@@ -50,7 +50,7 @@ header{
     font-family:Shadows Into Light;
     width:1200px;
     height:500px;
-    background:url("my_portfolio/me_huashan.JPG");
+    background:url("image/me_huashan.JPG");
     background-size:1200px;
     background-position:center;
     text-shadow: 5px 2px 8px rgba(127,68,0,.8);
@@ -160,12 +160,12 @@ article{
     background:#fff;
     float:left;
     margin-left: 225px;
-    background: url("my_portfolio/me250_250.jpg");
+    background: url("image/me250_250.jpg");
 }
 .box7{
     width:250px;
     height:250px;
-    background:url("my_portfolio/travel.jpg");
+    background:url("image/travel.jpg");
     float:right;
     margin-right:225px;
     border-radius:50px 0;
@@ -185,7 +185,7 @@ article{
     height:250px;
     background:#fff;
     margin:0 auto;
-    background: url("my_portfolio/dog.jpg");
+    background: url("image/dog.jpg");
 }
 .box10{
     width:200px;
@@ -211,7 +211,7 @@ article{
     background:#fff;
     float:right;
     margin-right:225px;
-    background:url("my_portfolio/luiquimati.jpg");
+    background:url("image/luiquimati.jpg");
 }
 .box12{
     width:250px;
@@ -235,7 +235,7 @@ article{
     height:250px;
     background:#fff;
     float:right;
-    background:url("my_portfolio/paiting.jpg");
+    background:url("image/paiting.jpg");
     
 }
 /*contact*/
