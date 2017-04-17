@@ -7,7 +7,7 @@ rgb(232,63,70)        crismin
 rgb(0,36,51);          dark blue
 rgb(0,145,204)        light blue2
 rgb(127,68,0);        brown 
-city theme #D9598A #1CAFC0 #FECA47 #83C25A #F28140 #9266C0
+city theme #D9598A #1CAFC0 #FECA47 #83C25A #F28140 #9266C0 #CCB91F 
 */  
 
 
@@ -26,7 +26,7 @@ body{
     width:80%;
     margin:0 auto;
     margin-bottom:2%;
-    background: rgb(0,36,51);
+    background: #CCB91F;
     font-family: georgia,times;
     position: relative;
 }
@@ -51,32 +51,30 @@ nav {
 
 /*header style*/
 header{
+    
     padding-top:35%;
-    background:url("image/me_huashan.JPG") no-repeat center;
+    background:#CCB91F;
     background-size:cover;
     
-    
-    
 }
 
-.left{
+.header{
+    width:90%;
     float:left;
     position:absolute;
-    top:3%;
+    top:5%;
     left:5%;
     font-family:Shadows Into Light;
-    font-size:4.5vw;
+    font-size:4vw;
     
 }
 
-.right{
+.perfil{
     float:right;
-    position:absolute;
-    top:5%;
-    right:8%;
-    font-family:Shadows Into Light;
-    font-size:2vw;
+    border-radius: 180px;
 }
+
+
 
 /*box style*/
 
@@ -145,11 +143,24 @@ header{
     text-transform:uppercase;
     
 }
-
+/*facebook twitter instagram*/
 aside{
-    width:10%;
+    display:flex;
+    align-items: center;
+    width:30%;
     position:absolute;
-    top:30%
+    top:24%;
+    left:10%;
+}
+
+.fb{
+    margin:0 2vw;
+}
+.tw{
+    margin:0 2vw;
+}
+.in{
+    margin:0 2vw;
 }
 
 footer{
