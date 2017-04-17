@@ -59,13 +59,13 @@ header{
 }
 
 .header{
-    width:90%;
+    width:80%;
     float:left;
     position:absolute;
     top:5%;
-    left:5%;
+    left:10%;
     font-family:Shadows Into Light;
-    font-size:4vw;
+    font-size:4.2vw;
     
 }
 
@@ -81,7 +81,7 @@ header{
 
 .flex-container{
     width:80%;
-    height:90vw;
+    height:100vw;
     display:-webkit-flex;
     display:flex;
     -webkit-flex-flow:wrap;
@@ -149,7 +149,7 @@ aside{
     align-items: center;
     width:30%;
     position:absolute;
-    top:20%;
+    top:19%;
     left:10%;
 }
 
