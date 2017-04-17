@@ -241,17 +241,17 @@ article{
 /*contact*/
 .fb{
     position:fixed;
-    top:25%;
+    top:40%;
     left:5%;
 }
 .in{
     position:fixed;
-    top:35%;
+    top:50%;
     left:5%;
 }
 .tw{
     position:fixed;
-    top:45%;
+    top:60%;
     left:5%;
 }
 /*footer style*/
