@@ -1,4 +1,4 @@
-   /*pallete  
+ /*pallete  
 rgb(202,248,255);    light blue
 rgb(178,138,106)       tan
 rgb(123,171,178)      grey blue
@@ -7,9 +7,11 @@ rgb(232,63,70)        crismin
 rgb(0,36,51);          dark blue
 rgb(0,145,204)        light blue2
 rgb(127,68,0);        brown 
-city theme #D9598A #1CAFC0 FECA47 83C25A F28140
-*/ 
-    @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+city theme #D9598A #1CAFC0 #FECA47 #83C25A #F28140 #9266C0
+*/  
+
+
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 /*reset css*/
 html,body,h1,h2,article,footer,div{
     margin:0;
@@ -21,254 +23,139 @@ html{
 }
 
 body{
-    font-family:georgia;
-    width:1200px;
-   
-    margin:0 auto 50px auto;
-    background:rgb(0,36,51);
-    
+    width:80%;
+    margin:0 auto;
+    margin-bottom:2%;
+    background: rgb(0,36,51);
+    font-family: georgia,times;
+    position: relative;
 }
 
-/*banner style*/
-header div{   
-    font-size:1.3em;
-    width:1192px;
-    display: inline-block;
-    background:rgba(127,68,0,0.8);
+/*nav style*/
+
+nav {
+    -webkit-display:flex;
+    display:flex;
+    width:100%;
+    background: rgba(127,68,0,.8);  
+    position:absolute;
+    top:0;
+    font-size:1.5vw;
+}
+
+.nav{
+    flex:1;
     text-align: center;
-    padding:4px; 
     
 }
-
-header div strong{
-    margin:0 119px;
-}
-
 
 /*header style*/
 header{
-    font-family:Shadows Into Light;
-    width:1200px;
-    height:500px;
-    background:url("image/me_huashan.JPG");
-    background-size:1200px;
-    background-position:center;
-    text-shadow: 5px 2px 8px rgba(127,68,0,.8);
-}
-
-
-
-
-header p{
-    font-size:2em;
-    font-style: italic;
-    text-align: center;
-    line-height: 50px;
+    padding-top:35%;
+    background:url("image/me_huashan.JPG") no-repeat center;
+    background-size:cover;
+    
     
     
 }
+
 .left{
-    font-weight: normal;
-     font-size:5em;
-     margin:40px 40px 0 70px;
-   
+    float:left;
+    position:absolute;
+    top:3%;
+    left:5%;
+    font-family:Shadows Into Light;
+    font-size:4.5vw;
+    
 }
 
 .right{
     float:right;
-    margin:-50px 50px 0 0;
-    
+    position:absolute;
+    top:5%;
+    right:8%;
+    font-family:Shadows Into Light;
+    font-size:2vw;
 }
 
-/*article style*/
-article{
-    width:1200px;
-    height:1250px;
-}
+/*box style*/
 
-#box{
-    
-   font-size:1.8em;
+
+.flex-container{
+    width:80%;
+    height:60vw;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-flow:wrap;
+    flex-flow: wrap;
+    margin:0 auto;
+    -webkit-justify-content:center;
+    justify-content: center;
+    font-family: georgia;
+    font-size:2.8vw;
+    font-variant: small-caps;
     text-align: center;
-    font-variant: small-caps; 
-}
-.box1{
-    width:200px;
-    height:200px;
-    padding:25px;
-    background:#D9598A;
-    float:right;
-    margin-right:225px;
-    color:#fff;
-  
-    
-}
-
-.box2{
-    width:200px;
-    height:200px;
-    padding:25px;
-    background:#1CAFC0;
-    margin:0 auto;
-    
-}
-
-.box3{
-    width:200px;
-    height:200px;
-    padding:25px;
-    background:#FECA47;
-    margin:0 auto;
-    border-radius:0 25px 0 0;
-}
-
-.box4{
-    width:450px;
-    height:200px;
-    padding:25px;
-    background:#83C25A;
-    float:right;
-    margin-right:225px;
-    border-radius:25px 0 0 0;
-    font-size:0.8em;
-}
-
-.box4 li {
-    display:inline-block;
-    padding:8px;
-}
-
-.box4 p{
-     font-size:1.5em; 
-    
-}
-
-.box5{
-    width:200px;
-    height:200px;
-    padding:25px;
-    background:#F28140; 
-    float:left;
-    margin-left:225px;
     color:#fff;
    
+    
 }
 
+ article div{
+     display:-webkit-flex;
+     display:flex;
+     -webkit-flex-flow:column;
+     flex-flow:column;
+     -webkit-justify-content:center;
+     justify-content:center; 
+     padding:1vw;
+     
+}
+
+.box1{
+    width:36%;
+    background: #1CAFC0;
+    font-size:3vw;
+}
+.box2{
+    width:57%;
+    background: #D9598A; 
+    font-size:3vw;
+}
+.box3{
+    width:30%;
+    background: #FECA47;
+    
+}
+.box4{
+    width:30%;
+    background: #83C25A;
+    
+    
+}
+.box5{
+    width:30%;
+    background: #F28140;
+    
+    
+}
 .box6{
-    width:250px;
-    height:250px;
-    background:#fff;
-    float:left;
-    margin-left: 225px;
-    background: url("image/me250_250.jpg");
-}
-.box7{
-    width:250px;
-    height:250px;
-    background:url("image/travel.jpg");
-    float:right;
-    margin-right:225px;
-    border-radius:50px 0;
-}
-.box8{
-    width:200px;
-    height:200px;
-    padding:25px;
-    background:#9266C0;
-    float:left;
-    margin-left:225px;
-    border-top-right-radius:50px;
-    color:#fff;
-}
-.box9{
-    width:250px;
-    height:250px;
-    background:#fff;
-    margin:0 auto;
-    background: url("image/dog.jpg");
-}
-.box10{
-    width:200px;
-    height:450px;
-    padding:25px;
-    float:left;
-    margin-left:225px;
-    background:#fff;
-    font-size:.8em;
-    color:rgb(0,36,51);; 
+    width:100%;
+    background: #9266C0;
+    font-size:4vw;
+    text-transform:uppercase;
     
 }
 
-.box10 li {
-       margin-top:20px;
-       
+aside{
+    width:10%;
+    position:absolute;
+    top:30%
 }
 
-
-.box11{
-    width:250px;
-    height:250px;
-    background:#fff;
-    float:right;
-    margin-right:225px;
-    background:url("image/luiquimati.jpg");
-}
-.box12{
-    width:250px;
-    height:250px;
-    background:#fff;
-    float:left;
-    margin-left:225px;
-}
-.box13{
-    width:200px;
-    height:200px;
-    background:#fff;
-    float:right;
-    margin-right:225px;
-    padding:25px;
-    line-height: 2em;
-    color:#9266C0;
-}
-.box14{
-    width:250px;
-    height:250px;
-    background:#fff;
-    float:right;
-    background:url("image/paiting.jpg");
-    
-}
-/*contact*/
-.fb{
-    position:fixed;
-    top:40%;
-    left:5%;
-}
-.in{
-    position:fixed;
-    top:50%;
-    left:5%;
-}
-.tw{
-    position:fixed;
-    top:60%;
-    left:5%;
-}
-/*footer style*/
 footer{
-    width:1160px;
     background:rgb(127,68,0);
-    padding:20px;;
+    text-align: center;
+    font-family:Shadows Into Light;
+    font-size:3vw;
     
 }
-
-footer p{
-    font-family:Shadows Into Light;
-    font-size:3em;
-    text-align: center; 
-}
-
-q{
-    font-size:1.2em;
-}
-
