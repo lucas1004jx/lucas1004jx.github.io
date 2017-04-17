@@ -23,7 +23,7 @@ html{
 }
 
 body{
-    width:80%;
+    width:100%;
     margin:0 auto;
     margin-bottom:2%;
     background: #CCB91F;
@@ -81,7 +81,7 @@ header{
 
 .flex-container{
     width:80%;
-    height:60vw;
+    height:90vw;
     display:-webkit-flex;
     display:flex;
     -webkit-flex-flow:wrap;
@@ -149,7 +149,7 @@ aside{
     align-items: center;
     width:30%;
     position:absolute;
-    top:24%;
+    top:20%;
     left:10%;
 }
 
