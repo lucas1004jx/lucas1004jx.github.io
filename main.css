@@ -263,14 +263,7 @@ body{
     .header{
         font-size:1.em;
     }
-   nav{
-        text-shadow: 
-        -2px -2px 10px #fff,
-        2px 2px 10px #fff,
-        0 0 20px #CCB91F,
-        0 0 40px #CCB91F        
-    ;
-    }
+   
     #toTop{
         font-size: 0.4em;
         padding:2px 5px;
