@@ -179,20 +179,19 @@ footer{
 }
 
 /*back to the top*/
-#toTop{
+#top{
     display:none;
     text-align: center;
-    padding:5px 10px;
+    padding:10px 10px;
     position: fixed;
     right:1%;
     bottom:10%;
     font-size: .7em;
-    background: rgba(22,22,22,.5);
-}
-#toTop a{
-    text-decoration: none;
+    background: rgba(0,145,204,0.5);
     color:#fff;
+    z-index:100;
 }
+
 
 /*desktop*/
 @media only screen and (min-width:769px){
@@ -260,6 +259,12 @@ body{
 /*mobile*/
 @media only screen and (max-width:480px){
     
+    nav{
+        text-shadow: 
+        -2px -2px 10px #fff,
+        2px 2px 10px #fff,
+        0 0 10px #CCB91F;
+    }
     .header{
         font-size:1.em;
     }

@@ -13,31 +13,24 @@ function changePerfil(){
 setInterval(changePerfil, 3000);
 
 //add to the top function
-var toTop=document.getElementById("toTop");
+
+var toTop = document.getElementById("top");
+function scrollFunction(){
+    if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
+        toTop.style.display="block";
+        
+     }  else{
+         toTop.style.display="none";
+     }
+      
+}
 window.onscroll=function(){
-    
-    toTop.style.display="inline-block";
+    scrollFunction()
 };
 
-function disppear (){
-     var width = 0;
-    // get the width.. more cross-browser issues
-    if (window.innerHeight) {
-        width = window.innerWidth;
-    } else if (document.documentElement && document.documentElement.clientHeight) {
-        width = document.documentElement.clientWidth;
-    } else if (document.body) {
-        width = document.body.clientWidth;
-    }
-    if(width < 600){
-        
-       toTop.style.display="none";
-       }
-    
-    
+function topFunction(){
+   
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop = 0;
 }
 
-window.onresize=function(){
-    
-    disppear();
-};
