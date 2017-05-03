@@ -20,7 +20,7 @@ html,body,h1,h2,article,footer,div{
 /*body style*/
 html{
    
-    background:#fff;
+    background:rgba(123,171,178,0.5);
 }
 
 body{
@@ -41,6 +41,16 @@ nav {
     position:absolute;
     top:0;
     font-size:1.5vw;
+    font-family:Shadows Into Light;
+    text-shadow: 
+        -2px -2px 10px #fff,
+        2px 2px 10px #fff,
+        0 0 20px #CCB91F,
+        0 0 40px #CCB91F,
+        0 0 60px #CCB91F,
+        0 0 80px #CCB91F,
+        0 0 100px #CCB91F
+    ;
 }
 
 .nav{
@@ -171,11 +181,27 @@ footer{
     font-size:3vw;
     
 }
+
+/*back to the top*/
+#toTop{
+    display:none;
+    text-align: center;
+    padding:5px 10px;
+    position: fixed;
+    right:1%;
+    bottom:10%;
+    font-size: .7em;
+    background: rgba(22,22,22,.5);
+}
+#toTop a{
+    text-decoration: none;
+    color:#fff;
+}
+
 /*desktop*/
 @media only screen and (min-width:769px){
 body{
     max-width:960px;
-    max-height:3000px;
     
 }
 
@@ -189,7 +215,7 @@ body{
     }
     
     article div{
-        padding:10px;
+        padding:5%;
     }
     
     .box1,.box2, .box6{
@@ -205,11 +231,24 @@ body{
     }
     
 }
-
+/*tablet*/
+@media only screen and (min-width:481px) and (max-width:768px){
+    #toTop{
+        font-size: 0.6em;
+        padding:2px 5px;
+    }
+    
+}
 /*mobile*/
 @media only screen and (max-width:480px){
     
     .header{
         font-size:1.em;
     }
+   
+    #toTop{
+        font-size: 0.4em;
+        padding:2px 5px;
+    }
+    
 }
