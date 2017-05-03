@@ -20,7 +20,7 @@ html,body,h1,h2,article,footer,div{
 /*body style*/
 html{
    
-    background:rgba(123,171,178,0.5);
+    background:#fff;
 }
 
 body{
@@ -41,8 +41,8 @@ nav {
     position:absolute;
     top:0;
     font-size:1.5vw;
-    font-family:Shadows Into Light;
-    /*text-shadow: 
+    /*font-family:Shadows Into Light;
+    text-shadow: 
         -2px -2px 10px #fff,
         2px 2px 10px #fff,
         0 0 20px #CCB91F,
