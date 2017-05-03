@@ -42,7 +42,7 @@ nav {
     top:0;
     font-size:1.5vw;
     font-family:Shadows Into Light;
-    text-shadow: 
+    /*text-shadow: 
         -2px -2px 10px #fff,
         2px 2px 10px #fff,
         0 0 20px #CCB91F,
@@ -50,7 +50,7 @@ nav {
         0 0 60px #CCB91F,
         0 0 80px #CCB91F,
         0 0 100px #CCB91F
-    ;
+    ;*/
 }
 
 .nav{
@@ -187,7 +187,7 @@ footer{
 }
 
 /*back to the top*/
-#toTop{
+/*#toTop{
     display:none;
     text-align: center;
     padding:5px 10px;
@@ -200,7 +200,7 @@ footer{
 #toTop a{
     text-decoration: none;
     color:#fff;
-}
+}*/
 
 /*desktop*/
 @media only screen and (min-width:769px){
@@ -236,13 +236,13 @@ body{
     
 }
 /*tablet*/
-@media only screen and (min-width:481px) and (max-width:768px){
+/*@media only screen and (min-width:481px) and (max-width:768px){
     #toTop{
         font-size: 0.6em;
         padding:2px 5px;
     }
     
-}
+}/*
 /*mobile*/
 @media only screen and (max-width:480px){
     
@@ -250,9 +250,9 @@ body{
         font-size:1.em;
     }
    
-    #toTop{
+ /*   #toTop{
         font-size: 0.4em;
         padding:2px 5px;
-    }
+    }*/
     
 }
