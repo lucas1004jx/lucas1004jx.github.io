@@ -51,9 +51,13 @@ nav {
     
 }
 
-#home a{
+nav a{
     text-decoration: none;
     color:#000;
+}
+
+nav a:hover{
+    color:#fff;
 }
 /*header style*/
 header{
@@ -152,22 +156,17 @@ header{
 }
 /*facebook twitter instagram*/
 aside{
-    display:flex;
-    align-items: center;
-    width:30%;
     position:absolute;
     top:19%;
-    left:10%;
+    left:11%;
+    width:40%;
+    display:flex;
+    justify-content:space-between;
 }
 
-.fb{
-    margin:0 2vw;
-}
-.tw{
-    margin:0 2vw;
-}
-.in{
-    margin:0 2vw;
+aside img{
+    width:30%;
+    margin-right:20px;
 }
 
 footer{
@@ -190,8 +189,13 @@ footer{
     background: rgba(0,145,204,0.5);
     color:#fff;
     z-index:100;
+    cursor:pointer;
+    border-radius: 10px;
 }
 
+#top:hover{
+    background:rgba(223,63,70,.5);
+}
 
 /*desktop*/
 @media only screen and (min-width:769px){
@@ -212,7 +216,7 @@ body{
     ;
     }
     .header{
-        font-size:2.3em;
+        font-size:2.1em;
     }
     
     .flex-container{
@@ -232,9 +236,7 @@ body{
         font-size:2em;
     }
     
-    .fb, .in, .tw {
-        margin:0 25px;
-    }
+    
     
 }
 /*tablet*/
@@ -250,11 +252,18 @@ body{
         
     ;
     }
+    
+    .header{
+        font-size:3.8vw;
+    }
+    aside{
+        top:20%;
+    }
     #toTop{
         font-size: 0.6em;
         padding:2px 5px;
     }
-    
+
 }
 /*mobile*/
 @media only screen and (max-width:480px){
@@ -266,8 +275,12 @@ body{
         0 0 10px #CCB91F;
     }
     .header{
-        font-size:1.em;
+        font-size:3.5vw;
     }
+    aside{
+        top:20%;
+    }
+    
    
     #toTop{
         font-size: 0.4em;
