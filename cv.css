@@ -46,9 +46,7 @@ nav a:link{
     text-decoration: none;
     color:#000;
 }
-nav a:visited{
-    color:#000;
-}
+
 nav a:hover{
     color:#fff;
 }
