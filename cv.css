@@ -46,15 +46,12 @@ nav a:link{
     text-decoration: none;
     color:#000;
 }
-
 nav a:visited{
- color:#000;
+    color:#000;
 }
- 
 nav a:hover{
     color:#fff;
 }
-
 
 nav a:active{
     color:#F28140;
@@ -194,6 +191,21 @@ section a:hover{
     color:#D9598A;
 }
 
+/*to the top button*/
+#top{
+    display:none;
+    padding:10px 5px;
+    background:rgba(131,194,90,.5) ;
+    color:#fff;
+    position: fixed;
+    bottom: 10%;
+    right:1%;
+    cursor: pointer;
+}
+
+#top:hover{
+    background: rgba(28, 175, 192,.5);
+}
 /*desktop*/
 @media only screen and (min-width:769px){
     body{

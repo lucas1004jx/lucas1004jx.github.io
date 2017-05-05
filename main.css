@@ -55,7 +55,6 @@ nav a:link{
     text-decoration: none;
     color:#000;
 }
-
 nav a:visited{
     color:#000;
 }
@@ -218,7 +217,7 @@ footer{
 #top{
     display:none;
     text-align: center;
-    padding:10px 10px;
+    padding:10px 5px;
     position: fixed;
     right:1%;
     bottom:10%;
@@ -313,7 +312,7 @@ body{
         2px 2px 10px #fff,
         0 0 10px #CCB91F;
         
-        font-size:2.5vw;
+        font-size:4vw;
     }
     
     
