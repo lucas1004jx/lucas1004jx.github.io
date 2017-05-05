@@ -34,7 +34,7 @@ body{
 /*nav style*/
 
 nav {
-    -webkit-display:flex;
+    display:-webkit-flex;
     display:flex;
     width:100%;
     background: rgba(127,68,0,.8);  
