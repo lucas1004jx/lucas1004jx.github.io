@@ -53,11 +53,11 @@ window.onscroll=function(){
             },false);
             
             
-            e.target.addEventListener("mouseout",function re(){
+           /* e.target.addEventListener("mouseout",function re(){
                 container.parentElement.removeChild(container);
                 largeImg.parentElement.removeChild(largeImg);
                 e.target.removeEventListener("mouseout",re,false);
-            },false);
+            },false);*/
            }
     }
        
