@@ -47,17 +47,17 @@ window.onscroll=function(){
             container.style.left = -(largeImg.width-e.offsetX )- 15 + "px";
             
             
-            e.target.addEventListener("mousemove",function(m){
+          /*  e.target.addEventListener("mousemove",function(m){
                  container.style.top = -(largeImg.height-m.offsetY) - 15 + "px"; 
                 container.style.left = -(largeImg.width-m.offsetX) - 15 +"px";
-            },false);
+            },false);*/
             
             
-           /* e.target.addEventListener("mouseout",function re(){
+            e.target.addEventListener("mouseout",function re(){
                 container.parentElement.removeChild(container);
                 largeImg.parentElement.removeChild(largeImg);
                 e.target.removeEventListener("mouseout",re,false);
-            },false);*/
+            },false);
            }
     }
        
