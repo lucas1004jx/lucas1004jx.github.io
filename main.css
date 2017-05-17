@@ -7,11 +7,12 @@ rgb(232,63,70)        crismin
 rgb(0,36,51);          dark blue
 rgb(0,145,204)        light blue2
 rgb(127,68,0);        brown 
-city theme #D9598A #1CAFC0 #FECA47 #83C25A #F28140 #9266C0 #CCB91F 
+city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7))
 */  
 
 
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 /*reset css*/
 html,body,h1,h2,article,footer,div{
     margin:0;
@@ -27,7 +28,7 @@ body{
     width:100%;
     margin:0 auto;
     background: #CCB91F;
-    font-family: georgia,times;
+    font-family: Nunito,georgia,times;
     position: relative;
 }
 
@@ -43,6 +44,8 @@ nav {
     font-size:20px;
     font-family:Shadows Into Light;
     
+    
+    
 }
 
 .nav{
@@ -52,16 +55,26 @@ nav {
     text-align: center;
     
 }
-
+.nav:hover{
+    -ms-transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    transform: scale(1.5,1.5);  
+    
+}
 nav a:link{
     text-decoration: none;
     color:#000;
+    -ms-transition: color .5s;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
 }
 nav a:visited{
     color:#000;
 }
 nav a:hover{
     color:#fff;
+    
 }
 
 nav a:active{
@@ -85,7 +98,7 @@ header{
     left:10%;
     font-family:Shadows Into Light;
     font-size:4.2vw;
-  font-weight:100;
+    font-weight: 100;
     
 }
 
@@ -108,10 +121,10 @@ header{
     margin:0 auto;
     -webkit-justify-content:center;
     justify-content: center;
-    font-family: georgia;
     font-size:2.8vw;
-    font-variant: small-caps;
+    text-transform: uppercase;
     text-align: center;
+    line-height: 1.8em;
     color:#fff;
    
     
@@ -133,35 +146,123 @@ header{
     width:40%;
     background: #1CAFC0;
     font-size:3vw;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
+    
 }
+
+ .box1:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8); 
+    z-index: 10;
+}
+.sep{
+    color:rgba(0,0,0,0);
+}
+
+
 .box2{
     width:60%;
     background: #D9598A; 
     font-size:3vw;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
+}
+.box2:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8); 
+    z-index: 10;
 }
 .box3{
     width:33%;
     background: #FECA47;
+    font-size: 3vw;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
     
+}
+.box3:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8);
+    z-index: 10;
 }
 .box4{
     width:34%;
     background: #83C25A;
+    font-size: 3vw;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
     
     
+}
+.box4:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8); 
+    z-index: 10;
 }
 .box5{
     width:33%;
     background: #F28140;
+    font-size: 3vw;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
     
     
+}
+.box5:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8);
+    z-index: 10;
 }
 .box6{
     width:100%;
     background: #9266C0;
-    font-size:4vw;
+    font-size:3vw;
     text-transform:uppercase;
+    -webkit-transition: -webkit-transform .8s,background 1s;
+    -ms-transition: -ms-transform .8s,background 1s;
+    -o-transition: -o-transform .8s,background 1s;
+      transition: transform .8s,background 1s;
     
+}
+.box6:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
+                -2px -2px 20px 5px rgba(250,250,250,0.8);
+    z-index: 10;
 }
 /*social media*/
 #socialMedia{
@@ -186,25 +287,45 @@ i.fa:hover{
 .fa-facebook {
   background: #3B5998;
   color: #fff;
+    -webkit-transition: background .7s;
+    -ms-transition: background .7s;
+    -o-transition: background .7s;
+    transition: background .7s;
 }
 
 .fa-twitter {
   background: #55ACEE;
   color: white;
+    -webkit-transition: background .7s;
+    -ms-transition: background .7s;
+    -o-transition: background .7s;
+    transition: background .7s;
 }
 
 .fa-google {
   background: #dd4b39;
   color: white;
+    -webkit-transition: background .7s;
+    -ms-transition: background .7s;
+    -o-transition: background .7s;
+    transition: background .7s;
 }
 
 .fa-linkedin {
   background: #007bb5;
   color: white;
+    -webkit-transition: background .7s;
+    -ms-transition: background .7s;
+    -o-transition: background .7s;
+    transition: background .7s;
 }
 .fa-instagram {
   background: #125688;
   color: white;
+    -webkit-transition: background .7s;
+    -ms-transition: background .7s;
+    -o-transition: background .7s;
+    transition: background .7s;
 }
 /*footer style*/
 
@@ -259,7 +380,7 @@ body{
     }
     
     .flex-container{
-        font-size:1.3em;
+        font-size:1.5em;
         max-height:1024px;
     }
     
@@ -267,7 +388,7 @@ body{
         padding:5%;
     }
     
-    .box1,.box2, .box6{
+    .box1,.box2,.box3,.box4,.box5,.box6{
         font-size:1em;
     }
     
