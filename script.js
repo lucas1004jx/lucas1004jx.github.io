@@ -132,7 +132,7 @@ function topFunction(){
             
         var change=setInterval(changeColor,1000); 
                
-     box.addEventListener("mouseout",function(d){
+     box.addEventListener("mouseout",function rm(d){
          clearInterval(change);
          
          switch(d.target.className){
@@ -155,6 +155,7 @@ function topFunction(){
                  d.target.style.background="#9266C0";
                  break;
                 }
+         box.removeEventListener("mouseout",rm,false);
      },false);
     }
            
