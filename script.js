@@ -158,33 +158,7 @@ function topFunction(){
          box.removeEventListener("mouseout",rm,false);
      },false);
     }
-        box.addEventListener("touchend",function(ev){
-            clearInterval(change);
-            ev.target.style.WebkitTransform="scale(1)";
-            ev.target.style.msTransform="scale(1)";
-            ev.target.style.WebkitTransform="scale(1)";
-            ev.target.fontSize="3vw";
-            switch(d.target.className){
-             case "box1":
-                 ev.target.style.background="#1CAFC0"; 
-                 break;
-             case "box2":
-                 ev.target.style.background="#D9598A";
-                 break;
-            case "box3":
-                 ev.target.style.background="#FECA47";
-                 break;
-            case "box4":
-                 ev.target.style.background="#83C25A";
-                 break;
-            case "box5":
-                 ev.target.style.background="#F28140";
-                 break;
-            case "box6":
-                 ev.target.style.background="#9266C0";
-                 break;
-                }
-        },false);   
+        
         
         },false) 
     
