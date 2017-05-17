@@ -158,7 +158,10 @@ function topFunction(){
          box.removeEventListener("mouseout",rm,false);
      },false);
     }
-           
+        box.addEventListener("touchend",function(){
+            clearInterval(change);
+        },false);   
+        
         },false) 
     
      
