@@ -43,8 +43,8 @@ window.onscroll=function(){
            
            /*position*/
              container.appendChild(largeImg);
-            container.style.top = (largeImg.height-e.offsetY )- 15 + "px";
-            container.style.left = (largeImg.width-e.offsetX )- 15 + "px";
+            container.style.top = - largeImg.height+e.offsetY - 15 + "px";
+            container.style.left = - largeImg.width-+e.offsetX - 15 + "px";
             
             
           /*  e.target.addEventListener("mousemove",function(m){
