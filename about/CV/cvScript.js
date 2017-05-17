@@ -53,6 +53,7 @@ window.onscroll=function(){
             
             
             e.target.addEventListener("mouseout",function re(){
+                container.parentElement.removeChild(container);
                 largeImg.parentElement.removeChild(largeImg);
                 e.target.removeEventListener("mouseout",re,false);
             },false);
