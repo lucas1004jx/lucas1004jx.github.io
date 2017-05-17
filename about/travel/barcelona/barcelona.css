@@ -1,0 +1,87 @@
+ /*pallete  
+rgb(202,248,255);    light blue
+rgb(178,138,106)       tan
+rgb(123,171,178)      grey blue
+rgb(178,113,26)       brown
+rgb(232,63,70)        crismin
+rgb(0,36,51);          dark blue
+rgb(0,145,204)        light blue2
+rgb(127,68,0);        brown 
+city theme #D9598A #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 #9266C0 #CCB91F (rgb(199,178,7))
+*/ 
+body{
+    width:90%;
+    margin:0 auto;
+    
+}
+/*thumbnail style*/
+#aside .imgGroup{
+    width:450px;
+}
+
+.imgGroup img{
+   width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+.imgGroup ul li{
+    list-style: none;
+    display:inline-block; 
+    margin:4px 5px 0 0
+}
+
+/*music style*/
+.musicGroup{
+    font-family: "FontAwesome";
+}
+.musicGroup ul li{
+    display:block;
+    padding: 10px;
+    width:20%;
+   border:1px solid rgba(0,36,51,.5);
+    background: rgba(28, 175, 192,.8);
+    cursor:pointer;
+    text-transform: capitalize;
+       
+}
+.musicGroup ul li:hover{
+    background: rgba(0,36,51,0.5);;
+}
+.musicGroup ul li:first-child{
+    border-radius: 10px 10px 0 0;
+}
+      /*jukebox border*/
+.musicGroup ul li:last-child{
+    border-radius: 0 0 10px 10px;
+
+}
+
+     /*jukebox icon*/
+.musicGroup ul li::before{
+    content:"\f04b";
+    margin-right:20px;
+} 
+#playing::before{
+    content:"\f04b";
+    margin-right:20px;
+}
+
+#pause::before{
+    content:"\f04c";
+    margin-right:20px;
+}
+
+
+
+#playing,#pause{
+   background: #FECA47;
+    color:#D9598A;
+    font-size:1.2em;
+    text-shadow: 2px 2px 5px #F28140;          
+                  
+    font-weight: bolder;
+}
+
