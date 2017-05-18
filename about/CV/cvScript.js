@@ -40,14 +40,14 @@ window.onscroll=function(){
             largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
            
            /*position*/
-            container.style.top= -(largeImg.height - e.offsetY)  - 15 + "px";
-            container.style.left= -(largeImg.width - e.offsetX)  - 15 + "px";
+            container.style.top= -(300 - e.offsetY)  - 15 + "px";
+            container.style.left= -(500 - e.offsetX)  - 15 + "px";
             container.appendChild(largeImg); 
             
-          /*  e.target.addEventListener("mousemove",function(m){
-                 container.style.top =m.offsetY + 15 + "px"; 
-                container.style.left = m.offsetX +  15 +"px";
-            },false);*/
+           e.target.addEventListener("mousemove",function(m){
+                container.style.top= -(300 - m.offsetY)  - 15 + "px";
+            container.style.left= -(500 - m.offsetX)  - 15 + "px";
+            },false);
             
             
             e.target.addEventListener("mouseout",function re(){
