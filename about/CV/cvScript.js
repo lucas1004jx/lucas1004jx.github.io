@@ -42,7 +42,7 @@ window.onscroll=function(){
            
            /*position*/
             container.style.top=e.offsetY) + 50 + "px";
-            container.style.left= e.offsetX ) + 50 + "px";
+            container.style.left= e.offsetX  + 50 + "px";
             container.appendChild(largeImg); 
             
             e.target.addEventListener("mousemove",function(m){
