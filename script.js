@@ -128,7 +128,7 @@ function topFunction(){
         myNode.addEventListener("mouseover",color,false);
     }else{
         
-        myNode.addEventListener("click",color,false);
+        myNode.addEventListener("touchstart",color,false);
          }
     
    
@@ -178,7 +178,7 @@ function topFunction(){
          box.removeEventListener("mouseout",rm,false);
      },false);
         //add click listener to remove effect
-               box.addEventListener("touchstart",function rm(v){
+               box.addEventListener("click",function rm(v){
          clearInterval(change);
          v.target.classList.remove("tbox");
         //when mouseout to recover the original color of each box 
