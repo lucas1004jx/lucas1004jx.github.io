@@ -38,11 +38,10 @@ window.onscroll=function(){
             var largeImg = document.createElement("img");
             var tnImg = e.target.src; 
             largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
-            largeImg.style.maxWidth=500 + "px";
            
            /*position*/
-            container.style.top=e.offsetY -largeImg.height - 15 + "px";
-            container.style.left= e.offsetX -largeImg.width - 15 + "px";
+            container.style.top= -(largeImg.height - e.offsetY)  - 15 + "px";
+            container.style.left= -(largeImg.width - e.offsetX)  - 15 + "px";
             container.appendChild(largeImg); 
             
           /*  e.target.addEventListener("mousemove",function(m){
