@@ -120,7 +120,8 @@ function topFunction(){
     
     myNode.addEventListener("mouseover",function color(e){
            if(e.target.tagName === "DIV"){ 
-        var box= e.target;    
+        var box= e.target; 
+               box.classList.add("tbox1");
         function changeColor(){
             box.style.background=colorArray[index];
         index++;
@@ -134,7 +135,8 @@ function topFunction(){
                
      box.addEventListener("mouseout",function rm(d){
          clearInterval(change);
-         
+         d.target.classList.remove("tbox1");
+        //when mouseout to recover the original color of each box 
          switch(d.target.className){
              case "box1":
                  d.target.style.background="#1CAFC0";

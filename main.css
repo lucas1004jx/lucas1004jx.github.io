@@ -107,8 +107,49 @@ header{
     border-radius: 360px;
 }
 
+/*h1 animation*/
+@-webkit-keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#fff;}
+}
 
+@-ms-keyframes h1Hilght{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#fff;}
+}
 
+@-o-keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#000;}
+}
+
+@keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#000;}
+}
+
+header h1 {
+    -webkit-animation:h1Hilight 10s infinite alternate;
+    -ms-animation:h1Hilight 10s infinite alternate;
+    -o-animation:h1Hilight 10s infinite alternate;
+    animation:h1Hilight 10s infinite alternate;
+}
 /*box style*/
 
 .flex-container{
@@ -153,7 +194,7 @@ header{
     
 }
 
- .box1:hover{
+ .tbox1{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
@@ -162,6 +203,8 @@ header{
                 -2px -2px 20px 5px rgba(250,250,250,0.8); 
     z-index: 10;
 }
+
+
 .sep{
     color:rgba(0,0,0,0);
 }
