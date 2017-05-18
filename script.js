@@ -118,7 +118,11 @@ function topFunction(){
     var colorArray = ["#FF5D54", "#2EA8F6", "#53CC2F", "#F26B13", "#3847EB","#ADCC2F","#ADCC2F"];
     var index =0;
     
-    myNode.addEventListener("mouseover",function color(e){
+    myNode.addEventListener("mouseover",color,false);
+    myNode.addEventListener("touchstart",color,false);
+    //add color function
+     function color(e){
+         {
            if(e.target.tagName === "DIV"){ 
         var box= e.target; 
                box.classList.add("tbox");
@@ -132,6 +136,8 @@ function topFunction(){
          }
             
         var change=setInterval(changeColor,1000); 
+      //add touch listener for mobile device
+              
                
      box.addEventListener("mouseout",function rm(d){
          clearInterval(change);
@@ -189,8 +195,8 @@ function topFunction(){
     }
         
         
-        },false) 
+        } 
     
-     
+     }
     
 })();
