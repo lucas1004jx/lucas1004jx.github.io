@@ -41,13 +41,13 @@ window.onscroll=function(){
             
            
            /*position*/
-            container.style.top=e.offsetY + 50 + "px";
-            container.style.left= e.offsetX  + 50 + "px";
+            container.style.top=e.offsetY + 15 + "px";
+            container.style.left= e.offsetX  + 15 + "px";
             container.appendChild(largeImg); 
             
             e.target.addEventListener("mousemove",function(m){
-                 container.style.top =m.offsetY + 50 + "px"; 
-                container.style.left = m.offsetX +  50 +"px";
+                 container.style.top =m.offsetY + 15 + "px"; 
+                container.style.left = m.offsetX +  15 +"px";
             },false);
             
             
