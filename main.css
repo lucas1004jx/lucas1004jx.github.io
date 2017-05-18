@@ -194,15 +194,7 @@ header h1 {
     
 }
 
- .tbox1{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8); 
-    z-index: 10;
-}
+ 
 
 
 .sep{
@@ -219,15 +211,7 @@ header h1 {
     -o-transition: -o-transform .8s,background 1s;
       transition: transform .8s,background 1s;
 }
-.box2:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8); 
-    z-index: 10;
-}
+
 .box3{
     width:33%;
     background: #FECA47;
@@ -238,15 +222,7 @@ header h1 {
       transition: transform .8s,background 1s;
     
 }
-.box3:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8);
-    z-index: 10;
-}
+
 .box4{
     width:34%;
     background: #83C25A;
@@ -258,15 +234,7 @@ header h1 {
     
     
 }
-.box4:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8); 
-    z-index: 10;
-}
+
 .box5{
     width:33%;
     background: #F28140;
@@ -278,15 +246,7 @@ header h1 {
     
     
 }
-.box5:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8);
-    z-index: 10;
-}
+
 .box6{
     width:100%;
     background: #9266C0;
@@ -298,13 +258,14 @@ header h1 {
       transition: transform .8s,background 1s;
     
 }
-.box6:hover{
+/*box transform*/
+.tbox{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
     box-shadow: 2px 2px 20px 5px rgba(250,250,250,0.8),
-                -2px -2px 20px 5px rgba(250,250,250,0.8);
+                -2px -2px 20px 5px rgba(250,250,250,0.8); 
     z-index: 10;
 }
 /*social media*/

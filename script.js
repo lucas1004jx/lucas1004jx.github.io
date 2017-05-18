@@ -121,7 +121,7 @@ function topFunction(){
     myNode.addEventListener("mouseover",function color(e){
            if(e.target.tagName === "DIV"){ 
         var box= e.target; 
-               box.classList.add("tbox1");
+               box.classList.add("tbox");
         function changeColor(){
             box.style.background=colorArray[index];
         index++;
@@ -135,7 +135,7 @@ function topFunction(){
                
      box.addEventListener("mouseout",function rm(d){
          clearInterval(change);
-         d.target.classList.remove("tbox1");
+         d.target.classList.remove("tbox");
         //when mouseout to recover the original color of each box 
          switch(d.target.className){
              case "box1":
@@ -155,6 +155,33 @@ function topFunction(){
                  break;
             case "box6":
                  d.target.style.background="#9266C0";
+                 break;
+                }
+         box.removeEventListener("mouseout",rm,false);
+     },false);
+        //add click listener to remove effect
+               box.addEventListener("click",function rm(v){
+         clearInterval(change);
+         v.target.classList.remove("tbox");
+        //when mouseout to recover the original color of each box 
+         switch(v.target.className){
+             case "box1":
+                 v.target.style.background="#1CAFC0";
+                 break;
+             case "box2":
+                 v.target.style.background="#D9598A";
+                 break;
+            case "box3":
+                 v.target.style.background="#FECA47";
+                 break;
+            case "box4":
+                 v.target.style.background="#83C25A";
+                 break;
+            case "box5":
+                 v.target.style.background="#F28140";
+                 break;
+            case "box6":
+                 v.target.style.background="#9266C0";
                  break;
                 }
          box.removeEventListener("mouseout",rm,false);
