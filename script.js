@@ -118,8 +118,20 @@ function topFunction(){
     var colorArray = ["#FF5D54", "#2EA8F6", "#53CC2F", "#F26B13", "#3847EB","#ADCC2F","#ADCC2F"];
     var index =0;
     
-    myNode.addEventListener("mouseover",color,false);
-    myNode.addEventListener("touchstart",color,false);
+    //detect a touche screen
+    function isTouchDevice(){
+       return "ontouchstart" in document.documentElement;
+       }
+    
+    if(!isTouchDevice()){
+        
+        myNode.addEventListener("mouseover",color,false);
+    }else{
+        
+        myNode.addEventListener("click",color,false);
+         }
+    
+   
     //add color function
      function color(e){
          {
@@ -166,7 +178,7 @@ function topFunction(){
          box.removeEventListener("mouseout",rm,false);
      },false);
         //add click listener to remove effect
-               box.addEventListener("click",function rm(v){
+               box.addEventListener("dblclick",function rm(v){
          clearInterval(change);
          v.target.classList.remove("tbox");
         //when mouseout to recover the original color of each box 
