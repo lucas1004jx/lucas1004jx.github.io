@@ -24,9 +24,6 @@ window.onscroll=function(){
 //Magnify img with mouseover
 
 
-<<<<<<< Updated upstream
-
-=======
 (function(){
     var myNode = document.querySelector("#certificate ul");
     myNode.addEventListener("mouseover",preview,false);
@@ -38,7 +35,6 @@ window.onscroll=function(){
             var container = document.createElement("div");
             container.id="preview";
             e.target.parentNode.appendChild(container);
-          
             var largeImg = document.createElement("img");
             var tnImg = e.target.src; 
             largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
@@ -56,17 +52,25 @@ window.onscroll=function(){
             
             
             e.target.addEventListener("mouseout",function re(){
-                container.parentElement.removeChild(container);
+                largeImg.parentElement.removeChild(largeImg);
                 e.target.removeEventListener("mouseout",re,false);
             },false);
            }
     }
        
->>>>>>> Stashed changes
         
     //when the window.innerWidth<=480px, remove mouseover listener
     
-   
+    window.addEventListener("resize",function(){
+        if(window.innerWidth < 480 ){
+       myNode.removeEventListener("mouseover",preview,false);
+    }else {
+        myNode.addEventListener("mouseover",preview,false);
+    }
+    
+    },false);
+    
+  })();
 
 
 
