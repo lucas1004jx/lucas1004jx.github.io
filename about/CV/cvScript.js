@@ -38,7 +38,7 @@ window.onscroll=function(){
             var largeImg = document.createElement("img");
             var tnImg = e.target.src; 
             largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
-            
+            largeImg.style.maxWidth=500 + "px";
            
            /*position*/
             container.style.top=e.offsetY -largeImg.height - 15 + "px";
