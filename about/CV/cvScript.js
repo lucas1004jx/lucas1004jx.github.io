@@ -40,12 +40,12 @@ window.onscroll=function(){
             largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
            
            /*position*/
-            container.style.top= -(400 - e.offsetY)  - 15 + "px";
+            container.style.top= -(350 - e.offsetY)  - 15 + "px";
             container.style.left= -(500 - e.offsetX)  - 15 + "px";
             container.appendChild(largeImg); 
             
            e.target.addEventListener("mousemove",function(m){
-                container.style.top= -(400 - m.offsetY)  - 15 + "px";
+                container.style.top= -(350 - m.offsetY)  - 15 + "px";
             container.style.left= -(500 - m.offsetX)  - 15 + "px";
             },false);
             
