@@ -41,14 +41,14 @@ window.onscroll=function(){
             
            
            /*position*/
-            container.style.top=e.offsetY + 15 + "px";
-            container.style.left= e.offsetX  + 15 + "px";
+            container.style.top=e.offsetY -largeImg.height - 15 + "px";
+            container.style.left= e.offsetX -largeImg.width - 15 + "px";
             container.appendChild(largeImg); 
             
-            e.target.addEventListener("mousemove",function(m){
+          /*  e.target.addEventListener("mousemove",function(m){
                  container.style.top =m.offsetY + 15 + "px"; 
                 container.style.left = m.offsetX +  15 +"px";
-            },false);
+            },false);*/
             
             
             e.target.addEventListener("mouseout",function re(){
