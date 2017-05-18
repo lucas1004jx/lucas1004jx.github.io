@@ -178,7 +178,7 @@ function topFunction(){
          box.removeEventListener("mouseout",rm,false);
      },false);
         //add click listener to remove effect
-               box.addEventListener("dblclick",function rm(v){
+               box.addEventListener("touchstart",function rm(v){
          clearInterval(change);
          v.target.classList.remove("tbox");
         //when mouseout to recover the original color of each box 
