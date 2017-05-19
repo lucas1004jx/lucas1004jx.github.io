@@ -1,11 +1,18 @@
 /*music style*/
-.musicGroup{
+body{
+    width:80%;
+    margin:0 auto;
+}
+.musicGroup {
     font-family: "FontAwesome";
+}
+.musicGroup ul{
+   width: 60%;
 }
 .musicGroup ul li{
     display:block;
     padding: 10px;
-    width:20%;
+    width:100%;
    border:1px solid rgba(0,36,51,.5);
     background: rgba(28, 175, 192,.8);
     cursor:pointer;
@@ -30,12 +37,12 @@
     margin-right:20px;
 } 
 #playing::before{
-    content:"\f04b";
+    content:"\f04c";
     margin-right:20px;
 }
 
 #pause::before{
-    content:"\f04c";
+    content:"\f04b";  /*"\f04c" simbolo pause  "\f04b"  simbola play */
     margin-right:20px;
 }
 

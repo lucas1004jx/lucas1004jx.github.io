@@ -4,7 +4,7 @@
     var player = document.createElement("audio");
     
   list.addEventListener("click",function(e){
-      
+      if(e.target.tagName ==="LI"){
       var music = e.target.getAttribute("data-src");
       
      
@@ -41,6 +41,7 @@
              player.play();
                 
             }
+      }
       player.addEventListener("ended",function(){
                 e.target.id=" ";
             },false);   

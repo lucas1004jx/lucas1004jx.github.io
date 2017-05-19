@@ -1,11 +1,11 @@
 (function(){
     var myNode=document.querySelector(".container");
     var card=document.querySelector("#card");
-    myNode.addEventListener("mouseover",function(){ 
-        card.classList.add("flipped");
+    myNode.addEventListener("click",function(){
+       
+        card.classList.toggle("flipped");
+         
     },false);
     
-    myNode.addEventListener("mouseleave",function(){
-        card.classList.remove("flipped");
-    },false);
+    
 })();
