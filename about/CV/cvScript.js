@@ -24,6 +24,53 @@ window.onscroll=function(){
 //Magnify img with mouseover
 
 
+(function(){
+    var myNode = document.querySelector("#certificate ul");
+    myNode.addEventListener("mouseover",preview,false);
+    
+    function preview(e){
+        if(e.target.tagName === "IMG"){
+            /*creae img element*/
+            e.target.style.cursor="pointer";
+            var container = document.createElement("div");
+            container.id="preview";
+            e.target.parentNode.appendChild(container);
+            var largeImg = document.createElement("img");
+            var tnImg = e.target.src; 
+            largeImg.src = tnImg.substr(0,tnImg.length-7) + ".png";
+           
+           /*position*/
+            container.style.top=-(largeImg.height-e.offsetY)- 15 + "px";
+            container.style.left=-(largeImg.width-e.offsetX )- 15 + "px";
+            container.appendChild(largeImg);
+            
+            
+           e.target.addEventListener("mousemove",function(m){
+                 container.style.top = -(largeImg.height-m.offsetY) - 15 + "px"; 
+                container.style.left = -(largeImg.width-m.offsetX) - 15 +"px";
+            },false);
+            
+            
+            e.target.addEventListener("mouseout",function re(){
+                largeImg.parentElement.removeChild(largeImg);
+                e.target.removeEventListener("mouseout",re,false);
+            },false);
+           }
+    }
+       
+        
+    //when the window.innerWidth<=480px, remove mouseover listener
+    
+    window.addEventListener("resize",function(){
+        if(window.innerWidth < 480 ){
+       myNode.removeEventListener("mouseover",preview,false);
+    }else {
+        myNode.addEventListener("mouseover",preview,false);
+    }
+    
+    },false);
+    
+  })();
 
 
 

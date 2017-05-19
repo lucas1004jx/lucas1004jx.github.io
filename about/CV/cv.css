@@ -90,6 +90,50 @@ h1{
     margin:0;
     padding:30px;
 }
+
+/*h1 animation*/
+@-webkit-keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#83C25A;}
+}
+
+@-ms-keyframes h1Hilght{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#83C25A;}
+}
+
+@-o-keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#83C25A;}
+}
+
+@keyframes h1Hilight{
+    0% {color:#D9598A;}
+    20% {color:#1CAFC0;}
+    40% {color:#fff;} 
+    60% {color:#F28140;}
+    80% {color:#9266C0;}
+    100% {color:#83C25A;}
+}
+
+header h1 {
+    -webkit-animation:h1Hilight 10s infinite alternate;
+    -ms-animation:h1Hilight 10s infinite alternate;
+    -o-animation:h1Hilight 10s infinite alternate;
+    animation:h1Hilight 10s infinite alternate;
+}
 /*social media*/
 #socialMedia{
     position:absolute;
@@ -238,7 +282,6 @@ section a:hover{
     display: inline-block;
     margin:10px;
     position: relative;
-    
     
 }
 
