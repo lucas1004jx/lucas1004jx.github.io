@@ -226,7 +226,7 @@ function topFunction(){
                if(!document.querySelector(".tbox")){
                box.classList.add("tbox"); 
                 change =setInterval(changeColor,1000);
-               }else{
+               }else if(box.classList.contains("tbox")){
                    box.classList.remove("tbox");
                    clearInterval(change);
                    
