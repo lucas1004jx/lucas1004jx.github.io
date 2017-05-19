@@ -212,27 +212,25 @@ function topFunction(){
     //add transform function for mobile,it´s the same with functoin color, only change classlist.toggle
      function colorM(e){
            if(e.target.tagName === "DIV"){ 
-        var box= e.target; 
-               box.classList.toggle("tbox");
-        function changeColor(){
-            box.style.background=colorArray[index];
-        index++;
-        if(index >= colorArray.length){
-            index = 0;
-        }  
+               var box= e.target; 
+                function changeColor(){
+                     box.style.background=colorArray[index];
+                      index++;
+                     if(index >= colorArray.length){
+                     index = 0;
+                      }  
             
-         }
-        
-              
-         if(box.classList.contains("tbox")){
-          change =setInterval(changeColor,1000);
-            
-             
-           }  else{
-                
-               clearInterval(change);
-              
-               switch(e.target.className){
+                }
+               
+               
+               if(!document.querySelector("tbox")){
+               box.classList.add("tbox"); 
+                change =setInterval(changeColor,1000);
+               }else{
+                   box.classList.remove("tbox");
+                   clearInterval(change);
+                   
+                   switch(e.target.className){
              case "box1":
                  e.target.style.background="#1CAFC0";
                  break;
@@ -252,7 +250,8 @@ function topFunction(){
                  e.target.style.background="#9266C0";
                  break;
                 }
-           } 
+               }
+        
     }
            
          
