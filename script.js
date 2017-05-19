@@ -223,7 +223,7 @@ function topFunction(){
                 }
                
                
-               if(!document.querySelector("tbox")){
+               if(!document.querySelector(".tbox")){
                box.classList.add("tbox"); 
                 change =setInterval(changeColor,1000);
                }else{
