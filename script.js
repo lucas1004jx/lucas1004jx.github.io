@@ -230,6 +230,7 @@ function topFunction(){
          if(box.classList.contains("tbox")){
             var change=setInterval(changeColor,1000); 
            }  else{
+               clearInterval(change);
                switch(e.target.className){
              case "box1":
                  e.target.style.background="#1CAFC0";
