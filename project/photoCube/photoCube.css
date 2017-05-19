@@ -218,7 +218,7 @@ button{
 @media only screen and (max-width:580px){
    
     .container{
-        margin:10vw auto 0 auto;
+        margin:18vw auto 0 auto;
         width:200px;
         height:200px;
     }
@@ -228,13 +228,13 @@ button{
         height:196px;
     }
     .btn{
-        width:250px;
+        width:220px;
         height:100px;
         margin:10vw auto 0 auto;
     }
     
     button{
-       font-size: 3vw; 
+       font-size: 2.5vw; 
         padding:5px;
         margin: 5px;
     }
