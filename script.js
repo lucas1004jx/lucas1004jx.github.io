@@ -128,7 +128,7 @@ function topFunction(){
         myNode.addEventListener("mouseover",color,false);
     }else{
         
-        myNode.addEventListener("touchstart",color,false);
+        myNode.addEventListener("touchstart",colorM,false);
          }
     
    
@@ -210,5 +210,51 @@ function topFunction(){
         } 
     
      }
+    
+    
+    
+    //add transform function for mobile,it´s the same with functoin color, only change classlist.toggle
+     function colorM(e){
+         {
+           if(e.target.tagName === "DIV"){ 
+        var box= e.target; 
+               box.classList.toggle("tbox");
+        function changeColor(){
+            box.style.background=colorArray[index];
+        index++;
+        if(index >= colorArray.length){
+            index = 0;
+        }  
+            
+         }
+         if(box.classList.contains("tbox")){
+            var change=setInterval(changeColor,1000); 
+           }  else{
+               switch(e.target.className){
+             case "box1":
+                 e.target.style.background="#1CAFC0";
+                 break;
+             case "box2":
+                 e.target.style.background="#D9598A";
+                 break;
+            case "box3":
+                 e.target.style.background="#FECA47";
+                 break;
+            case "box4":
+                 v.target.style.background="#83C25A";
+                 break;
+            case "box5":
+                 e.target.style.background="#F28140";
+                 break;
+            case "box6":
+                 e.target.style.background="#9266C0";
+                 break;
+                }
+           }              
+    }
+           
+        } 
+     }
+    
     
 })();
