@@ -218,10 +218,10 @@ button{
 @media only screen and (max-width:768px){
    
     .container{
-        margin: 20vw auto 0 auto;
+        margin:10vw auto 0 auto;
     }
     
     .btn{
-        margin:5vw auto 0 auto;
+        margin:6vw auto 0 auto;
     }
 }
