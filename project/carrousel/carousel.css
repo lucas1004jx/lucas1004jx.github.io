@@ -1,0 +1,237 @@
+/*pallete  
+rgb(202,248,255);    light blue
+rgb(178,138,106)       tan
+rgb(123,171,178)      grey blue
+rgb(178,113,26)       brown
+rgb(232,63,70)        crismin
+rgb(0,36,51);          dark blue
+rgb(0,145,204)        light blue2
+rgb(127,68,0);        brown 
+city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47(rgb(254, 202, 71)) #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7)) rgb(56, 71, 235)
+*/  
+
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+html{
+    animation: colorChange 10s infinite alternate;
+    font-family: Nunito;
+}
+
+nav{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+nav a{
+    text-decoration: none;
+}
+#carouselSec{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: -webkit-flex;
+     display: -moz-flex;
+     display: flex;
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    width:304px;
+    height:204px;
+    perspective: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#carousel{
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    width: 100%;
+    height:100%;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+    -ms-transition: transform 1s;
+    transition: transform 1s;
+    
+}
+
+#carousel figure{
+    width: 280px;
+    height:180px;
+    left:10px;
+    top:10px;
+    position: absolute;
+    display: -webkit-flex;
+     display: -moz-flex;
+     display: flex;
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    margin: 0;
+    border: 2px solid #000;
+}
+
+#carousel figure:nth-child(1){
+    -webkit-transform: rotateY(0deg) translateZ(468px);
+    -moz-transform: rotateY(0deg) translateZ(468px);
+    -o-transform: rotateY(0deg) translateZ(468px);
+    -ms-transform: rotateY(0deg) translateZ(468px);
+    transform: rotateY(0deg) translateZ(468px);
+    background: rgba(202,19,88,0.5);
+}
+
+#carousel figure:nth-child(2){
+    -webkit-transform: rotateY(36deg) translateZ(468px);
+    -moz-transform: rotateY(36deg) translateZ(468px);
+    -o-transform: rotateY(36deg) translateZ(468px);
+    -ms-transform: rotateY(36deg) translateZ(468px);
+    transform: rotateY(36deg) translateZ(468px);
+    background:  rgba(28, 175, 192,0.5)
+}
+
+#carousel figure:nth-child(3){
+    -webkit-transform: rotateY(72deg) translateZ(468px);
+    -moz-transform: rotateY(72deg) translateZ(468px);
+    -o-transform: rotateY(72deg) translateZ(468px);
+    -ms-transform: rotateY(72deg) translateZ(468px);
+    transform: rotateY(72deg) translateZ(468px);
+    background: rgba(254, 202, 71,0.5);
+}
+
+#carousel figure:nth-child(4){
+    -webkit-transform: rotateY(108deg) translateZ(468px);
+    -moz-transform: rotateY(108deg) translateZ(468px);
+    -o-transform: rotateY(108deg) translateZ(468px);
+    -ms-transform: rotateY(108deg) translateZ(468px);
+    transform: rotateY(108deg) translateZ(468px);
+    background: rgba(131,194,90,0.5);
+}
+
+#carousel figure:nth-child(5){
+    -webkit-transform: rotateY(144deg) translateZ(468px);
+    -moz-transform: rotateY(144deg) translateZ(468px);
+    -o-transform: rotateY(144deg) translateZ(468px);
+    -ms-transform: rotateY(144deg) translateZ(468px);
+    transform: rotateY(144deg) translateZ(468px);
+    background: rgba(242,129,64,0.5);
+}
+
+#carousel figure:nth-child(6){
+    -webkit-transform: rotateY(180deg) translateZ(468px);
+    -moz-transform: rotateY(180deg) translateZ(468px);
+    -o-transform: rotateY(180deg) translateZ(468px);
+    -ms-transform: rotateY(180deg) translateZ(468px);
+    transform: rotateY(180deg) translateZ(468px);
+    background: rgba(146,102,192,0.5);
+}
+
+#carousel figure:nth-child(7){
+    -webkit-transform: rotateY(216deg) translateZ(468px);
+    -moz-transform: rotateY(216deg) translateZ(468px);
+    -o-transform: rotateY(216deg) translateZ(468px);
+    -ms-transform: rotateY(216deg) translateZ(468px);
+    transform: rotateY(216deg) translateZ(468px);
+    background: rgba(199,178,7,0.5);
+}
+
+#carousel figure:nth-child(8){
+    -webkit-transform: rotateY(252deg) translateZ(468px);
+    -moz-transform: rotateY(252deg) translateZ(468px);
+    -o-transform: rotateY(252deg) translateZ(468px);
+    -ms-transform: rotateY(252deg) translateZ(468px);
+    transform: rotateY(252deg) translateZ(468px);
+    background: rgba(56, 71, 235,0.5);
+}
+
+#carousel figure:nth-child(9){
+    -webkit-transform: rotateY(288deg) translateZ(468px);
+    -moz-transform: rotateY(288deg) translateZ(468px);
+    -o-transform: rotateY(288deg) translateZ(468px);
+    -ms-transform: rotateY(288deg) translateZ(468px);
+    transform: rotateY(288deg) translateZ(468px);
+    background:  rgba(216, 54, 176,0.5)
+}
+
+#carousel figure:nth-child(10){
+    -webkit-transform: rotateY(324deg) translateZ(468px);
+    -moz-transform: rotateY(324deg) translateZ(468px);
+    -o-transform: rotateY(324deg) translateZ(468px);
+    -ms-transform: rotateY(324deg) translateZ(468px);
+    transform: rotateY(324deg) translateZ(468px);
+    background: rgba(78, 252, 211,0.5);
+}
+
+
+.btn{
+    margin: 100px;
+
+}
+
+button{
+    margin: 10px;
+    padding:20px;
+    font-size: 2em;
+}
+
+/*animation for background*/
+@-webkit-keyframes colorChange{
+    0%{background: rgb(202,248,255);}
+    20%{background: rgb(178,138,106);}
+    40%{background: rgb(123,171,178);}
+    60%{background: rgb(178,113,26);}
+    80{background: rgb(232,63,70);}
+    100%{background:rgb(127,68,0); }
+    
+}
+
+@-ms-keyframes colorChange{
+    0%{background: rgb(202,248,255);}
+    20%{background: rgb(178,138,106);}
+    40%{background: rgb(123,171,178);}
+    60%{background: rgb(178,113,26);}
+    80{background: rgb(232,63,70);}
+    100%{background:rgb(127,68,0); }
+    
+}
+
+@-o-keyframes colorChange{
+    0%{background: rgb(202,248,255);}
+    20%{background: rgb(178,138,106);}
+    40%{background: rgb(123,171,178);}
+    60%{background: rgb(178,113,26);}
+    80{background: rgb(232,63,70);}
+    100%{background:rgb(127,68,0); }
+    
+}
+
+@keyframes colorChange{
+    0%{background: rgb(202,248,255);}
+    20%{background: rgb(178,138,106);}
+    40%{background: rgb(123,171,178);}
+    60%{background: rgb(178,113,26);}
+    80{background: rgb(232,63,70);}
+    100%{background:rgb(127,68,0); }
+    
+}
+
+@media only screen and (max-width:580px){
+    button{
+        font-size: 1em;
+        padding: 5px;
+    }
+    
+    nav{
+        font-size: 1.5em;
+    }
+    
+}
