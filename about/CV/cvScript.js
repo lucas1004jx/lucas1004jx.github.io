@@ -43,7 +43,9 @@ window.onscroll=function(){
             container.style.top=-(largeImg.height-e.offsetY)- 15 + "px";
             container.style.left=-(largeImg.width-e.offsetX )- 15 + "px";
             container.appendChild(largeImg);
-            
+            console.dir(largeImg);
+            console.dir(largeImg.offsetWidth);
+            console.dir(largeImg.offsetHeight);
             
            e.target.addEventListener("mousemove",function(m){
                  container.style.top = -(largeImg.height-m.offsetY) - 15 + "px"; 

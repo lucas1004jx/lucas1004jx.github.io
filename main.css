@@ -27,7 +27,7 @@ html{
 body{
     width:100%;
     margin:0 auto;
-    background: #CCB91F;
+    background: rgba(0,0,51,0.8);
     font-family: Nunito,georgia,times;
     position: relative;
 }
@@ -39,7 +39,7 @@ nav {
     display:flex;
     width:100%;
     background: rgba(127,68,0,.8);  
-    position:absolute;
+    
     top:0;
     font-size:20px;
     font-family:Shadows Into Light;
@@ -81,30 +81,25 @@ nav a:active{
     color:#F28140;
 }
 /*header style*/
-header{
-    
-    padding-top:35%;
-    background:#CCB91F;
-    background-size:cover;
-    
-    
-}
 
 .header{
     width:80%;
     float:left;
-    position:absolute;
+   margin-left:10%; 
     top:5%;
     left:10%;
-    font-family:Shadows Into Light;
     font-size:4.2vw;
     font-weight: 100;
+    padding: 1em;
+    box-sizing: border-box;
+    line-height: 7vw;
     
 }
 
 .perfil{
     float:right;
-    border-radius: 360px;
+    border-radius: 15px;
+    border: 5px solid #fff;
 }
 
 /*h1 animation*/
@@ -270,15 +265,15 @@ header h1 {
 }
 /*social media*/
 #socialMedia{
-    position:absolute;
+    margin-left: 10%;
     z-index: 100;
-    top:19%;
-    left:10%;
+    display: inline-block; 
 }
+
 i.fa {
-  padding: 8px;
-  font-size: 20px;
-  width:20px;
+  padding: 10px;
+  font-size: 25px;
+  width:25px;
   text-align: center;
   text-decoration: none;
   margin: 5px 10px;
@@ -380,7 +375,8 @@ body{
     ;
     }
     .header{
-        font-size:2.1em;
+        font-size:1.5em;
+        line-height: 70px;
     }
     
     .flex-container{
@@ -416,14 +412,17 @@ body{
     ;
        font-size: 2.5vw;
     }
+    #socialMedia{
+        top:-6%;
+    }
     i.fa{
-        font-size: 1.8vw;
-        width:1.8vw;
-        padding:1.5vw;
-        margin:1vw;
+        font-size: 2.5vw;
+        width:2.5vw;
+        padding:1vw;
+        margin: 1vw;
     }
     .header{
-        font-size:3.8vw;
+        font-size:3vw;
     }
     #toTop{
         font-size: 0.6em;
@@ -443,15 +442,18 @@ body{
         font-size:4vw;
     }
     
+    #socialMedia{
+        top:-6%;
+    }
     
     i.fa{
-        font-size:1.5vw;
-        width:1.5vw;
-        padding:1vw;
+        font-size:2vw;
+        width:2vw;
+        padding:1.1vw;
         margin:1vw;
     }
     .header{
-        font-size:3.5vw;
+        font-size:3vw;
     }
     
    
