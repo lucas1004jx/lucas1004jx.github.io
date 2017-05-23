@@ -5,18 +5,56 @@
   <meta charset="utf-8">
   <meta name="viewport" width="device-width, initial-scale=1.0">
   <title>contact me</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link href="contact.css" rel="stylesheet" type="text/css">
     
 </head>
 <body>
-    <h1>contact me</h1>
-    <h2>XIN JIN</h2>
-    <p>lucas1004jx@gmail.com</p>
-    <p>(0034)634246136</p>
-    <p>paseo zorrila<br>47007<br>Valladolid Spain</p>
-    <div id="gMap"></div>
     
+    <nav class="nav navbar-default">
+        <div class="container">
+            
+            <!--nav header-->
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand " href="../index.htm">LucasJin</a>
+                <p class="navbar-text">Front-end Developer</p>
+            </div>
+         <!--nav item--> 
+            
+            <div class="collapse navbar-collapse" id="myNavbar">
+           <ul class="nav navbar-nav navbar-right ">
+               <li><a href="../index.htm">HOME</a></li>
+            <li><a href="../about/CV/cv.html">ABOUT</a></li>
+            <li><a href="../project/project.html" >PROJECT</a></li>
+            <li class="active"><a href="contact.html">CONTACT</a></li>
+        </ul>
+            </div> 
+        </div>
+    </nav>
     
+    <div class="container">
+        <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <div class="page-header">
+        <h1>contact me</h1>
+        </div>
+        <h2>XIN JIN</h2>
+        <p>lucas1004jx@gmail.com</p>
+        <p>(0034)634246136</p>
+        <p>paseo zorrila<br>47007<br>Valladolid Spain</p>
+        
+    <div id="gMap" ></div>
+    </div>
+        </div>
+    </div>
+    
+    <script src="../script/jquery-3.2.1.min.js"></script>
+    <script src="../script/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH7BPtKPT_s1H7afWVn7mOTsuieKkVJlA&callback=initMap"
     async defer></script>
     <script src="contact.js"></script>

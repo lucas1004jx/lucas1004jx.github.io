@@ -5,23 +5,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Portfolio of Lucas Jin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link href="main.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     
     <body id="mainPage">
-      <header> 
-          <nav>
-              <div class="nav" id="home"><a href="index.htm">HOME</a></div>
-              <div class="nav"><a href="about/CV/cv.html">ABOUT</a></div>
-              <div class="nav"><a href="project/project.html">PROJECT</a></div>
-              <div class="nav"><a href="contact/contact.html">CONTACT</a></div>
+      
+          
+          <nav class="navbar navbar-default">
+              <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="index.htm">LucasJin</a>
+                      <p class="navbar-text">Front-end Developer</p>
+                  </div>
+                  
+                  <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+              <li id="home" class="active"><a href="index.htm">HOME</a></li>
+              <li ><a href="about/CV/cv.html">ABOUT</a></li>
+              <li ><a href="project/project.html">PROJECT</a></li>
+              <li ><a href="contact/contact.html">CONTACT</a></li>
+              </ul>
+                  </div>
+              </div>
           </nav>
+       
+    <header>
+        <div class="container"> 
           <h1 class="header"><img src="image/luiquimati.jpg" class="perfil" width=30% id="perfil">I´m Lucas Jin 
-          <br>Wolcome to join me!<br>I´m learning frontend develope.</h1>     
+          <br>Wolcome to join me!<br>I´m learning frontend develope.</h1> 
+        </div>
     </header>
-        
-       <aside> 
+           
+       <aside class="container"> 
         <div id=socialMedia>
         <a href="https://www.facebook.com/xin.jin.5872?ref=bookmarks"  target="_blank"><i class="fa fa-facebook"></i></a>
             
@@ -33,11 +55,8 @@
     </div>
         </aside> 
         
-        <article class="flex-container">
-          
-            
-            
-            
+        <div class="container">
+        <article class="flex-container">  
             
             <div class="box1">today is<span id="cTime"></span></div>
             <div class="box2">my cv</div>
@@ -47,20 +66,22 @@
             <div class="box6">I´m learning Frontend develope</div>
                       
         </article>
-     
+        </div>
         
+        <div class="container">
         <footer>
            <p> <q>
             Be yourself; everyone else is already taken. 
                 </q><br>― Oscar Wilde</p>
         </footer>
-        
+        </div>
         <button onclick="topFunction()" id="top" title="go to top">
             Top
         </button>
         
         
-        
+        <script src="script/jquery-3.2.1.min.js"></script>
+        <script src="script/bootstrap.min.js"></script>
         <script src="script.js"></script>
     </body>
 
