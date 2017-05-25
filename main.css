@@ -328,13 +328,13 @@ footer{
 footer ul li{
     text-align: center;
     list-style: none;
-    font-size: 1.8vw;;
+    font-size: 2vw;;
     line-height: 2em;
     text-transform: capitalize;
 }
 
 footer ul li h4{
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     font-weight: bold;
     color:#fff;
 }
@@ -396,9 +396,9 @@ body{
 
 footer{
    
-    
     font-size:2em;
     padding:30px 0 60px 0;
+    margin-top: 100px;
 }
 
 footer ul li{
@@ -445,6 +445,7 @@ footer ul li h4{
     /*footer*/  
     footer{
     padding:20px 0 40px 0;
+    margin-top:60px;
 }
 
  #top{
@@ -487,6 +488,7 @@ footer ul li h4{
   /*footer*/  
     footer{
     padding:10px 0 20px 0;
+        margin-top:40px;
 }
 
     #top{

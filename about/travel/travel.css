@@ -10,33 +10,158 @@ rgb(127,68,0);        brown
 city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7))  purple-blue rgba(0,0,51,0.8);
 */  
 
-
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua");
+@import url("https://fonts.googleapis.com/css?family=Bad+Script");
 body{
     font-size: 16px;
+    font-family: Nunito;
 }
+
+/*nav style*/
+.navbar-default{
+        background: rgb(0,145,204);
+    }
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-text {
+    color: rgba(0,0,51,0.8);
+}
+
 
 header h1{
     text-align: center; 
     text-shadow: 2px 2px 3px rgba(0,0,51,0.8);
+    font-family: inknut antiqua;
 }
 
-/*desktop*/
+header h2{
+        font-size: 5em;
+        font-family: inknut antiqua;
+    }
+
+header q{
+    font-family: bad script;
+}
+
+article h2{
+        text-align: center;
+       font-family: bad script;
+    }
+
+
+/*footer style*/
+
+footer{
+   
+    background:rgb(0,145,204);
+    font-family:Shadows Into Light;
+    padding:30px 0 60px 0;
+    border-top: 2px solid rgba(255,255,255,.5);
+}
+
+footer ul li{
+    text-align: center;
+    list-style: none;
+    font-size: 1.8vw;;
+    line-height: 2em;
+    text-transform: capitalize;
+}
+
+footer ul li h4{
+    font-size: 2.5vw;
+    font-weight: bold;
+    color:#fff;
+}
+footer ul li a{
+    color:rgba(22, 22, 22,0.5);
+}
+
+footer ul li a:hover{
+    text-decoration: none;
+    }   
+/*top button*/
+#toTop span{
+    display: block;
+    padding: 0px 5px;
+}
+#toTop button{
+    position: fixed;
+    display: none;
+    bottom:20%;
+    right:2%;
+}
+
+#toTop .btn-default{
+    background: rgba(0,145,204,.5);
+}
+
+
+/*=============desktop========================================
+===================================*/
 @media only screen and (min-width:769px){
+    
+    
+    
     header h1{
         font-size:4em;
         padding-bottom:30px;
+        
     }
     
     header h2{
-        font-size: 4em;
+        font-size: 5em;
+        
     }
     
+    header q{
+       font-size:1.5em;
+       
+    }
+    
+    article h2{
+        font-size: 2em;
+    }
+    
+    article{
+    margin-bottom: 50px;
 }
+    
+    /*footer style*/
+
+footer{
+   margin-top:100px;
+    font-size:2em;
+    padding:30px 0 60px 0;
+}
+
+footer ul li{
+    
+    font-size: 0.6em;
+   
+}
+
+footer ul li h4{
+    font-size: 1.4em;
+}
+    
+}
+
+
 /*tablet*/
 @media only screen and (min-width:481px) and (max-width:768px){
     
     header h1{
-        font-size:2em;
+        font-size:3em;
         padding-bottom:20px;
     }
     
@@ -44,6 +169,9 @@ header h1{
         font-size: 3em;
     }
     
+    header q{
+       font-size:1em; 
+    }
      .nav-stacked>li{
         float: left;
     }
@@ -51,6 +179,19 @@ header h1{
     .nav-stacked>li + li{
         margin-top:0;
         margin-left:2px;
+    }
+    
+    article h2{
+        font-size: 2em;
+    }
+    
+    article{
+    margin-bottom: 40px;
+}
+    
+    footer{
+        margin-top:50px;
+        padding:20px 0 40px 0;
     }
     
 }
@@ -64,7 +205,11 @@ header h1{
     }
     
     header h2{
-        font-size: 3em;
+        font-size: 2.5em;
+    }
+    
+    header q{
+       font-size:1em; 
     }
     
     .nav-stacked>li{
@@ -75,4 +220,17 @@ header h1{
         margin-top:0;
         margin-left:2px;
     }
+    
+    article h2{
+        font-size: 1.5em;
+    }
+    article{
+    margin-bottom: 30px;
+}
+    
+    footer{
+        margin-top:30px;
+        padding:10px 0 20px 0;
+    }
+    
 }
