@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Trave with lucas</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="travel.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-default"> <!--navbar-->  
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                     <span class="icon-bar"></span>   
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">LucasJin</a>
+                    <p class="navbar-text">Frontend Developer</p>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                 <ul class="nav navbar-nav navbar-right" >
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PROYECT</a></li>
+                    <li><a href="#">CONTACT</a></li>  
+                </ul>
+                </div>
+            </div>
+        </nav><!--navbar -->
+        
+        <!--heading carousel-->
+        <header>
+            
+            <div class="container">
+                <div class="row">
+                    <h1 class="col-xs-12 ">Trave with lucas</h1>
+                    <div class="col-xs-12">
+                     <div id="city" class="carousel slide" data-ride="carousel" >
+                         <!--indicator-->
+                         <ol class="carousel-indicators">
+                             <li data-target="#city" data-slide-to="0" class="active"></li>
+                             <li data-target="#city" data-slide-to="1"></li>
+                             <li data-target="#city" data-slide-to="2"></li>
+                             <li data-target="#city" data-slide-to="3"></li>
+                             <li data-target="#city" data-slide-to="4"></li>
+                             <li data-target="#city" data-slide-to="5"></li>
+                         </ol>
+                         <div class="carousel-inner">
+                             
+                             <div class="item active">
+                              <img src="image/madrid.jpg" alt="madrid">
+                                 <div class="carousel-caption">
+                                     <h2>Madrid</h2>
+                                     <q>Si alguna vez me pierdo, no me busquéis muy lejos. Andaré por Madrid</q>
+                                 </div>
+                             </div>
+                        
+                             <div class="item">
+                                <img src="image/barcelona.jpg" alt="barcelona">
+                                 <div class="carousel-caption">
+                                     <h2>Barcelona</h2>
+                                     <q>"Barcelona , que bello horizonte, como una joya en el sol. Por ti seré gaviota de tu bella mar"</q>
+                                 </div>
+                             </div>
+                             
+                             <div class="item">
+                                <img src="image/lisboa.JPG" alt="lisboa">
+                                 <div class="carousel-caption">
+                                 <h2>Lisbon</h2>
+                                     <q> You´ll know what is beauty only if you have been here</q>
+                                 </div>
+                             </div>
+                             
+                             <div class="item">
+                                <img src="image/oporto.JPG" alt="oporto">
+                                 <div class="carousel-caption">
+                                 <h2>Porto</h2>
+                                 <q>Love´s in the air</q>
+                                 </div>
+                             </div>
+                             
+                             <div class="item">
+                                <img src="image/roma.JPG" alt="roma">
+                                 <div class="carousel-caption">
+                                     <h2>Rome</h2>
+                                     <q>All roads lead to Rome. Yeah, it´s so true</q>
+                                 </div>
+                             </div>
+                             
+                             <div class="item">
+                                <img src="image/vaticano.JPG" alt="vaticano">
+                                 <div class="carousel-caption">
+                                 <h2>Vatican</h2>
+                                 <q>Everyone should visit vatican at least one time in the life. </q>
+                                 </div>
+                             </div> 
+                             
+                         </div><!--carousel inner-->
+                         
+                         <!--left and right control-->
+                         <a href="#city" data-slide="prev" class="left carousel-control"> 
+                             <span class="glyphicon glyphicon-chevron-left"></span>
+                         </a>
+                         
+                         <a class="right carousel-control" href="#city" data-slide="next">
+                         <span class="glyphicon glyphicon-chevron-right"></span>
+                         </a>
+                         
+                        
+                     </div><!--carousel-->
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--container div-->
+            
+        </header>
+        
+        <!--tab menu for city-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h2>Cities</h2>
+                    <p>Let me introduce you some lovely cities here generaly. You can check the link in each city to see more information.</p>
+                <!--menu-->
+                <ul class="col-sm-3 col-xs-12 nav nav-tabs nav-stacked">
+                    <li class="active"><a href="#Madrid" data-toggle="tab">Madrid</a></li>
+                    <li><a href="#Barcelona" data-toggle="tab">Barcelona</a></li>
+                    <li><a href="#Lisbon" data-toggle="tab">Lisbon</a></li>
+                    <li><a href="#Porto" data-toggle="tab">Porto</a></li>
+                    <li><a href="#Rome" data-toggle="tab">Rome</a></li>
+                    <li><a href="#Vatican" data-toggle="tab">Vatican</a></li>
+                </ul> 
+                
+                <div class="tab-content col-sm-9 col-xs-12">
+                    <div id="Madrid" class="tab-pane fade in active">
+                        <h2>Madrid</h2>
+                        <p>Madrid is the capital of Spain, and is home to the Spanish Royal family as well as the Spanish Government. It is a modern metropolitan city and an economical and industrial center of Spain, and, with its population of nearly 3,5 million people, is also the biggest city in Spain.
+                        It is located in the centre of the Iberian Peninsula, and is surrounded by mountains and natural parks. Although it is located in the centre of the country, it has traditionally been the hub between different areas of Spain and is therefore connected to all major Spanish cities by train, road or air.
+
+                        The weather in Madrid varies a lot depending on the season, from hot and dry in the summer, with temperature of approx. 29C/85F, to cold (4C/39F) and with some rain in the winter.
+
+                        Attractions
+
+                        Madrid has a lot of interesting attractions that offer both culture and amusement.
+                        The city is full of great monuments, like the royal palace, the Plaza Mayor or the many statuettes, and for people interested in art, the museums Del Prado, Reina Sofia or Thyssen have some of the most fantastic collections of famous Spanish painters like Velazquez, Goya, Picasso or Miro.
+                        If you like to be entertained, Madrid has two big amusements parks (including the new Warner Bros park) and there are regular international concerts, big flea markets, parades and other activities going on.
+
+                        To sport enthusiasts Madrid can offer everything from skiing (only 1 hour away by bus) during the winter, to golf all year round, as well as international sporting events and the possibility to practice nearly any sport at the University facilities.
+
+                        If you like going out at night, Madrid has a very interesting nightlife throughout the whole week and which is available all year round. You can either go out for a tapa (Spanish snack), eat at a very nice restaurant, go to the cinema or one of the many theatres, or find nearly any type of bar or disco.</p>
+                    </div>
+                    <div id="Barcelona" class="tab-pane fade">
+                    
+                    </div>
+                    <div id="Lisbon" class="tab-pane fade">
+                    
+                    </div>
+                    <div id="Porto" class="tab-pane fade">
+                    
+                    </div>
+                    <div id="Rome" class="tab-pane fade">
+                    
+                    </div>
+                    <div id="Vatican" class="tab-pane fade">
+                    
+                    </div>
+                    
+                </div>
+                    
+                    
+                </div><!--row-->
+            </div><!--container-->
+        </section>
+        
+        
+        <script src="../../script/jquery-3.2.1.min.js"></script>
+        <script src="../../script/bootstrap.min.js"></script>  
+        <script src="travel.js"></script>
+    </body>
+    
+</html>

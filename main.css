@@ -40,6 +40,9 @@ body{
 .navbar-default{
     background: rgb(199,178,7);
     font-family: Inknut Antiqua;
+    border:1px solid rgb(199,178,7);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding:0.1em;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
     background: rgb(242,129,64);
@@ -136,7 +139,6 @@ header h1 {
 /*box style*/
 
 .flex-container{
-    width:80%;
     height:100vw;
     display:-webkit-flex;
     display:flex;
@@ -316,25 +318,43 @@ i.fa:hover{
 /*footer style*/
 
 footer{
-    width: 80%;
-    margin: 0 auto;
+   
     background:rgb(199,178,7);
-    text-align: center;
     font-family:Shadows Into Light;
-    font-size:3vw;  
+    padding:30px 0 60px 0;
+    border-top: 2px solid rgba(255,255,255,.5);
 }
 
+footer ul li{
+    text-align: center;
+    list-style: none;
+    font-size: 1.8vw;;
+    line-height: 2em;
+    text-transform: capitalize;
+}
 
+footer ul li h4{
+    font-size: 2.5vw;
+    font-weight: bold;
+    color:#fff;
+}
+footer ul li a{
+    color:rgba(22, 22, 22,0.5);
+}
+
+footer ul li a:hover{
+    text-decoration: none;
+    }   
 
 /*back to the top*/
 #top{
     display:none;
     text-align: center;
-    padding:10px 5px;
+    padding:15px 15px;
     position: fixed;
     right:1%;
     bottom:10%;
-    font-size: .7em;
+    font-size: 1em;
     background: rgba(0,145,204,0.5);
     color:#fff;
     z-index:100;
@@ -372,10 +392,26 @@ body{
         font-size:1em;
     }
     
-    footer{
-        font-size:2em;
-    }
+    /*footer style*/
+
+footer{
+   
     
+    font-size:2em;
+    padding:30px 0 60px 0;
+}
+
+footer ul li{
+    
+    font-size: 0.6em;
+   
+}
+
+footer ul li h4{
+    font-size: 1.4em;
+}
+ 
+ 
     
     
 }
@@ -406,7 +442,15 @@ body{
         font-size: 0.6em;
         padding:2px 5px;
     }
+    /*footer*/  
+    footer{
+    padding:20px 0 40px 0;
+}
 
+ #top{
+       padding:10px 10px;
+     font-size:0.8em;
+    }
 }
 /*mobile*/
 @media only screen and (max-width:480px){
@@ -439,5 +483,14 @@ body{
         font-size: 0.4em;
         padding:2px 5px;
     }
-    
+   
+  /*footer*/  
+    footer{
+    padding:10px 0 20px 0;
+}
+
+    #top{
+        font-size: 0.6em;
+        padding:8px 8px;
+    }  
 }
