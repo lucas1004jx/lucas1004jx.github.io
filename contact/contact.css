@@ -111,7 +111,34 @@ footer ul li a:hover{
     }  
 
 
+/*form style*/
+form legend{
+    color:#fff;
+    font-family:inknut antiqua;
+    font-size:2em;
+}
 
+
+.form-horizontal .control-label {
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+.radio{
+    clear:both;
+}
+
+.form-group select{
+   color:rgb(242,129,64); 
+}
+
+.form-group .btn-default{
+    background: rgb(242,129,64);
+    color:#fff;
+}
+.pull-right{
+        margin-right:10%;
+    }
 
 /*desktop*/
 @media only screen and (min-width:1000px){
@@ -132,12 +159,17 @@ footer ul li{
 footer ul li h4{
     font-size: 1.4em;
 }
-  
+ 
+form legend{
+        font-size: 2.5em;
+    }
+    
+    
     
 }
      
-/*tablet and mobile*/ 
-@media only screen and (max-width:768px){
+/*tablet*/ 
+@media only screen and (min-width:481px) and (max-width:768px){
     
     
     h1{
@@ -167,4 +199,31 @@ footer ul li h4{
 footer{
     padding:10px 0 20px 0;
 }
+    .form-horizontal{
+        margin: 15px;
+    } 
+    
+  form legend{
+        font-size: 1.4em;
+    }
+    
+    .pull-right{
+        margin-right:2%;
+    }
+    
+}
+
+@media only screen and (max-width:480px){
+form legend{
+        font-size:  1.1em;
+    }
+    
+.form-horizontal{
+        margin: 20px;
+    } 
+    
+    .pull-right{
+        margin-right:5%;
+    }
+    
 }

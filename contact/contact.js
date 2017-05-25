@@ -26,3 +26,5 @@ var map;
           infowindow.open(map, marker);
         });
       }
+
+$("textarea").tooltip();
