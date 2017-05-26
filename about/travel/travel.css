@@ -42,6 +42,7 @@ header h1{
     text-align: center; 
     text-shadow: 2px 2px 3px rgba(0,0,51,0.8);
     font-family: inknut antiqua;
+    font-variant: small-caps;
 }
 
 header h2{
@@ -206,6 +207,10 @@ footer ul li h4{
     
     header h2{
         font-size: 2.5em;
+    }
+    
+    header .item:last-of-type h2{
+        font-size: 2em;
     }
     
     header q{
