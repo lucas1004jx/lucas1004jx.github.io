@@ -10,6 +10,7 @@ body{
 
 
 header{
+    
     background: linear-gradient(rgba(55,55,55,0.8),rgba(55,55,55,0.8)), url("image/lucas.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
@@ -22,6 +23,7 @@ header{
     }
     
     h1{
+        font-family: times;
         text-align: center;
         color:$white;
         text-transform: uppercase;
