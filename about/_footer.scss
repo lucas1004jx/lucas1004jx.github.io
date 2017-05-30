@@ -1,12 +1,13 @@
 
 footer {
     background: $green; 
-    padding: 30px 0 60px 0;
+    padding: 30px 0 50px 0;
    ul li{
         list-style: none;
         text-align: center;
-        font-family: $script;
         font-size: 1rem;
+       text-transform: capitalize;
+       
        @include break(481px,768px){
            font-size: 2rem;
        }
@@ -20,8 +21,10 @@ footer {
                color:complement($green);
            }
           h4{
-              font-size: 1.5rem;
+              font-size: 1rem;
+              font-weight: bold;
               color:$white;
+              text-transform: capitalize;
               @include break(481px,768px){
                   font-size: 2rem;
               }

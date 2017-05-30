@@ -6,9 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-@import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua");
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -405,12 +403,12 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 */
 footer {
   background: #83C25A;
-  padding: 30px 0 60px 0; }
+  padding: 30px 0 50px 0; }
   footer ul li {
     list-style: none;
     text-align: center;
-    font-family: shadows into light;
-    font-size: 1rem; }
+    font-size: 1rem;
+    text-transform: capitalize; }
     @media (min-width: 481px) and (max-width: 768px) {
       footer ul li {
         font-size: 2rem; } }
@@ -423,8 +421,10 @@ footer {
         text-decoration: none;
         color: #995ac2; }
       footer ul li a h4 {
-        font-size: 1.5rem;
-        color: #fff; }
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        text-transform: capitalize; }
         @media (min-width: 481px) and (max-width: 768px) {
           footer ul li a h4 {
             font-size: 2rem; } }
@@ -441,17 +441,13 @@ footer {
 
 .navbar-default .navbar-brand {
   font-weight: bold;
-  color: #fff;
-  font-family: Inknut antiqua; }
-
-.navbar-default .navbar-text {
-  font-family: Inknut antiqua; }
+  color: #fff; }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   background: #1CAFC0; }
 
 body {
-  font-family: nunito; }
+  font-family: muli; }
 
 header {
   background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/lucas.jpg") no-repeat center center;
@@ -575,6 +571,7 @@ header {
   border-bottom: 1px solid #000;
   font-size: 2.5rem;
   letter-spacing: 0.5rem;
+  font-weight: bold;
   color: #fff;
   text-shadow: 2px 0 0 #83C25A, -2px 0 0 #83C25A; }
   @media (min-width: 481px) and (max-width: 768px) {
@@ -609,7 +606,6 @@ header {
   margin-top: 20px;
   font-size: 1.5rem; }
 .thumbnail h3 {
-  font-family: shadows into light;
   color: #83C25A; }
 .thumbnail a:hover, .thumbnail a:link, .thumbnail a:visited, .thumbnail a:active {
   text-decoration: none; }

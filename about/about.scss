@@ -5,7 +5,7 @@
 @import "navbar";
 
 body{
-    font-family: $text;
+    font-family: $main-font;
 }
 
 
@@ -53,6 +53,7 @@ header{
     border-bottom: 1px solid #000;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
+    font-weight: bold;
     @include break(481px,768px){
        font-size: 4rem;
     }
@@ -93,9 +94,7 @@ header{
     }
     
     h3{
-        font-family: $script;
         color:$green;
-        
     }
     
     a:hover,a:link,a:visited,a:active{
