@@ -1,0 +1,24 @@
+.navbar-default{
+    background:$green;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $white;
+    text-transform:uppercase;
+}
+
+.navbar-default .navbar-brand {
+    font-weight:bold;
+    color: $white;
+    font-family: $heading;
+}
+
+.navbar-default .navbar-text {
+   font-family: $heading;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background:$blue;
+}
+
+

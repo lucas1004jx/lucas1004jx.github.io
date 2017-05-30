@@ -18,13 +18,14 @@ body{
     margin:0 auto;
     background: rgba(0,0,51,0.8);
     color:#fff;
-    font-family: Inknut Antiqua;
+    font-family: nunito;
 }
 
 
 h1{
     text-transform: uppercase;
     font-size:3em;
+    font-family: inknut antiqua;
 }
 
 h2{
@@ -34,10 +35,10 @@ h2{
 h2 + p {
     text-transform: none;
 } 
-p{
+h2~p{
     font-family: nunito;
     text-transform: capitalize;
-    font-size: 1.5em;
+    font-size:2rem;
 }
 #gMap{
     height:250px;
@@ -64,13 +65,13 @@ nav{
 }
 .navbar-default .navbar-brand{
     color: #fff;
-    font-weight: bolder;
     font-size: 1.5em;
+    font-weight: bolder;
+    font-family: inuknut antiqua;
 }
 
 .navbar-default .navbar-text{
-    padding-top:0.2em;
-    font-size: 1.3em;
+    font-family: inknut antiqua;
 }
 
 .navbar-default .navbar-nav>li>a{
@@ -190,8 +191,7 @@ form legend{
 }
 
 .navbar-default .navbar-text{
-    padding-top: 0.3em;
-    font-size: 1em;
+   
 }
     
 /*footer*/

@@ -1,0 +1,106 @@
+@import "normalize";
+@import "variable";
+@import "mixins";
+@import "footer";
+@import "navbar";
+
+body{
+    font-family: $text;
+}
+
+
+header{
+    background: linear-gradient(rgba(55,55,55,0.8),rgba(55,55,55,0.8)), url("image/lucas.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 250px;
+    @include break(481px,768px){
+        height:400px;
+    }
+    @include break(769px){
+        height:600px;
+    }
+    
+    h1{
+        text-align: center;
+        color:$white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 4rem;
+        position: absolute;
+        @include fadeIn(4s,-50px);
+
+        @include break(481px,768px){
+            font-size:3.5rem;
+            line-height: 8rem;
+            @include fadeIn(4s,-80px);
+        }
+        @include break(769px){
+            font-size: 5rem;
+            line-height: 8rem;
+            @include fadeIn(4s,-100px);
+        }
+    } 
+    
+}
+
+.intro h2{
+    text-align: center;
+    text-transform: capitalize;
+    padding:20px;
+    border-bottom: 1px solid #000;
+    font-size: 2.5rem;
+    @include break(481px,768px){
+       font-size: 4rem;
+    }
+    @include break(769px){
+        font-size: 5rem;
+    }
+    @include textShadow(#000);
+}
+
+.intro p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    word-spacing: 5px;
+    
+    @include break(481px,768px){
+        word-spacing: 10px;
+    }
+    @include break(769px){
+        word-spacing: 15px;
+    }
+    
+}
+.intro{
+    margin-bottom: 30px;
+    @include break(481px,768px){
+        margin-bottom: 50px;
+    }
+    @include break(769px){
+        margin-bottom: 80px;
+    }
+}
+
+.thumbnail{
+    .caption{
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+    
+    h3{
+        font-family: $script;
+        color:$green;
+        
+    }
+    
+    a:hover,a:link,a:visited,a:active{
+        text-decoration: none;
+    }
+    
+    a:hover h3{
+       color:complement($green); 
+    }
+}
+

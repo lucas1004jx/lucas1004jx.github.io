@@ -15,7 +15,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 @import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua");
 @import url("https://fonts.googleapis.com/css?family=Bad+Script");
 body{
-    font-size: 16px;
     font-family: Nunito;
 }
 
@@ -30,11 +29,12 @@ body{
 
 .navbar-default .navbar-brand {
     color: #fff;
-    font-size: 1.5em;
+    font-family: inknut antiqua;
 }
 
 .navbar-default .navbar-text {
     color: rgba(0,0,51,0.8);
+    font-family: inknut antiqua;
 }
 
 
