@@ -11,7 +11,7 @@
     title.style.left=(header.offsetWidth-title.offsetWidth)/2 + "px";
     }
     
-    position();
+    window.addEventListener("load",position,false);
     window.addEventListener("resize",rePosition,false);
     
 })();
