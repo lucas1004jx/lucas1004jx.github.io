@@ -56,7 +56,7 @@ header{
     @include break(769px){
         font-size: 5rem;
     }
-    @include textShadow(#000);
+    @include textShadow($green);
 }
 
 .intro p{

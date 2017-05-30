@@ -572,7 +572,7 @@ header {
   border-bottom: 1px solid #000;
   font-size: 2.5rem;
   color: #fff;
-  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000; }
+  text-shadow: 2px 0 0 #83C25A, -2px 0 0 #83C25A; }
   @media (min-width: 481px) and (max-width: 768px) {
     .intro h2 {
       font-size: 4rem; } }
