@@ -465,7 +465,7 @@ header {
     header {
       height: 600px; } }
   header h1 {
-    font-family: times;
+    font-family: times,monospace,georgia;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
