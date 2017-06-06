@@ -1,0 +1,67 @@
+.navbar {
+    position: absolute;
+    z-index: 100;
+    padidng:0;
+}
+
+.navbar-default {
+    background: transparent;
+    border: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-header a:hover {
+    color: $yellow;
+}
+
+//navbar-brand
+.navbar-default .navbar-brand {
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    span{
+        font-size: 1rem;
+        color:rgb(180,180,180);
+        margin-left: 10px;
+        @include break(769px){
+            font-size: 1.5rem;
+        }
+    }
+    @include break(769px) {
+        font-size: 2rem;
+        margin-top: 10px;;
+    }
+}
+
+//toggle button
+.navbar-toggle {
+    background: $yellow;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background: $white;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: $yellow;
+    background: transparent;
+    border-bottom: 4px solid $yellow;
+}
+
+.navbar-default .navbar-collapse {
+    @include break(0,768px) {
+        background: rgba(22, 22, 22, 0.8);
+    }
+}

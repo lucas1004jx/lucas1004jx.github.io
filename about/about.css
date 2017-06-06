@@ -403,7 +403,8 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 */
 footer {
   background: #83C25A;
-  padding: 30px 0 50px 0; }
+  padding: 30px 0 50px 0;
+  margin-top: 30px; }
   footer ul li {
     list-style: none;
     text-align: center;
@@ -411,7 +412,7 @@ footer {
     text-transform: capitalize; }
     @media (min-width: 481px) and (max-width: 768px) {
       footer ul li {
-        font-size: 2rem; } }
+        font-size: 1.5rem; } }
     @media (min-width: 769px) {
       footer ul li {
         font-size: 2.2rem; } }
@@ -427,27 +428,66 @@ footer {
         text-transform: capitalize; }
         @media (min-width: 481px) and (max-width: 768px) {
           footer ul li a h4 {
-            font-size: 2rem; } }
+            font-size: 1.5rem; } }
         @media (min-width: 769px) {
           footer ul li a h4 {
             font-size: 2.2rem; } }
 
+.navbar {
+  position: absolute;
+  padding: 0; }
+
 .navbar-default {
-  background: #83C25A; }
+  background: transparent;
+  border: 0; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
-  text-transform: uppercase; }
+  margin-top: 15px;
+  text-transform: uppercase;
+  padding: 5px 10px; }
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-header a:hover {
+  color: #83C25A; }
 
 .navbar-default .navbar-brand {
   font-weight: bold;
-  color: #fff; }
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0px; }
+  .navbar-default .navbar-brand span {
+    font-size: 1rem;
+    color: #b4b4b4;
+    margin-left: 10px; }
+    @media (min-width: 769px) {
+      .navbar-default .navbar-brand span {
+        font-size: 1.5rem; } }
+  @media (min-width: 769px) {
+    .navbar-default .navbar-brand {
+      font-size: 2rem;
+      margin-top: 10px; } }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-  background: #1CAFC0; }
+.navbar-toggle {
+  background: #83C25A; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: #fff; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #83C25A;
+  background: transparent;
+  border-bottom: 4px solid #83C25A; }
+
+@media (min-width: 0) and (max-width: 768px) {
+  .navbar-default .navbar-collapse {
+    background: rgba(22, 22, 22, 0.8); } }
 
 body {
-  font-family: muli; }
+  font-family: gfs-didot;
+  position: relative; }
 
 header {
   background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/lucas.jpg") no-repeat center center;
@@ -461,7 +501,7 @@ header {
     header {
       height: 600px; } }
   header h1 {
-    font-family: times,monospace,georgia;
+    font-family: gfs-didot, times, monospace, georgia;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -602,14 +642,46 @@ header {
     .intro {
       margin-bottom: 80px; } }
 
-.thumbnail .caption {
-  margin-top: 20px;
-  font-size: 1.5rem; }
-.thumbnail h3 {
-  color: #83C25A; }
-.thumbnail a:hover, .thumbnail a:link, .thumbnail a:visited, .thumbnail a:active {
-  text-decoration: none; }
-.thumbnail a:hover h3 {
-  color: #995ac2; }
+.thumbnail {
+  height: 100%;
+  margin-right: 0px; }
+  .thumbnail .caption {
+    margin-top: 20px;
+    font-size: 1.5rem; }
+  .thumbnail h3 {
+    color: #83C25A; }
+  .thumbnail a:hover,
+  .thumbnail a:link,
+  .thumbnail a:visited,
+  .thumbnail a:active {
+    text-decoration: none; }
+  .thumbnail a:hover h3 {
+    color: #995ac2; }
+
+/*.row.display-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include break(769px) {
+        &+.display-flex {
+            margin-top: 30px;
+        }
+    }
+    
+} not work for safari*/
+/*to top*/
+#toTop button {
+  padding: 5px 12px;
+  background: rgba(131, 194, 90, 0.5);
+  border-radius: 4px;
+  display: none;
+  position: fixed;
+  bottom: 25%;
+  right: 1%; }
+  #toTop button span {
+    display: block; }
 
 /*# sourceMappingURL=about.css.map */

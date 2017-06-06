@@ -2,6 +2,7 @@
 footer {
     background: $green; 
     padding: 30px 0 50px 0;
+    margin-top: 30px;
    ul li{
         list-style: none;
         text-align: center;
@@ -9,7 +10,7 @@ footer {
        text-transform: capitalize;
        
        @include break(481px,768px){
-           font-size: 2rem;
+           font-size: 1.5rem;
        }
        @include break(769px){
            font-size: 2.2rem;
@@ -26,7 +27,7 @@ footer {
               color:$white;
               text-transform: capitalize;
               @include break(481px,768px){
-                  font-size: 2rem;
+                  font-size: 1.5rem;
               }
               @include break(769px){
                   font-size: 2.2rem;

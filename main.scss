@@ -1,0 +1,287 @@
+ /*pallete  
+rgb(202,248,255);    light blue
+rgb(178,138,106)       tan
+rgb(123,171,178)      grey blue
+rgb(178,113,26)       brown
+rgb(232,63,70)        crismin
+rgb(0,36,51);          dark blue
+rgb(0,145,204)        light blue2
+rgb(127,68,0);        brown 
+city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7))  purple-blue rgba(0,0,51,0.8);
+*/
+ 
+ @import "normalize";
+ @import "variable";
+ @import "mixins";
+ @import "navbar";
+ body {
+     font-family: $main-font;
+     background: $black;
+ }
+ 
+ header {
+     background: url("image/wings.jpg") no-repeat center center;
+     background-size: cover;
+     /*height: 250px;
+     @include break(481px,
+     768px) {
+         height: 350px;
+     }
+     @include break(769px) {
+         height: 450px;
+     }*/
+     color: $white;
+     @include flex(row);
+     align-items: flex-end;
+     div {
+         padding: 10px;
+         text-align: center;
+         line-height: 1.5rem;
+         letter-spacing: 1rem;
+         text-transform: uppercase;
+         margin-bottom: 50px;
+         @include break(481px,
+         768px) {
+             margin-bottom: 80px;
+         }
+         @include break(769px) {
+             margin-bottom: 100px;
+         }
+         h1 {
+             font-weight: lighter;
+             font-size: 2rem;
+             font-family: $header-font;
+             margin: 10px;
+             span {
+                 font-weight: 600;
+             }
+             @include break(481px,
+             768px) {
+                 font-size: 3rem;
+             }
+             @include break(769px) {
+                 font-size: 4rem;
+                 word-spacing: 2rem;
+             }
+         }
+         /*h1*/
+         p {
+             font-size: 0.8rem;
+             font-weight: lighter;
+             letter-spacing: 0.8rem;
+             margin-bottom: 20px;
+             @include break(481px,
+             768px) {
+                 font-size: 1.2rem;
+             }
+             @include break(769px) {
+                 font-size: 1.5rem;
+             }
+         }
+     }
+     /*div*/
+     ul {
+         display: flex;
+         display: -webkit-flex;
+         padding: 0;
+         justify-content: space-around;
+         list-style: none;
+         margin: 0;
+         li a {
+             font-size: 1rem;
+             color: $white;
+             @include break(480px,
+             768px) {
+                 font-size: 1.2rem;
+             }
+             @include break(769px) {
+                 font-size: 1.5rem;
+             }
+             &:hover {
+                 color: $yellow;
+             }
+         }
+         /*li a*/
+     }
+     /*ul*/
+ }
+ /*header*/
+ /*section style*/
+ 
+ section {
+     margin-top: 0px;
+     text-align: center;
+     text-transform: uppercase;
+     color: $white;
+     div.row {
+         h2 {
+             padding: 0 50px 10px 50px;
+             font-size: 2.5rem;
+             color: $yellow;
+             @include break(481px,
+             768px) {
+                 font-size: 3.5rem;
+             }
+             @include break(769px) {
+                 font-size: 4.5rem;
+             }
+         }
+         
+         h4 {
+             font-size: 1.2rem;
+             @include break(481px,
+             768px) {
+                 font-size: 1.4rem;
+             }
+             @include break(769px) {
+                 font-size: 1.5rem;
+             }
+         }
+         
+         p {
+             font-size: 1rem;
+             @include break(481px,
+             768px) {
+                 font-size: 1.4rem;
+             }
+             @include break(769px) {
+                 font-size: 1.5rem;
+             }
+         }
+     }
+ }
+ 
+ section.who {
+     @extend section;
+     .container{
+         padding-left: 0;
+         padding-right: 0;
+     }
+     div.row {
+         background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/skate.jpg") no-repeat center center;
+         padding: 20px 0 20px 0;
+         margin: 50px 0 50px 0;
+         @include break(481px,
+         768px) {
+             padding: 20px 10px 20px 10px;
+         }
+         @include break(769px) {
+             padding: 50px 10px 50px 10px;
+         }
+     }
+     h2 {
+         border-bottom: 2px solid $yellow;
+         display: inline-block;
+     }
+     figure {
+         margin: 0;
+         margin-top: 50px;
+         img {
+             width: 30%;
+         }
+         
+         p {
+             text-transform: none;
+         }
+     }
+     /*figure*/
+ }
+ 
+div.time_know{
+    background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/tree.jpg") no-repeat center center;
+         background-size: cover;
+}
+ section.timeLine {
+     @extend section;
+     div.row {
+         h2{
+             margin:20px 0 30px 0;
+            @include break(481px,768px){
+                margin: 40px 0 40px 0;
+            }
+            @include break(769px){
+                margin: 60px 0 60px 0;
+            }
+         }
+         a{
+             color:$yellow;
+             text-decoration: underline;
+         }
+         .col-xs-6:first-of-type {
+             text-align: right;
+             border-right: 2px solid $white;
+             h4 {
+                 display: inline-block;
+                 margin-right: 10px;
+             }
+             p {
+                 margin-bottom: 70px;
+             }
+         }
+         .col-xs-6:last-of-type {
+             text-align: left;
+             h4 {
+                 display: inline-block;
+                 margin-left: 10px;
+                 margin-top: 70px;
+             }
+         }
+         i {
+             color: $yellow;
+         }
+     }
+ }
+
+section.know{
+    @extend section;
+    div.row{
+       
+        img{
+            width: 40%;
+            @include break(480px,768px){
+                width: 30%;
+            }
+            @include break(769px){
+                width:25%;
+            }
+        }
+        h2{
+            display: inline-block;
+            border-bottom: 1px solid $yellow;
+            margin:20px 0 30px 0;
+            @include break(481px,768px){
+                margin: 40px 0 40px 0;
+            }
+            @include break(769px){
+                margin: 60px 0 60px 0;
+            }
+        }
+        h4{
+            margin-bottom: 30px;
+        }
+        
+        a{
+            color:$white;
+        }
+    }
+}
+
+section.contact{
+    @extend section;
+    background:url("image/contact.jpg") no-repeat center center;
+        background-size: cover;
+    div.row{
+        h2{
+            margin-top: 80px;
+            line-height: 40px;
+            @include break(481px,768px){
+             margin-top: 120px;
+                line-height: 60px;
+            }
+            @include break(769px){
+             margin-top: 160px;
+                line-height: 80px;
+            }
+        }
+    }
+}

@@ -1,24 +1,64 @@
-.navbar-default{
-    background:$green;
+.navbar {
+    position: absolute;
+    padding: 0;
+}
+
+.navbar-default {
+    background: transparent;
+    border: 0;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: $white;
-    text-transform:uppercase;
+    margin-top: 15px;
+    text-transform: uppercase;
+    padding: 5px 10px;
 }
 
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-header a:hover {
+    color: $green;
+}
+
+//navbar-brand
 .navbar-default .navbar-brand {
-    font-weight:bold;
-    color: $white;
-    
+    font-weight: bold; 
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    span{
+        font-size: 1rem;
+        color:rgb(180,180,180);
+        margin-left: 10px;
+        @include break(769px){
+            font-size: 1.5rem;
+        }
+    }
+    @include break(769px) {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
 }
 
-.navbar-default .navbar-text {
-   
+//toggle button
+.navbar-toggle {
+    background: $green;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    background:$blue;
+.navbar-default .navbar-toggle .icon-bar {
+    background: $white;
 }
 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: $green;
+    background: transparent;
+    border-bottom: 4px solid $green;
+}
 
+.navbar-default .navbar-collapse {
+    @include break(0,768px) {
+        background: rgba(22, 22, 22, 0.8);
+    }
+}
