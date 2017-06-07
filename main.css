@@ -515,8 +515,6 @@ header {
       font-size: 2rem;
       font-family: codystar;
       margin: 10px; }
-      header div h1 span {
-        font-weight: 600; }
       @media (min-width: 481px) and (max-width: 768px) {
         header div h1 {
           font-size: 3rem; } }
@@ -616,7 +614,7 @@ section.who {
       text-transform: none; }
 
 div.time_know {
-  background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/tree.jpg") no-repeat center center;
+  background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.9)), url("image/tree.jpg") no-repeat center center;
   background-size: cover; }
 
 section.timeLine div.row h2 {
@@ -645,8 +643,28 @@ section.timeLine div.row .col-xs-6:last-of-type {
     margin-left: 10px;
     margin-top: 70px; }
 section.timeLine div.row i {
-  color: #FECA47; }
-
+  color: #FECA47;
+  animation: light 1.5s infinite linear alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
 section.know div.row img {
   width: 40%; }
   @media (min-width: 480px) and (max-width: 768px) {
@@ -671,7 +689,7 @@ section.know div.row a {
   color: #fff; }
 
 section.contact {
-  background: url("image/contact.jpg") no-repeat center center;
+  background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.1)), url("image/contact.jpg") no-repeat center center;
   background-size: cover; }
   section.contact div.row h2 {
     margin-top: 80px;
@@ -684,5 +702,227 @@ section.contact {
       section.contact div.row h2 {
         margin-top: 160px;
         line-height: 80px; } }
+
+/*animate header h1*/
+.char1 {
+  animation: light 3s infinite ease alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char2 {
+  animation: light 2s infinite linear alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char3 {
+  animation: light 1.7s infinite ease-in alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char4 {
+  animation: light 1s infinite ease-out alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char5 {
+  animation: light 3.5s infinite linear alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char6 {
+  animation: light 2s infinite ease alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char7 {
+  animation: light 2.5s infinite ease-out alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char8 {
+  animation: light 2.1s infinite ease-in alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char9 {
+  animation: light 3s infinite ease alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+.char10 {
+  animation: light 1.5s infinite linear alternate; }
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -52,9 +52,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
              font-size: 2rem;
              font-family: $header-font;
              margin: 10px;
-             span {
-                 font-weight: 600;
-             }
              @include break(481px,
              768px) {
                  font-size: 3rem;
@@ -188,7 +185,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
  }
  
 div.time_know{
-    background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.8)), url("image/tree.jpg") no-repeat center center;
+    background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.9)), url("image/tree.jpg") no-repeat center center;
          background-size: cover;
 }
  section.timeLine {
@@ -228,6 +225,7 @@ div.time_know{
          }
          i {
              color: $yellow;
+             @include glow(1.5s,linear);
          }
      }
  }
@@ -268,7 +266,7 @@ section.know{
 
 section.contact{
     @extend section;
-    background:url("image/contact.jpg") no-repeat center center;
+    background:linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.1)),url("image/contact.jpg") no-repeat center center;
         background-size: cover;
     div.row{
         h2{
@@ -285,3 +283,37 @@ section.contact{
         }
     }
 }
+
+/*animate header h1*/
+
+.char1{
+    @include glow(3s,ease);
+}
+.char2{
+    @include glow(2s,linear);
+}
+.char3{
+    @include glow(1.7s,ease-in);
+}
+.char4{
+    @include glow(1s,ease-out);
+}
+.char5{
+    @include glow(3.5s,linear);
+}
+.char6{
+    @include glow(2s,ease);
+}
+.char7{
+    @include glow(2.5s,ease-out);
+}
+.char8{
+    @include glow(2.1s,ease-in);
+}
+.char9{
+    @include glow(3s,ease);
+}
+.char10{
+    @include glow(1.5s,linear);
+}
+

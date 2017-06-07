@@ -70,3 +70,51 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin glow($time,$effect){
+    
+    @-webkit-keyframes light{
+        0%{
+            color:$white;
+             
+        }
+        100%{
+            color:$yellow;
+            
+        }
+    }
+    
+    @-moz-keyframes light{
+        0%{
+            color:$white;
+            
+        }
+        100%{
+            color:$yellow;
+           
+        }
+    }
+    
+    @-o-keyframes light{
+        0%{
+            color:$white;
+           
+        }
+        100%{
+            color:$yellow;
+            
+        }
+    }
+    
+    @keyframes light{
+        0%{
+            color:$white;
+
+        }
+        100%{
+            color:$yellow;
+           
+        }
+    }
+    animation: light $time infinite $effect alternate;
+}

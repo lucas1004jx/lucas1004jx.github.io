@@ -1,5 +1,15 @@
 (function () {
 
+     var wHeight=$(window).height();
+    $(".fullHeight").css("height",wHeight);
+    
+    $(window).resize(function(){
+        var wHeight=$(window).height();
+        $(".fullHeight").css("height",wHeight);
+    });
+    
+    
+    
     var title = document.querySelector("header  h1");
     var header = document.querySelector("header");
 
@@ -37,3 +47,5 @@ $(window).on("scroll",function(){
 });
     
 });
+
+
