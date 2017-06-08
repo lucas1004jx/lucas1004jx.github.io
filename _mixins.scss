@@ -71,7 +71,7 @@
     align-items: center;
 }
 
-@mixin glow($time,$effect){
+@mixin glow(){
     
     @-webkit-keyframes light{
         0%{
@@ -116,5 +116,5 @@
            
         }
     }
-    animation: light $time infinite $effect alternate;
+    
 }

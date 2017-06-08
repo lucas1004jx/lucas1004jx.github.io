@@ -20,6 +20,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
  }
  
  header {
+     position: relative;
      background: url("image/wings.jpg") no-repeat center center;
      background-size: cover;
      /*height: 250px;
@@ -97,15 +98,18 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
              &:hover {
                  color: $yellow;
              }
+             
          }
          /*li a*/
      }
      /*ul*/
+
  }
  /*header*/
  /*section style*/
  
  section {
+     position: relative;
      margin-top: 0px;
      text-align: center;
      text-transform: uppercase;
@@ -123,7 +127,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
                  font-size: 4.5rem;
              }
          }
-         
          h4 {
              font-size: 1.2rem;
              @include break(481px,
@@ -134,7 +137,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
                  font-size: 1.5rem;
              }
          }
-         
          p {
              font-size: 1rem;
              @include break(481px,
@@ -150,7 +152,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
  
  section.who {
      @extend section;
-     .container{
+     .container {
          padding-left: 0;
          padding-right: 0;
      }
@@ -176,7 +178,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
          img {
              width: 30%;
          }
-         
          p {
              text-transform: none;
          }
@@ -184,24 +185,26 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
      /*figure*/
  }
  
-div.time_know{
-    background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.9)), url("image/tree.jpg") no-repeat center center;
-         background-size: cover;
-}
+ div.time_know {
+     background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.9)), url("image/tree.jpg") no-repeat center center;
+     background-size: cover;
+ }
+ 
  section.timeLine {
      @extend section;
      div.row {
-         h2{
-             margin:20px 0 30px 0;
-            @include break(481px,768px){
-                margin: 40px 0 40px 0;
-            }
-            @include break(769px){
-                margin: 60px 0 60px 0;
-            }
+         h2 {
+             margin: 20px 0 30px 0;
+             @include break(481px,
+             768px) {
+                 margin: 40px 0 40px 0;
+             }
+             @include break(769px) {
+                 margin: 60px 0 60px 0;
+             }
          }
-         a{
-             color:$yellow;
+         a {
+             color: $yellow;
              text-decoration: underline;
          }
          .col-xs-6:first-of-type {
@@ -225,95 +228,142 @@ div.time_know{
          }
          i {
              color: $yellow;
-             @include glow(1.5s,linear);
          }
      }
  }
+ 
+ section.know {
+     @extend section;
+     div.row {
+         img {
+             width: 40%;
+             @include break(480px,
+             768px) {
+                 width: 30%;
+             }
+             @include break(769px) {
+                 width: 25%;
+             }
+         }
+         h2 {
+             display: inline-block;
+             border-bottom: 1px solid $yellow;
+             margin: 20px 0 30px 0;
+             @include break(481px,
+             768px) {
+                 margin: 40px 0 40px 0;
+             }
+             @include break(769px) {
+                 margin: 60px 0 60px 0;
+             }
+         }
+         h4 {
+             margin-bottom: 60px;
+         }
+         a {
+             color: $white;
+         }
+     }
+ }
+ 
+ section.contact {
+     @extend section;
+     background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.1)), url("image/contact.jpg") no-repeat center center;
+     background-size: cover;
+     div.row {
+         h2 {
+             margin-top: 80px;
+             line-height: 40px;
+             @include break(481px,
+             768px) {
+                 margin-top: 120px;
+                 line-height: 60px;
+             }
+             @include break(769px) {
+                 margin-top: 160px;
+                 line-height: 80px;
+             }
+         }
+     }
+ }
+ /*animate header h1*/
+ 
+ @include glow();
+ .char1 {
+     animation: light 1s infinite ease alternate;
+ }
+ 
+ .char2 {
+     animation: light 1.2s infinite ease-out alternate;
+ }
+ 
+ .char3 {
+     animation: light 2s infinite linear alternate;
+ }
+ 
+ .char4 {
+     animation: light 1.5s infinite ease-out alternate;
+ }
+ 
+ .char5 {
+     animation: light 1s infinite ease alternate;
+ }
+ 
+ .char6 {
+     animation: light 1.3s infinite ease-in alternate;
+ }
+ 
+ .char7 {
+     animation: light 1.8s infinite linear alternate;
+ }
+ 
+ .char8 {
+     animation: light 1.6s infinite ease-out alternate;
+ }
+ 
+ .char9 {
+     animation: light 1.4s infinite ease-in alternate;
+ }
+ 
+ .char10 {
+     animation: light 2s infinite ease alternate;
+ }
 
-section.know{
-    @extend section;
-    div.row{
-       
-        img{
-            width: 40%;
-            @include break(480px,768px){
-                width: 30%;
-            }
-            @include break(769px){
-                width:25%;
-            }
-        }
-        h2{
-            display: inline-block;
-            border-bottom: 1px solid $yellow;
-            margin:20px 0 30px 0;
-            @include break(481px,768px){
-                margin: 40px 0 40px 0;
-            }
-            @include break(769px){
-                margin: 60px 0 60px 0;
-            }
-        }
-        h4{
-            margin-bottom: 30px;
-        }
-        
-        a{
-            color:$white;
-        }
-    }
+/*down and up button*/
+button{
+         background: transparent;
+         padding: 0;
+         padding: 0px 5px;
+         border: none;
+         .fa-sort-desc, .fa-sort-asc {
+             display: block;
+             color: $white;
+             margin: 0px;
+             line-height: 10px;
+             font-size: 20px;
+             &:hover {
+                 color: $yellow;
+             }
+             &:first-of-type{
+                 animation: light 1s infinite linear;
+                 animation-delay: 0s;
+             }
+             &:last-of-type{
+                 animation: light 1s infinite linear;
+                 animation-delay: 0.5s;
+             }
+         }
 }
+     button.down {
+         @extend button;
+         position: absolute;
+         bottom: 3%;
+         left: 49%;
+     }
 
-section.contact{
-    @extend section;
-    background:linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.1)),url("image/contact.jpg") no-repeat center center;
-        background-size: cover;
-    div.row{
-        h2{
-            margin-top: 80px;
-            line-height: 40px;
-            @include break(481px,768px){
-             margin-top: 120px;
-                line-height: 60px;
-            }
-            @include break(769px){
-             margin-top: 160px;
-                line-height: 80px;
-            }
-        }
-    }
+button#top{
+    @extend button;
+    position: fixed;
+    right:2%;
+    bottom: 40%;
 }
-
-/*animate header h1*/
-
-.char1{
-    @include glow(3s,ease);
-}
-.char2{
-    @include glow(2s,linear);
-}
-.char3{
-    @include glow(1.7s,ease-in);
-}
-.char4{
-    @include glow(1s,ease-out);
-}
-.char5{
-    @include glow(3.5s,linear);
-}
-.char6{
-    @include glow(2s,ease);
-}
-.char7{
-    @include glow(2.5s,ease-out);
-}
-.char8{
-    @include glow(2.1s,ease-in);
-}
-.char9{
-    @include glow(3s,ease);
-}
-.char10{
-    @include glow(1.5s,linear);
-}
-

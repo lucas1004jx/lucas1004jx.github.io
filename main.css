@@ -216,7 +216,7 @@ svg:not(:root) {
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
+button, button.down, button#top,
 input,
 optgroup,
 select,
@@ -234,7 +234,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
+button, button.down, button#top,
 input {
   /* 1 */
   overflow: visible; }
@@ -243,7 +243,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button,
+button, button.down, button#top,
 select {
   /* 1 */
   text-transform: none; }
@@ -253,7 +253,7 @@ select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-button,
+button, button.down, button#top,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -263,7 +263,7 @@ html [type="button"],
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner,
+button::-moz-focus-inner, button.down::-moz-focus-inner, button#top::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
@@ -273,7 +273,7 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring,
+button:-moz-focusring, button#top:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
@@ -476,6 +476,7 @@ body {
   background: #000; }
 
 header {
+  position: relative;
   background: url("image/wings.jpg") no-repeat center center;
   background-size: cover;
   /*height: 250px;
@@ -556,6 +557,7 @@ header {
 /*header*/
 /*section style*/
 section, section.who, section.timeLine, section.know, section.contact {
+  position: relative;
   margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
@@ -643,28 +645,8 @@ section.timeLine div.row .col-xs-6:last-of-type {
     margin-left: 10px;
     margin-top: 70px; }
 section.timeLine div.row i {
-  color: #FECA47;
-  animation: light 1.5s infinite linear alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  color: #FECA47; }
+
 section.know div.row img {
   width: 40%; }
   @media (min-width: 480px) and (max-width: 768px) {
@@ -684,7 +666,7 @@ section.know div.row h2 {
     section.know div.row h2 {
       margin: 60px 0 60px 0; } }
 section.know div.row h4 {
-  margin-bottom: 30px; }
+  margin-bottom: 60px; }
 section.know div.row a {
   color: #fff; }
 
@@ -704,225 +686,85 @@ section.contact {
         line-height: 80px; } }
 
 /*animate header h1*/
+@-webkit-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-moz-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@-o-keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
+@keyframes light {
+  0% {
+    color: #fff; }
+  100% {
+    color: #FECA47; } }
 .char1 {
-  animation: light 3s infinite ease alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1s infinite ease alternate; }
+
 .char2 {
-  animation: light 2s infinite linear alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.2s infinite ease-out alternate; }
+
 .char3 {
-  animation: light 1.7s infinite ease-in alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 2s infinite linear alternate; }
+
 .char4 {
-  animation: light 1s infinite ease-out alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.5s infinite ease-out alternate; }
+
 .char5 {
-  animation: light 3.5s infinite linear alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1s infinite ease alternate; }
+
 .char6 {
-  animation: light 2s infinite ease alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.3s infinite ease-in alternate; }
+
 .char7 {
-  animation: light 2.5s infinite ease-out alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.8s infinite linear alternate; }
+
 .char8 {
-  animation: light 2.1s infinite ease-in alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.6s infinite ease-out alternate; }
+
 .char9 {
-  animation: light 3s infinite ease alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 1.4s infinite ease-in alternate; }
+
 .char10 {
-  animation: light 1.5s infinite linear alternate; }
-@-webkit-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-moz-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@-o-keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
-@keyframes light {
-  0% {
-    color: #fff; }
-  100% {
-    color: #FECA47; } }
+  animation: light 2s infinite ease alternate; }
+
+/*down and up button*/
+button, button.down, button#top {
+  background: transparent;
+  padding: 0;
+  padding: 0px 5px;
+  border: none; }
+  button .fa-sort-desc, button#top .fa-sort-desc, button .fa-sort-asc, button#top .fa-sort-asc {
+    display: block;
+    color: #fff;
+    margin: 0px;
+    line-height: 10px;
+    font-size: 20px; }
+    button .fa-sort-desc:hover, button#top .fa-sort-desc:hover, button .fa-sort-asc:hover, button#top .fa-sort-asc:hover {
+      color: #FECA47; }
+    button .fa-sort-desc:first-of-type, button#top .fa-sort-desc:first-of-type, button .fa-sort-asc:first-of-type, button#top .fa-sort-asc:first-of-type {
+      animation: light 1s infinite linear;
+      animation-delay: 0s; }
+    button .fa-sort-desc:last-of-type, button#top .fa-sort-desc:last-of-type, button .fa-sort-asc:last-of-type, button#top .fa-sort-asc:last-of-type {
+      animation: light 1s infinite linear;
+      animation-delay: 0.5s; }
+
+button.down, button.down#top {
+  position: absolute;
+  bottom: 3%;
+  left: 49%; }
+
+button#top {
+  position: fixed;
+  right: 2%;
+  bottom: 40%; }
 
 /*# sourceMappingURL=main.css.map */

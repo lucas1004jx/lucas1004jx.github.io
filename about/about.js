@@ -40,9 +40,9 @@ $(document).ready(function () {
 $(window).on("scroll",function(){
     if ($(window).scrollTop() > 250) {
         
-        $("#toTop button").css("display", "block");
+        $("#toTop button").fadeIn();
     }else{
-        $("#toTop button").css("display", "none");
+        $("#toTop button").fadeOut();
     }
 });
     
