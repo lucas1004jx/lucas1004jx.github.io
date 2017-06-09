@@ -43,12 +43,18 @@ $(function(){
            }
     })
     
-    /*animate visible element on screen*/
+   
     
-    $(window).on("load",function() {
+    
+    
+});
+
+ /*animate visible element on screen*/
+
+$(window).on("load",function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade, #timeLine h4,#timeLine p,#timeLine i").each(function() {
+    $("figure, .fade,#timeLine h4,#timeLine p,#timeLine i").each(function() {
       /* Check the location of each desired element */
       var objectBottom = $(this).offset().top + $(this).outerHeight();
       
@@ -62,7 +68,5 @@ $(function(){
   }).scroll(); //invoke scroll-handler on page-load
 });
 
-    
-});
 
 
