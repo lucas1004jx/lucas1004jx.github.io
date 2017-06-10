@@ -423,6 +423,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   right: 50px; }
 
 .navbar-fixed-top {
+  position: absolute;
   z-index: 10; }
 
 .navbar-default {
