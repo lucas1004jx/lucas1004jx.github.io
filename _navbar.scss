@@ -91,6 +91,7 @@
     color:$white;
     text-transform: uppercase;
     font-family: $main-font;
+    @include transition(visibility,0.2s,ease);
     @include break(769px){
        display: none;
     }
@@ -117,7 +118,7 @@
     
     @include break(0,768px){
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
