@@ -118,3 +118,18 @@
     }
     
 }
+
+@mixin transition($value,$time,$effect){
+    -moz-transition: $value $time  $effect;
+    -webkit-transition: $value $time  $effect;
+    -o-transition: $value $time  $effect;
+    transition: $value $time  $effect;
+}
+
+@mixin gradient($color1,$color2){
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($color1, $color2); /* Standard syntax */
+}

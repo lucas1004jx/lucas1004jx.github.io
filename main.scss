@@ -271,21 +271,29 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
      background: linear-gradient(rgba(55, 55, 55, 0.8), rgba(55, 55, 55, 0.1)), url("image/contact.jpg") no-repeat center center;
      background-size: cover;
      div.row {
-         h2 {
-             margin-top: 80px;
-             line-height: 40px;
+        h2 {
+            line-height: 40px;
+            
+         &:first-of-type {  
+             margin-top: 100px;
              @include break(481px,
              768px) {
-                 margin-top: 120px;
+                 margin-top: 140px;
                  line-height: 60px;
              }
              @include break(769px) {
-                 margin-top: 160px;
+                 margin-top: 180px;
                  line-height: 80px;
              }
          }
+         }
+         #email, #email:hover,#email:visited{
+             color:$white;
+         }
      }
  }
+
+
  /*animate header h1*/
  
  @include glow();

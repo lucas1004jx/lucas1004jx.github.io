@@ -9,26 +9,36 @@
     border: 0;
 }
 
+
+
 .navbar-default .navbar-nav>li>a {
     color: $white;
     text-transform: uppercase;
     padding: 5px 10px;
     margin-top: 20px;
+    @include transition(border,0.2s,ease);
 }
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-header a:hover {
-    color: $yellow;
+.navbar-header a:hover {
+    color: $black;
+    border-bottom: 4px solid $white;
+    @include break(769px){
+        color: $yellow;
+    }
 }
 
 //navbar-brand
-.navbar-default .navbar-brand {
+.navbar-header {
     font-weight: bold;
     color: $white;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 0;
+    a{
+        color:$yellow;
+    }
     span{
         font-size: 1rem;
         color:rgb(180,180,180);
@@ -43,25 +53,76 @@
     }
 }
 
-//toggle button
-.navbar-toggle {
-    background: $yellow;
-}
 
-.navbar-default .navbar-toggle .icon-bar {
-    background: $white;
-}
+
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
-    color: $yellow;
+    color:$black;
+    border-bottom: 4px solid $white;
     background: transparent;
+    @include break(769px){
+        color: $yellow;
     border-bottom: 4px solid $yellow;
+    }
+    
 }
 
-.navbar-default .navbar-collapse {
-    @include break(0,768px) {
-        background: rgba(22, 22, 22, 0.8);
+
+/*open and close btn*/
+#open,#close{
+    float:right;
+    margin-top: 20px;
+    margin-right: 20px;
+    color:$white;
+    text-transform: uppercase;
+    font-family: $main-font;
+    @include break(769px){
+       display: none;
     }
 }
+
+
+.openbtn:after{
+    color:$yellow;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+}
+
+.closebtn:after{
+    margin-left: 5px;
+    color:$yellow;
+    content: "\f00d";
+    font-family: "FontAwesome";
+    font-size: 2rem;
+}
+
+
+/*nav overlay*/
+#nav{
+    
+    @include break(0,768px){
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+   // background: rgba($yellow,0.8);
+        @include gradient(rgba($mastard,0.8),rgba($yellow,0.8));
+    
+    
+    .wrap{
+        position: absolute;
+        width:80%;
+        left: 10%;
+        height:100%;
+        z-index: -1;
+        @include flex(column);
+    
+    }
+    }
+}
+
+
+

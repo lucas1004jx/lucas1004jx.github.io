@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -12,32 +13,43 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+
+                <a href="" class="navbar-brand">LucasJin<span>Front End Developer </span></a>
+                <button type="button" id="open" class="openbtn">
+                      MENU
+                  </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar  navbar-default navbar-fixed-top" id="nav">
         <div class="container">
             <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                    <a href="" class="navbar-brand">LucasJin<span>Front End Developer </span></a>
-                </div>
-                <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                    <ul class="nav navbar-nav">
+                <button type="button" class="closebtn" id="close">CLOSE</button>
+                <div class=" wrap">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html">HOME</a></li>
                         <li><a href="about/about.html">ABOUT</a></li>
                         <li><a href="project/project.html">PROJECT</a></li>
                         <li><a href="contact/contact.html">CONTACT</a></li>
                     </ul>
                 </div>
-                <!--collapse-->
             </div>
-            <!--row-->
         </div>
-        <!--container-->
     </nav>
 
+   
+   
+    
+   
+   
+   
+   
     <header class="container-fluid fullHeight">
         <div>
             <h1>MEET LUCAS</h1>
@@ -50,13 +62,13 @@
                 <li><a href="https://www.behance.net/Kurnikowa"><i class="fa fa-google-plus"></i></a></li>
             </ul>
         </div>
-        
-         <a href="#who">
-        <button class="down">
+
+        <a href="#who">
+            <button class="down">
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
 </button>
-    </a>
+        </a>
     </header>
 
     <section class="who" id="who">
@@ -92,12 +104,12 @@
                 </figure>
                 <!-- down button-->
                 <a href="#timeLine">
-            <button class="down">
+                    <button class="down">
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
           </button>
-           </a>
-           
+                </a>
+
             </div>
         </div>
         <!--container-->
@@ -154,7 +166,7 @@
                         <p>my first personal web page</p>
                     </div>
 
-                    
+
                 </div>
             </div>
         </section>
@@ -181,13 +193,14 @@
 
                     </div>
                     <!--down button-->
-        <a href="#contact">
-        <button class="down">
+                    <a href="#contact">
+                        <button class="down">
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
          </button>
-        </a>
-                </div><!--row-->
+                    </a>
+                </div>
+                <!--row-->
             </div>
             <!--container-->
         </section>
@@ -196,30 +209,31 @@
     <section class="contact fullHeight" id="contact">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-6 col-xs-offset-6">
-                    <h2>contact <br>me</h2>
-
+                <div class="col-xs-8 col-xs-offset-2">
+                    <h2>contact</h2>
+                    <h2>me</h2>
                 </div>
-                <div class="col-xs-6 col-xs-offset-6">
-                    <p>e-mail: <br>lucas1004jx@gmail.com</p>
+                <div class="col-xs-8 col-xs-offset-2">
+                    <a href="mailto:lucas1004jx@gmail.com" id="email">e-mail: <br>lucas1004jx@gmail.com</a>
                 </div>
 
             </div>
         </div>
 
     </section>
-    
+
     <!--to up button-->
-    
-        <button id="top">
+
+    <button id="top">
         <i class="fa fa-sort-asc" aria-hidden="true"></i>
         <i class="fa fa-sort-asc" aria-hidden="true"></i>
          </button>
-       
+
 
     <script src="script/jquery-3.2.1.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/jquery.lettering-0.6.1.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
