@@ -422,11 +422,15 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   padidng: 0;
   right: 50px; }
 
+.navbar-fixed-top {
+  z-index: 10; }
+
 .navbar-default {
   background: transparent;
   border: 0; }
 
 .navbar-default .navbar-nav > li > a {
+  text-align: center;
   color: #fff;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -455,6 +459,9 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   margin-top: 0; }
   .navbar-header a {
     color: #FECA47; }
+    .navbar-header a:hover {
+      border: none;
+      color: #fff; }
   .navbar-header span {
     font-size: 1rem;
     color: #b4b4b4;

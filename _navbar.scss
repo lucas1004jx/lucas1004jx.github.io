@@ -5,6 +5,10 @@
     right: 50px;
 }
 
+.navbar-fixed-top{
+    z-index: 10;
+}
+
 .navbar-default {
     background: transparent;
     border: 0;
@@ -13,6 +17,7 @@
 
 
 .navbar-default .navbar-nav>li>a {
+    text-align: center;
     color: $white;
     text-transform: uppercase;
     padding: 5px 10px;
@@ -38,8 +43,13 @@
     font-size: 1.5rem;
     margin-top: 0;
     
+    
     a{
         color:$yellow;
+        &:hover{
+            border: none;
+            color:$white;
+        }
     }
     span{
         font-size: 1rem;
@@ -112,7 +122,7 @@
     height: 100%;
     overflow: hidden;
    // background: rgba($yellow,0.8);
-        @include gradient(rgba($mastard,0.8),rgba($yellow,0.8));
+    @include gradient(rgba($mastard,0.8),rgba($yellow,0.8));
     
     
     .wrap{
