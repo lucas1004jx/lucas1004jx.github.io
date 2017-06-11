@@ -346,13 +346,15 @@ button{
          .fa-sort-desc, .fa-sort-asc {
              display: block;
              color: $white;
-             margin: 0px;
-             line-height: 10px;
-             font-size: 20px;
+             margin: 0;
+             padding: 0;
+             //line-height: 25px;
+             font-size: 25px;
              &:hover {
                  color: $yellow;
              }
              &:first-of-type{
+                 margin-bottom: -15px;
                  animation: light 1s infinite linear;
                  animation-delay: 0s;
              }
@@ -366,7 +368,13 @@ button{
          @extend button;
          position: absolute;
          bottom: 3%;
-         left: 49%;
+         left: 46%;
+         @include break(481px,768px){
+             left:48%;
+         }
+         @include break(769px){
+             left:49%;
+         }
      }
 
 button#top{

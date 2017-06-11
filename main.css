@@ -825,12 +825,13 @@ button, button.down, button#top {
   button .fa-sort-desc, button#top .fa-sort-desc, button .fa-sort-asc, button#top .fa-sort-asc {
     display: block;
     color: #fff;
-    margin: 0px;
-    line-height: 10px;
-    font-size: 20px; }
+    margin: 0;
+    padding: 0;
+    font-size: 25px; }
     button .fa-sort-desc:hover, button#top .fa-sort-desc:hover, button .fa-sort-asc:hover, button#top .fa-sort-asc:hover {
       color: #FECA47; }
     button .fa-sort-desc:first-of-type, button#top .fa-sort-desc:first-of-type, button .fa-sort-asc:first-of-type, button#top .fa-sort-asc:first-of-type {
+      margin-bottom: -15px;
       animation: light 1s infinite linear;
       animation-delay: 0s; }
     button .fa-sort-desc:last-of-type, button#top .fa-sort-desc:last-of-type, button .fa-sort-asc:last-of-type, button#top .fa-sort-asc:last-of-type {
@@ -840,7 +841,13 @@ button, button.down, button#top {
 button.down, button.down#top {
   position: absolute;
   bottom: 3%;
-  left: 49%; }
+  left: 46%; }
+  @media (min-width: 481px) and (max-width: 768px) {
+    button.down, button.down#top {
+      left: 48%; } }
+  @media (min-width: 769px) {
+    button.down, button.down#top {
+      left: 49%; } }
 
 button#top {
   position: fixed;
