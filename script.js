@@ -30,7 +30,7 @@ $(function () {
     
     
     
-
+          
                 $("header h1").lettering();
 
                 /*glow the stars of time line*/

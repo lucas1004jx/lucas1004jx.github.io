@@ -1,0 +1,120 @@
+@import "normalize";
+@import "variable";
+@import "mixins";
+@import "navbar";
+
+
+body{
+    font-family: $main-font;
+}
+#chongqing{
+    position: relative;
+     background: url("image/chongqing_small.jpg") no-repeat center center;
+    background-size: cover;
+    margin-top: 0;
+    @include break(769px){
+        background: url("image/chongqing_big.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .heading{
+        
+        background: rgba($fblue,0.2);
+        position: absolute;
+        top:10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        padding: 20px 0;
+        h1,h3{
+            display: block;
+            margin: 0px;
+            padding: 10px 0 10px 0;
+            @include text-glow($pink);
+        }
+        
+        h1{
+            font-family: $main-font;
+            font-size: 3.8rem;
+            letter-spacing: 4px;
+            @include break(481px,768px){
+                font-size: 5rem;
+            }
+            @include break(769px){
+                font-size: 7rem;
+            }
+        }
+        h3{
+            font-family: $script-font;
+            font-size: 2rem;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            @include break(481px,768px){
+                font-size: 3rem;
+            }
+            @include break(769px){
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+.countdown{
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-family: $main-font;
+    text-transform: uppercase;
+    color: $white;
+    @include break(769px){
+            bottom:17%;
+        }
+    .countdown-section{
+       
+        display: inline-block;
+        padding:10px;
+        .countdown-amount{
+           display: block;
+            font-size: 4rem;
+            @include break(481px,768px){
+                font-size: 6rem;
+            }
+            @include break(769px){
+                font-size: 8rem;
+            }
+        }
+        .countdown-period{
+           display: block;
+            font-size: 1.2rem;
+            @include break(481px,768px){
+                font-size: 2rem;
+            }
+            @include break(769px){
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+/*solcia media*/
+.social{
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    bottom:10px;
+    width: 100%;
+    padding: 0;
+    li{
+        display: inline-block;
+        i{
+            color:$white;
+            padding: 10px 20px;
+            @include break(769px){
+              font-size: 2rem;  
+            }
+        }
+    }
+}
