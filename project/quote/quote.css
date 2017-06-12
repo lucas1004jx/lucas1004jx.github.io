@@ -622,8 +622,11 @@ section {
     text-transform: uppercase;
     padding: 10px;
     font-family: sans-serif;
-    border-radius: 10px;
-    border: 1px solid #ff0000;
+    border-radius: 15px;
+    border-top: 2px solid #ff0000;
+    border-left: 2px solid #ff0000;
+    border-right: 2px solid rgba(255, 0, 0, 0.6);
+    border-bottom: 2px solid rgba(255, 0, 0, 0.6);
     -webkit-box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616;
     -moz-box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616;
     box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616; }
