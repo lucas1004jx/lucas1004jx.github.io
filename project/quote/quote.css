@@ -623,6 +623,7 @@ section {
     padding: 10px;
     font-family: sans-serif;
     border-radius: 10px;
+    border: 1px solid #ff0000;
     -webkit-box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616;
     -moz-box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616;
     box-shadow: -2px -2px 10px #161616, 2px 2px 10px #161616; }

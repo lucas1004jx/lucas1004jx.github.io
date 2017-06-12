@@ -88,6 +88,7 @@ section {
         padding: 10px;
         font-family: sans-serif;
         border-radius: 10px;
+        border: 1px solid $red;
         @include box-shadow($grey);
         @include break(481px,768px){
             font-size:2rem;
