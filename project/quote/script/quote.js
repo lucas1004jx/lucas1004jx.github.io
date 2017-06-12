@@ -85,19 +85,6 @@ $(function () {
     });
 
 
-    /*btn position*/
-
-    var $wbtn = $("#get").width();
-    var $wWidth = $(window).width();
-    var lbtn = ($wWidth - $wbtn) / 2;
-    $("#get").css("left", lbtn);
-
-    $(window).resize(function () {
-        var $wbtn = $("#get").width();
-        var $wWidth = $(window).width();
-        var lbtn = ($wWidth - $wbtn) / 2;
-        $("#get").css("left", lbtn);
-
-    });
+    
 
 });

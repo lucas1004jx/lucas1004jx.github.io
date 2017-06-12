@@ -72,11 +72,15 @@ section {
         }
         
     }
-    #get {
+    .btn{
         position: absolute;
-        text-align: center;
-        bottom: 10%;
+        width: 100%;
+        bottom:10%;
         left: 0;
+    }
+    
+    #get {
+        
         color: $white;
         background: $grey;
         font-size: 1.5rem;
@@ -84,7 +88,7 @@ section {
         padding: 10px;
         font-family: sans-serif;
         border-radius: 10px;
-        @include box-shadow($red);
+        @include box-shadow($grey);
         @include break(481px,768px){
             font-size:2rem;
         }
@@ -94,3 +98,24 @@ section {
        
     }
 }
+
+/*solcia media*/
+.social{
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    bottom:10px;
+    width: 100%;
+    padding: 0;
+    li{
+        display: inline-block;
+        i{
+            color:$red;
+            padding: 10px 20px;
+            @include break(769px){
+              font-size: 2rem;  
+            }
+        }
+    }
+}
+
