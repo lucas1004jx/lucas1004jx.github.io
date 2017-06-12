@@ -1,3 +1,6 @@
+nav{
+    font-family: $nav-font;
+}
 .navbar {
     position: absolute;
     z-index: 100;
@@ -41,20 +44,17 @@
 .navbar-header {
     font-weight: bold;
     text-align: center;
-    font-size: 1.2rem;
-    margin-top: 0;
+    font-size: 1.5rem;
+    margin-top: 0px;
     
     
     a{
-        color:$white;
-        font-size: 1.2rem;
-        @include break(769px){
-        font-size: 1.5rem; 
-
-        }
+        color:$pink;
+        font-size: 1.5rem;
+        margin-top: 5px;
         &:hover{
          border: none;
-        color:$pink;
+        color:$white;
         }
     }
     span{

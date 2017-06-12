@@ -32,6 +32,7 @@ body{
             margin: 0px;
             padding: 10px 0 10px 0;
             @include text-glow($pink);
+            @include fadeIn(3s,-20px);
         }
         
         h1{

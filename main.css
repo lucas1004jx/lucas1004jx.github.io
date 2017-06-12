@@ -454,7 +454,9 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   font-size: 1.5rem;
   margin-top: 0; }
   .navbar-header a {
-    color: #FECA47; }
+    color: #FECA47;
+    font-size: 1.5rem;
+    margin-top: 5px; }
     .navbar-header a:hover {
       border: none;
       color: #fff; }
@@ -467,7 +469,6 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
         font-size: 1.5rem; } }
   @media (min-width: 769px) {
     .navbar-header {
-      font-size: 2rem;
       margin-top: 10px;
       margin-left: 30px; } }
 

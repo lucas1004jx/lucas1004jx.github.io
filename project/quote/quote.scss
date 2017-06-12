@@ -1,0 +1,96 @@
+@import "normalize";
+@import "variable";
+@import "mixins";
+@import "navbar";
+#quote {
+    position: relative;
+    background: rgba($grey,0.8);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+    p {
+        display: inline;
+        font-size: 2.5rem;
+        padding: 20px;
+        font-family: $nav-font;
+        @include break(481px,768px){
+            font-size: 3.5rem;
+        }
+        @include break(769px){
+            font-size: 4.5rem;
+        }
+    }
+    &:before {
+        content: "\f10d";
+        font-family: "FontAwesome";
+        font-size: 5rem;
+        position: absolute;
+        color:rgba($white,0.7);
+        top:-40px;
+        left: -10px;
+    }
+    &:after {
+        content: "\f10e";
+        font-family: "FontAwesome";
+        font-size: 5rem;
+        position: absolute;
+        color:rgba($white,0.7);
+        bottom:-40px;
+        right: -10px;
+    }
+}
+
+section {
+    background: url("image/gym.jpg") no-repeat center center;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    @include flex(column);
+    text-align: center;
+
+    h1 {
+        font-family: sans-serif;
+        text-transform: uppercase;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        margin: 0;
+        font-size: 4rem;
+        line-height: 5rem;
+        @include text-glow($red);
+        @include break(480px,768px){
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+        @include break(769px){
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+        
+    }
+    #get {
+        position: absolute;
+        text-align: center;
+        bottom: 10%;
+        left: 0;
+        color: $white;
+        background: $grey;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 10px;
+        font-family: sans-serif;
+        border-radius: 10px;
+        @include box-shadow($red);
+        @include break(481px,768px){
+            font-size:2rem;
+        }
+        @include break(769px){
+            font-size:2.5rem;
+        }
+       
+    }
+}
