@@ -39,7 +39,7 @@ $(function () {
                 star.each(function () {
                     var sec = Math.random() + 1 + "s";
 
-                    $(this).css("animation", "light " + sec + " infinite linear alternate");
+                    $(this).css("animation", "glow " + sec + " infinite linear alternate");
                 });
 
                 /*down button*/

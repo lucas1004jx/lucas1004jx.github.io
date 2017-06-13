@@ -298,43 +298,43 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
  
  @include glow();
  .char1 {
-     animation: light 1s infinite ease alternate;
+     animation: glow 1s infinite ease alternate;
  }
  
  .char2 {
-     animation: light 1.2s infinite ease-out alternate;
+     animation: glow 1.2s infinite ease-out alternate;
  }
  
  .char3 {
-     animation: light 2s infinite linear alternate;
+     animation: glow 2s infinite linear alternate;
  }
  
  .char4 {
-     animation: light 1.5s infinite ease-out alternate;
+     animation: glow 1.5s infinite ease-out alternate;
  }
  
  .char5 {
-     animation: light 1s infinite ease alternate;
+     animation: glow 1s infinite ease alternate;
  }
  
  .char6 {
-     animation: light 1.3s infinite ease-in alternate;
+     animation: glow 1.3s infinite ease-in alternate;
  }
  
  .char7 {
-     animation: light 1.8s infinite linear alternate;
+     animation: glow 1.8s infinite linear alternate;
  }
  
  .char8 {
-     animation: light 1.6s infinite ease-out alternate;
+     animation: glow 1.6s infinite ease-out alternate;
  }
  
  .char9 {
-     animation: light 1.4s infinite ease-in alternate;
+     animation: glow 1.4s infinite ease-in alternate;
  }
  
  .char10 {
-     animation: light 2s infinite ease alternate;
+     animation: glow 2s infinite ease alternate;
  }
 
 /*down and up button*/
@@ -355,11 +355,11 @@ button{
              }
              &:first-of-type{
                  margin-bottom: -15px;
-                 animation: light 1s infinite linear;
+                 animation: glow 1s infinite linear;
                  animation-delay: 0s;
              }
              &:last-of-type{
-                 animation: light 1s infinite linear;
+                 animation: glow 1s infinite linear;
                  animation-delay: 0.5s;
              }
          }
