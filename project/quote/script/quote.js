@@ -5,16 +5,16 @@ $(function () {
         $.getJSON("quote.json", function (data) {
             var num = data.cita.length;
             var index = Math.floor(Math.random() * num);
-            //$("#quote").html("<span>" + data.cita[index] + "</span>");
+            $("#quote").html("<p>" + data.cita[index] + "</p>");
 
             /*typing animation*/
-            $("#quote span").typed({
+            $("#quote p").typed({
                 strings: [data.cita[index]],
                 typeSpeed: 50
             });
             
             /*make font responsive according to text amount*/
-            var $quote = $("#quote span");
+            var $quote = $("#quote p");
             var $wordnum = $quote.text().split(" ").length;
 
             function resfont() {
@@ -73,8 +73,8 @@ $(function () {
             }); 
     }
     
-    /*typing();
-    setInterval(typing,30000)*/
+    typing();
+    setInterval(typing,30000)
      
 
     var wHeight = $(window).height();

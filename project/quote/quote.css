@@ -582,16 +582,16 @@ nav {
   width: 90%;
   margin: 0 auto;
   margin-top: 30px; }
-  #quote span {
+  #quote p {
     display: inline;
     font-size: 2.5rem;
     padding: 20px;
     font-family: gfs-didot; }
     @media (min-width: 481px) and (max-width: 768px) {
-      #quote span {
+      #quote p {
         font-size: 3.5rem; } }
     @media (min-width: 769px) {
-      #quote span {
+      #quote p {
         font-size: 4.5rem; } }
   #quote .typed-cursor {
     opacity: 1;
