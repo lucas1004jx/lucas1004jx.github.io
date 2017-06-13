@@ -586,7 +586,8 @@ nav {
     display: inline;
     font-size: 2rem;
     padding: 20px;
-    font-family: gfs-didot; }
+    font-family: gfs-didot;
+    font-weight: lighter; }
     @media (min-width: 481px) and (max-width: 768px) {
       #quote p {
         font-size: 3.5rem; } }
@@ -633,7 +634,7 @@ section {
   section h1 {
     color: #ff0000;
     animation: fade 2s;
-    font-family: sans-serif;
+    font-family: orbitron;
     text-transform: uppercase;
     position: absolute;
     top: 10%;
@@ -643,6 +644,7 @@ section {
     padding: 20px 0;
     margin: 0;
     font-size: 3rem;
+    font-weight: bold;
     line-height: 4rem;
     -moz-transition: all 1s ease;
     -webkit-transition: all 1s ease;

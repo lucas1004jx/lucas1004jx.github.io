@@ -15,6 +15,7 @@
         font-size: 2rem;
         padding: 20px;
         font-family: $nav-font;
+        font-weight: lighter;
         @include break(481px, 768px) {
             font-size: 3.5rem;
         }
@@ -61,7 +62,7 @@ section {
     h1 {
         color:$red;
         @include fadeIn(2s,-10px);
-        font-family: sans-serif;
+        font-family: $main-font;
         text-transform: uppercase;
         position: absolute;
         top: 10%;
@@ -71,6 +72,7 @@ section {
         padding: 20px 0;
         margin: 0;
         font-size: 3rem;
+        font-weight: bold;
         line-height: 4rem;
         @include transition(all,1s,ease);
         @include break(480px,
