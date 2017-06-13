@@ -73,8 +73,8 @@ $(function () {
             }); 
     }
     
-    typing();
-    setInterval(typing,30000)
+    /*typing();
+    setInterval(typing,30000)*/
      
 
     var wHeight = $(window).height();
