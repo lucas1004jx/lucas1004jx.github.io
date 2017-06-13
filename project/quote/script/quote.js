@@ -147,7 +147,7 @@ $(function () {
         $("#en").addClass("active");
         $("#es").removeClass("active");
         $("#get").html("get motivated <i class='fa fa-arrow-circle-up'></i>");
-        
+        $("#quote p").html("<p>To achieve something you’ve never had before, you must do something you’ve never done before.</p>");
 
         function typing() {
             $("h1").typed({
@@ -165,6 +165,8 @@ $(function () {
         $("#es").addClass("active");
         $("#en").removeClass("active");
         $("#get").html("motívate con otra frase <i class='fa fa-arrow-circle-up'></i>");
+        $("#quote p").html("<p>No es grande aquel que nunca falla si no el que nunca se da por vencido.</p>");
+        
         
         function typing() {
             $("h1").typed({
