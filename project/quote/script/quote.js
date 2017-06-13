@@ -12,8 +12,9 @@ $(function () {
                 $("#quote p").typed({
                     strings: [data.quote[index]],
                     typeSpeed: 50,
-                    contentType: "text"  
-               
+                    contentType: "text",
+                    backSpeed: 50,
+                    backDelay: 500
                 });
 
 
@@ -123,7 +124,6 @@ $(function () {
 
     /*language choice*/
     
-<<<<<<< HEAD
     /*type English*/
      function typingEn() {
             $("h1").typed({
@@ -136,21 +136,6 @@ $(function () {
                 loop: false
             });
         }
-=======
-    if($("#es").hasClass("active")){
-       
-        function typingEs() {
-            $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase",  "hoy te toca <br>gym"],
-                typeSpeed: 50
-            });
-        }
-
-        typingEs();
-        
-    
-       }
->>>>>>> origin/master
     
     /*type Español*/
      function typingEs() {
@@ -174,20 +159,7 @@ $(function () {
         $("#es").removeClass("active");
         $("#get").html("get motivated <i class='fa fa-arrow-circle-up'></i>");
         $("#quote p").html("<p>To achieve something you’ve never had before, you must do something you’ve never done before.</p>");
-<<<<<<< HEAD
         typingEn();
-=======
-
-        function typingEn() {
-            $("h1").typed({
-                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "it´s gym <br>time"],
-                typeSpeed: 50
-            });
-        }
-
-        typingEn();
-        
->>>>>>> origin/master
 
     });
 
@@ -197,16 +169,7 @@ $(function () {
         $("#en").removeClass("active");
         $("#get").html("motívate con otra frase <i class='fa fa-arrow-circle-up'></i>");
         $("#quote p").html("<p>No es grande aquel que nunca falla si no el que nunca se da por vencido.</p>");
-<<<<<<< HEAD
         typingEs();    
-=======
-        
-        
-       
-
-        typingEs();
-        
->>>>>>> origin/master
         
     });
 
