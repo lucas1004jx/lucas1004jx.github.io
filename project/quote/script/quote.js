@@ -128,8 +128,8 @@ $(function () {
      function typingEn() {
             $("h1").typed({
                 strings: ["it´s gym <br>time", "get motivated <br>by a quote", "it´s gym <br>time"],
-                typeSpeed: 50,
-                backSpeed: 50,
+                typeSpeed: 0,
+                backSpeed: 0,
                 backDelay: 500,
                 contentType: "html",
                 showCursor: false,
@@ -141,8 +141,8 @@ $(function () {
      function typingEs() {
             $("h1").typed({
                 strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "hoy te toca <br>gym"],
-                typeSpeed: 50,
-                backSpeed: 50,
+                typeSpeed: 0,
+                backSpeed: 0,
                 backDelay: 500,
                 contentType: "html",
                 showCursor: false,
