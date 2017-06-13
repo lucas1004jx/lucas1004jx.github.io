@@ -1,23 +1,43 @@
 $(function () {
 
-    $("#get").on("click touchstart" ,function () {
-      
+    $("#get").on("click touchstart", function () {
+
         $.getJSON("quote.json", function (data) {
-            var num = data.cita.length;
-            var index = Math.floor(Math.random() * num);
+            var num;
+            var index;
+            if ($("#en").hasClass("active")) {
+                num = data.cita.length;
+                index = Math.floor(Math.random() * num);
+                /*typing animation*/
+                $("#quote p").typed({
+                    strings: [data.quote[index]],
+                    typeSpeed: 50,
+                    contentType: "text",
+                    backSpeed: 50,
+                    backDelay: 500
+                });
+
+
+            } else if ($("#es").hasClass("active")) {
+                num = data.cita.length;
+                index = Math.floor(Math.random() * num);
+                /*typing animation*/
+                $("#quote p").typed({
+                    strings: [data.cita[index]],
+                    typeSpeed: 50,
+                    contentType: "text",
+                    backSpeed: 50,
+                    backDelay: 500
+                });
+            }
+
             //$("#quote").html("<p>" + data.cita[index] + "</p>");
 
-            /*typing animation*/
-            $("#quote p").typed({
-                strings: [data.cita[index]],
-                typeSpeed: 50,
-                contentType: "text",
-                backSpeed:50,
-                backDelay:500
-            });
-            
-            
-            
+
+
+
+
+
             /*make font responsive according to text amount*/
             var $quote = $("#quote p");
             var $wordnum = $quote.text().split(" ").length;
@@ -27,40 +47,40 @@ $(function () {
 
                 if ($wWidth < 480) {
                     if ($wordnum <= 15 && $wordnum >= 0) {
-                        $quote.css("font-size", "2.5rem");
+                        $quote.css("font-size", "2rem");
 
                     } else if ($wordnum > 15 && $wordnum <= 20) {
-                        $quote.css("font-size", "2rem");
+                        $quote.css("font-size", "1.5rem");
 
                     } else if ($wordnum > 20 && $wordnum <= 25) {
-                        $quote.css("font-size", "2rem");
+                        $quote.css("font-size", "1rem");
 
                     } else if ($wordnum > 25 && $wordnum <= 50) {
-                        $quote.css("font-size", "1.5rem");
+                        $quote.css("font-size", "1rem");
                     }
 
                 } else if ($wWidth > 481 && $wWidth < 768) {
 
                     if ($wordnum <= 15 && $wordnum >= 0) {
-                        $quote.css("font-size", "4rem");
-                    } else if ($wordnum > 15 && $wordnum <= 20) {
-                        $quote.css("font-size", "3.5rem");
-                    } else if ($wordnum > 20 && $wordnum <= 25) {
                         $quote.css("font-size", "3rem");
-                    } else if ($wordnum > 25 && $wordnum <= 50) {
+                    } else if ($wordnum > 15 && $wordnum <= 20) {
+                        $quote.css("font-size", "3rem");
+                    } else if ($wordnum > 20 && $wordnum <= 25) {
                         $quote.css("font-size", "2.5rem");
+                    } else if ($wordnum > 25 && $wordnum <= 50) {
+                        $quote.css("font-size", "2rem");
                     }
 
                 } else if ($wWidth > 769) {
 
                     if ($wordnum <= 15 && $wordnum >= 0) {
-                        $quote.css("font-size", "5rem");
-                    } else if ($wordnum > 15 && $wordnum <= 20) {
                         $quote.css("font-size", "4.5rem");
+                    } else if ($wordnum > 15 && $wordnum <= 20) {
+                        $quote.css("font-size", "4rem");
                     } else if ($wordnum > 20 && $wordnum <= 25) {
-                        $quote.css("font-size", "3.5rem");
-                    }else if ($wordnum > 25 && $wordnum <= 50) {
                         $quote.css("font-size", "3rem");
+                    } else if ($wordnum > 25 && $wordnum <= 50) {
+                        $quote.css("font-size", "2.5rem");
                     }
                 }
             }
@@ -70,17 +90,12 @@ $(function () {
 
         });
     });
+
     
-    function typing(){
-        $("h1").typed({
-                strings:["hoy te toca <br>gym","anímate <br>con una frase","tú <br> puedes","hoy te toca <br>gym"],
-                typeSpeed:50
-            }); 
-    }
-    
-    typing();
-    setInterval(typing,30000)
+        
      
+
+
 
     var wHeight = $(window).height();
     $(".fullHeight").css("height", wHeight);
@@ -111,7 +126,57 @@ $(function () {
 
     });
 
+    /*language choice*/
+    
+    if($("#es").hasClass("active")){
+       
+        function typing() {
+            $("h1").typed({
+                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
+                typeSpeed: 50
+            });
+        }
 
+        typing();
+        setInterval(typing, 40000);
+    
+       }
+    
+    
+    $("#en").on("click touchstart", function () {
+        $("#en").addClass("active");
+        $("#es").removeClass("active");
+        $("#get").html("get motivated <i class='fa fa-arrow-circle-up'></i>");
+        
+
+        function typing() {
+            $("h1").typed({
+                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "you <br> can do it", "it´s gym <br>time"],
+                typeSpeed: 50
+            });
+        }
+
+        typing();
+        setInterval(typing, 40000);
+
+    });
+
+    $("#es").on("click touchstart", function () {
+        $("#es").addClass("active");
+        $("#en").removeClass("active");
+        $("#get").html("motívate con otra frase <i class='fa fa-arrow-circle-up'></i>");
+        
+        function typing() {
+            $("h1").typed({
+                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
+                typeSpeed: 50
+            });
+        }
+
+        typing();
+        setInterval(typing, 40000);
+        
+    });
 
 
 });
