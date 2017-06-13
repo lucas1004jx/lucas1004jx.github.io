@@ -138,7 +138,7 @@ $(function () {
         }
 
         typingEs();
-        setInterval(typingEs, 40000);
+        
     
        }
     
@@ -151,13 +151,13 @@ $(function () {
 
         function typingEn() {
             $("h1").typed({
-                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "you <br> can do it", "it´s gym <br>time"],
+                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "it´s gym <br>time"],
                 typeSpeed: 50
             });
         }
 
         typingEn();
-        setInterval(typingEn, 40000);
+        
 
     });
 
@@ -171,7 +171,7 @@ $(function () {
        
 
         typingEs();
-        setInterval(typingEs, 40000);
+        
         
     });
 
