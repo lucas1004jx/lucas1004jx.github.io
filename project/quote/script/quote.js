@@ -1,7 +1,7 @@
 $(function () {
 
-    $("#get").click(function () {
-
+    $("#get").on("click touchstart" ,function () {
+      
         $.getJSON("quote.json", function (data) {
             var num = data.cita.length;
             var index = Math.floor(Math.random() * num);
@@ -73,7 +73,7 @@ $(function () {
     
     function typing(){
         $("h1").typed({
-                strings:["hoy te toca <br>gym","anímate <br>con una frase","tú <br> puedes"],
+                strings:["hoy te toca <br>gym","anímate <br>con una frase","tú <br> puedes","hoy te toca <br>gym"],
                 typeSpeed:50
             }); 
     }
