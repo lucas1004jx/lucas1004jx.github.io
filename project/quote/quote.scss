@@ -59,8 +59,7 @@ section {
         width: 90%;
     }
     h1 {
-        @include fadeIn(2s,
-        -10px);
+        //@include fadeIn(2s,-10px);
         font-family: sans-serif;
         text-transform: uppercase;
         position: absolute;
@@ -72,7 +71,7 @@ section {
         margin: 0;
         font-size: 3rem;
         line-height: 4rem;
-        @include text-glow($red);
+       // @include text-glow($red);
         @include break(480px,
         768px) {
             font-size: 5rem;
