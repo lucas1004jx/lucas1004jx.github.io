@@ -132,7 +132,7 @@ $(function () {
        
         function typingEs() {
             $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
+                strings: ["hoy te toca <br>gym", "anímate <br>con una frase",  "hoy te toca <br>gym"],
                 typeSpeed: 50
             });
         }
