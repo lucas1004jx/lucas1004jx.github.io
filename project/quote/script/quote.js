@@ -126,27 +126,35 @@ $(function () {
     
     /*type English*/
      function typingEn() {
+         $("h1").removeClass("glow");
             $("h1").typed({
-                strings: ["it´s gym\ntime", "get motivated\nby a quote", "it´s gym\ntime"],
-                typeSpeed: 0,
-                backSpeed: 0,
+                strings: ["it´s gym<br>time", "get motivated<br>by a quote", "it´s gym<br>time"],
+                typeSpeed: 50,
+                backSpeed: 50,
                 backDelay: 500,
-                contentType: "text",
+                contentType: "html",
                 showCursor: false,
-                loop: false
+                loop: false,
+                callback:function(){
+                 $("h1").addClass("glow");   
+                }
             });
         }
     
     /*type Español*/
      function typingEs() {
+         $("h1").removeClass("glow");
             $("h1").typed({
-                strings: ["hoy te toca\ngym", "anímate\ncon una frase", "hoy te toca\ngym"],
-                typeSpeed: 0,
-                backSpeed: 0,
+                strings: ["hoy te toca<br>gym", "anímate<br>con una frase", "hoy te toca<br>gym"],
+                typeSpeed: 50,
+                backSpeed: 50,
                 backDelay: 500,
-                contentType: "text",
+                contentType: "html",
                 showCursor: false,
-                loop: false
+                loop: false,
+                callback:function(){
+                 $("h1").addClass("glow");   
+                }
             });
         }
 

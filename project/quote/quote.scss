@@ -59,7 +59,8 @@ section {
         width: 90%;
     }
     h1 {
-        //@include fadeIn(2s,-10px);
+        color:$red;
+        @include fadeIn(2s,-10px);
         font-family: sans-serif;
         text-transform: uppercase;
         position: absolute;
@@ -71,7 +72,7 @@ section {
         margin: 0;
         font-size: 3rem;
         line-height: 4rem;
-        @include text-glow($red);
+        @include transition(all,1s,ease);
         @include break(480px,
         768px) {
             font-size: 5rem;
@@ -82,6 +83,7 @@ section {
             line-height: 10rem;
         }
     }
+    
     .btn {
         position: absolute;
         width: 100%;
@@ -187,3 +189,9 @@ section {
         }
     }
 }
+
+
+.glow{
+     @include text-glow($red);
+    color:$white;
+    }

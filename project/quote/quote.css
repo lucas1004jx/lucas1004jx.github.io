@@ -631,6 +631,8 @@ section {
   section .container {
     width: 90%; }
   section h1 {
+    color: #ff0000;
+    animation: fade 2s;
     font-family: sans-serif;
     text-transform: uppercase;
     position: absolute;
@@ -642,8 +644,24 @@ section {
     margin: 0;
     font-size: 3rem;
     line-height: 4rem;
-    -webkit-text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000;
-    text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000; }
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
     @media (min-width: 480px) and (max-width: 768px) {
       section h1 {
         font-size: 5rem;
@@ -736,5 +754,10 @@ section {
       -moz-transform: translateY(2px);
       transform: translateY(2px);
       box-shadow: 0 1px #990000; }
+
+.glow {
+  -webkit-text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000;
+  text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000;
+  color: #fff; }
 
 /*# sourceMappingURL=quote.css.map */
