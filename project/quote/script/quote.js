@@ -11,7 +11,9 @@ $(function () {
             $("#quote p").typed({
                 strings: [data.cita[index]],
                 typeSpeed: 50,
-                contentType: "text"
+                contentType: "text",
+                backSpeed:50,
+                backDelay:500
             });
             
             
