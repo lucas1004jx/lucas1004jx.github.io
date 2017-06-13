@@ -594,10 +594,7 @@ nav {
       #quote p {
         font-size: 4.5rem; } }
   #quote .typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite; }
+    cursor: none; }
   #quote:before {
     content: "\f10d";
     font-family: "FontAwesome";

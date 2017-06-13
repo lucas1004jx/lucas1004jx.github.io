@@ -13,6 +13,8 @@ $(function () {
                 typeSpeed: 50
             });
             
+            
+            
             /*make font responsive according to text amount*/
             var $quote = $("#quote p");
             var $wordnum = $quote.text().split(" ").length;
