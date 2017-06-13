@@ -130,15 +130,15 @@ $(function () {
     
     if($("#es").hasClass("active")){
        
-        function typing() {
+        function typingEs() {
             $("h1").typed({
                 strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
                 typeSpeed: 50
             });
         }
 
-        typing();
-        setInterval(typing, 40000);
+        typingEs();
+        setInterval(typingEs, 40000);
     
        }
     
@@ -149,15 +149,15 @@ $(function () {
         $("#get").html("get motivated <i class='fa fa-arrow-circle-up'></i>");
         $("#quote p").html("<p>To achieve something you’ve never had before, you must do something you’ve never done before.</p>");
 
-        function typing() {
+        function typingEn() {
             $("h1").typed({
                 strings: ["it´s gym <br>time", "get motivated <br>by a quote", "you <br> can do it", "it´s gym <br>time"],
                 typeSpeed: 50
             });
         }
 
-        typing();
-        setInterval(typing, 40000);
+        typingEn();
+        setInterval(typingEn, 40000);
 
     });
 
@@ -168,15 +168,10 @@ $(function () {
         $("#quote p").html("<p>No es grande aquel que nunca falla si no el que nunca se da por vencido.</p>");
         
         
-        function typing() {
-            $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
-                typeSpeed: 50
-            });
-        }
+       
 
-        typing();
-        setInterval(typing, 40000);
+        typingEs();
+        setInterval(typingEs, 40000);
         
     });
 
