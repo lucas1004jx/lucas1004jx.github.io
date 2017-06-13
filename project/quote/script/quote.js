@@ -127,11 +127,11 @@ $(function () {
     /*type English*/
      function typingEn() {
             $("h1").typed({
-                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "it´s gym <br>time"],
+                strings: ["it´s gym\ntime", "get motivated\nby a quote", "it´s gym\ntime"],
                 typeSpeed: 0,
                 backSpeed: 0,
                 backDelay: 500,
-                contentType: "html",
+                contentType: "text",
                 showCursor: false,
                 loop: false
             });
@@ -140,11 +140,11 @@ $(function () {
     /*type Español*/
      function typingEs() {
             $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "hoy te toca <br>gym"],
+                strings: ["hoy te toca\ngym", "anímate\ncon una frase", "hoy te toca\ngym"],
                 typeSpeed: 0,
                 backSpeed: 0,
                 backDelay: 500,
-                contentType: "html",
+                contentType: "text",
                 showCursor: false,
                 loop: false
             });
