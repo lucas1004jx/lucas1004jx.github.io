@@ -34,13 +34,9 @@ $(function () {
             //$("#quote").html("<p>" + data.cita[index] + "</p>");
 
 
-
-
-
-
             /*make font responsive according to text amount*/
             var $quote = $("#quote p");
-            var $wordnum = $quote.text().split(" ").length;
+            var $wordnum = $quote.text( ).split(" ").length;
 
             function resfont() {
                 var $wWidth = $(window).width();
@@ -128,55 +124,52 @@ $(function () {
 
     /*language choice*/
     
-    if($("#es").hasClass("active")){
-       
-        function typing() {
+    /*type English*/
+     function typingEn() {
             $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
-                typeSpeed: 50
+                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "it´s gym <br>time"],
+                typeSpeed: 50,
+                backSpeed: 50,
+                backDelay: 500,
+                contentType: "html",
+                showCursor: false,
+                loop: false
+            });
+        }
+    
+    /*type Español*/
+     function typingEs() {
+            $("h1").typed({
+                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "hoy te toca <br>gym"],
+                typeSpeed: 50,
+                backSpeed: 50,
+                backDelay: 500,
+                contentType: "html",
+                showCursor: false,
+                loop: false
             });
         }
 
-        typing();
-        setInterval(typing, 40000);
+    /*when load the page first time*/
+    typingEs();
     
-       }
-    
-    
+    /*when change english*/
     $("#en").on("click touchstart", function () {
         $("#en").addClass("active");
         $("#es").removeClass("active");
         $("#get").html("get motivated <i class='fa fa-arrow-circle-up'></i>");
         $("#quote p").html("<p>To achieve something you’ve never had before, you must do something you’ve never done before.</p>");
-
-        function typing() {
-            $("h1").typed({
-                strings: ["it´s gym <br>time", "get motivated <br>by a quote", "you <br> can do it", "it´s gym <br>time"],
-                typeSpeed: 50
-            });
-        }
-
-        typing();
-        setInterval(typing, 40000);
+        typingEn();
 
     });
 
+    /*when change español*/
     $("#es").on("click touchstart", function () {
         $("#es").addClass("active");
         $("#en").removeClass("active");
         $("#get").html("motívate con otra frase <i class='fa fa-arrow-circle-up'></i>");
         $("#quote p").html("<p>No es grande aquel que nunca falla si no el que nunca se da por vencido.</p>");
-        
-        
-        function typing() {
-            $("h1").typed({
-                strings: ["hoy te toca <br>gym", "anímate <br>con una frase", "tú <br> puedes", "hoy te toca <br>gym"],
-                typeSpeed: 50
-            });
-        }
-
-        typing();
-        setInterval(typing, 40000);
+        typingEs();    
         
     });
 
