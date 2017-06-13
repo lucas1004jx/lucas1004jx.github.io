@@ -5,12 +5,13 @@ $(function () {
         $.getJSON("quote.json", function (data) {
             var num = data.cita.length;
             var index = Math.floor(Math.random() * num);
-            $("#quote").html("<p>" + data.cita[index] + "</p>");
+            //$("#quote").html("<p>" + data.cita[index] + "</p>");
 
             /*typing animation*/
             $("#quote p").typed({
                 strings: [data.cita[index]],
-                typeSpeed: 50
+                typeSpeed: 50,
+                contentType: "text"
             });
             
             
