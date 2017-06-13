@@ -71,7 +71,7 @@ section {
         margin: 0;
         font-size: 3rem;
         line-height: 4rem;
-       // @include text-glow($red);
+        @include text-glow($red);
         @include break(480px,
         768px) {
             font-size: 5rem;
