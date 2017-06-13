@@ -579,7 +579,7 @@ nav {
 #quote {
   position: relative;
   background: rgba(22, 22, 22, 0.8);
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px; }
   #quote p {
@@ -628,6 +628,8 @@ section {
   align-items: center;
   text-align: center;
   /*btn style*/ }
+  section .container {
+    width: 90%; }
   section h1 {
     animation: fade 2s;
     font-family: sans-serif;

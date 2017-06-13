@@ -7,7 +7,7 @@
 #quote {
     position: relative;
     background: rgba($grey, 0.8);
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 20px;
     p {
@@ -55,6 +55,9 @@ section {
     position: relative;
     @include flex(column);
     text-align: center;
+    .container{
+        width: 90%;
+    }
     h1 {
         @include fadeIn(2s,
         -10px);
