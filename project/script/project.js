@@ -49,9 +49,6 @@ $(function(){
     var lHeight =$(".letter").height();
     var top = (wHeight-lHeight)/2;
     var left =(wWidth-lWidth)/2;
-    console.log(wHeight); 
-       console.log(".letter height:" + lHeight);
-       
      $(".letter").css("top",top);
     $(".letter").css("left",left);
    }
@@ -70,6 +67,12 @@ font.load().then(function () {
 });
     position();
     $(window).resize(position);
+    
+    
+    /*------tooltip----------------*/
+    
+    $("[data-toggle='tooltip']").tooltip("show");
+    $("[data-toggle='tooltip']").find(".tooltip.fade").addClass("in");
     
 });
 

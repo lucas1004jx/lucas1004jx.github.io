@@ -2,42 +2,46 @@
 @import "variable";
 @import "mixins";
 @import "navbar";
-body {}
+body {
+    background: url("image/background.jpg");
+}
 
 header {
-    background: $black;
     color: $white;
     font-family: $main-font;
-    text-rendering:optimizeLegibility;
-
+    text-rendering: optimizeLegibility;
     .letter {
         margin: 0px;
         text-transform: uppercase;
         word-wrap: break-word;
         overflow-wrap: break-word;
-        line-height: 8.5rem; 
+        line-height: 8.5rem;
         padding-left: 10px;
         font-size: 12rem;
-        max-width:320px;
+        max-width: 320px;
         text-align: center;
         position: absolute;
-        
-        @include break(321px,414px){
+        /*-webkit-box-reflect:below -10px linear-gradient(to top,transparent,rgba($white,0.5));
+        box-reflect:below -10px linear-gradient(to top,transparent,rgba($white,0.5));*/
+        @include break(321px,
+        414px) {
             font-size: 12.5rem;
             line-height: 9.8rem;
             max-width: 321px;
         }
-        @include break(415px,767px){
+        @include break(415px,
+        767px) {
             font-size: 15rem;
             line-height: 11rem;
             max-width: 415px;
         }
-        @include break(768px,1023px){
+        @include break(768px,
+        1023px) {
             font-size: 26rem;
             line-height: 18rem;
             max-width: 768px;
         }
-        @include break(1024px){
+        @include break(1024px) {
             font-size: 34rem;
             line-height: 24rem;
             max-width: 1024px;
@@ -47,105 +51,135 @@ header {
         }
         .char1 {
             margin-left: -10px;
-            top:-10px;
-            color:$yellow;
+            top: -10px;
+            color: $yellow;
             z-index: 10;
-            text-shadow: 4px 4px 10px darken($yellow,40);
+            text-shadow: 4px 4px 10px darken($yellow, 40);
         }
         .char2 {
             margin-left: -35px;
-            top:10px;
-            color:$blue;
+            top: 10px;
+            color: $blue;
             z-index: 8;
-            text-shadow:4px 4px 10px darken($blue,40);
-            @include break(769px){
-                text-shadow:
-                4px 10px 10px darken($blue,40);
+            text-shadow: 4px 4px 10px darken($blue, 40);
+            @include break(769px) {
+                text-shadow: 4px 10px 10px darken($blue, 40);
             }
         }
         .char3 {
             margin-left: -20px;
-            top:0;
-            color:$red;
+            top: 0;
+            color: $red;
             z-index: 12;
-            text-shadow:-8px 4px 10px darken($red,40);
+            text-shadow: -8px 4px 10px darken($red, 40);
         }
         .char4 {
             margin-left: 10px;
-            top:-25px;
-            color:lighten($fblue,20);
+            top: -25px;
+            color: lighten($fblue, 20);
             z-index: 12;
-            text-shadow:
-                8px -4px 10px darken($fblue,40),
-                8px 10px 10px darken($fblue,40);
-            @include break(769px){
-                text-shadow:
-                8px -8px 10px darken($fblue,40),
-                10px 16px 10px darken($fblue,40);
+            text-shadow: 8px -4px 10px darken($fblue, 40), 8px 10px 10px darken($fblue, 40);
+            @include break(769px) {
+                text-shadow: 8px -8px 10px darken($fblue, 40), 10px 16px 10px darken($fblue, 40);
             }
         }
         .char5 {
             margin-left: -25px;
-            color:$white;
+            color: $white;
             z-index: 6;
-            text-shadow:6px 6px 10px darken($grey,40);
+            text-shadow: 6px 6px 10px darken($grey, 40);
         }
         .char6 {
             margin-left: -15px;
-            top:-15px;
-            color:$mastard;
+            top: -15px;
+            color: $mastard;
             z-index: 14;
-            text-shadow: -6px -6px 10px darken($mastard,40);
-            @include break(769px){
-                text-shadow:
-                -8px -8px 10px darken($mastard,40);
+            text-shadow: -6px -6px 10px darken($mastard, 40);
+            @include break(769px) {
+                text-shadow: -8px -8px 10px darken($mastard, 40);
             }
         }
         .char7 {
             margin-left: -20px;
-            top:-25px;
-            color:$pink;
+            top: -25px;
+            color: $pink;
             z-index: 14;
-            text-shadow:4px 4px 10px darken($pink,40);
+            text-shadow: 4px 4px 10px darken($pink, 40);
         }
         .char8 {
             margin-left: -20px;
-            color:$green;
+            color: $green;
             z-index: 16;
-            text-shadow:
-                -4px -4px 10px darken($green,40),
-                 4px -4px 10px darken($green,40);
-            @include break(769px){
+            text-shadow: -4px -4px 10px darken($green, 40), 4px -4px 10px darken($green, 40);
+            @include break(769px) {
                 margin-left: -35px;
-                text-shadow:
-                    -10px -8px 20px darken($green,40),
-                    6px -6px 10px darken($green,40);;
+                text-shadow: -10px -8px 20px darken($green, 40), 6px -6px 10px darken($green, 40);
+                ;
             }
-            @include break(1024px){
+            @include break(1024px) {
                 margin-left: -45px;
             }
         }
         .char9 {
             margin-left: -30px;
-            top:-10px;
-            color:$orange;
+            top: -10px;
+            color: $orange;
             z-index: 4;
-            text-shadow:4px 4px 10px darken($orange,40);
-            @include break(769px,1023px){
+            text-shadow: 4px 4px 10px darken($orange, 40);
+            @include break(769px,
+            1023px) {
                 margin-left: -35px;
             }
-            @include break(1024px){
+            @include break(1024px) {
                 margin-left: -55px;
             }
         }
         .char10 {
             margin-left: -20px;
-            color:$purple;
+            color: $purple;
             z-index: 2;
-            text-shadow:4px 4px 10px darken($purple,40);
-            @include break(1024px){
+            text-shadow: 4px 4px 10px darken($purple, 40);
+            @include break(1024px) {
                 margin-left: -35px;
             }
         }
     }
+}
+
+
+/*-------------------project section-----------------*/
+
+section.project {
+    padding: 10px 15px;
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-family: $main-font;
+        color: $red;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    p {
+        color: $white;
+        font-family: $text-font;
+        font-size: 2rem;
+        &:first-of-type {
+            padding-top: 20px;
+        }
+    }
+    a {
+        font-family: $text-font;
+        color: $red;
+        text-decoration: underline;
+        img {
+            width: 100%;
+        }
+    }
+    
+    .row{
+        border:1px solid $white;
+    }
+    
+    
 }

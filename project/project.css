@@ -541,8 +541,10 @@ nav {
       justify-content: center;
       align-items: center; } }
 
+body {
+  background: url("image/background.jpg"); }
+
 header {
-  background: #000;
   color: #fff;
   font-family: orbitron;
   text-rendering: optimizeLegibility; }
@@ -556,7 +558,9 @@ header {
     font-size: 12rem;
     max-width: 320px;
     text-align: center;
-    position: absolute; }
+    position: absolute;
+    /*-webkit-box-reflect:below -10px linear-gradient(to top,transparent,rgba($white,0.5));
+    box-reflect:below -10px linear-gradient(to top,transparent,rgba($white,0.5));*/ }
     @media (min-width: 321px) and (max-width: 414px) {
       header .letter {
         font-size: 12.5rem;
@@ -661,5 +665,31 @@ header {
       @media (min-width: 1024px) {
         header .letter .char10 {
           margin-left: -35px; } }
+
+/*-------------------project section-----------------*/
+section.project {
+  padding: 10px 15px; }
+  section.project h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: orbitron;
+    color: #ff0000;
+    padding: 10px;
+    margin: 20px 0; }
+  section.project p {
+    color: #fff;
+    font-family: gfs-didot;
+    font-size: 2rem; }
+    section.project p:first-of-type {
+      padding-top: 20px; }
+  section.project a {
+    font-family: gfs-didot;
+    color: #ff0000;
+    text-decoration: underline; }
+    section.project a img {
+      width: 100%; }
+  section.project .row {
+    border: 1px solid #fff; }
 
 /*# sourceMappingURL=project.css.map */

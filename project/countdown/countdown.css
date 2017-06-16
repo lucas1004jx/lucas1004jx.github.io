@@ -432,14 +432,8 @@ nav {
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-header a:hover {
-  color: #011764;
-  border-bottom: 4px solid #fff; }
-  @media (min-width: 769px) {
-    .navbar-default .navbar-nav > li > a:focus,
-    .navbar-default .navbar-nav > li > a:hover,
-    .navbar-header a:hover {
-      color: #D9598A;
-      border-bottom: 4px solid #D9598A; } }
+  color: #D9598A;
+  border-bottom: 4px solid #D9598A; }
 
 .navbar-header {
   font-weight: bold;
@@ -469,15 +463,9 @@ nav {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
   font-weight: bold;
-  color: #011764;
-  border-bottom: 4px solid #fff;
+  color: #D9598A;
+  border-bottom: 4px solid #D9598A;
   background: transparent; }
-  @media (min-width: 769px) {
-    .navbar-default .navbar-nav > .active > a,
-    .navbar-default .navbar-nav > .active > a:focus,
-    .navbar-default .navbar-nav > .active > a:hover {
-      color: #D9598A;
-      border-bottom: 4px solid #D9598A; } }
 
 /*open and close btn*/
 #open, #close {
@@ -488,7 +476,7 @@ nav {
   margin-right: 20px;
   color: #fff;
   text-transform: uppercase;
-  font-family: yeseva-one;
+  font-family: gfs-didot;
   -moz-transition: visibility 0.2s ease;
   -webkit-transition: visibility 0.2s ease;
   -o-transition: visibility 0.2s ease;
@@ -517,15 +505,15 @@ nav {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgba(217, 89, 138, 0.8);
+    background: rgba(22, 22, 22, 0.8);
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(217, 89, 138, 0.8), rgba(1, 23, 100, 0.8));
+    background: -webkit-linear-gradient(rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(217, 89, 138, 0.8), rgba(1, 23, 100, 0.8));
+    background: -o-linear-gradient(rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(217, 89, 138, 0.8), rgba(1, 23, 100, 0.8));
+    background: -moz-linear-gradient(rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(217, 89, 138, 0.8), rgba(1, 23, 100, 0.8));
+    background: linear-gradient(rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
     /* Standard syntax */ }
     #nav .wrap {
       position: absolute;
@@ -539,9 +527,6 @@ nav {
       -webkit-flex-direction: column;
       justify-content: center;
       align-items: center; } }
-
-body {
-  font-family: yeseva-one; }
 
 #chongqing {
   position: relative;
@@ -599,9 +584,12 @@ body {
     opacity: 1;
     transform: translateY(0); } }
     #chongqing .heading h1 {
-      font-family: yeseva-one;
+      font-family: orbitron;
       font-size: 3.8rem;
       letter-spacing: 4px; }
+      @media (min-width: 320px) and (max-width: 374px) {
+        #chongqing .heading h1 {
+          font-size: 3rem; } }
       @media (min-width: 481px) and (max-width: 768px) {
         #chongqing .heading h1 {
           font-size: 5rem; } }
@@ -613,6 +601,9 @@ body {
       font-size: 2rem;
       word-spacing: 5px;
       letter-spacing: 2px; }
+      @media (min-width: 320px) and (max-width: 374px) {
+        #chongqing .heading h3 {
+          font-size: 2rem; } }
       @media (min-width: 481px) and (max-width: 768px) {
         #chongqing .heading h3 {
           font-size: 3rem; } }
@@ -626,7 +617,7 @@ body {
   width: 100%;
   left: 0;
   text-align: center;
-  font-family: yeseva-one;
+  font-family: orbitron;
   text-transform: uppercase;
   color: #fff; }
   @media (min-width: 769px) {
@@ -638,6 +629,9 @@ body {
     .countdown .countdown-section .countdown-amount {
       display: block;
       font-size: 4rem; }
+      @media (min-width: 320px) and (max-width: 374px) {
+        .countdown .countdown-section .countdown-amount {
+          font-size: 3rem; } }
       @media (min-width: 481px) and (max-width: 768px) {
         .countdown .countdown-section .countdown-amount {
           font-size: 6rem; } }

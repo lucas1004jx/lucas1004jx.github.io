@@ -4,9 +4,7 @@
 @import "navbar";
 
 
-body{
-    font-family: $main-font;
-}
+
 #chongqing{
     position: relative;
      background: url("image/chongqing_small.jpg") no-repeat center center;
@@ -39,6 +37,9 @@ body{
             font-family: $main-font;
             font-size: 3.8rem;
             letter-spacing: 4px;
+            @include break(320px,374px){
+                font-size: 3rem;
+            }
             @include break(481px,768px){
                 font-size: 5rem;
             }
@@ -51,6 +52,9 @@ body{
             font-size: 2rem;
             word-spacing: 5px;
             letter-spacing: 2px;
+            @include break(320px,374px){
+                font-size: 2rem;
+            }
             @include break(481px,768px){
                 font-size: 3rem;
             }
@@ -80,6 +84,9 @@ body{
         .countdown-amount{
            display: block;
             font-size: 4rem;
+            @include break(320px,374px){
+                font-size: 3rem;
+            }
             @include break(481px,768px){
                 font-size: 6rem;
             }
