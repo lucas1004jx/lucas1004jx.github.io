@@ -46,10 +46,11 @@ $(function(){
     var left =(wWidth-lWidth)/2;
        
        
-       $(".letter").css("top",top);
+     $(".letter").css("top",top);
     $(".letter").css("left",left);
    }
 
+    
     position();
     $(window).resize(position);
     
