@@ -8,10 +8,10 @@ header {
     background: $black;
     color: $white;
     font-family: $main-font;
-   
+    text-rendering:optimizeLegibility;
 
     .letter {
-        margin-top: 0px;
+        margin: 0px;
         text-transform: uppercase;
         word-wrap: break-word;
         overflow-wrap: break-word;

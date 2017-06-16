@@ -1,6 +1,11 @@
+
+
 $(function(){
     
     /*ReactDOM.render(React.createElement("div",null,"hello world"),document.getElementById("react"))*/
+    
+    
+    
     
     var wHeight = $(window).height();
     var wWidth = $(window).width();
@@ -41,17 +46,31 @@ $(function(){
     var wHeight = $(window).height();
     var wWidth = $(window).width();
     var lWidth= $(".letter").width();
-    var lHeigh =$(".letter").height();
-    var top = (wHeight-lHeigh)/2;
+    var lHeight =$(".letter").height();
+    var top = (wHeight-lHeight)/2;
     var left =(wWidth-lWidth)/2;
-       
+    console.log(wHeight); 
+       console.log(".letter height:" + lHeight);
        
      $(".letter").css("top",top);
     $(".letter").css("left",left);
    }
 
-    
+    //----------------position letters-------------------------
+    var font = new FontFaceObserver("orbitron", {
+  weight: 400
+});
+
+font.load().then(function () {
+    position();
+  
+}, function () {
+    position();
+  console.log('Font is not available');
+});
     position();
     $(window).resize(position);
     
 });
+
+

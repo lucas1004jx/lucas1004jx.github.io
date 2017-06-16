@@ -544,9 +544,10 @@ nav {
 header {
   background: #000;
   color: #fff;
-  font-family: orbitron; }
+  font-family: orbitron;
+  text-rendering: optimizeLegibility; }
   header .letter {
-    margin-top: 0px;
+    margin: 0px;
     text-transform: uppercase;
     word-wrap: break-word;
     overflow-wrap: break-word;
