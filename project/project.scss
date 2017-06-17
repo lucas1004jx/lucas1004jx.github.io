@@ -151,35 +151,60 @@ header {
 
 section.project {
     padding: 10px 15px;
+    margin-top: 20px;
     h2 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-family: $main-font;
-        color: $red;
-        padding: 10px;
-        margin: 20px 0;
+        color: $black;
+        @include break(320px,374px){
+            font-size: 1.5rem;
+        }
+        
     }
     p {
         color: $white;
         font-family: $text-font;
         font-size: 2rem;
+        
         &:first-of-type {
-            padding-top: 20px;
+            margin-top: 20px;
+            padding-top: 10px;
         }
     }
     a {
         font-family: $text-font;
-        color: $red;
+        color: $black;
         text-decoration: underline;
+        color:$blue;
+        
         img {
             width: 100%;
         }
     }
     
-    .row{
-        border:1px solid $white;
+    .caption{
+        p{
+        color: $black;
+        font-family: $text-font;
+        font-size: 2rem;
+         text-decoration: none;
+        font-variant: small-caps;
+            @include break(320px,374px){
+            font-size: 1.5rem;
+        }
+        }
+        
+        &>p:nth-of-type(2){
+            font-variant: normal;
+            font-size: 1rem;
+            &:after{
+                content:"...";
+            }      
+        }
     }
+    
     
     
 }

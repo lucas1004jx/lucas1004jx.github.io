@@ -69,10 +69,7 @@ font.load().then(function () {
     $(window).resize(position);
     
     
-    /*------tooltip----------------*/
     
-    $("[data-toggle='tooltip']").tooltip("show");
-    $("[data-toggle='tooltip']").find(".tooltip.fade").addClass("in");
     
 });
 

@@ -668,28 +668,44 @@ header {
 
 /*-------------------project section-----------------*/
 section.project {
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  margin-top: 20px; }
   section.project h2 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: orbitron;
-    color: #ff0000;
-    padding: 10px;
-    margin: 20px 0; }
+    color: #000; }
+    @media (min-width: 320px) and (max-width: 374px) {
+      section.project h2 {
+        font-size: 1.5rem; } }
   section.project p {
     color: #fff;
     font-family: gfs-didot;
     font-size: 2rem; }
     section.project p:first-of-type {
-      padding-top: 20px; }
+      margin-top: 20px;
+      padding-top: 10px; }
   section.project a {
     font-family: gfs-didot;
-    color: #ff0000;
-    text-decoration: underline; }
+    color: #000;
+    text-decoration: underline;
+    color: #1CAFC0; }
     section.project a img {
       width: 100%; }
-  section.project .row {
-    border: 1px solid #fff; }
+  section.project .caption p {
+    color: #000;
+    font-family: gfs-didot;
+    font-size: 2rem;
+    text-decoration: none;
+    font-variant: small-caps; }
+    @media (min-width: 320px) and (max-width: 374px) {
+      section.project .caption p {
+        font-size: 1.5rem; } }
+  section.project .caption > p:nth-of-type(2) {
+    font-variant: normal;
+    font-size: 1rem; }
+    section.project .caption > p:nth-of-type(2):after {
+      content: "..."; }
 
 /*# sourceMappingURL=project.css.map */
