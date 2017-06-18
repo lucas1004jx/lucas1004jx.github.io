@@ -39,18 +39,20 @@ $(function(){
     
     $("header h1").lettering();
     
-    //control position of .letter
+    
+    
+    //control position  center
     
    
-   function position(){
+   function position(ele){
     var wHeight = $(window).height();
     var wWidth = $(window).width();
-    var lWidth= $(".letter").width();
-    var lHeight =$(".letter").height();
+    var lWidth= $(ele).width();
+    var lHeight =$(ele).height();
     var top = (wHeight-lHeight)/2;
     var left =(wWidth-lWidth)/2;
-     $(".letter").css("top",top);
-    $(".letter").css("left",left);
+     $(ele).css("top",top);
+    $(ele).css("left",left);
    }
 
     //----------------position letters-------------------------
@@ -59,18 +61,32 @@ $(function(){
 });
 
 font.load().then(function () {
-    position();
+    position(".letter");
   
 }, function () {
-    position();
+    position(".letter");
   console.log('Font is not available');
 });
-    position();
-    $(window).resize(position);
+    position(".letter");
+    $(window).resize(function(){
+        position(".letter");
+    });
     
+    //-----------------match height-------------
+    $(".jumbotron").matchHeight();
     
+       //-------------center project block---------
+    function project(ele){
+    var wHeight = $(window).height();
+    var lHeight =$(ele).height();
+    var top = (wHeight-lHeight)/2; 
+     $(ele).css("top",top);
+   }
     
+    project(".project");
     
 });
+
+
 
 

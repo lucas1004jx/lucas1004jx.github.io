@@ -544,6 +544,10 @@ nav {
 body {
   background: url("image/background.jpg"); }
 
+.stop-scroll {
+  overflow: hidden;
+  height: 100%; }
+
 header {
   color: #fff;
   font-family: orbitron;
@@ -704,7 +708,7 @@ section.project {
         font-size: 1.5rem; } }
   section.project .caption > p:nth-of-type(2) {
     font-variant: normal;
-    font-size: 1rem; }
+    font-size: 1.2rem; }
     section.project .caption > p:nth-of-type(2):after {
       content: "..."; }
 

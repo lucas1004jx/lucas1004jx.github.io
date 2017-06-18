@@ -4,6 +4,12 @@
 @import "navbar";
 body {
     background: url("image/background.jpg");
+    
+}
+
+.stop-scroll{
+    overflow: hidden;
+    height: 100%;
 }
 
 header {
@@ -198,7 +204,7 @@ section.project {
         
         &>p:nth-of-type(2){
             font-variant: normal;
-            font-size: 1rem;
+            font-size: 1.2rem;
             &:after{
                 content:"...";
             }      

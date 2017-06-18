@@ -7,7 +7,7 @@ $(function () {
                 $(".fullHeight").css("height", wHeight);
             });
 
-            /*navbar overlay*/
+            /* navbar overlay*/
             $("#open").click(function() {
                     $("#nav").fadeToggle();
                 $("#open").css("visibility","hidden");
