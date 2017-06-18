@@ -544,10 +544,6 @@ nav {
 body {
   background: url("image/background.jpg"); }
 
-.stop-scroll {
-  overflow: hidden;
-  height: 100%; }
-
 header {
   color: #fff;
   font-family: orbitron;

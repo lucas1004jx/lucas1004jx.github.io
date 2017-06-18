@@ -76,17 +76,18 @@ font.load().then(function () {
     $(".jumbotron").matchHeight();
     
        //-------------center project block---------
-    function project(ele){
+    function centerTop(ele){
     var wHeight = $(window).height();
     var lHeight =$(ele).height();
     var top = (wHeight-lHeight)/2; 
      $(ele).css("top",top);
    }
     
-    project(".project");
+    centerTop("#quote,#countdown");
+    //------------animation on scroll--------------
+    AOS.init();
     
 });
-
 
 
 

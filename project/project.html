@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
     <link href="project.css" rel="stylesheet">
     <script src="//use.edgefonts.net/orbitron:n3,n5,n7,n9;rochester;gfs-didot.js"></script>
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
@@ -61,7 +62,7 @@
    
     <div class="container fullHeight">
         <div class="row">
-                <section class="project col-xs-12 col-sm-6 col-md-4">
+                <section class="project col-xs-12 col-sm-6 col-md-4" id="quote" data-aos="zoom-out" data-aos-duration="600">
                 <div class="jumbotron caption">
                     <h2>quote generator</h2>
                     <a href="quote/quote.html">
@@ -70,9 +71,9 @@
                     <p>A project From FreeCode Camp</p>
                     <p>This is a project from FreeCode Camp, and I really love how the project turns out. I´ve applied AJAX and JSON to this project</p>
                     <!----------modal-------------------->
-                    <button type="button" class="btn btn-info btn-ml" data-toggle="modal" data-target="#countdown">TO KONW MORE</button>
+                    <button type="button" class="btn btn-info btn-ml" data-toggle="modal" data-target="#quoteModal">TO KONW MORE</button>
 
-                    <div class="modal fade" id="countdown" role="dialog">
+                    <div class="modal fade" id="quoteModal" role="dialog">
                         <div class="modal-dialog">
                             <!-------modal content-->
                             <div class="modal-content">
@@ -103,7 +104,7 @@
                 <!-------jumbotron-->
             </section>
              
-            <section class="project col-xs-12 col-sm-6 col-md-4">
+            <section class="project col-xs-12 col-sm-6 col-md-4" id="countdown" data-aos="zoom-out" data-aos-duration="600">
                 <div class="jumbotron caption">
                     <h2>trip countdown</h2>
                     <a href="countdown/countdown.html">
@@ -112,9 +113,9 @@
                     <p>A project for my trip</p>
                     <p>This is a project for my trip to china, I´m going back to Chong Qing, china in septembre, I create this little web App to remaid me  </p>
                     <!----------modal-------------------->
-                    <button type="button" class="btn btn-info btn-ml" data-toggle="modal" data-target="#quote">TO KONW MORE</button>
+                    <button type="button" class="btn btn-info btn-ml" data-toggle="modal" data-target="#countdownModal">TO KONW MORE</button>
 
-                    <div class="modal fade" id="quote" role="dialog">
+                    <div class="modal fade" id="countdown" role="dialog">
                         <div class="modal-dialog">
                             <!-------modal content-->
                             <div class="modal-content">
@@ -164,7 +165,7 @@
     <script src="script/jquery.lettering-0.6.1.min.js"></script>
     <script src="script/fontfaceobserver.js"></script>
     <script src="script/jquery.matchHeight.js"></script>
-    <script src="script/jquery.scrollme.min.js"></script>
+    <script src="script/aos.js"></script>
     <script src="script/project.js"></script>
 </body>
 </html>
