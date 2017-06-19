@@ -4,6 +4,10 @@
 //var url= "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY";
 
 //get icon http://openweathermap.org/img/w/10d.png
+//http://api.openweathermap.org/data/2.5/weather?lat=41.6405488&lon=-4.737433&APPID=0b723ce4aade68f38bd6fb0ae3303df4
+//http://api.openweathermap.org/data/2.5/weather?lat=41.6405488&lon=-4.737433&APPID=0b723ce4aade68f38bd6fb0ae3303df4
+
+
 
 //------------weather api-------------------
 $(function(){
@@ -18,7 +22,7 @@ $(function(){
     
     function getInfo(){
         
-       $.get(url + "&appid=" + api).done(function(response){
+       $.get(url + "&APPID=" + api).done(function(response){
         console.log(response);
         weatherInfo(response);
     }); 
@@ -52,7 +56,7 @@ $(function(){
             lat =position.coords.latitude;
             lng =position.coords.longitude;
                
-            url="//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
+            url="http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
              console.log(url);  
                
                getInfo();
