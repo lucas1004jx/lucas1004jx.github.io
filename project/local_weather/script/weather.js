@@ -56,7 +56,7 @@ $(function(){
             lat =position.coords.latitude;
             lng =position.coords.longitude;
                
-            url="http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
+            url=" https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
              console.log(url);  
                
                getInfo();
