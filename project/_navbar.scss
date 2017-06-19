@@ -35,11 +35,7 @@ nav{
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-header a:hover {
     color: $red;
-    border-bottom: 4px solid $white;
-    @include break(769px){
-        color: $red;
-        border-bottom: 4px solid $red;
-    }
+    border-bottom: 4px solid $red;
 }
 
 //navbar-brand
@@ -81,13 +77,8 @@ nav{
 .navbar-default .navbar-nav>.active>a:hover {
     font-weight: bold;
     color:$red;
-    border-bottom: 4px solid $white;
+    border-bottom: 4px solid $red;
     background: transparent;
-    @include break(769px){
-        color: $red;
-     border-bottom: 4px solid $red;
-    }
-    
 }
 
 

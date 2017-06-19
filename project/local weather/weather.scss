@@ -2,3 +2,39 @@
 @import "variable";
 @import "mixins";
 @import "navbar";
+
+
+
+#weather{
+    background: $mastard;
+    text-align: center;
+    @include flex(column);
+    h1{
+      text-transform: uppercase;
+        margin: 0;
+        font-family: $main-font;
+    }
+    #city{
+        border-bottom: 4px $white solid;
+        padding: 5px 50px;
+    }
+    #descri{
+        display: inline-block;
+        font-family: $main-font;
+        
+    }
+    img{
+        display: inline-block;
+    }
+    #temp{
+        font-size: 2.5rem;
+    }
+    
+    .block{
+        margin-top: -10px;
+    }
+    
+    button#deg{
+       margin: 20px; 
+    }
+}

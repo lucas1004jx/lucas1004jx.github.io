@@ -11,7 +11,54 @@
     
 </head>
 <body>
- <div id="weather"></div>
+<!--navbar-->
+    <nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="navbar-header navbar-fixed-top">
+                        <a href="../../index.html" class="navbar-brand">LucasJin<span>Front End Developer </span></a>
+                        <button type="button" id="open" class="openbtn">
+                      MENU
+                  </button>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <nav class="navbar  navbar-default navbar-fixed-top" id="nav">
+                        <button type="button" class="closebtn" id="close">CLOSE</button>
+                        <div class=" wrap">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../../index.html">HOME</a></li>
+                                <li><a href="../../about/about.html">ABOUT</a></li>
+                                <li class="active"><a href="project.html">PROJECT</a></li>
+                                <li><a href="../../contact/contact.html">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </nav>
+
+<!--------weather------------>
+ <div id="weather" class="fullHeight">
+    <div id="city"></div>
+    <div class="block">
+       <div id="descri"></div>
+      <img src="" alt=""> 
+    </div>
+    
+    <div id="temp"></div>
+    <button type="button" class="btn btn-info" id="degF" data-deg="c">Turn to Fahrenheit</button>
+    <div></div>
+     
+ </div>
     
     <script src="script/jquery-3.2.1.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
