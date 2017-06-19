@@ -41,7 +41,7 @@ $(function(){
         $("#city").html("<h1>"+city+"</h1>");
         $("#descri").html("<p>"+descri+"</p>");
          $("#temp").html("<h1>"+degC+"&#176;C</h1>");
-        $("#weather img").attr("src","http://openweathermap.org/img/w/" + icon +".png");
+        $("#weather img").attr("src","//openweathermap.org/img/w/" + icon +".png");
         
     }
     
