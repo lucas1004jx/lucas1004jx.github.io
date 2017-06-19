@@ -52,13 +52,13 @@ $(function(){
             lat =position.coords.latitude;
             lng =position.coords.longitude;
                
-            url="http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
+            url="//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng;
              console.log(url);  
                
                getInfo();
                
            },function(){
-              $("#weather").html("<p>Sorry, can´t get your location, please refresh the browser agian</p>");
+              $("#weather").html("<p>Sorry, can´t get your location, please refresh the browser.</p>");
            });
             
            }/*----if navagator*/
