@@ -83,7 +83,7 @@ font.load().then(function () {
      $(ele).css("top",top);
    }
     
-    centerTop("#quote,#countdown");
+    centerTop(".jumbotron");
     //------------animation on scroll--------------
     AOS.init();
     

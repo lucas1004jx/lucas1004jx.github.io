@@ -167,18 +167,11 @@ section.project {
         
     }
     p {
-        color: $white;
+        color: $black;
         font-family: $text-font;
-        font-size: 2rem;
-        
-        &:first-of-type {
-            margin-top: 20px;
-            padding-top: 10px;
-        }
     }
     a {
         font-family: $text-font;
-        color: $black;
         text-decoration: underline;
         color:$blue;
         
@@ -194,6 +187,10 @@ section.project {
         font-size: 2rem;
          text-decoration: none;
         font-variant: small-caps;
+        &:first-of-type {
+            margin-top: 20px;
+            padding-top: 10px;
+        }
             @include break(320px,374px){
             font-size: 1.5rem;
         }
@@ -208,6 +205,11 @@ section.project {
         }
     }
     
-    
+    .modal-body{
+        p{
+            font-variant: small-caps;
+            font-size: 1.5em;
+        }
+    }
     
 }

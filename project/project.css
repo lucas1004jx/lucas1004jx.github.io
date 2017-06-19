@@ -668,15 +668,10 @@ section.project {
       section.project h2 {
         font-size: 1.5rem; } }
   section.project p {
-    color: #fff;
-    font-family: gfs-didot;
-    font-size: 2rem; }
-    section.project p:first-of-type {
-      margin-top: 20px;
-      padding-top: 10px; }
+    color: #000;
+    font-family: gfs-didot; }
   section.project a {
     font-family: gfs-didot;
-    color: #000;
     text-decoration: underline;
     color: #1CAFC0; }
     section.project a img {
@@ -687,6 +682,9 @@ section.project {
     font-size: 2rem;
     text-decoration: none;
     font-variant: small-caps; }
+    section.project .caption p:first-of-type {
+      margin-top: 20px;
+      padding-top: 10px; }
     @media (min-width: 320px) and (max-width: 374px) {
       section.project .caption p {
         font-size: 1.5rem; } }
@@ -695,5 +693,8 @@ section.project {
     font-size: 1.2rem; }
     section.project .caption > p:nth-of-type(2):after {
       content: "..."; }
+  section.project .modal-body p {
+    font-variant: small-caps;
+    font-size: 1.5em; }
 
 /*# sourceMappingURL=project.css.map */
