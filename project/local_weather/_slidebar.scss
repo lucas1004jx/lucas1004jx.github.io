@@ -1,0 +1,25 @@
+#nav {
+    font-family: $nav-font;
+    text-transform: uppercase;
+    font-weight: bolder;
+    @include flex(column);
+    height: 100%;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        a {
+            color: $white;
+            &:hover {
+                color: $red;
+                border-bottom: 2px solid $red;
+            }
+        }
+    }
+    .active {
+        color: $red;
+        border-bottom: 2px solid $red;
+    }
+}

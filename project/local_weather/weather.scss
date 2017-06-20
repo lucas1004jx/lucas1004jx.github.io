@@ -1,7 +1,7 @@
 @import "normalize";
 @import "variable";
 @import "mixins";
-@import "navbar";
+@import "slidebar"; 
 body {
     font-family: $main-font;
     color: $black;
@@ -16,18 +16,34 @@ body {
         text-transform: uppercase;
         margin: 0;
         font-family: $main-font;
+        
     }
     #city {
         padding: 5px;
     }
     .header {
         position: absolute;
-        top: 5%;
+        top: 8%;
         left: 10px;
         font-size: 1rem;
+        width: 100%;
+        @include break(481px,768px){
+            font-size: 1.5rem;
+        }
+        @include break(769px){
+            font-size: 2rem;
+        }
+    }
+    #deg{
+        margin-right: 20px;
+        font-size: 1rem;
+        @include break(320px,374px){
+            font-size: 0.8rem;
+        }
     }
     #week {
         margin-right: 20px;
+        margin-left: 20px;
     }
     #descri,
     img,
@@ -39,6 +55,15 @@ body {
         font-size: 2.5rem;
         padding: 10px;
         margin-top: 20px;
+    }
+    #descri{
+        font-size: 1.5rem;
+        @include break(481px,768px){
+            font-size:  2rem;
+        }
+        @include break(769px){
+            font-size:  2.5rem;
+        }
     }
     .windBlock {
         @extend .block;
@@ -58,11 +83,7 @@ body {
         right: 10px;   
     }
     
-    button#deg {
-        position: absolute;
-        top: 5%;
-        right: 10px;
-    }
+    
     img {
         width: 50%;
         object-fit: cover;
@@ -78,12 +99,22 @@ body {
         width: 100%;
         text-align: center;
         bottom: 0;
-        padding: 20px;
+        padding: 20px 5px;
+        
     }
 }
 
 .block {
+      font-size: 1rem;
         width: 100px;
+    @include break(481px,768px){
+        font-size: 1.5rem;
+        margin: 0 15px;
+    }
+    @include break(769px){
+        font-size: 2rem;
+        margin: 0 25px;
+    }
       display: inline-block;
         img {
             width: 20%;
@@ -94,4 +125,21 @@ body {
         }
     }
     
-@include glow();
+//@include glow();
+
+.menu{
+    position: absolute;
+    top:5px;
+    left: 10px;
+    color: $black;
+    background: transparent;
+}
+
+.custom-fluid-width {
+  width: 40%;
+}
+
+button{
+    font-family: $main-font;
+}
+

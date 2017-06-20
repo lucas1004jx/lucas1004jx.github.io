@@ -101,7 +101,7 @@ $(function(){
         
         if(control==="c"){
            $("#temp").html("<h1>"+degF+"&#176;F</h1>");
-        $("#deg").text("Turn to Celsius").attr("data-deg","f");
+        $("#deg").text("Show Celsius").attr("data-deg","f");
     
            } else if(control==="f"){
         $("#temp").html("<h1>"+degC+"&#176;C</h1>");
@@ -122,6 +122,16 @@ $(function(){
     }
     
     setInterval(showTime,1000);
+    
+    //--------------create slidebar-----------
+    var controller = new slidebars();
+    controller.init();
+    $(".menu").on("click",function(e){
+        event.stopPropagation();
+      event.preventDefault();
+        controller.toggle( 'id-1' );
+    });
+    
     
 });
   
