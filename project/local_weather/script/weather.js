@@ -113,11 +113,15 @@ $(function(){
     
     
     /*-------------get date use moment.js----------*/
-    var week = moment().format("dddd");
+    function showTime(){
+       var week = moment().format("dddd");
     var time= moment().format("LT");
     
     $("#week").html("<p>"+week+"</p>");
-    $("#time").html("<p>"+time+"</p>");
+    $("#time").html("<p>"+time+"</p>"); 
+    }
+    
+    setInterval(showTime,1000);
     
 });
   
