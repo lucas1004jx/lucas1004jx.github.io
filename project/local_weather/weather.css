@@ -529,9 +529,14 @@ nav {
       justify-content: center;
       align-items: center; } }
 
+body {
+  font-family: orbitron;
+  color: #000; }
+
 #weather {
-  background: #CCB91F;
+  background: #fff;
   text-align: center;
+  animation: glow 20s linear infinite;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -543,18 +548,96 @@ nav {
     margin: 0;
     font-family: orbitron; }
   #weather #city {
-    border-bottom: 4px #fff solid;
-    padding: 5px 50px; }
-  #weather #descri {
-    display: inline-block;
-    font-family: orbitron; }
-  #weather img {
+    padding: 5px; }
+  #weather .header {
+    position: absolute;
+    top: 5%;
+    left: 10px;
+    font-size: 1rem; }
+  #weather #week {
+    margin-right: 20px; }
+  #weather #descri,
+  #weather img,
+  #weather #time,
+  #weather #week {
     display: inline-block; }
   #weather #temp {
-    font-size: 2.5rem; }
-  #weather .block {
-    margin-top: -10px; }
+    font-size: 2.5rem;
+    padding: 10px;
+    margin-top: 20px; }
+  #weather .windBlock {
+    bottom: 10px;
+    left: 10px; }
+  #weather .humiBlock {
+    bottom: 10px;
+    right: 10px; }
+  #weather .sunriseBlock {
+    bottom: 10px;
+    right: 10px; }
   #weather button#deg {
-    margin: 20px; }
+    position: absolute;
+    top: 5%;
+    right: 10px; }
+  #weather img {
+    width: 50%;
+    object-fit: cover; }
+    @media (min-width: 481px) and (max-width: 768px) {
+      #weather img {
+        width: 40%; } }
+    @media (min-width: 769px) {
+      #weather img {
+        width: 30%; } }
+  #weather #sidebar {
+    position: absolute;
+    bottom: 0;
+    padding: 20px; }
+
+.block, #weather .windBlock, #weather .humiBlock, #weather .sunriseBlock {
+  width: 100px;
+  display: inline-block; }
+  .block img, #weather .windBlock img, #weather .humiBlock img, #weather .sunriseBlock img {
+    width: 20%; }
+  .block p, #weather .windBlock p, #weather .humiBlock p, #weather .sunriseBlock p {
+    margin: 0;
+    padding: 0; }
+
+@-webkit-keyframes glow {
+  0% {
+    background: #fff; }
+  10% {
+    background: #1CAFC0; }
+  20% {
+    background: #FECA47; }
+  30% {
+    background: #83C25A; }
+  40% {
+    background: #F28140; }
+  50% {
+    background: #9266C0; }
+  60% {
+    background: #D9598A; }
+  70% {
+    background: #CCB91F; }
+  80% {
+    background: #ff0000; } }
+@keyframes glow {
+  0% {
+    background: #fff; }
+  10% {
+    background: #1CAFC0; }
+  20% {
+    background: #FECA47; }
+  30% {
+    background: #83C25A; }
+  40% {
+    background: #F28140; }
+  50% {
+    background: #9266C0; }
+  60% {
+    background: #D9598A; }
+  70% {
+    background: #CCB91F; }
+  80% {
+    background: #D9598A; } }
 
 /*# sourceMappingURL=weather.css.map */

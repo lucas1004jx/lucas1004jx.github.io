@@ -2,39 +2,94 @@
 @import "variable";
 @import "mixins";
 @import "navbar";
+body {
+    font-family: $main-font;
+    color: $black;
+}
 
-
-
-#weather{
-    background: $mastard;
+#weather {
+    background: $white;
     text-align: center;
+    animation: glow 20s linear infinite;
     @include flex(column);
-    h1{
-      text-transform: uppercase;
+    h1 {
+        text-transform: uppercase;
         margin: 0;
         font-family: $main-font;
     }
-    #city{
-        border-bottom: 4px $white solid;
-        padding: 5px 50px;
+    #city {
+        padding: 5px;
     }
-    #descri{
+    .header {
+        position: absolute;
+        top: 5%;
+        left: 10px;
+        font-size: 1rem;
+    }
+    #week {
+        margin-right: 20px;
+    }
+    #descri,
+    img,
+    #time,
+    #week {
         display: inline-block;
-        font-family: $main-font;
-        
     }
-    img{
-        display: inline-block;
-    }
-    #temp{
+    #temp {
         font-size: 2.5rem;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .windBlock {
+        @extend .block;
+        bottom: 10px;
+        left: 10px;
     }
     
-    .block{
-        margin-top: -10px;
+    .humiBlock{
+        
+       @extend .block;
+        bottom: 10px;
+        right: 10px;
+        }
+    .sunriseBlock{
+        @extend .block;
+        bottom: 10px;
+        right: 10px;   
     }
     
-    button#deg{
-       margin: 20px; 
+    button#deg {
+        position: absolute;
+        top: 5%;
+        right: 10px;
+    }
+    img {
+        width: 50%;
+        object-fit: cover;
+        @include break(481px, 768px) {
+            width: 40%;
+        }
+        @include break(769px) {
+            width: 30%;
+        }
+    }
+    #sidebar{
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
     }
 }
+
+.block {
+        width: 100px;
+      display: inline-block;
+        img {
+            width: 20%;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+@include glow();

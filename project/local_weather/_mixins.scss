@@ -71,39 +71,86 @@
     align-items: center;
 }
 
-@mixin glow($color1,$color2){
+@mixin glow(){
     
     @-webkit-keyframes glow{
           0%{
-            color:$color1;
+            background:$white;
 
         }
-        50%{
-            color:$color2;
+        10%{
+            background:$blue;
            
         }
-        100%{
-            color:$color1;
+        20%{
+            background:$yellow;
+           
+        }
+        30%{
+            background:$green;
+
+        }
+        40%{
+            background:$orange;
+           
+        }
+        50%{
+            background:$purple;
+           
+        }
+        60%{
+            background:$pink;
+
+        }
+        70%{
+            background:$mastard;
+           
+        }
+        80%{
+            background:$red;
            
         }
     }
     
     
     @keyframes glow{
-        0%{
-            color:$color1;
+          0%{
+            background:$white;
 
         }
-        50%{
-            color:$color2;
+        10%{
+            background:$blue;
            
         }
-        100%{
-            color:$color1;
+        20%{
+            background:$yellow;
+           
+        }
+        30%{
+            background:$green;
+
+        }
+        40%{
+            background:$orange;
+           
+        }
+        50%{
+            background:$purple;
+           
+        }
+        60%{
+            background:$pink;
+
+        }
+        70%{
+            background:$mastard;
+           
+        }
+        80%{
+            background:$pink;
            
         }
     }
-    
 }
 @mixin blink(){
     @keyframes blink{

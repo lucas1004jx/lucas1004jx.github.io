@@ -15,10 +15,15 @@ $(function(){
     var lng=0;
     var url="";
     var api="0b723ce4aade68f38bd6fb0ae3303df4";
-   var degC;
+    var degC;
     var degF;
+
     
     getLocation();
+    
+    $.get("http://api.openweathermap.org/data/2.5/forecast?lat=41.6405488&lon=-4.737433&APPID=0b723ce4aade68f38bd6fb0ae3303df4").done(function(forecast){
+        console.log(forecast);
+    });
     
     function getInfo(){
         
@@ -39,14 +44,21 @@ $(function(){
         var city=response.name;
         var country=response.sys.country;
         var icon=response.weather[0].icon;
+        var sunrise= moment.unix(response.sys.sunrise);
+        var hour=sunrise._d.getHours();
+        var min=sunrise._d.getMinutes();
+         var sunriseTime=hour +":"+min+"AM";
+        
         /*var info ="You are in "+city+", "+country+ "<br>Current weather condition: "+condition+"<br>Current temperature: "+ degC + "&#176;C/" + degF +"&#176;F"+"<br>Current humidity : "+ humidity+"<br>Current wind speed: "+ windSpeed + "mps";
         
         $("#weather").append("<p>" + info + "</p>");*/
         $("#city").html("<h1>"+city+"</h1>");
         $("#descri").html("<p>"+descri+"</p>");
          $("#temp").html("<h1>"+degC+"&#176;C</h1>");
-        $("#weather img").attr("src","//openweathermap.org/img/w/" + icon +".png");
-        
+        $("#icon").attr("src","images/" + icon +".svg");
+        $("#wind").html("<p>"+windSpeed+"mps</p>");
+        $("#humidity").html("<p>"+humidity+"</p>");
+        $("#sunrise").html("<p>"+sunriseTime+"</p>");
     }
     
     function getLocation(){
@@ -100,26 +112,13 @@ $(function(){
     });
     
     
-    /*-------------------navbar overlay------------*/
-            $("#open").click(function() {
-                    $("#nav").fadeToggle();
-                $("#open").css("visibility","hidden");
-               
-                });
-            $("#close").click(function(){
-                $("#nav").fadeToggle();
-               $("#open").css("visibility","visible");
-            });              
-            
-    $(window).resize(function() {
-        if (window.innerWidth >=769) {
-            $("#nav").css("display", "block");
-        }else{
-            $("#nav").css("display", "none");
-            $("#open").css("visibility","visible");
-        }
-
-    });      
+    /*-------------get date use moment.js----------*/
+    var week = moment().format("dddd");
+    var time= moment().format("LT");
+    
+    $("#week").html("<p>"+week+"</p>");
+    $("#time").html("<p>"+time+"</p>");
+    
 });
   
 

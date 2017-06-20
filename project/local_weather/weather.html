@@ -6,62 +6,62 @@
     <title>Local Weather</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="weather.css" rel="stylesheet">
     <script src="//use.edgefonts.net/orbitron:n3,n5,n7,n9;rochester;gfs-didot.js"></script>
-    
+    <link href="weather.css" rel="stylesheet">
+
 </head>
+
 <body>
-<!--navbar-->
-    <nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="navbar-header navbar-fixed-top">
-                        <a href="../../index.html" class="navbar-brand">LucasJin<span>Front End Developer </span></a>
-                        <button type="button" id="open" class="openbtn">
-                      MENU
-                  </button>
-                    </div>
-                </div>
 
 
-                <div class="col-sm-6">
-                    <nav class="navbar  navbar-default navbar-fixed-top" id="nav">
-                        <button type="button" class="closebtn" id="close">CLOSE</button>
-                        <div class=" wrap">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="../../index.html">HOME</a></li>
-                                <li><a href="../../about/about.html">ABOUT</a></li>
-                                <li class="active"><a href="../project.html">PROJECT</a></li>
-                                <li><a href="../../contact/contact.html">CONTACT</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-
-
-            </div>
-            <!--row-->
+    <!--------weather------------>
+    <div id="weather" class="fullHeight">
+        <div class="header">
+            <div id="city"></div>
+            <div id="week"></div>
+            <div id="time"></div>
         </div>
-        <!--container-->
-    </nav>
 
-<!--------weather------------>
- <div id="weather" class="fullHeight">
-    <div id="city"></div>
-    <div class="block">
-       <div id="descri"></div>
-      <img src="" alt=""> 
+
+        <img src="" alt="" id="icon">
+
+        <div id="temp"></div>
+
+        <div id="descri"></div>
+
+        <div id="sidebar">
+            <div class="sunriseBlock">
+                <img src="images/sunrise.svg" alt="">
+                <p>Sunrise</p>
+                <div id="sunrise"></div>
+            </div>
+
+            <div class="windBlock">
+                <img src="images/wind.svg" alt="">
+                <p>Wind</p>
+                <div id="wind"></div>
+            </div>
+
+            <div class="humiBlock">
+                <img src="images/humidity.svg" alt="">
+                <p>Humidity</p>
+                <div id="humidity"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <button type="button" class="btn btn-default btn-sm" id="deg" data-deg="c">Turn to Fahrenheit</button>
+        <div></div>
+
     </div>
-    
-    <div id="temp"></div>
-    <button type="button" class="btn btn-info btn-sm" id="deg" data-deg="c">Turn to Fahrenheit</button>
-    <div></div>
-     
- </div>
-    
+
     <script src="script/jquery-3.2.1.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
-    <script src="script/weather.js"></script> 
+    <script src="script/moment.js"></script>
+    <script src="script/weather.js"></script>
 </body>
 </html>
