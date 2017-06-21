@@ -27,6 +27,9 @@ body {
         left: 10px;
         font-size: 1rem;
         width: 100%;
+        @include break(320px,374px){
+            font-size: 0.8rem;
+        }
         @include break(481px,768px){
             font-size: 1.5rem;
         }
@@ -41,10 +44,18 @@ body {
             font-size: 0.8rem;
         }
     }
-    #week {
+    #week,#time{
         margin-right: 20px;
-        margin-left: 20px;
+        p{
+            margin: 0;
+            margin-top: 10px;
+            font-size: 1rem;
+            @include break(320px,374px){
+            margin-top: 5px;
+        }
+        }
     }
+    
     #descri,
     img,
     #time,
@@ -143,3 +154,71 @@ button{
     font-family: $main-font;
 }
 
+
+  /*----------------position in the top right corner---*/  
+ /*#cityName, .easy-autocomplete{
+    position: absolute;
+    top:5px;
+    right: 20px;
+    font-family: $nav-font;
+}
+  .easy-autocomplete-container ul,.easy-autocomplete-container{
+    top:17px;
+    right: 20px;
+}
+
+#searchIcon{
+    position: absolute;
+    top:15px;
+    right: 10px;
+    font-size: 2rem;
+}*/
+
+
+
+input#cityName, .easy-autocomplete,.easy-autocomplete-container ul li{
+    font-family: $nav-font;
+    display: inline-block;
+    width: 140px;
+    font-size: 1rem;
+    @include break(320px,374px){
+      width: 120px;
+        
+    }
+    @include break(481px,768px){
+       width: 200px;
+        font-size: 1.5rem;
+    }
+    @include break(769px){
+        width: 290px;
+        font-size: 2rem;
+    }
+}
+#cityName{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+}
+#searchIcon{
+    padding: 5px;
+    margin-left:0px;
+    font-size: 1.5rem;
+    @include break(321px,480px){
+      margin-left:18px;
+    }
+    @include break(481px,768px){
+      margin-left:30px;
+        font-size: 1.5rem;
+    }
+    @include break(769px){
+        margin-left:40px;
+        font-size: 2rem;
+    }
+}
+#searchBar{
+    
+}
+
+.easy-autocomplete, .eac-description{
+    width: 150px;
+}

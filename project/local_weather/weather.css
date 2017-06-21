@@ -401,7 +401,7 @@ rgb(127,68,0);        brown
 #EDF2FF                grey
 city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7))  purple-blue rgba(0,0,51,0.8);
 */
-#nav {
+.nav {
   font-family: gfs-didot;
   text-transform: uppercase;
   font-weight: bolder;
@@ -413,17 +413,17 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   align-items: center;
   height: 100%;
   padding: 0; }
-  #nav li {
+  .nav li {
     list-style: none;
     padding: 10px;
     text-align: center;
     width: 100%; }
-    #nav li a {
+    .nav li a {
       color: #fff; }
-      #nav li a:hover {
+      .nav li a:hover {
         color: #ff0000;
         border-bottom: 2px solid #ff0000; }
-  #nav .active {
+  .nav .active {
     color: #ff0000;
     border-bottom: 2px solid #ff0000; }
 
@@ -453,6 +453,9 @@ body {
     left: 10px;
     font-size: 1rem;
     width: 100%; }
+    @media (min-width: 320px) and (max-width: 374px) {
+      #weather .header {
+        font-size: 0.8rem; } }
     @media (min-width: 481px) and (max-width: 768px) {
       #weather .header {
         font-size: 1.5rem; } }
@@ -465,9 +468,15 @@ body {
     @media (min-width: 320px) and (max-width: 374px) {
       #weather #deg {
         font-size: 0.8rem; } }
-  #weather #week {
-    margin-right: 20px;
-    margin-left: 20px; }
+  #weather #week, #weather #time {
+    margin-right: 20px; }
+    #weather #week p, #weather #time p {
+      margin: 0;
+      margin-top: 10px;
+      font-size: 1rem; }
+      @media (min-width: 320px) and (max-width: 374px) {
+        #weather #week p, #weather #time p {
+          margin-top: 5px; } }
   #weather #descri,
   #weather img,
   #weather #time,
@@ -540,5 +549,64 @@ body {
 
 button {
   font-family: orbitron; }
+
+/*----------------position in the top right corner---*/
+ /*#cityName, .easy-autocomplete{
+    position: absolute;
+    top:5px;
+    right: 20px;
+    font-family: $nav-font;
+}
+  .easy-autocomplete-container ul,.easy-autocomplete-container{
+    top:17px;
+    right: 20px;
+}
+
+#searchIcon{
+    position: absolute;
+    top:15px;
+    right: 10px;
+    font-size: 2rem;
+}*/
+input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
+  font-family: gfs-didot;
+  display: inline-block;
+  width: 140px;
+  font-size: 1rem; }
+  @media (min-width: 320px) and (max-width: 374px) {
+    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
+      width: 120px; } }
+  @media (min-width: 481px) and (max-width: 768px) {
+    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
+      width: 200px;
+      font-size: 1.5rem; } }
+  @media (min-width: 769px) {
+    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
+      width: 290px;
+      font-size: 2rem; } }
+
+#cityName {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px; }
+
+#searchIcon {
+  padding: 5px;
+  margin-left: 0px;
+  font-size: 1.5rem; }
+  @media (min-width: 321px) and (max-width: 480px) {
+    #searchIcon {
+      margin-left: 18px; } }
+  @media (min-width: 481px) and (max-width: 768px) {
+    #searchIcon {
+      margin-left: 30px;
+      font-size: 1.5rem; } }
+  @media (min-width: 769px) {
+    #searchIcon {
+      margin-left: 40px;
+      font-size: 2rem; } }
+
+.easy-autocomplete, .eac-description {
+  width: 150px; }
 
 /*# sourceMappingURL=weather.css.map */

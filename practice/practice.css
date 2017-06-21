@@ -1,0 +1,30 @@
+body{
+    width: 100%;
+    height: 1200px;
+    background: #678911;
+    
+}
+
+input#cityName{
+    
+    
+    background: #987;
+}
+
+
+.easy-autocomplete-container{
+    top:34px;
+}
+    
+ #cityName,.easy-autocomplete-container ul,  
+.easy-autocomplete{
+    
+    top:10%;
+    right: 10px;
+}
+
+#cityName:after{
+    content: "\f002";
+    font-family: "FontAwesome";
+    color: $red;
+}

@@ -8,27 +8,36 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/slidebars.min.css">
     <script src="//use.edgefonts.net/orbitron:n3,n5,n7,n9;rochester;gfs-didot.js"></script>
+    <link rel="stylesheet" href="css/easy-autocomplete.min.css">
     <link href="weather.css" rel="stylesheet">
 
 </head>
 
 <body>
     <!----------slidebar-->
+    
     <div canvas="container">
         <button class="menu btn btn-default"><i class="fa fa-bars" aria-hidden="true"></i></button>
-
-
+        
+           
+     
         <!--------weather------------>
         <div id="weather" class="fullHeight">
             <div class="header">
                 <div id="city" class="pull-left"></div>
+                <div id="time" class="pull-right"></div>
+                <div id="week" class="pull-right"></div>
                 
-                <button type="button" class="btn btn-default btn-sm pull-right" id="deg" data-deg="c">Show Fahrenheit</button>
                 
                 <div class="clearfix"></div>
-                <div id="week" class="pull-left"></div>
-                <div id="time" class="pull-left"></div>
+                <div class="pull-left" id="searchBar">
+                   <input type="text" id="cityName" placeholder="City Name">
+                   <i class="fa fa-search" aria-hidden="true" id="searchIcon"></i>
+                </div>
                 
+                
+                <button type="button" class="btn btn-default btn-sm pull-right" id="deg" data-deg="c">Show Fahrenheit</button>
+        
             </div>
 
 
@@ -58,23 +67,28 @@
                 </div>
             </div>
             
-        </div>
-
-    </div>
-<!-----------slide menu-------->
+        </div><!-------------weather-------------->
+    </div><!--------slide bar-->
+<!-----------slide menu------------------------>
     <div class="custom-fluid-width" off-canvas="id-1 left push" >
-    <ul id="nav">
+    <ul class="nav">
        <li><a href="../../index.html">home</a></li>
      <li><a href="../../about/about.html">about</a></li>
-     <li><a href="../project.html" class="active">project</a></li>
+     <li id="project"><a href="../project.html" class="active">project</a> 
+     </li>
      <li><a href="../../contact/contact.html">contact</a></li> 
     </ul>
-    </div>
+    </div><!-------id-1 left push-->
+    
+    <!-------------------search bar------------>
+    
+    
 
     <script src="script/jquery-3.2.1.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/moment.js"></script>
     <script src="script/slidebars.min.js"></script>
+    <script src="script/jquery.easy-autocomplete.min.js"></script>
     <script src="script/weather.js"></script>
 </body>
 </html>
