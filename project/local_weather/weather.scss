@@ -174,7 +174,9 @@ button{
     font-size: 2rem;
 }*/
 
-
+.easy-autocomplete-container ul{
+    margin-left: 5px;
+}
 
 input#cityName, .easy-autocomplete,.easy-autocomplete-container ul li{
     font-family: $nav-font;
