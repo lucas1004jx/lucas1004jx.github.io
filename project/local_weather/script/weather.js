@@ -18,8 +18,23 @@ $(function () {
     var degC;
     var degF;
      var id;
-
-    getLocation();
+   
+    //----------check permission state-----------
+     navigator.permissions.query({name:'geolocation'}).then(function(result) {
+ if (result.state == 'granted') {
+     console.log(result.state);
+   getLocation();
+ } else if (result.state == 'prompt') {
+     getLocation();
+   console.log(result.state);
+ }else{
+     alert("Sorry, Geolocation  permission is denied.");
+     $("#error").html("<p>Sorry, Geolocation  permission is denied.</p>");
+ }
+ // Don't do anything if the permission was denied.
+});
+    
+    
 
 
     function getInfo() {
@@ -71,10 +86,12 @@ $(function () {
                 getInfo();
 
             }, function () {
-                $("#weather").html("<p>Sorry, can´t get your location, please refresh the browser.</p>");
+                $("#error").html("<p>Sorry, can´t get your location, please refresh the browser.</p>");
             });
 
-        } /*----if navagator*/
+        } else{
+            $("#error").html("<p>Sorry, Geolocation is not supported for this Browser.</p>");
+        }/*----if navagator*/
 
 
     }
