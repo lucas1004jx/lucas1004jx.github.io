@@ -20,7 +20,7 @@ $(function () {
      var id;
    getLocation();
     //----------check permission state-----------
-     navigator.permissions.query({name:'geolocation'}).then(function(result) {
+     /*navigator.permissions.query({name:'geolocation'}).then(function(result) {
  if (result.state == 'granted') {
      console.log(result.state);
    getLocation();
@@ -32,7 +32,7 @@ $(function () {
      $("#error").html("<p>Sorry, Geolocation  permission is denied.</p>");
  }
  // Don't do anything if the permission was denied.
-});
+});*/
     
     
 
