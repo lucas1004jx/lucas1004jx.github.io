@@ -446,7 +446,8 @@ body {
     font-family: orbitron;
     padding: 5px 0; }
   #weather #city {
-    padding: 5px; }
+    padding: 5px;
+    color: #F28140; }
   #weather .header {
     position: absolute;
     top: 8%;
@@ -493,9 +494,11 @@ body {
   #weather #temp {
     font-size: 2.5rem;
     padding: 10px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    color: #F28140; }
   #weather #descri {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    color: #F28140; }
     @media (min-width: 481px) and (max-width: 768px) {
       #weather #descri {
         font-size: 2rem; } }
