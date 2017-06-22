@@ -161,11 +161,12 @@ $(function () {
         getValue: "name",
         theme:"square",
         list: {
+            maxNumberOfElements: 10,
             match: {
                 enabled: true
             },
             sort:{
-                enabled:true
+                enabled:false
             },
             showAnimation: {
 			type: "fade", //normal|slide|fade
