@@ -9,7 +9,6 @@ body {
 
 #weather {
     background: $white;
-    //text-align: center;
     animation: glow 20s linear infinite;
     @include flex(column);
     h1 {
@@ -163,7 +162,7 @@ button{
     font-family: $main-font;
 }
 
-
+/*---------------input position-------------------*/
 input#cityName {
     font-family: $nav-font;
     margin-right: 5px;

@@ -558,6 +558,7 @@ body {
 button {
   font-family: orbitron; }
 
+/*---------------input position-------------------*/
 input#cityName {
   font-family: gfs-didot;
   margin-right: 5px;

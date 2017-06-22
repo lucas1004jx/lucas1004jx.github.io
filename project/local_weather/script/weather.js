@@ -81,11 +81,24 @@ $(function () {
 //----------------get url by id-------------------
     function getId(){
         url = " https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?id=" + id;
-        console.log("id url" + url);
         getInfo();
         
     }
-
+//-----------go back to current city----------
+    function back(){
+        url = " https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng;
+        getInfo();
+        
+    }
+    
+    $("#back").hide();
+    $("#back").on("click",function(){
+        $("#back").fadeOut("slow");
+        back();
+        //document.getElementById("cityName").value="";
+        $("#cityName").val("");
+    });
+    
     //-----------------main js-------------------------
 
 
@@ -169,6 +182,7 @@ $(function () {
         onClickEvent(){
              id = $("#cityName").getSelectedItemData().id;
             getId();
+            $("#back").fadeIn();
         }
             
         },
