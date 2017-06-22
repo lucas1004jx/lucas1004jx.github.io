@@ -146,6 +146,7 @@ $(function () {
     var options = {
         url: "city.list.min.json",
         getValue: "name",
+        theme:"square",
         list: {
             match: {
                 enabled: true

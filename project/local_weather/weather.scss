@@ -9,13 +9,14 @@ body {
 
 #weather {
     background: $white;
-    text-align: center;
+    //text-align: center;
     animation: glow 20s linear infinite;
     @include flex(column);
     h1 {
         text-transform: uppercase;
         margin: 0;
         font-family: $main-font;
+        padding: 5px 0;
         
     }
     #city {
@@ -39,19 +40,27 @@ body {
     }
     #deg{
         margin-right: 20px;
-        font-size: 1rem;
-        @include break(320px,374px){
-            font-size: 0.8rem;
+        font-size: 0.8rem;
+        @include break(480px,768px){
+            font-size: 1.5rem;
+        }
+        @include break(769px){
+           font-size: 2rem;
         }
     }
     #week,#time{
         margin-right: 20px;
         p{
             margin: 0;
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 1rem;
-            @include break(320px,374px){
-            margin-top: 5px;
+            @include break(480px,768px){
+            margin-top: 10px;
+           font-size: 1.5rem;
+        }
+            @include break(769px){
+            margin-top: 10px;
+           font-size: 2rem;
         }
         }
     }
@@ -155,72 +164,41 @@ button{
 }
 
 
-  /*----------------position in the top right corner---*/  
- /*#cityName, .easy-autocomplete{
-    position: absolute;
-    top:5px;
-    right: 20px;
+input#cityName {
     font-family: $nav-font;
-}
-  .easy-autocomplete-container ul,.easy-autocomplete-container{
-    top:17px;
-    right: 20px;
-}
-
-#searchIcon{
-    position: absolute;
-    top:15px;
-    right: 10px;
-    font-size: 2rem;
-}*/
-
-.easy-autocomplete-container ul{
-    margin-left: 5px;
-}
-
-input#cityName, .easy-autocomplete,.easy-autocomplete-container ul li{
-    font-family: $nav-font;
-    display: inline-block;
-    width: 140px;
-    font-size: 1rem;
-    @include break(320px,374px){
-      width: 120px;
-        
-    }
-    @include break(481px,768px){
-       width: 200px;
-        font-size: 1.5rem;
-    }
-    @include break(769px){
-        width: 290px;
-        font-size: 2rem;
-    }
-}
-#cityName{
     margin-right: 5px;
     margin-left: 5px;
     padding: 5px;
-}
-#searchIcon{
-    padding: 5px;
-    margin-left:0px;
-    font-size: 1.5rem;
-    @include break(321px,480px){
-      margin-left:18px;
+    width: 123px;
+    margin-top: 2.5px;
+  background-image: url("images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+    @include break(375px,480px){
+        width: 154px;
     }
-    @include break(481px,768px){
-      margin-left:30px;
-        font-size: 1.5rem;
+    @include break(480px,768px){
+        width: 231px;
     }
     @include break(769px){
-        margin-left:40px;
-        font-size: 2rem;
+        width: 308px;
     }
 }
-#searchBar{
-    
+
+.easy-autocomplete-container ul{
+    font-family: $nav-font;
+    margin-left: 5px;
 }
 
-.easy-autocomplete, .eac-description{
-    width: 150px;
+div.easy-autocomplete.eac-square.eac-description{
+    width: 123px;
+    @include break(375px,480px){
+        width: 154px;
+    }
+    @include break(480px,768px){
+        width: 231px;
+    }
+    @include break(769px){
+        width: 308px;
+    }
 }

@@ -433,7 +433,6 @@ body {
 
 #weather {
   background: #fff;
-  text-align: center;
   animation: glow 20s linear infinite;
   display: flex;
   display: -webkit-flex;
@@ -444,7 +443,8 @@ body {
   #weather h1 {
     text-transform: uppercase;
     margin: 0;
-    font-family: orbitron; }
+    font-family: orbitron;
+    padding: 5px 0; }
   #weather #city {
     padding: 5px; }
   #weather .header {
@@ -464,19 +464,27 @@ body {
         font-size: 2rem; } }
   #weather #deg {
     margin-right: 20px;
-    font-size: 1rem; }
-    @media (min-width: 320px) and (max-width: 374px) {
+    font-size: 0.8rem; }
+    @media (min-width: 480px) and (max-width: 768px) {
       #weather #deg {
-        font-size: 0.8rem; } }
+        font-size: 1.5rem; } }
+    @media (min-width: 769px) {
+      #weather #deg {
+        font-size: 2rem; } }
   #weather #week, #weather #time {
     margin-right: 20px; }
     #weather #week p, #weather #time p {
       margin: 0;
-      margin-top: 10px;
+      margin-top: 15px;
       font-size: 1rem; }
-      @media (min-width: 320px) and (max-width: 374px) {
+      @media (min-width: 480px) and (max-width: 768px) {
         #weather #week p, #weather #time p {
-          margin-top: 5px; } }
+          margin-top: 10px;
+          font-size: 1.5rem; } }
+      @media (min-width: 769px) {
+        #weather #week p, #weather #time p {
+          margin-top: 10px;
+          font-size: 2rem; } }
   #weather #descri,
   #weather img,
   #weather #time,
@@ -550,66 +558,40 @@ body {
 button {
   font-family: orbitron; }
 
-/*----------------position in the top right corner---*/
- /*#cityName, .easy-autocomplete{
-    position: absolute;
-    top:5px;
-    right: 20px;
-    font-family: $nav-font;
-}
-  .easy-autocomplete-container ul,.easy-autocomplete-container{
-    top:17px;
-    right: 20px;
-}
-
-#searchIcon{
-    position: absolute;
-    top:15px;
-    right: 10px;
-    font-size: 2rem;
-}*/
-.easy-autocomplete-container ul {
-  margin-left: 5px; }
-
-input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
+input#cityName {
   font-family: gfs-didot;
-  display: inline-block;
-  width: 140px;
-  font-size: 1rem; }
-  @media (min-width: 320px) and (max-width: 374px) {
-    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
-      width: 120px; } }
-  @media (min-width: 481px) and (max-width: 768px) {
-    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
-      width: 200px;
-      font-size: 1.5rem; } }
-  @media (min-width: 769px) {
-    input#cityName, .easy-autocomplete, .easy-autocomplete-container ul li {
-      width: 290px;
-      font-size: 2rem; } }
-
-#cityName {
   margin-right: 5px;
   margin-left: 5px;
-  padding: 5px; }
-
-#searchIcon {
   padding: 5px;
-  margin-left: 0px;
-  font-size: 1.5rem; }
-  @media (min-width: 321px) and (max-width: 480px) {
-    #searchIcon {
-      margin-left: 18px; } }
-  @media (min-width: 481px) and (max-width: 768px) {
-    #searchIcon {
-      margin-left: 30px;
-      font-size: 1.5rem; } }
+  width: 123px;
+  margin-top: 2.5px;
+  background-image: url("images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center; }
+  @media (min-width: 375px) and (max-width: 480px) {
+    input#cityName {
+      width: 154px; } }
+  @media (min-width: 480px) and (max-width: 768px) {
+    input#cityName {
+      width: 231px; } }
   @media (min-width: 769px) {
-    #searchIcon {
-      margin-left: 40px;
-      font-size: 2rem; } }
+    input#cityName {
+      width: 308px; } }
 
-.easy-autocomplete, .eac-description {
-  width: 150px; }
+.easy-autocomplete-container ul {
+  font-family: gfs-didot;
+  margin-left: 5px; }
+
+div.easy-autocomplete.eac-square.eac-description {
+  width: 123px; }
+  @media (min-width: 375px) and (max-width: 480px) {
+    div.easy-autocomplete.eac-square.eac-description {
+      width: 154px; } }
+  @media (min-width: 480px) and (max-width: 768px) {
+    div.easy-autocomplete.eac-square.eac-description {
+      width: 231px; } }
+  @media (min-width: 769px) {
+    div.easy-autocomplete.eac-square.eac-description {
+      width: 308px; } }
 
 /*# sourceMappingURL=weather.css.map */
