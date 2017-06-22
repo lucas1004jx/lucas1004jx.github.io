@@ -18,7 +18,7 @@ $(function () {
     var degC;
     var degF;
      var id;
-   
+   getLocation();
     //----------check permission state-----------
      navigator.permissions.query({name:'geolocation'}).then(function(result) {
  if (result.state == 'granted') {
