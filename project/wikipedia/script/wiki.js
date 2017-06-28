@@ -138,6 +138,10 @@ $(function () {
             },
             onHideListEvent:function(){
                 $(".easy-autocomplete-container").css("height",0);
+                update();
+                var wHeight = $(window).height();
+                $("#main").css("top", -wHeight).fadeOut();
+                $("#intro").css("top", 0).fadeIn();
             },
             onChooseEvent: function (element) {
                 update();
