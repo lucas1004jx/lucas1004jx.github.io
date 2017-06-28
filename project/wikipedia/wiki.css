@@ -479,8 +479,6 @@ body {
   background: #ecacc5;
   position: absolute;
   width: 100%;
-  -webkit-transform: scale(1);
-  transform: scale(1);
   -moz-transition: top 1s ease;
   -webkit-transition: top 1s ease;
   -o-transition: top 1s ease;
