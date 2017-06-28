@@ -30,6 +30,8 @@ body {
         background: lighten($pink,20%);
        position: absolute;
       width: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
     @include transition(top, 1s, ease);
 
     
