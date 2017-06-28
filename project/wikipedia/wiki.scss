@@ -141,8 +141,8 @@ body {
     }
 }
 /*---------------search bar----------------*/
-div.easy-autocomplete.eac-icon-right {
-    width: 80%;
+div.easy-autocomplete {
+    width: 80% !important;
     display: inline-block;
     @include break(481px,768px){
             font-size: 2rem;   

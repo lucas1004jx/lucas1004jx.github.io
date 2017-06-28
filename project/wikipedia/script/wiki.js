@@ -145,9 +145,6 @@ $(function () {
                 var wHeight = $(window).height();
                 $("#main").css("top", -wHeight).fadeOut();
                 $("#intro").css("top", 0).fadeIn();
-                $("html, body").css("transform","scale(1)");
-
-
             }
         },
 

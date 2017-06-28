@@ -591,14 +591,14 @@ body {
       color: #0f5e67; }
 
 /*---------------search bar----------------*/
-div.easy-autocomplete.eac-icon-right {
-  width: 80%;
+div.easy-autocomplete {
+  width: 80% !important;
   display: inline-block; }
   @media (min-width: 481px) and (max-width: 768px) {
-    div.easy-autocomplete.eac-icon-right {
+    div.easy-autocomplete {
       font-size: 2rem; } }
   @media (min-width: 769px) {
-    div.easy-autocomplete.eac-icon-right {
+    div.easy-autocomplete {
       font-size: 3rem; } }
 
 .easy-autocomplete-container {
