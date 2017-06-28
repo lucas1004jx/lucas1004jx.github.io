@@ -108,7 +108,7 @@ $(function () {
     /*----------search bar----------------------*/
     var options = {
         url: function (result) {
-            return "https://en.wikipedia.org/w/api.php?action=opensearch&format=xml&search=" + result;
+            return "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&format=xml&search=" + result;
         },
         dataType: "xml",
         xmlElementName: "Item",
