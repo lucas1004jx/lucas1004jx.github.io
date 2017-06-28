@@ -60,7 +60,7 @@ $(function () {
     })
     
     $("#random2").click(function(){
-        
+        $("#loading").fadeIn();
         if($("#back").text() === "Back"){
            randomEn();
            }else if($("#back").text() === "Volver"){
