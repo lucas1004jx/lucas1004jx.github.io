@@ -134,7 +134,7 @@ $(function () {
             },
             onShowListEvent:function(){
                 $(".easy-autocomplete-container").css("height",250);
-                console.log("aa");
+                
             },
             onHideListEvent:function(){
                 $(".easy-autocomplete-container").css("height",0);
@@ -142,8 +142,8 @@ $(function () {
             onClickEvent: function (element) {
                 update();
                 var wHeight = $(window).height();
-                $("#main").css("top", -wHeight);
-                $("#intro").css("top", 0);
+                $("#main").css("top", -wHeight).fadeOut();
+                $("#intro").css("top", 0).fadeIn();
 
 
             }
