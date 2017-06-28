@@ -4,7 +4,7 @@ $(function () {
 
     //-------------get random data------------
     function randomEn() {
-        var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnfilterredir=redirects&rnlimit=10";
+        var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnfilterredir=redirects&rnlimit=10&callback=?";
         
         $.get(url).done(function (response) {
             console.log(response);
@@ -24,7 +24,7 @@ $(function () {
     };
     
       function randomEs() {
-        var url = "https://es.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnfilterredir=redirects&rnlimit=10";
+        var url = "https://es.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnfilterredir=redirects&rnlimit=10&callback=?";
         $.get(url).done(function (response) {
             console.log(response);
             var id;
@@ -84,7 +84,7 @@ $(function () {
     function update() {
         result = $("#searchBar").val();
         $("#searchBar").val(result);
-        url = url + result + "&limit=1";
+        url = url + result + "&limit=1&callback=?";
         get();
     };
 
