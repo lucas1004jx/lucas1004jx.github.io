@@ -139,7 +139,7 @@ $(function () {
             onHideListEvent:function(){
                 $(".easy-autocomplete-container").css("height",0);
             },
-            onClickEvent: function (element) {
+            onChooseEvent: function (element) {
                 update();
                 var wHeight = $(window).height();
                 $("#main").css("top", -wHeight).fadeOut();
