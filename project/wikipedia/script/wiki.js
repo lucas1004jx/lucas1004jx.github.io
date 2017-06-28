@@ -47,8 +47,8 @@ $(function () {
     $("#random").click(function () {
         $("#social").fadeOut();
         var wHeight=$(window).height();
-        $("#article").css("top",0);
-        $("#main").css("top",-wHeight);
+        $("#article").css("top",0).fadeIn();
+        $("#main").css("top",-wHeight).fadeOut();
         if($("#back").text() === "Back"){
            randomEn();
            }else if($("#back").text() === "Volver"){
@@ -173,8 +173,8 @@ $(function () {
     //---------------------go back btn------------------------
     $("#back").click(function () {
         var wHeight=$(window).height();
-        $("#main").css("top", 0);
-        $("#intro").css("top",wHeight);
+        $("#main").css("top", 0).fadeIn();
+        $("#intro").css("top",wHeight).fadeOut();
         $("#searchBar").val("");
 //--------------reset url---------------------
         if ($("#back").text() === "Back") {
@@ -188,8 +188,8 @@ $(function () {
     $("#back2").click(function(){
         $("#social").fadeIn();
         var wHeight=$(window).height();
-        $("#article").css("top",wHeight);
-        $("#main").css("top",0);
+        $("#article").css("top",wHeight).fadeOut();
+        $("#main").css("top",0).fadeIn();
     });
     //---------------set initial position of each section------
 
@@ -197,16 +197,16 @@ $(function () {
     function InitPo(){
          var wHeight = $(window).height();
          $("#lang").css("top", 0);
-        $("#main").css("top", wHeight);
-        $("#intro").css("top", wHeight);
-        $("#article").css("top",wHeight);
+        $("#main").css("top", wHeight).fadeOut();
+        $("#intro").css("top", wHeight).fadeOut();
+        $("#article").css("top",wHeight).fadeOut();
     }
 
    InitPo();
     
     
 //----------------change position  when resize-------------------
-    $(window).resize(function () {
+    /*$(window).resize(function () {
         var wHeight = $(window).height();
         if ($("#main").css("top") === "0px") {
             $("#main").css("top", 0);
@@ -232,14 +232,14 @@ $(function () {
             $("#article").css("top",0);
         }
 
-    });
+    });*/
 
     //---------------language button function----------------
     $("#en").click(function () {
         
         var wHeight = $(window).height();
-        $("#lang").css("top", -wHeight);
-        $("#main").css("top", 0);
+        $("#lang").css("top", -wHeight).fadeOut();
+        $("#main").css("top", 0).fadeIn();
         url = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=";
         //----------change language of the text-------------------
         $("#random").text("Give a try");
@@ -254,8 +254,8 @@ $(function () {
     $("#es").click(function () {
         
         var wHeight = $(window).height();
-        $("#lang").css("top", -wHeight);
-        $("#main").css("top", 0);
+        $("#lang").css("top", -wHeight).fadeOut();
+        $("#main").css("top", 0).fadeIn();
 
         url = "https://es.wikipedia.org/w/api.php?action=opensearch&format=json&search=";
         //----------change language of the text-------------------
@@ -269,8 +269,8 @@ $(function () {
 
     $("#change").click(function () {
         var wHeight = $(window).height();
-        $("#lang").css("top", 0);
-        $("#main").css("top", wHeight);
+        $("#lang").css("top", 0).fadeIn();
+        $("#main").css("top", wHeight).fadeOut();
     });
 
 //---------------use typed.js to animate language page h1---------------
