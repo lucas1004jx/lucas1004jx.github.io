@@ -8,6 +8,7 @@ $(function () {
         
         $.get(url).done(function (response) {
             console.log(response);
+            $("#loading").fadeOut();
             var id;
             var randomUrl;
             var title;
@@ -27,6 +28,7 @@ $(function () {
         var url = "https://cors-anywhere.herokuapp.com/https://es.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnfilterredir=redirects&rnlimit=10";
         $.get(url).done(function (response) {
             console.log(response);
+            $("#loading").fadeOut();
             var id;
             var randomUrl;
             var title;
@@ -46,6 +48,7 @@ $(function () {
     
     $("#random").click(function () {
         $("#social").fadeOut();
+        $("#loading").fadeIn();
         var wHeight=$(window).height();
         $("#article").css("top",0).fadeIn();
         $("#main").css("top",-wHeight).fadeOut();
@@ -294,4 +297,12 @@ $(function () {
   controller.toggle( 'id-1' );
 } );
     
+//----------loading status overlay--------------
+    $("#loading").hide();
+    $("#loading").resize(function(){
+        var wHeight=$(window).height();
+        $("#loading").css("height",wHeight);
+    });
+   
+
 });

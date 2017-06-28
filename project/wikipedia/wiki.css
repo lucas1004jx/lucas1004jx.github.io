@@ -665,4 +665,26 @@ div.easy-autocomplete {
         #social li i {
           font-size: 2rem; } }
 
+#loading {
+  position: absolute;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.8);
+  z-index: 102;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FECA47;
+  font-family: alfa-slab-one;
+  font-size: 2rem;
+  letter-spacing: 0.5rem; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    #loading {
+      font-size: 4rem; } }
+  @media (min-width: 769px) {
+    #loading {
+      font-size: 6rem; } }
+
 /*# sourceMappingURL=wiki.css.map */

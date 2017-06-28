@@ -210,3 +210,22 @@ div.easy-autocomplete {
         }
     }
 }
+
+//----------loading status overlay----------
+#loading{
+    position: absolute;
+    width: 100%;
+    background: rgba($grey,0.8);
+    z-index: 102;
+    @include flex(row);
+    color:$yellow;
+    font-family: $wiki-font;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    @include break(480px,768px){
+       font-size: 4rem; 
+    }
+    @include break(769px){
+        font-size: 6rem;
+    }
+}
