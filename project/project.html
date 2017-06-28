@@ -62,7 +62,60 @@
    
     <div class="container fullHeight">
         <div class="row">
+    <!--------------------------wiki search app---------------------------------->
+                       <section class="project col-xs-12 col-sm-6 col-md-4" id="wiki" >
+                <div class="jumbotron caption" data-aos="zoom-out" data-aos-duration="600">
+                    <h2>Wiki search</h2>
+                    <a href="wikipedia/wiki.html">
+                        <img src="image/wiki.jpg" alt="wiki search" class="img-thumbnail"> Click here or the image to see the project
+                    </a>
+                    <p>A project from FreeCode Camp</p>
+                    <p>This is anther project from FreeCode Camp, it´s a wiki search app that require using media wiki API to get the wikipedia page  </p>
+                    <!----------modal btn------------------->
+                    
+                    <button type="button" class="btn btn-info btn-ml" data-toggle="modal" data-target="#wikiModal">TO KONW MORE</button>
+              </div>
+                <!-------jumbotron----------------->
+                   
+                   <!----------modal-------------------->
+                    <div class="modal fade" id="wikiModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-------modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h2 class="modal-title">countdown</h2>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>This is another project from FreeCode Camp, and it requires using media wiki API to get the wikipedia page and also the user can click a button and generate a random wikipedia page.</p>
+                                    
+                                    <p>Basically it´s quite the same with my last project , the weather app, but this time I find more complicated due to the page layout and the API call. This time worked with XML format instead of JSON, and to get the random page I have to make two API calls. But I have so much fun with it and I´ve learn a lot form it.</p>
+                                    
+                                    <p>So the basical function of this APP is: First, the language page will show up to request the user to choose a language (English or Spanish) and then it will lead to the user to the main serach page.
+                                    
+                                    <p>In this page the use can type a subject that he wants search in the search bar, then will silde in another page to show the generally conent of the subject, if the user wants to know more, he can click "know more" button to get the wikipedia page, or he can click "back" button to go back to the search page. </p>
+                                    
+                                    <p>And another function is the user can click "give a try button", then will slide in another page to show the user 10 random articles, if the user is interested in one article ,he can click on it , and it will lead to the corresponding wikipedia page, or he can click "another try" button to get another 10 random articles. And the last hte user can click "back" button to go back to the main search page.</p>
+                                    
+                                    <p>I hope you like it.</p>
+                                    <a href="wikipedia/wiki.html"><button type="button" class="btn btn-info">View the project</button></a>
+                                </div>
+                                <!---------modal body-->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                                <!------footer--------->
+                            </div>
+                            <!------------modal content---------->
+                        </div>
+                        <!-----modal dialog------->
+                    </div>
+                    <!-------id countdown-->
+                
+            </section>
                
+ <!--------------------------weath app---------------------------------->
                <section class="project col-xs-12 col-sm-6 col-md-4" id="weather" >
                 <div class="jumbotron caption" data-aos="zoom-out" data-aos-duration="600">
                     <h2>local weather</h2>
@@ -110,7 +163,7 @@
                 
             </section>
 
-               
+<!--------------------------quote app---------------------------------->    
                 <section class="project col-xs-12 col-sm-6 col-md-4" id="quote" >
                 <div class="jumbotron caption" data-aos="zoom-out" data-aos-duration="600">
                     <h2>quote generator</h2>
@@ -155,7 +208,7 @@
                     <!-------id quote-->
                 
             </section>
-             
+  <!--------------------------countdown app---------------------------------->           
             <section class="project col-xs-12 col-sm-6 col-md-4" id="countdown" data->
                 <div class="jumbotron caption" data-aos="zoom-out" data-aos-duration="600">
                     <h2>trip countdown</h2>

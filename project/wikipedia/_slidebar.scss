@@ -10,17 +10,19 @@
         padding: 10px;
         text-align: center;
         width: 100%;
-        a {
+        text-align: center;
+        width: 150px;
+        a { 
             color: $white;
             &:hover {
-                color: $red;
-                border-bottom: 2px solid $red;
+                color: $black;
+                border-bottom: 2px solid $black;
             }
         }
     }
     .active {
-        color: $red;
-        border-bottom: 2px solid $red;
+        color: $black;
+        border-bottom: 2px solid $black;
     }
 }
 
@@ -30,8 +32,10 @@
     left: 10px;
     color: $black;
     background: transparent;
+    z-index: 100;
 }
 
 .custom-fluid-width {
   width: 40%;
+    background: $mastard;
 }

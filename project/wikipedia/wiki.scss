@@ -1,0 +1,210 @@
+@import "normalize";
+@import "variable";
+@import "mixins";
+@import "slidebar";
+body {
+    font-family: $nav-font;
+}
+//--------------main section----------------------
+#main {
+   
+    @include flex(column);
+    width: 100%;
+    margin: 0 auto;
+    font-family: $nav-font;
+    background: lighten($blue,20%);
+    position: absolute;
+    @include transition(top, 1s, ease);
+        #searchBar {
+            width: 100%;
+           background-image: url("images/icon_search.png");
+           background-repeat: no-repeat;
+           background-position: right 10px center;
+        }    
+}
+/*----------------intro section------------*/
+#intro{
+        font-family: $nav-font;
+        @include flex(column);
+        padding: 20px;
+        background: lighten($pink,20%);
+       position: absolute;
+      width: 100%;
+    @include transition(top, 1s, ease);
+
+    
+    #info{
+        width: 90%;
+        padding: 20px;
+        background: rgba($white,0.6);
+        box-shadow: 10px 10px 5px  rgba($pink,0.8);
+        font-family: $nav-font;
+        font-size: 1.2rem;
+        @include break(321px,480px){
+            font-size: 1.5rem;
+        }
+        @include break(481px,768px){
+            font-size: 2rem;
+        }
+        @include break(769px){
+            font-size: 3rem;
+        }
+    }
+    }
+//-----------------language section----------------
+#lang{
+    position: absolute;
+    width: 100%;
+    background: $yellow;
+    @include flex(column);
+    @include transition(top,1s,ease);
+   
+    h1{
+        font-family: $wiki-font;
+        color:$blue;
+        font-size: 2rem;
+        display: inline-block;
+        @include break(321px,480px){
+            font-size: 2.5rem;
+        }
+        @include break(481px,768px){
+            font-size: 4rem;
+        }
+        @include break(769px){
+            font-size: 6rem;
+        }
+    }
+     &>h1{ 
+            color:$red;
+    }
+    .typedText{
+        height: 40px;
+        
+        @include break(481px,768px){
+            height:70px;
+        }
+        @include break(769px){
+            height: 100px;
+        }
+    }
+}
+
+//-----------------ramdom article section-------------------
+#article{
+    position: absolute;
+    width: 100%;
+    background: $green;
+    @include flex(column);
+    @include transition(top,1s,ease);
+    h1{
+        font-family: $wiki-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px;
+        @include break(321px,480px){
+            font-size: 1.5rem;
+        }
+        @include break(481px,768px){
+            font-size: 2.5rem;
+           padding: 20px;
+            margin-bottom: 50px;
+            
+        }
+        @include break(769px){
+            font-size: 4rem;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+    }
+    ul{
+        width: 90%;
+        margin-bottom: 0;
+    }
+    li.list-group-item{
+        background: lighten($green,20%);
+        font-size: 1.2rem;
+        @include break(321px,480px){
+            font-size: 1.5rem;
+        }
+        @include break(481px,768px){
+            font-size: 2rem;
+        }
+        @include break(769px){
+            font-size: 3rem;
+        }
+        a{
+            color:darken($blue,20%);
+        }
+    }
+}
+/*---------------search bar----------------*/
+div.easy-autocomplete.eac-icon-right {
+    width: 80%;
+    display: inline-block;
+    @include break(481px,768px){
+            font-size: 2rem;   
+        }
+        @include break(769px){
+            font-size: 3rem;
+        }
+    
+}
+
+.easy-autocomplete-container{
+    text-align: left;
+    overflow: scroll;
+    
+}
+
+//-------all the button top margin and dispaly inline block---------------
+.button{
+        margin-top: 20px;
+    button{
+        display: inline-block;
+        margin: 10px;
+        @include break(481px,768px){
+            font-size: 2rem;
+            margin: 20px;
+        }
+        @include break(769px){
+            font-size: 3rem;
+            margin: 20px;
+        }
+    }
+    }
+
+
+//-------------animate cursor for typed.js--------------
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+@include blink();
+
+//--------------social media icon--------------
+#social {
+    list-style: none;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 100;
+    ul{
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        i {
+            color: $white;
+            padding: 10px 20px;
+            @include break(769px) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

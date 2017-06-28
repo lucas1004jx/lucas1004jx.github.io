@@ -1,0 +1,188 @@
+
+
+@mixin break($width...) {
+    @if length($width)==1 {
+        @media (min-width: nth($width, 1)) {
+            @content;
+        }
+    }
+    @if length($width)==2 {
+        @media (min-width: nth($width, 1)) and (max-width:nth($width, 2)) {
+            @content;
+        }
+    }
+}
+
+@mixin fadeIn($time, $d) {
+    @-webkit-keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    
+    
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    animation:fade $time;
+}
+
+@mixin text-glow($color) {
+    
+    -webkit-text-shadow:  
+        -2px -2px 10px #fff,
+        2px 2px 10px #fff,
+        0 0 20px $color,
+        0 0 40px $color,
+        0 0 60px $color,
+        0 0 80px $color,
+        0 0 100px $color;
+    
+    text-shadow:  
+        -2px -2px 10px #fff,
+        2px 2px 10px #fff,
+        0 0 20px $color,
+        0 0 40px $color,
+        0 0 60px $color,
+        0 0 80px $color,
+        0 0 100px $color;
+}
+
+
+
+@mixin flex($dir){
+    display:flex;
+    display:-webkit-flex;
+    flex-direction: $dir;
+    -webkit-flex-direction:$dir;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin glow(){
+    
+    @-webkit-keyframes glow{
+          0%{
+            background:$white;
+
+        }
+        10%{
+            background:$blue;
+           
+        }
+        20%{
+            background:$yellow;
+           
+        }
+        30%{
+            background:$green;
+
+        }
+        40%{
+            background:$orange;
+           
+        }
+        50%{
+            background:$purple;
+           
+        }
+        60%{
+            background:$pink;
+
+        }
+        70%{
+            background:$mastard;
+           
+        }
+        80%{
+            background:$red;
+           
+        }
+    }
+    
+    
+    @keyframes glow{
+          0%{
+            background:$white;
+
+        }
+        10%{
+            background:$blue;
+           
+        }
+        20%{
+            background:$yellow;
+           
+        }
+        30%{
+            background:$green;
+
+        }
+        40%{
+            background:$orange;
+           
+        }
+        50%{
+            background:$purple;
+           
+        }
+        60%{
+            background:$pink;
+
+        }
+        70%{
+            background:$mastard;
+           
+        }
+        80%{
+            background:$pink;
+           
+        }
+    }
+}
+@mixin blink(){
+    @keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+}
+
+
+@mixin transition($value,$time,$effect){
+    -moz-transition: $value $time  $effect;
+    -webkit-transition: $value $time  $effect;
+    -o-transition: $value $time  $effect;
+    transition: $value $time  $effect;
+}
+
+@mixin gradient($color1,$color2){
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($color1, $color2); /* Standard syntax */
+}
+
