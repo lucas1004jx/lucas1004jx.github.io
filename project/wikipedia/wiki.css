@@ -542,6 +542,7 @@ body {
 #article {
   position: absolute;
   width: 100%;
+  overflow: scroll;
   background: #83C25A;
   display: flex;
   display: -webkit-flex;

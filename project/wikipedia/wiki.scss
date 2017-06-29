@@ -95,6 +95,7 @@ body {
 #article{
     position: absolute;
     width: 100%;
+    overflow: scroll;
     background: $green;
     @include flex(column);
     @include transition(top,1s,ease);
