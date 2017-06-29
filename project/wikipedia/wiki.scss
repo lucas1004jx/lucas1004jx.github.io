@@ -97,38 +97,49 @@ body {
     width: 100%;
     overflow: scroll;
     background: $green;
-    //@include flex(column);
+    @include flex(column);
     @include transition(top,1s,ease);
     h1{
+        
         font-family: $wiki-font;
         font-size: 1rem;
         text-transform: uppercase;
         text-align: center;
         padding: 10px;
-        margin-top: 50px;
         @include break(321px,480px){
             font-size: 1.5rem;
-            margin-top: 60px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         @include break(481px,768px){
             font-size: 2.5rem;
-           padding: 20px;
-            margin-top: 70px;
+           padding: 20px; 
             margin-bottom: 30px;
             
         }
         @include break(769px){
             font-size: 4rem;
             padding: 20px;
-            margin-top: 80px;
             margin-bottom: 50px;
         }
     }
     ul{
+        
+        overflow: scroll;
         margin: 0 auto;
         width: 90%;
         margin-bottom: 0;
+        flex-basis: 400px;
+        min-height: 50px;
+        @include break(321px,480px){
+            flex-basis: 420px;
+        }
+        @include break(481px,768px){
+            flex-basis: 430px;
+            
+        }
+        @include break(769px){
+            flex-basis: 500px;
+        }
     }
     li.list-group-item{
         background: lighten($green,20%);
@@ -146,6 +157,7 @@ body {
             color:darken($blue,20%);
         }
     }
+    
 }
 /*---------------search bar----------------*/
 div.easy-autocomplete {
@@ -169,7 +181,7 @@ div.easy-autocomplete {
 //-------all the button top margin and dispaly inline block---------------
 .button{
     text-align: center;
-        margin-top: 20px;
+        margin-top: 10px;
     button{
         display: inline-block;
         margin: 10px;

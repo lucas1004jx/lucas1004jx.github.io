@@ -544,6 +544,12 @@ body {
   width: 100%;
   overflow: scroll;
   background: #83C25A;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -moz-transition: top 1s ease;
   -webkit-transition: top 1s ease;
   -o-transition: top 1s ease;
@@ -553,29 +559,37 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 10px;
-    margin-top: 50px; }
+    padding: 10px; }
     @media (min-width: 321px) and (max-width: 480px) {
       #article h1 {
         font-size: 1.5rem;
-        margin-top: 60px;
-        margin-bottom: 10px; } }
+        margin-bottom: 20px; } }
     @media (min-width: 481px) and (max-width: 768px) {
       #article h1 {
         font-size: 2.5rem;
         padding: 20px;
-        margin-top: 70px;
         margin-bottom: 30px; } }
     @media (min-width: 769px) {
       #article h1 {
         font-size: 4rem;
         padding: 20px;
-        margin-top: 80px;
         margin-bottom: 50px; } }
   #article ul {
+    overflow: scroll;
     margin: 0 auto;
     width: 90%;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    flex-basis: 400px;
+    min-height: 50px; }
+    @media (min-width: 321px) and (max-width: 480px) {
+      #article ul {
+        flex-basis: 420px; } }
+    @media (min-width: 481px) and (max-width: 768px) {
+      #article ul {
+        flex-basis: 430px; } }
+    @media (min-width: 769px) {
+      #article ul {
+        flex-basis: 500px; } }
   #article li.list-group-item {
     background: #bbdea4;
     font-size: 1.2rem; }
@@ -608,7 +622,7 @@ div.easy-autocomplete {
 
 .button {
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 10px; }
   .button button {
     display: inline-block;
     margin: 10px; }
