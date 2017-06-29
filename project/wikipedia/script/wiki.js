@@ -250,6 +250,7 @@ $(function () {
         $("#search button").text("Know more");
         $("#random2").text("Another try");
         $("#back2").text("Back");
+        $("#article h1").text("Find 10 random articles for you!");
 
     });
 
@@ -267,6 +268,7 @@ $(function () {
         $("#search button").text("Saber más");
         $("#random2").text("Probar otra vez");
         $("#back2").text("Volver");
+        $("#article h1").text("Encontrado 10 artículos al azar!");
     });
 
     $("#change").click(function () {
