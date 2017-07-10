@@ -3,8 +3,8 @@
 @import "sass_modules/mixins";
 @import "sass_modules/slidebar";
 body {
-    width: 0;
-    height: 0;
+    position: relative;
+    background: $black;
 }
 
 #lang {
