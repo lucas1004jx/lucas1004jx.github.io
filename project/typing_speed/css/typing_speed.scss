@@ -5,6 +5,7 @@
 body {
 background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
     background-size: cover;
+    overflow: hidden;
 }
 
 #lang {
@@ -271,22 +272,16 @@ background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("
     left: 0;
     padding: 0;
     margin: 0;
-    display: none;
     font-family: $main-font;
     z-index: 10;
     font-weight: bold;
-    @include flex(column);
+    display: none ;
     .card {
-        //position: absolute;
         display: none;
         width: 90%;
        height: 80vh;
         margin: 0 auto;
         background: $green;
-        //left: 50%;
-        //top: 100vh;
-        //transform: translate(-50%, -50%);
-        //@include transition(all, 1s,ease);
         .stc {
             background: rgba($white, 0.1);
             width: 90%;
@@ -369,7 +364,6 @@ background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("
         }
     }
 }
-
 
 /*---------common------*/
 
