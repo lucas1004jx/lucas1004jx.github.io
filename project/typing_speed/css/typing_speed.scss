@@ -3,13 +3,14 @@
 @import "sass_modules/mixins";
 @import "sass_modules/slidebar";
 body {
-background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
+
+    position: relative;
 }
 
 #lang {
-    position: fixed;
+    background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
+    background-size: cover;
+    position: absolute;
     z-index: 12;
     top: 0;
     left: 0;
@@ -113,6 +114,8 @@ background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("
 }
 
 #main {
+    background: url("../images/background.png") no-repeat center center;
+    background-size: cover;
     font-family: $nav-font;
     font-size: 12px;
     position: absolute;

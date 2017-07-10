@@ -207,8 +207,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     $("#en").click(english);
     $("#arrow").click(lang);
     
-    
-   //--------------initialize slide menu-------------
+     //--------------initialize slide menu-------------
     var controller = new slidebars();
   controller.init();
     $( '#menu' ).on( 'click', function ( event ) {
@@ -219,15 +218,21 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
   // Toggle the Slidebar with id 'id-1'
   controller.toggle( 'id-1' );
 } );
+   
     //--------postion-----------
     function position(){
         var wWidth=$(window).width();
         var wHeight=$(window).height();
-        $("#html,#body,#lang,#main,#result_es,#result_en").css("width",wWidth);
-        $("#html,#body,#lang,#main,#result_es,#result_en").css("height",wHeight);
+        $("html,body,#lang,#main,#result_es,#result_en,.overlay").css("width",wWidth);
+        $("html,body,#lang,#main,#result_es,#result_en,.overlay").css("height",wHeight);
     }
     
     position();
     $(window).resize(position);
+    
+    //-------------overlay nav------------
+    $("#menu").click(function(){
+        
+    });
     
 });
