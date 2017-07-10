@@ -191,8 +191,8 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
         
         return (min + ":" + sec + ":" + miniSec);
     }
-    //$("#result_es,#result_en").hide();
     
+    $("#result_btn").prop("disabled",true);
     $("textarea").keyup(spellCheck);
 
     $("#start").click(reset);
