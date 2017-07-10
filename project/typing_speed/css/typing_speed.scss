@@ -3,7 +3,8 @@
 @import "sass_modules/mixins";
 @import "sass_modules/slidebar";
 body {
-    position: relative;
+background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
+    background-size: cover;
 }
 
 #lang {
@@ -12,8 +13,6 @@ body {
     top: 0;
     left: 0;
     @include transition(left, 0.5s, ease);
-    background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
-    background-size: cover;
     h1 {
         @extend .title;
         font-size: 20px;
@@ -113,8 +112,6 @@ body {
 }
 
 #main {
-    background: url("../images/background.png") no-repeat center center;
-    background-size: cover;
     font-family: $nav-font;
     font-size: 12px;
     position: absolute;
@@ -272,6 +269,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
     display: none;
     font-family: $main-font;
     z-index: 10;
