@@ -278,13 +278,19 @@ body {
     font-family: $main-font;
     z-index: 10;
     font-weight: bold;
-    display: none ;
+    display: none;
     .card {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
         width: 90%;
        height: 80vh;
         margin: 0 auto;
         background: $green;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        @include transition(top,0.5s,ease);
         .stc {
             background: rgba($white, 0.1);
             width: 90%;

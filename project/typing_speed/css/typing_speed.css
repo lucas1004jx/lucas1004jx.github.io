@@ -702,10 +702,19 @@ body {
   /*---card--------------*/ }
   #result_es .card, #result_en .card {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
     width: 90%;
     height: 80vh;
     margin: 0 auto;
     background: #83C25A;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -moz-transition: top 0.5s ease;
+    -webkit-transition: top 0.5s ease;
+    -o-transition: top 0.5s ease;
+    transition: top 0.5s ease;
     /*----#stc-------*/ }
     #result_es .card .stc, #result_en .card .stc {
       background: rgba(255, 255, 255, 0.1);
