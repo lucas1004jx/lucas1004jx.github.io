@@ -7,7 +7,7 @@ body {
 }
 
 #lang {
-    position: absolute;
+    position: fixed;
     z-index: 12;
     top: 0;
     left: 0;
@@ -270,25 +270,24 @@ body {
 #result_es {
     background: rgba($black, 0.4);
     position: absolute;
-    top: 0;
+    top: 100vh;
     left: 0;
     display: none;
     font-family: $main-font;
     z-index: 10;
     font-weight: bold;
+    @include flex(column);
     .card {
-        position: absolute;
+        //position: absolute;
         display: none;
         width: 90%;
        height: 80vh;
         margin: 0 auto;
         background: $green;
-        left: 50%;
-        top: 100vh;
-        transform: translate(-50%, -50%);
-        @include transition(top,
-        1s,
-        ease);
+        //left: 50%;
+        //top: 100vh;
+        //transform: translate(-50%, -50%);
+        //@include transition(all, 1s,ease);
         .stc {
             background: rgba($white, 0.1);
             width: 90%;

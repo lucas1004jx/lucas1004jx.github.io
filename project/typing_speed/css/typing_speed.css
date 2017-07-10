@@ -449,7 +449,7 @@ body {
   position: relative; }
 
 #lang {
-  position: absolute;
+  position: fixed;
   z-index: 12;
   top: 0;
   left: 0;
@@ -691,27 +691,25 @@ body {
 #result_es, #result_en {
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 0;
+  top: 100vh;
   left: 0;
   display: none;
   font-family: flamenco;
   z-index: 10;
   font-weight: bold;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /*---card--------------*/ }
   #result_es .card, #result_en .card {
-    position: absolute;
     display: none;
     width: 90%;
     height: 80vh;
     margin: 0 auto;
     background: #83C25A;
-    left: 50%;
-    top: 100vh;
-    transform: translate(-50%, -50%);
-    -moz-transition: top 1s ease;
-    -webkit-transition: top 1s ease;
-    -o-transition: top 1s ease;
-    transition: top 1s ease;
     /*----#stc-------*/ }
     #result_es .card .stc, #result_en .card .stc {
       background: rgba(255, 255, 255, 0.1);
