@@ -585,6 +585,7 @@ body {
         height: 180px;
         font-size: 20px; } }
   #main textarea {
+    resize: none;
     display: block;
     resize: none;
     outline: #999999 solid 2px;
