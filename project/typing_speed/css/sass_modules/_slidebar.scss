@@ -37,7 +37,7 @@
 
 .custom-fluid-width {
   width: 40%;
-    @include gradient($orange,$green);
+    background: $green;
 }
 .custom-duration-400 {
   -webkit-transition-duration: 400ms;

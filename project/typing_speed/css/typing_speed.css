@@ -439,16 +439,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 
 .custom-fluid-width {
   width: 40%;
-  background: #E0932B;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#E0932B, #83C25A);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#E0932B, #83C25A);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#E0932B, #83C25A);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#E0932B, #83C25A);
-  /* Standard syntax */ }
+  background: #83C25A; }
 
 .custom-duration-400 {
   -webkit-transition-duration: 400ms;
@@ -762,7 +753,7 @@ body {
       background: rgba(255, 255, 255, 0.5);
       color: #83C25A;
       border: none;
-      font-size: 15px;
+      font-size: 12px;
       width: 70px;
       height: 70px;
       border-radius: 50%;
