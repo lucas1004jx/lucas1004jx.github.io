@@ -704,9 +704,11 @@ body {
   display: none;
   font-family: flamenco;
   z-index: 10;
+  font-weight: bold;
   /*---card--------------*/ }
   #result_es .card, #result_en .card {
     position: absolute;
+    display: none;
     width: 90%;
     height: 80vh;
     margin: 0 auto;

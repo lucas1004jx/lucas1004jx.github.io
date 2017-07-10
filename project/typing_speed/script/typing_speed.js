@@ -76,7 +76,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     
    function showResult(){
        $(".active").fadeIn("slow");
-       $(".card").css("top", "50%");
+       $(".card").fadeIn().css("top", "50%");
        $("#result_es h1").text("ENHORABUENA!");
        $("#result_en h1").text("CONGRADULATIONS!");
        $(".try").text(" "+vez+" ");
@@ -95,7 +95,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
 
     function hideResult(){
         $(".active").fadeOut("slow");
-       $(".card").css("top", "100vh");
+       $(".card").css("top", "100vh").fadeOut();
     }
     $("textarea").on("keypress", function () {
         if ($("textarea").val().length === 0 && begin === false) {
