@@ -217,4 +217,15 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
   controller.toggle( 'id-1' );
 } );
 
+    //--------postion-----------
+    function position(){
+        var wWidth=$(window).width();
+        var wHeight=$(window).height();
+        $("#lang,#main,#result_es,#result_en").css("width",wWidth);
+        $("#lang,#main,#result_es,#result_en").css("height",wHeight);
+    }
+    
+    position();
+    $(window).resize(position);
+    
 });

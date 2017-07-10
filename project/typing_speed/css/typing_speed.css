@@ -455,10 +455,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   transition-duration: 400ms; }
 
 body {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh; }
+  position: relative; }
 
 #lang {
   position: absolute;
@@ -470,9 +467,7 @@ body {
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
   background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh; }
+  background-size: cover; }
   #lang h1 {
     font-size: 20px;
     padding: 20px;
@@ -566,8 +561,6 @@ body {
 #main {
   background: url("../images/background.png") no-repeat center center;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
   font-family: gfs-didot;
   font-size: 12px;
   position: absolute;
@@ -706,8 +699,6 @@ body {
 #result_es, #result_en {
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  width: 100%;
-  height: 100vh;
   top: 0;
   left: 0;
   display: none;
