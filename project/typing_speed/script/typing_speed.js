@@ -107,8 +107,9 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     });
     
     function español(){
-        $("#main").css("left",0);
-        $("#lang").css("left","-100vw");
+//-------------------hide lang section, show main section-----------------
+        $("#main").fadeIn().css("left",0);
+        $("#lang").css("left","-100vw").fadeOut();
         $("#result_es").addClass("active");
         $("#result_en").removeClass("active");
         currentText = text_es[0];
@@ -140,8 +141,9 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     }
     
     function english(){
-        $("#main").css("left",0);
-        $("#lang").css("left","-100vw");
+        //-------------------hide lang section, show main section-----------------
+        $("#main").fadeIn().css("left",0);
+        $("#lang").css("left","-100vw").fadeOut();
         $("#result_en").addClass("active");
         $("#result_es").removeClass("active");
         
@@ -173,8 +175,8 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     }
     
     function lang(){
-        $("#main").css("left","100vw");
-        $("#lang").css("left","0");
+        $("#main").css("left","100vw").fadeOut();
+        $("#lang").fadeIn().css("left","0");
     }
    
     function format(time){
