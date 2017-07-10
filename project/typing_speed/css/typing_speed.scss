@@ -4,7 +4,6 @@
 @import "sass_modules/slidebar";
 body {
     position: relative;
-    overflow: hidden;
 }
 
 #lang {
@@ -384,7 +383,7 @@ body {
 }
 
 .icon {
-    width: 15px;
+    width: 18px;
     margin-left: 15px;
     margin-top: 15px;
     &:hover {
