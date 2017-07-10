@@ -1,0 +1,405 @@
+@import "sass_modules/normalize";
+@import "sass_modules/variable";
+@import "sass_modules/mixins";
+@import "sass_modules/slidebar";
+body {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#lang {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    @include transition(left, 0.5s, ease);
+    background: linear-gradient(rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url("../images/background.png") no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    h1 {
+        @extend .title;
+        font-size: 20px;
+        padding: 20px;
+        margin: 10vh 0;
+        @include break(481px,768px) {
+            font-size: 30px;
+        }
+        @include break(769px){
+            font-size: 50px;
+        }
+    }
+    #menu {
+        @extend .icon;
+    }
+    p {
+        text-align: center;
+        font-family: $nav-font;
+        text-transform: uppercase;
+        font-size: 18px;
+        @include break(321px,
+        480px) {
+            font-size: 20px;
+        }
+        @include break(481px,
+        768px) {
+            font-size: 25px;
+        }
+        @include break(769px){
+            font-size: 35px;
+        }
+        &:first-of-type {
+            color: $orange;
+            margin-top: 80px;
+            @include break(481px,
+            768px) {
+                margin-top: 120px;
+            }
+        }
+        &:last-of-type {
+            color: $green;
+        }
+    }
+    #lang_btn {
+        @include flex(row);
+        margin-top: 60px;
+        #es,
+        #en {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 50px;
+            font-size: 16px;
+            @include break(481px,
+            768px) {
+                font-size: 20px;
+                width: 80px;
+                height: 80px;
+            }
+            @include break(769px){
+                width: 100px;
+                height: 100px;
+            font-size: 35px;
+        }
+        }
+        #es {
+            border: 1px solid $green;
+            color: $green;
+        }
+        #en {
+            border: 1px solid $orange;
+            color: $orange;
+        }
+    }
+    #social{
+        list-style: none;
+        @include flex(row);
+        padding: 0;
+        margin-top: 80px;
+        li{
+            display: inline-block;
+            margin:0 20px;
+            font-size: 16px;
+            @include break(481px,768px){
+                   font-size: 25px; 
+                margin: 0 40px;
+                }
+            @include break(769px){
+                font-size: 35px; 
+                margin: 0 60px;
+                }
+            i{  
+                color:white;  
+            }
+        }
+    }
+}
+
+#main {
+    background: url("../images/background.png") no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: $nav-font;
+    font-size: 12px;
+    position: fixed;
+    left: 100vw;
+    z-index: 2;
+    @include transition(left,
+    0.5s,
+    ease);
+    #arrow {
+        @extend .icon;
+    }
+    #text {
+        background: rgba($white, 0.5);
+        padding: 18px;
+        height: 140px;
+        overflow: scroll;
+        @include break(481px,
+        768px) {
+            height: 160px;
+            font-size: 15px;
+        }
+        @include break(769px){
+            height: 180px;
+            font-size: 20px;
+        }
+    }
+    textarea {
+        display: block;
+        resize: none;
+        outline: rgb(153, 153, 153) solid 2px;
+        width: 100%;
+        padding: 10px;
+        background: rgba($white, 0.5);
+        border: none;
+        overflow: scroll;
+        @include break(481px,
+        768px) {
+            font-size: 15px;
+        }
+        @include break(769px){
+            font-size: 20px;
+        }
+    }
+    #text_btn {
+        margin-bottom: 10px;
+        @include flex(row);
+        @include break(321px,
+        480px) {
+            margin-bottom: 20px;
+        }
+        .text {
+            background: $green;
+            color: $white;
+            border-radius: 16px;
+            font-size: 16px;
+            margin: 0 10px;
+            font-size: 12px;
+            @include break(321px,
+            480px) {
+                font-size: 15px;
+            }
+            @include break(481px,
+            768px) {
+                font-size: 20px;
+            }
+            @include break(769px){
+                margin: 0 20px;
+            font-size: 25px;
+        }
+        }
+    }
+    #timer_start {
+        margin-top: 20px;
+        @include break(321px,
+        480px) {
+            margin-top: 40px;
+        }
+        @include break(769px){
+            margin-top: 80px;
+        }
+        #start,
+        #timer {
+            display: inline-block;
+            text-transform: uppercase;
+            color: $white;
+            font-size: 10px;
+            @include break(321px,
+            480px) {
+                font-size: 15px;
+            }
+            @include break(481px,
+            768px) {
+                font-size: 20px;
+            }
+            @include break(769px){
+            font-size: 25px;
+        }
+        }
+        #start {
+            background: $green;
+            border-radius: 10px;
+            border: none;
+            font-size: 10px;
+            @include break(321px,
+            480px) {
+                font-size: 15px;
+            }
+            @include break(481px,
+            768px) {
+                font-size: 20px;
+            }
+            @include break(769px){
+            font-size: 25px;
+        }
+        }
+    }
+    h1 {
+        @extend .title;
+        font-size: 20px;
+        padding: 10px;
+        margin: 20px 0;
+        @include break(481px,
+        768px) {
+            font-size: 25px;
+        }
+        @include break(769px){
+            font-size: 30px;
+        }
+    }
+    #result_btn {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        background: rgba($green, 0.5);
+        color: $white;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 10px;
+        @include break(321px,480px) {
+            font-size: 15px;
+        }
+        @include break(481px,768px){
+           font-size: 20px; 
+        }
+         @include break(769px){
+            font-size: 30px;
+        }
+    }
+}
+
+#result_es {
+    background: rgba($black, 0.4);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    font-family: $main-font;
+    z-index: 10;
+    .card {
+        position: absolute;
+        width: 90%;
+        height: 80vh;
+        margin: 0 auto;
+        background: $green;
+        left: 50%;
+        top: 100vh;
+        transform: translate(-50%, -50%);
+        @include transition(top,
+        1s,
+        ease);
+        .stc {
+            background: rgba($white, 0.5);
+            width: 90%;
+            margin: 30px auto;
+            h1 {
+                @extend .title;
+                margin: 0;
+                width: 100%;
+                padding: 25px 10px;
+                font-size: 18px;
+                @include break(481px,768px){
+                   font-size: 20px; 
+                 }
+                @include break(769px){
+                   font-size: 40px;
+                  }
+            }
+            
+             
+            ul {
+                padding: 13px;
+                li {
+                    font-weight: lighter;
+                    font-size: 15px;
+                    color: $white;
+                    list-style: none;
+                    margin-top: 13px;
+                    @include break(481px,768px){
+           font-size: 20px; 
+        }
+                     @include break(769px){
+            font-size: 30px;
+        }
+                    span {
+                        text-transform: lowercase;
+                    }
+                }
+                .em {
+                    color: $red;
+                }
+                .info {
+                    font-family: serif;
+                }
+            }
+            /*------ul--------*/
+        }
+        /*----#stc-------*/
+        .back {
+            background: rgba($white, 0.5);
+            color: $green;
+            border: none;
+            font-size: 15px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            float: right;
+            margin-right: 30px;
+            font-family: $main-font;
+            @include break(481px,768px){
+                width: 90px;
+            height: 90px;
+           font-size: 20px; 
+        }
+             @include break(769px){
+                 width: 120px;
+            height: 120px;
+            font-size: 30px;
+        }
+        }
+    }
+    /*---card--------------*/
+}
+
+#result_en {
+    @extend #result_es;
+    .card {
+        background: $orange;
+        .back {
+            color: $orange;
+        }
+    }
+}
+
+
+/*---------common------*/
+
+.title {
+    background: rgba($white, 0.2);
+    text-align: center;
+    font-family: $main-font;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    &:hover {
+        cursor: pointer;
+    }
+    @include break(481px,
+    768px) {
+        width: 25px;
+    }
+    @include break(769px){
+            width: 35px;
+        }
+}

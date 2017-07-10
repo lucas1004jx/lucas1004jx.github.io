@@ -1,0 +1,15 @@
+
+svg{
+    width: 100%;
+    height: 100vh;   
+}
+
+#hour,#min,#sec{
+    -webkit-transform-origin: 547px 512px;
+    transform-origin: 547px 512px;
+}
+
+body{
+    background: url("star.jpg") no-repeat center center;
+    background-size: cover;
+}

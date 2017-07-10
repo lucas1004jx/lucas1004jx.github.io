@@ -671,17 +671,47 @@ section.project {
     color: #000;
     font-family: gfs-didot; }
   section.project a {
-    font-family: gfs-didot;
-    text-decoration: underline;
-    color: #1CAFC0; }
-    section.project a img {
+    font-family: gfs-didot; }
+    section.project a:hover {
+      text-decoration: none; }
+  section.project .imgContainer {
+    position: relative; }
+    section.project .imgContainer img {
       width: 100%; }
+    section.project .imgContainer .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(22, 22, 22, 0.8);
+      opacity: 0;
+      -moz-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      section.project .imgContainer .overlay p {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px;
+        border: 2px solid #fff; }
+    section.project .imgContainer:hover .overlay {
+      opacity: 1; }
+    section.project .imgContainer .fadein {
+      opacity: 1; }
   section.project .caption p {
     color: #000;
     font-family: gfs-didot;
     font-size: 2rem;
     text-decoration: none;
-    font-variant: small-caps; }
+    font-variant: small-caps;
+    padding: 0 20px; }
     section.project .caption p:first-of-type {
       margin-top: 20px;
       padding-top: 10px; }
@@ -693,6 +723,10 @@ section.project {
     font-size: 1.2rem; }
     section.project .caption > p:nth-of-type(2):after {
       content: "..."; }
+  section.project .jumbotron {
+    padding: 10px 0 20px 0; }
+  section.project button {
+    margin: 0 20px; }
   section.project .modal-body p {
     font-variant: small-caps;
     font-size: 1.5em; }

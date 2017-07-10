@@ -172,13 +172,44 @@ section.project {
     }
     a {
         font-family: $text-font;
-        text-decoration: underline;
-        color:$blue;
-        
-        img {
-            width: 100%;
+        &:hover{
+            text-decoration: none;
         }
     }
+        .imgContainer{
+            position: relative;
+           img {
+            width: 100%; 
+        } 
+            .overlay{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                @include flex(column);
+                background: rgba($grey,0.8);
+                opacity: 0;
+                @include transition(all,0.5s,ease);
+                p{
+                    text-transform: uppercase;
+                    color: $white;
+                    padding: 10px;
+                    border:2px solid $white;
+                }
+            }
+            
+            &:hover .overlay{
+                opacity: 1;
+            }
+            
+            .fadein{
+               opacity: 1; 
+            }
+        } 
+        
+        
+    
     
     .caption{
         p{
@@ -187,6 +218,7 @@ section.project {
         font-size: 2rem;
          text-decoration: none;
         font-variant: small-caps;
+        padding: 0 20px;
         &:first-of-type {
             margin-top: 20px;
             padding-top: 10px;
@@ -204,7 +236,12 @@ section.project {
             }      
         }
     }
-    
+    .jumbotron{
+        padding: 10px 0 20px 0;
+    }
+    button{
+        margin: 0 20px;
+    }
     .modal-body{
         p{
             font-variant: small-caps;
