@@ -75,7 +75,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     }
     
    function showResult(){
-       $(".active").fadeIn("slow").css("top",0);
+       $(".act").fadeIn("slow");
        $(".card").fadeIn().css("top", "50%");
        $("#result_es h1").text("ENHORABUENA!");
        $("#result_en h1").text("CONGRADULATIONS!");
@@ -94,7 +94,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
    }
 
     function hideResult(){
-        $(".active").fadeOut("slow");
+        $(".act").fadeOut("slow");
        $(".card").css("top", "100vh").fadeOut();
     }
     $("textarea").on("keypress", function () {
@@ -110,8 +110,9 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
 //-------------------hide lang section, show main section-----------------
         $("#main").fadeIn().css("left",0);
         $("#lang").css("left","-100vw").fadeOut();
-        $("#result_es").addClass("active");
-        $("#result_en").removeClass("active");
+        $("#result_es").addClass("act");
+        $("#result_en").removeClass("act");
+    
         currentText = text_es[0];
         textArr=currentText.split(" ");
         countWord=textArr.length;
@@ -144,8 +145,8 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
         //-------------------hide lang section, show main section-----------------
         $("#main").fadeIn().css("left",0);
         $("#lang").css("left","-100vw").fadeOut();
-        $("#result_en").addClass("active");
-        $("#result_es").removeClass("active");
+        $("#result_en").addClass("act");
+        $("#result_es").removeClass("act");
         
         currentText = text_en[0];
         textArr=currentText.split(" ");
@@ -190,6 +191,8 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
         
         return (min + ":" + sec + ":" + miniSec);
     }
+    $("#result_es,#result_en").hide();
+    
     $("textarea").keyup(spellCheck);
 
     $("#start").click(reset);

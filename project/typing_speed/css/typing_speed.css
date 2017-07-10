@@ -691,7 +691,7 @@ body {
 #result_es, #result_en {
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 100vh;
+  top: 0;
   left: 0;
   display: none;
   font-family: flamenco;
