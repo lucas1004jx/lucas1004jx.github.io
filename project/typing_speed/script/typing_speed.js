@@ -1,5 +1,5 @@
 $(function () {
-    var text_es = ["Premio Nobel se otorga cada año a personas que efectuen investigaciones o descubrimientos sobresalientes durante el año precedente o lleven a cabo el mayor beneficio a la humanidad o contribución notable a la sociedad.", "Cada laureado recibe una medalla de oro, un diploma y una suma de dinero.Los premios se instituyeron como última voluntad de Alfred Nobel, inventor de la dinamita e industrial sueco.", "La primera ceremonia de entrega de los Premios Nobel se celebró en la Antigua Real Academia de Música de Estocolmo (Suecia) en 1901. Desde 1902, los premios los entrega el Rey de Suecia. Los premios se conceden en una ceremonia anualmente el 10 de diciembre, fecha en que Alfred Nobel murió."];
+    var text_es = ["Premio Nobel se otorga cada año a personas que efectúen investigaciones o descubrimientos sobresalientes durante el año precedente o lleven a cabo el mayor beneficio a la humanidad o contribución notable a la sociedad.", "Cada laureado recibe una medalla de oro, un diploma y una suma de dinero.Los premios se instituyeron como última voluntad de Alfred Nobel, inventor de la dinamita e industrial sueco.", "La primera ceremonia de entrega de los Premios Nobel se celebró en la Antigua Real Academia de Música de Estocolmo (Suecia) en 1901. Desde 1902, los premios los entrega el Rey de Suecia. Los premios se conceden en una ceremonia anualmente el 10 de diciembre, fecha en que Alfred Nobel murió."];
     
 var text_en=["Time travel is the concept of movement (such as by a human) between certain points in time, analogous to movement between different points in space, typically using a hypothetical device known as a time machine, in the form of a vehicle or of a portal connecting distant points in time.","Time travel is a recognized concept in philosophy and fiction, but traveling to an arbitrary point in time has a very limited support in theoretical physics, and usually only connected with quantum mechanics or wormholes, also known as Einstein-Rosen bridges.","In a more narrow sense, one-way time travel into the future via time dilation is a well-understood phenomenon within the frameworks of special relativity and general relativity, but advancing a large amount of time is not feasible with current technology."];
     var time = [0, 0, 0];
@@ -218,6 +218,9 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
   // Toggle the Slidebar with id 'id-1'
   controller.toggle( 'id-1' );
 } );
+    $( '#lang' ).click(function(){
+        controller.close( 'id-1' );
+    });
    
     //--------postion-----------
     function position(){
