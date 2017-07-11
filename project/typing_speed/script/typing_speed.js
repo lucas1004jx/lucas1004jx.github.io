@@ -78,7 +78,7 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
        $(".act").fadeIn("slow");
        $(".card").fadeIn().css("top", "50%");
        $("#result_es h1").text("ENHORABUENA!");
-       $("#result_en h1").text("CONGRADULATIONS!");
+       $("#result_en h1").text("CONGRATULATIONS!");
        $(".try").text(" "+vez+" ");
        var time=$("#timer span").text();
        $(".time").text(time);
