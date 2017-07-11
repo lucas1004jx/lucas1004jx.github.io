@@ -235,4 +235,10 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
         
     });
     
+    //------prevent copy and past text-------------
+    $("body").on("copy paste",function(e){
+        e.preventDefault();
+        return false;
+    })
+    
 });
