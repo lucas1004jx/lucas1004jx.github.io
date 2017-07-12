@@ -592,9 +592,13 @@ body {
       #main #text {
         height: 160px;
         font-size: 15px; } }
-    @media (min-width: 769px) {
+    @media (min-width: 769px) and (max-width: 1199px) {
       #main #text {
-        height: 180px;
+        height: 200px;
+        font-size: 20px; } }
+    @media (min-width: 1200px) {
+      #main #text {
+        height: 250px;
         font-size: 20px; } }
   #main textarea {
     resize: none;
@@ -602,15 +606,22 @@ body {
     resize: none;
     outline: #999999 solid 2px;
     width: 100%;
+    height: 140px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.5);
     border: none;
     overflow: scroll; }
     @media (min-width: 481px) and (max-width: 768px) {
       #main textarea {
-        font-size: 15px; } }
-    @media (min-width: 769px) {
+        font-size: 15px;
+        height: 160px; } }
+    @media (min-width: 769px) and (max-width: 1199px) {
       #main textarea {
+        font-size: 20px;
+        height: 200px; } }
+    @media (min-width: 1200px) {
+      #main textarea {
+        height: 250px;
         font-size: 20px; } }
   #main #text_btn {
     margin-bottom: 10px;
@@ -623,6 +634,9 @@ body {
     @media (min-width: 321px) and (max-width: 480px) {
       #main #text_btn {
         margin-bottom: 20px; } }
+    @media (min-width: 1200px) {
+      #main #text_btn {
+        display: inline-block; } }
     #main #text_btn .text {
       background: #83C25A;
       color: #fff;
@@ -636,10 +650,15 @@ body {
       @media (min-width: 481px) and (max-width: 768px) {
         #main #text_btn .text {
           font-size: 20px; } }
-      @media (min-width: 769px) {
+      @media (min-width: 769px) and (max-width: 1199px) {
         #main #text_btn .text {
           margin: 0 20px;
           font-size: 25px; } }
+      @media (min-width: 1200px) {
+        #main #text_btn .text {
+          display: block;
+          font-size: 25px;
+          margin: 15px 0; } }
   #main #timer_start {
     margin-top: 20px; }
     @media (min-width: 321px) and (max-width: 480px) {
@@ -689,7 +708,10 @@ body {
         font-size: 25px; } }
     @media (min-width: 769px) {
       #main h1 {
-        font-size: 30px; } }
+        font-size: 35px; } }
+  @media (min-width: 1200px) {
+    #main .lg {
+      margin-top: 100px; } }
   #main #result_btn {
     position: absolute;
     bottom: 20px;

@@ -40,30 +40,36 @@
     
 <!--------------- test--------------->
  <section class="container" id="main"> 
- <div class="row">
   <img src="images/arrow_green.png" alt="arrow" id="arrow">
    <h1>typing speed test</h1>
-  <div class="col-xs-12">
+   <div class="row lg">
+  <div class="col-xs-12 col-md-6  col-lg-2 col-lg-offset-1">
   <div id="text_btn">
     <button type="button" class="text btn btn-default" id="text1">text_01</button>
   <button type="button" class="text btn btn-default" id="text2">text_02</button>
   <button type="button" class="text btn btn-default" id="text3">text_03</button>  
   </div>
+  </div>
+  <div class="clearfix visible-md"></div>
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <p id="text"></p>  
+  </div>
+    
   
-  <p id="text"></p>  
+  
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <textarea name="" id="" ></textarea>  
   </div>
   
-  <div class="col-xs-12">
-    <textarea name="" id="" rows="8" ></textarea>  
-  </div>
-  
-  <div class="col-xs-12 " id="timer_start">
+  <div class="col-xs-12 col-md-10 col-md-offset-1" id="timer_start">
      <div id="timer"> TIEMPO: <span > 00:00::00</span></div> 
   <button type="button" class="pull-right btn" id="start">probar otra vez</button> 
   </div> 
-  
-  <button type="button" id="result_btn" class="col-xs-10 col-xs-offset-1 btn">ESTATISTICA</button>
+
  </div><!------row------->
+ <div class="row">
+     <button type="button" id="result_btn" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 btn">ESTATISTICA</button> 
+  </div><!------row-------->
  </section><!------container-->
    
   <!----------español resultado-->
