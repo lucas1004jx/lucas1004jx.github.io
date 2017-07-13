@@ -447,7 +447,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 
 .custom-fluid-width {
   width: 40%;
-  background: url("../../images/slidebar.png") no-repeat center center;
+  background: url("../images/slidebar.png") no-repeat center center;
   background-size: cover; }
 
 #social {
@@ -544,7 +544,14 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
     color: #FECA47;
     text-align: center; }
     #main #history p {
-      display: inline-block; }
+      display: inline-block;
+      font-size: 1.5rem; }
+      @media (min-width: 481px) and (max-width: 1199px) {
+        #main #history p {
+          font-size: 2rem; } }
+      @media (min-width: 1200px) {
+        #main #history p {
+          font-size: 2.5rem; } }
       #main #history p:hover {
         cursor: pointer; }
     #main #history i {
@@ -578,6 +585,8 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
     width: 100%;
     height: 0;
     position: absolute;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.8);
     -moz-transition: height 1s ease;
     -webkit-transition: height 1s ease;

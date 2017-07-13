@@ -81,6 +81,13 @@
         text-align: center;
         p{
             display: inline-block;
+            font-size: 1.5rem;
+            @include break(481px,1199px){
+               font-size: 2rem; 
+            }
+            @include break(1200px){
+               font-size: 2.5rem; 
+            }
             &:hover{
                 cursor: pointer;
             }
@@ -124,6 +131,8 @@
         width: 100%;
         height: 0;
         position: absolute;
+        top:0;
+        left: 0;
         background: rgba($black,0.8);
         @include transition(height,1s,ease);
         color: $yellow;
