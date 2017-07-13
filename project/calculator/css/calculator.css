@@ -435,13 +435,14 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   left: 10px;
   color: #fff;
   background: transparent;
-  z-index: 100; }
+  z-index: 100;
+  font-size: 25px; }
   @media (min-width: 481px) and (max-width: 768px) {
     #menu {
-      font-size: 25px; } }
+      font-size: 30px; } }
   @media (min-width: 769px) {
     #menu {
-      font-size: 35px; } }
+      font-size: 40px; } }
   #menu:hover {
     cursor: pointer; }
 

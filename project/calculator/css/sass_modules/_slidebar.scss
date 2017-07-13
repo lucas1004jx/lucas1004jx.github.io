@@ -34,11 +34,12 @@
     color: $white;
     background: transparent;
     z-index: 100;
+    font-size: 25px;
     @include break(481px,768px){
-                   font-size: 25px; 
+                   font-size: 30px; 
                 }
             @include break(769px){
-                font-size: 35px; 
+                font-size: 40px; 
                 }
     &:hover{
         cursor: pointer;
