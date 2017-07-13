@@ -1,0 +1,138 @@
+.navbar {
+    position: absolute;
+    z-index: 100;
+    padidng:0;
+    right: 50px;
+}
+
+.navbar-fixed-top{
+    position: absolute;
+    z-index: 10;
+}
+
+.navbar-default {
+    background: transparent;
+    border: 0;
+}
+
+
+
+.navbar-default .navbar-nav>li>a {
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-top: 20px;
+    @include transition(border,0.2s,ease);
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-header a:hover {
+    color: $yellow;
+    border-bottom: 4px solid $yellow;
+}
+
+//navbar-brand
+.navbar-header {
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    
+    
+    a{
+        color:$yellow;
+        font-size: 1.5rem;
+        margin-top: 5px;
+        &:hover{
+            border: none;
+            color:$white;
+        }
+    }
+    span{
+        font-size: 1rem;
+        color:rgb(180,180,180);
+        margin-left: 10px;
+        @include break(769px){
+            font-size: 1.5rem;
+        }
+    }
+    @include break(769px) {
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+}
+
+
+
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color:$yellow;
+    border-bottom: 4px solid $yellow;
+    background: transparent;
+   
+    
+}
+
+
+/*open and close btn*/
+#open,#close{
+    float:right;
+    margin-top: 20px;
+    margin-right: 20px;
+    color:$white;
+    text-transform: uppercase;
+    font-family: $main-font;
+    @include transition(visibility,0.2s,ease);
+    @include break(769px){
+       display: none;
+    }
+}
+
+
+.openbtn:after{
+    color:$yellow;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+}
+
+.closebtn:after{
+    margin-left: 5px;
+    color:$yellow;
+    content: "\f00d";
+    font-family: "FontAwesome";
+    font-size: 2rem;
+}
+
+
+/*nav overlay*/
+#nav{
+    
+    @include break(0,768px){
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+   // background: rgba($yellow,0.8);
+    @include gradient($black,$grey);
+    
+    
+    .wrap{
+        position: absolute;
+        width:80%;
+        left: 10%;
+        height:100%;
+        z-index: -1;
+        @include flex(column);
+    
+    }
+    }
+}
+
+
+

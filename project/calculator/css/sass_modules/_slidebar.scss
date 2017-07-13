@@ -1,0 +1,52 @@
+.nav {
+    font-family: $nav-font;
+    text-transform: uppercase;
+    font-weight: bolder;
+    @include flex(column);
+    height: 100%;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+        width: 150px;
+        a { 
+            color: $white;
+            &:hover {
+                color: $yellow;
+                border-bottom: 2px solid $yellow;
+            }
+        }
+    }
+    .active {
+        color: $yellow;
+        border-bottom: 2px solid $yellow;
+    }
+}
+
+#menu{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    color: $white;
+    background: transparent;
+    z-index: 100;
+    @include break(481px,768px){
+                   font-size: 25px; 
+                }
+            @include break(769px){
+                font-size: 35px; 
+                }
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+
+.custom-fluid-width {
+  width: 40%;
+    background: url("../../images/slidebar.png") no-repeat center center;
+    background-size: cover;
+}

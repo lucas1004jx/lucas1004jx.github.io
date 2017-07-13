@@ -233,10 +233,6 @@ var text_en=["Time travel is the concept of movement (such as by a human) betwee
     position();
     $(window).resize(position);
     
-    //-------------overlay nav------------
-    $("#menu").click(function(){
-        
-    });
     
     //------prevent copy and past text-------------
     $("body").on("copy paste",function(e){

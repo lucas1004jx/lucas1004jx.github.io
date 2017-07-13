@@ -1,0 +1,27 @@
+
+
+
+#social{
+        list-style: none;
+        @include flex(row);
+        padding: 0;
+       margin: 0;
+       margin-top: 10px;
+        li{
+            display: inline-block;
+            margin:0 20px;
+            font-size: 16px;
+            @include break(481px,768px){
+                   font-size: 25px; 
+                margin: 0 40px;
+                }
+            @include break(769px){
+                font-size: 35px; 
+                margin: 0 60px;
+                }
+            i{  
+                color:white;  
+            }
+        }
+    }
+
