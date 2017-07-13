@@ -1,9 +1,9 @@
 $(function () {
     var input = [];
-    var result = 0;
+    var result;
+    var equationMulti="";
     var operation = false;
     var input = true;
-    var leftP=false;
     //---------detect mobile deveice-----------
     function isMobile() {
         try {
@@ -64,10 +64,11 @@ $(function () {
         }else if(operation===false && input===true && num==="-" && text==="0"){
                  $("#screen-lower p").text(num);
             operation = false;
-                 }else if(operation===true && input===false && num==="-"){
+                 }else if(operation===true && input===false ){
                       $("#screen-lower p").text(num);
                    operation = false;  
                      input=true;
+                     continuo=true;
                           }
     }
 
@@ -76,6 +77,7 @@ $(function () {
         $("#screen-upper p").text("0");
         input = true;
         operation = false;
+        equationMulti="";
     }
 
     function clear() {
@@ -103,13 +105,17 @@ $(function () {
 
     function calc() {
         var length = $("#screen-lower p").text().length;
-        if ( operation === true) {
+        
             var equation = $("#screen-lower p").text();
             equation = equation.substr(0, length - 1);
             equation = equation.replace(/÷/g, "/");
             equation = equation.replace("×", "*");
-            try{
-                result = math.eval(equation).toString().substr(0, 6);
+            equationMulti +=equation;
+        console.log(equationMulti);
+        if ( operation === true ) {  
+           try{
+                
+                result = math.eval(equationMulti).toString().substr(0, 6);
             $("#screen-upper p").text(result);
             $("#list").append("<p>" + equation + "=" + result + "</p>");
             input = false;
@@ -117,9 +123,8 @@ $(function () {
                 $("#screen-upper p").text("ERROR");
                 input=false
             }
-            
         }
-
+         
     }
 
     function showList() {
