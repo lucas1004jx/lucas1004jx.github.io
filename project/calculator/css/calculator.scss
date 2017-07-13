@@ -6,7 +6,7 @@
 
 #body{
     width: 100%;
-    background: url("../images/background.png") no-repeat center center;
+    background: url("../image/background.png") no-repeat center center;
     background-size: cover;
     overflow: scroll;
 }
@@ -172,4 +172,9 @@
    box-shadow:          0 20px 50px $black;
 }
 
+.custom-fluid-width {
+  width: 40%;
+    background: url("../image/slidebar.png") no-repeat center center;
+    background-size: cover; 
+}
    
