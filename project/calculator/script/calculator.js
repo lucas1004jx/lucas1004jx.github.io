@@ -1,9 +1,12 @@
 $(function () {
     var input = [];
     var result;
+    var resultB;
     var equationMulti="";
     var operation = false;
     var input = true;
+    var continuo = false;
+    
     //---------detect mobile deveice-----------
     function isMobile() {
         try {
@@ -112,10 +115,10 @@ $(function () {
             equation = equation.replace("×", "*");
             equationMulti +=equation;
         console.log(equationMulti);
-        if ( operation === true ) {  
-           try{
-                
-                result = math.eval(equationMulti).toString().substr(0, 6);
+        if ( operation === true && continuo ===false) {    
+        try{   
+             result = math.eval(equationMulti).toString().substr(0, 6);
+            resultB=result;
             $("#screen-upper p").text(result);
             $("#list").append("<p>" + equation + "=" + result + "</p>");
             input = false;
@@ -123,7 +126,21 @@ $(function () {
                 $("#screen-upper p").text("ERROR");
                 input=false
             }
-        }
+        }else if(operation === true && continuo ===true){
+                try{   
+             result = math.eval(equationMulti).toString().substr(0, 6);
+            
+            $("#screen-upper p").text(result);
+            $("#list").append("<p>" + resultB+equation + "=" + result + "</p>");
+            input = false;
+            resultB=result;
+            }catch(err){
+                $("#screen-upper p").text("ERROR");
+                input=false
+            } 
+                 }
+        
+         
          
     }
 
