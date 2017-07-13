@@ -5,6 +5,8 @@
     @include flex(column);
     height: 100%;
     padding: 0;
+    background: url("../../images/slidebar.png") no-repeat center center;
+    background-size: cover;
     li {
         list-style: none;
         padding: 10px;
@@ -47,6 +49,5 @@
 
 .custom-fluid-width {
   width: 40%;
-    background: url("../../images/slidebar.png") no-repeat center center;
-    background-size: cover;
+    
 }
