@@ -183,7 +183,7 @@ $(function () {
   // Toggle the Slidebar with id 'id-1'
   controller.toggle( 'id-1' );
 } );
-    $( '#main' ).click(function(){
+    $( '#main,#body' ).click(function(){
         controller.close( 'id-1' );
     });
     
