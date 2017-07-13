@@ -82,10 +82,14 @@ $(function () {
         if (input === true) {
             var length = $("#screen-lower p").text().length;
             var num = $("#screen-lower p").text();
+            if(length>1){
             num = num.substr(0, length - 1);
             $("#screen-lower p").text(num);
-            
-            var check = num.substr(length - 2, 1);
+               }else if(length===1){
+                $("#screen-lower p").text("0");    
+                        }
+        
+        var check = num.substr(length - 2, 1);
             
         }
 
