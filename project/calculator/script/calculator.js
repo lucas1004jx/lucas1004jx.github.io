@@ -84,6 +84,7 @@ $(function () {
         input = true;
         operation = false;
         resultB="";
+        choose=true;
         
         
     }
@@ -151,8 +152,7 @@ $(function () {
         var index=text.indexOf("=");
          var history=text.substr(index+1);
         var length=$("#screen-lower p").text().length;
-        
-        if(input === true && length === 1 && text === "0" && choose===true){
+        if(input === true && length === 1 && $("#screen-lower p").text() === "0" && choose===true){
            $("#screen-lower p").text(history);
             operation=true;
             choose=false;
@@ -163,8 +163,8 @@ $(function () {
            $("#screen-lower p").append(history);
           operation=true;
             choose=false;
-            
-            
+            console.log("b");
+            console.log( $("#screen p").text());
            }else if(input===false ){
               $("#screen-lower p").text(history);
                $("#screen-upper p").text("0");
