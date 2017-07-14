@@ -600,6 +600,9 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
       padding: 5px 20px;
       opacity: 0;
       font-size: 1.5rem; }
+      #main #list p:hover {
+        cursor: pointer;
+        color: #5958B9; }
   #main .showList {
     height: 100% !important;
     display: flex !important;

@@ -142,6 +142,10 @@
             padding: 5px 20px;
             opacity: 0;
             font-size: 1.5rem;
+            &:hover{
+                cursor: pointer;
+                color: $purple-blue;
+            }
         }
     }
     .showList{

@@ -1,11 +1,12 @@
 $(function () {
     var input = [];
     var result;
-    var resultB;
+    var resultB="";
     var equationMulti="";
     var operation = false;
     var input = true;
-    var continuo = false;
+    
+    var choose=true;
     
     //---------detect mobile deveice-----------
     function isMobile() {
@@ -64,14 +65,16 @@ $(function () {
         if (operation === true && input === true) {
             $("#screen-lower p").append(num);
             operation = false;
+            choose=true;
         }else if(operation===false && input===true && num==="-" && text==="0"){
                  $("#screen-lower p").text(num);
             operation = false;
+            choose=true;
                  }else if(operation===true && input===false ){
                       $("#screen-lower p").text(num);
                    operation = false;  
                      input=true;
-                     continuo=true;
+                     choose=true;
                           }
     }
 
@@ -80,7 +83,9 @@ $(function () {
         $("#screen-upper p").text("0");
         input = true;
         operation = false;
-        equationMulti="";
+        resultB="";
+        
+        
     }
 
     function clear() {
@@ -108,25 +113,14 @@ $(function () {
 
     function calc() {
         var length = $("#screen-lower p").text().length;
-        
-            var equation = $("#screen-lower p").text();
+        var equation = $("#screen-lower p").text();
             equation = equation.substr(0, length - 1);
             equation = equation.replace(/÷/g, "/");
             equation = equation.replace(/×/g, "*");
-            equationMulti +=equation;
-        console.log(equationMulti);
-        if ( operation === true && continuo ===false) {    
-        try{   
-             result = math.eval(equationMulti).toString().substr(0, 6);
-            resultB=result;
-            $("#screen-upper p").text(result);
-            $("#list").append("<p>" + equation + "=" + result + "</p>");
-            input = false;
-            }catch(err){
-                $("#screen-upper p").text("ERROR");
-                input=false
-            }
-        }else if(operation === true && continuo ===true){
+            equationMulti =resultB+equation;
+            console.log(equationMulti);
+        
+        if(operation === true ){
                 try{   
              result = math.eval(equationMulti).toString().substr(0, 6);
             
@@ -146,9 +140,43 @@ $(function () {
 
     function showList() {
         $("#list").fadeToggle().toggleClass("showList");
-
+       $("#list p").each(function(){
+            $(this).click(chooseHistory);
+        });
     }
 
+    
+    function chooseHistory(){
+        var text=$(this).text();
+        var index=text.indexOf("=");
+         var history=text.substr(index+1);
+        var length=$("#screen-lower p").text().length;
+        
+        if(input === true && length === 1 && text === "0" && choose===true){
+           $("#screen-lower p").text(history);
+            operation=true;
+            choose=false;
+            
+            
+           }
+       else if(input===true && choose===true){
+           $("#screen-lower p").append(history);
+          operation=true;
+            choose=false;
+            
+            
+           }else if(input===false ){
+              $("#screen-lower p").text(history);
+               $("#screen-upper p").text("0");
+               input = true;
+               operation = true;
+               resultB="";
+               choose=false;
+                    }
+        $("#list").fadeOut().removeClass("showList");   
+               
+    }
+    
     //-------------------------event handler--------------------  
 
     $("#calc button.num").each(function () {
@@ -168,7 +196,11 @@ $(function () {
 
     $("button.clearAll").click(clearAll);
     $("button.clear").click(clear);
-    $("#history").click(showList);
+    $("#history").click(function(){
+        showList();
+       
+    });
+    
     
     //-------------use math js -----------------------------
     math.config({
