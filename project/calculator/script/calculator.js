@@ -112,7 +112,7 @@ $(function () {
             var equation = $("#screen-lower p").text();
             equation = equation.substr(0, length - 1);
             equation = equation.replace(/÷/g, "/");
-            equation = equation.replace("×", "*");
+            equation = equation.replace(/×/g, "*");
             equationMulti +=equation;
         console.log(equationMulti);
         if ( operation === true && continuo ===false) {    

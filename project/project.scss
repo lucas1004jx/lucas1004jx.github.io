@@ -4,7 +4,7 @@
 @import "navbar";
 body {
     background: url("image/background.jpg");
-    
+    overflow: scroll;
 }
 
 
@@ -13,6 +13,7 @@ header {
     color: $white;
     font-family: $main-font;
     text-rendering: optimizeLegibility;
+    
     .letter {
         margin: 0px;
         text-transform: uppercase;
@@ -43,11 +44,13 @@ header {
             font-size: 26rem;
             line-height: 18rem;
             max-width: 768px;
+            //min-height: 760px;
         }
         @include break(1024px) {
             font-size: 34rem;
             line-height: 24rem;
             max-width: 1024px;
+            //min-height: 760px;
         }
         span {
             position: relative;

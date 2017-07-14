@@ -530,7 +530,8 @@ nav {
       align-items: center; } }
 
 body {
-  background: url("image/background.jpg"); }
+  background: url("image/background.jpg");
+  overflow: scroll; }
 
 header {
   color: #fff;
