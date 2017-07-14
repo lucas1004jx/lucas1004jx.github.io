@@ -13,7 +13,15 @@ header {
     color: $white;
     font-family: $main-font;
     text-rendering: optimizeLegibility;
-    
+    width: 100vw;
+    min-height: 500px;
+    @include break(768px,
+        1023px) { 
+            min-height: 720px;
+        }
+        @include break(1024px) {  
+            min-height: 850px;
+        }
     .letter {
         margin: 0px;
         text-transform: uppercase;

@@ -536,7 +536,15 @@ body {
 header {
   color: #fff;
   font-family: orbitron;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  width: 100vw;
+  min-height: 500px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    header {
+      min-height: 720px; } }
+  @media (min-width: 1024px) {
+    header {
+      min-height: 850px; } }
   header .letter {
     margin: 0px;
     text-transform: uppercase;

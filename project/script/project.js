@@ -53,21 +53,33 @@ $(function () {
         $(ele).css("left", left);
     }
 
+    function poLetter(){
+        var hHeight = $("header").height();
+        var hWidth = $("header").width();
+        var lWidth = $(".letter").width();
+        var lHeight = $(".letter").height();
+        var top = (hHeight - lHeight) / 2;
+        var left = (hWidth - lWidth) / 2;
+        $(".letter").css("top", top);
+        $(".letter").css("left", left);
+       
+    }
+    
     //----------------position letters-------------------------
     var font = new FontFaceObserver("orbitron", {
         weight: 400
     });
 
     font.load().then(function () {
-        position(".letter");
+        poLetter();
 
     }, function () {
-        position(".letter");
+        poLetter();
         console.log('Font is not available');
     });
     position(".letter");
     $(window).resize(function () {
-        position(".letter");
+        poLetter();
     });
 
     //-----------------match height-------------
