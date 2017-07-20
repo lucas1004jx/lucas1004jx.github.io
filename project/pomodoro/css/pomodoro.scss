@@ -1,0 +1,156 @@
+@import "sass_modules/normalize";
+@import "sass_modules/variable";
+@import "sass_modules/mixins";
+@import "sass_modules/navbar";
+body {
+    background: $red;
+    width: 100%;
+    font-family: $main-font;
+    height: 100%;
+    position: relative;
+}
+#pomodoro{
+    display: none;
+}
+#main {
+    position: relative;
+    #showSession {
+        color: $white;
+        margin-top: 20px;
+        position: absolute;
+        font-size: 2rem;
+        text-transform: uppercase;
+        @include break(481px,768px){
+            font-size: 3rem;
+        }
+         @include break(769px){
+            font-size: 4rem;
+        }
+    }
+    #timer {
+        position: absolute;
+        color: $white;
+        font-size: 2rem;
+        font-family: $main-font;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        bottom: 0;
+        @include break(481px,768px){
+            font-size: 3rem;
+        }
+         @include break(769px){
+            font-size: 4rem;
+        }
+    }
+    #mycanvas {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        border-bottom: 4px solid rgba($black, 0.5);
+    }
+}
+
+.descri {
+    color:$white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    display: inline-block;
+    text-transform: capitalize;
+    text-align: center;
+    @include break(481px,768px){
+            font-size: 2rem;
+        }
+         @include break(769px){
+            font-size: 3rem;
+        }
+}
+
+
+label {
+    @include flex(row);
+    justify-content: space-around;
+    //display: block;
+    input{
+        display: inline-block;
+        width:15%;
+    }
+    #session,#break{
+        width: 25%;
+    }
+}
+
+img {
+    display: none;
+}
+
+div.button{
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-default{
+  background: $yellow;
+    color:$white;
+    border: none;
+}
+
+#sPlus,#sMinus,#bPlus,#bMinus{
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+    @include break(481px,768px){
+            font-size: 2rem;
+        width: 30px;
+      height: 30px;
+        }
+         @include break(769px){
+            font-size: 3rem;
+             width: 40px;
+      height: 40px;
+        }
+
+}
+
+.row{
+    margin-top: 20px;
+}
+
+#start_reset{
+    width: 100%;
+    text-align: center;
+    margin-top:80px;
+    #start,#reset{
+        margin: 0 20px;
+        font-family: $main-font;
+        font-size: 2rem;
+        @include break(481px,768px){
+            font-size: 2.5rem;
+       
+        }
+         @include break(769px){
+            font-size: 3rem;
+            
+        }
+    }
+}
+
+#sMin,#bMin{
+    display: none;
+    @extend .descri;
+    
+}
+
+#animation_container {
+	position:absolute;
+	left:0;
+    top:0px;
+  }
+
+#skip{
+    position: absolute;
+    top:5px;
+    left: 5px;
+}

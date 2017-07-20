@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <script src="//use.edgefonts.net/orbitron:n3,n5,n7,n9;rochester;gfs-didot;alfa-slab-one.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pomodoro.css">
+</head>
+
+<body>
+
+
+<section id="pomodoro">
+    <div id="main">
+        <div id="showSession">Pomodoro Clock</div>
+        <div id="timer">00:00:00</div>
+        <canvas id="mycanvas" width="800" height="800"></canvas>
+    </div>
+
+    <img src="image/human1.png" alt="" id="human">
+    <img src="image/break.png" alt="" id="storm">
+    <div class="container">
+        <div class="row">
+            <label for="">
+            
+              <div class="descri col-xs-4" id="session">session :</div>
+              <input type="text"  value=0 id="sTime" placeholder=" " class="col-xs-2">
+              <span id="sMin" class="col-xs-2"></span>
+              <span class="descri col-xs-2">mins</span>  
+           
+            
+    <div class="button col-xs-4">  
+   <button id="sPlus" class="fa fa-plus btn btn-default"></button>
+    <button id="sMinus" class="fa fa-minus btn btn-default"></button>
+    </div>
+   
+         </label>
+        </div>
+        <!-------row---------->
+        <div class="row">
+            <label for="">
+         
+               <div class="descri col-xs-4" id="break">break :</div>
+            <input type="text"  value=0 id="bTime" placeholder=" " class="col-xs-2">
+            <span id="bMin" class="col-xs-2"></span>
+            <span class="descri col-xs-2">mins</span>  
+            
+
+     <div class="button col-xs-4">
+     <button id="bPlus" class="fa fa-plus btn btn-default"></button> 
+     <button id="bMinus" class="fa fa-minus btn btn-default"></button>
+     </div>
+     
+           </label>
+        </div>
+        <!------row-->
+    
+    </div><!-----container-->
+
+    <div id="start_reset">
+        <button type="button" class="btn btn-default " id="start">Start</button>
+        <button type="button" class="btn btn-default " id="reset">Reset</button>
+    </div>
+    </section>
+    
+
+
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/pomodoro.js"></script>
+</body>
+
+</html>
