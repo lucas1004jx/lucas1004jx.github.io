@@ -540,6 +540,8 @@ body {
     margin-top: 20px;
     position: absolute;
     font-size: 2rem;
+    width: 100%;
+    text-align: center;
     text-transform: uppercase; }
     @media (min-width: 481px) and (max-width: 768px) {
       #main #showSession {
@@ -600,9 +602,13 @@ label {
 img {
   display: none; }
 
-div.button {
+button {
   display: inline-block;
   text-align: center; }
+  button:hover {
+    background: #83C25A !important; }
+  button:active {
+    background: #83C25A !important; }
 
 .btn-default {
   background: #FECA47;
@@ -611,19 +617,22 @@ div.button {
 
 #sPlus, #sMinus, #bPlus, #bMinus {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 0; }
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0 10px; }
   @media (min-width: 481px) and (max-width: 768px) {
     #sPlus, #sMinus, #bPlus, #bMinus {
       font-size: 2rem;
       width: 30px;
-      height: 30px; } }
+      height: 30px;
+      margin: 0 15px; } }
   @media (min-width: 769px) {
     #sPlus, #sMinus, #bPlus, #bMinus {
       font-size: 3rem;
       width: 40px;
-      height: 40px; } }
+      height: 40px;
+      margin: 0 20px; } }
 
 .row {
   margin-top: 20px; }
@@ -631,7 +640,7 @@ div.button {
 #start_reset {
   width: 100%;
   text-align: center;
-  margin-top: 80px; }
+  margin-top: 60px; }
   #start_reset #start, #start_reset #reset {
     margin: 0 20px;
     font-family: orbitron;

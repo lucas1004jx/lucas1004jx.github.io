@@ -19,6 +19,8 @@ body {
         margin-top: 20px;
         position: absolute;
         font-size: 2rem;
+        width: 100%;
+        text-align: center;
         text-transform: uppercase;
         @include break(481px,768px){
             font-size: 3rem;
@@ -85,9 +87,15 @@ img {
     display: none;
 }
 
-div.button{
+button{
     display: inline-block;
     text-align: center;
+    &:hover{
+        background: $green !important;
+    }
+    &:active{
+        background: $green !important;
+    }
 }
 
 .btn-default{
@@ -98,18 +106,21 @@ div.button{
 
 #sPlus,#sMinus,#bPlus,#bMinus{
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       padding: 0;
+      margin:0 10px; 
     @include break(481px,768px){
             font-size: 2rem;
         width: 30px;
       height: 30px;
+        margin:0 15px;
         }
          @include break(769px){
             font-size: 3rem;
              width: 40px;
       height: 40px;
+             margin:0 20px;
         }
 
 }
@@ -121,7 +132,7 @@ div.button{
 #start_reset{
     width: 100%;
     text-align: center;
-    margin-top:80px;
+    margin-top:60px;
     #start,#reset{
         margin: 0 20px;
         font-family: $main-font;

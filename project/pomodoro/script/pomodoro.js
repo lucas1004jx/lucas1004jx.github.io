@@ -61,8 +61,10 @@ $(function () {
         
         var foto=session%7;
         $("#human").attr("src","image/human"+foto+".png");
-        
-        if(sessionRun===true || running===false){
+        if(running===false){ 
+         var img = document.getElementById("human");
+           ctx.drawImage(img,360,360);
+           }else  if(sessionRun===true || running===false){
             var img = document.getElementById("human");
            ctx.drawImage(img,360,360);
            }else if(breakRun===true){
@@ -103,10 +105,11 @@ $(function () {
     }
 
     function init() {
+        
         min = $("#sTime").val();
         total = min * 60;
         shape();
-        $("#start").text("start");
+        $("#start").text("Start");
         $("#showSession").text("Pomodoro clock");
         position("#showSession");
         position("#timer");
@@ -186,6 +189,7 @@ $(function () {
     }
     //--------------------------start function------------------------------------
     function start() {
+        createjs.Sound.stop();
         var time = $("#sTime").val();
         var bTime = $("#bTime").val();
         if (time >= 0) {
@@ -195,12 +199,12 @@ $(function () {
 
             if ((pause === true && sessionRun === true) || (running === false)) { //when timer is paused during counting session time or when the first time the timer is loaded or reseted
                 countdown = setInterval(draw, 1000);
-                $("#start").text("pause");
+                $("#start").text("Pause");
                 pause = false;
                 running = true;
             } else if (pause === true && breakRun === true) { // when timer is paused during is counting break time
                 countdown = setInterval(breakTime, 1000);
-                $("#start").text("pause");
+                $("#tart").text("Pause");
                 pause = false;
             } else if (pause === false) { // when is counting
                 clearInterval(countdown);
@@ -219,7 +223,6 @@ $(function () {
         $("#bTime").val(0);
         clearInterval(countdown);
         countdown = null;
-        init();
         pause = true;
         update = false;
         sessionRun = false;
@@ -228,6 +231,7 @@ $(function () {
         session=1;
         breaking=1;
         foto=1;
+        init();
     }
     //--------------plus and minus function-------------------------
     function sPlus() {
@@ -303,6 +307,7 @@ $(function () {
             $("#skip").fadeOut();
             position("#timer");
           position("#showSession");
+            createjs.Sound.stop();
         });
     }
     //---------------------event handler--------------------------
@@ -384,6 +389,7 @@ $(function () {
     position("#animation_container");
     position("#toClock");
     positionH("#toClock");
+   
     
 });
 
