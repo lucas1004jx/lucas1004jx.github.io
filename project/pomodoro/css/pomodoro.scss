@@ -2,6 +2,7 @@
 @import "sass_modules/variable";
 @import "sass_modules/mixins";
 @import "sass_modules/navbar";
+@import "sass_modules/social";
 body {
     background: $red;
     width: 100%;
@@ -132,7 +133,7 @@ button{
 #start_reset{
     width: 100%;
     text-align: center;
-    margin-top:60px;
+    margin-top:40px;
     #start,#reset{
         margin: 0 20px;
         font-family: $main-font;
