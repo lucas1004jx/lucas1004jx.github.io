@@ -617,15 +617,15 @@ button {
 
 #sPlus, #sMinus, #bPlus, #bMinus {
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   margin: 0 10px; }
   @media (min-width: 481px) and (max-width: 768px) {
     #sPlus, #sMinus, #bPlus, #bMinus {
       font-size: 2rem;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       margin: 0 15px; } }
   @media (min-width: 769px) {
     #sPlus, #sMinus, #bPlus, #bMinus {

@@ -56,7 +56,7 @@ $(function () {
         grd.addColorStop(1, "#CC0033");
         ctx.fillStyle = grd;
         ctx.fillRect(0, 0, 800, 800);
-
+        ctx.lineCap="round";
         //mono
         
         var foto=session%7;
@@ -389,7 +389,8 @@ $(function () {
     position("#animation_container");
     position("#toClock");
     positionH("#toClock");
-   
+    
+  
     
 });
 

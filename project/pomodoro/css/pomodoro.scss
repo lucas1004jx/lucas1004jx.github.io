@@ -106,14 +106,14 @@ button{
 
 #sPlus,#sMinus,#bPlus,#bMinus{
       border-radius: 50%;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       padding: 0;
       margin:0 10px; 
     @include break(481px,768px){
             font-size: 2rem;
-        width: 30px;
-      height: 30px;
+        width: 35px;
+      height: 35px;
         margin:0 15px;
         }
          @include break(769px){
