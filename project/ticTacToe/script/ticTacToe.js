@@ -1704,7 +1704,7 @@ $(function () {
 
 
     var header = $("#intro h1");
-    TweenLite.fromTo(tic, 1, {
+    TweenLite.fromTo(tic, 1.5, {
         opacity: 0,
         x: -150,
         ease: Power2.easeOut
@@ -1713,7 +1713,7 @@ $(function () {
         x: 0,
         ease: Power4.easeOut
     });
-    TweenLite.fromTo(toe, 1, {
+    TweenLite.fromTo(toe, 1.5, {
         opacity: 0,
         x: 150,
         ease: Power4.easeOut
@@ -1722,13 +1722,13 @@ $(function () {
         x: 0,
         ease: Power4.easeOut
     });
-    TweenLite.from(tac, 1, {
+    TweenLite.from(tac, 1.5, {
         opacity: 0,
         y: -150,
         ease: Bounce.easeOut
     });
     TweenLite.from("#play", 1, {
         opacity: 0,
-        delay: 0.5
+        delay: 0.8
     });
 });
