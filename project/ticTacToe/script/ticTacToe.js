@@ -72,7 +72,7 @@ $(function () {
     function animate() {
         if (y >= canvas.height) {
             gameStart = true; // only can draw when the grid animation complete
-            $("#ai").fadeIn();
+            $("#ai_btn").fadeIn();
             return;
         }
         requestAnimationFrame(animate);
@@ -762,7 +762,7 @@ $(function () {
         $("#circle").attr("disabled", false);
         $("#x").attr("disabled", false);
         $("#reset_btn").fadeOut();
-        $("#ai").fadeIn();
+        $("#ai_btn").fadeIn();
         ctx.clearRect(0, 0, wWidth, wHeight);
         y = 0;
         x = 0;
@@ -1577,7 +1577,7 @@ $(function () {
     canvas.addEventListener("click", function () {
 
         $("#reset_btn").fadeIn("slow");
-        $("#ai").fadeOut();
+        $("#ai_btn").fadeOut();
         if (playerMove === true && gameStart === true) {
 
 
@@ -1676,7 +1676,7 @@ $(function () {
             playerMove = false;
             circle = !circle;
             aspa = !aspa;
-            $("#ai").fadeOut();
+            $("#ai_btn").fadeOut();
             ai();
         }
 

@@ -609,10 +609,12 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   right: 0;
   z-index: 1;
   /*-----#end-------*/ }
-  #main #ai {
+  #main #ai_btn {
     position: absolute;
+    width: 100%;
     bottom: -80px;
-    display: none; }
+    display: none;
+    text-align: center; }
   #main #button {
     width: 100%;
     text-align: center;
