@@ -1,0 +1,43 @@
+.nav {
+    font-family: $nav-font;
+    text-transform: uppercase;
+    font-weight: bolder;
+    @include flex(column);
+    height: 100%;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+        width: 150px;
+        a { 
+            color: $white;
+            &:hover {
+                color: $yellow;
+                border-bottom: 2px solid $yellow;
+                background: transparent;
+            }
+        }
+    }
+    .active {
+        color: $yellow;
+        border-bottom: 2px solid $yellow;
+    }
+}
+
+.menu{
+    position: absolute;
+    top:5px;
+    left: 10px;
+    color: $black;
+    background: transparent;
+    z-index: 100;
+}
+
+.custom-fluid-width {
+  width: 40%;
+    background: url("../image/ticMenu.png") ;
+    background-size: cover;
+}

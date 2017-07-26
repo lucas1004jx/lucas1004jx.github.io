@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:image" content="image/tictactoe.png" />
+    <title>TIC_TAC_TOE | WEB_PROJECT | LUCAS_JIN</title>
+    <script src="//use.edgefonts.net/orbitron:n3,n5,n7,n9;rochester;gfs-didot;alfa-slab-one.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slidebars.min.css">
+    <link rel="stylesheet" href="css/ticTacToe.css">
+
+</head>
+
+<body>
+   <div canvas="container" id="body">
+      <button class="menu btn btn-default"><i class="fa fa-bars" aria-hidden="true"></i></button>
+       <section id="intro">
+        <header>
+            <h1 id="tic">tic</h1>
+            <h1 id="tac">tac</h1>
+            <h1 id="toe">toe</h1>
+        </header>
+
+        <button type="button" class="btn btn-danger" id="play">Play</button>
+    </section>
+    <section id="main">
+        
+        <div id="button">
+            <div id="circle_btn">
+                <button type="button" id="circle" class="btn btn-info"><i class="fa fa-circle-o"></i> </button> <span id="oScore">0</span>
+            </div>
+
+            <div id="x_btn">
+                <button type="button" id="x" class="btn btn-info active"><i class="fa fa-times"></i> </button> <span id="xScore">0</span>
+            </div>
+
+
+        </div>
+
+        <div id="end">
+            <i class="fa fa-circle-o" id="winner"></i>
+            <i id="empate"></i>
+            <p>winner!</p>
+        </div>
+        <canvas id="canvas"></canvas>
+
+        <div id="reset_btn">
+            <button type="button" class="btn btn-danger" id="reset">RESTART</button>
+        </div>
+        <button type="button" id="ai" class="btn btn-danger">AI First</button> 
+        
+    </section>
+
+    <section >
+        <ul id="social">
+        <li><a href="https://www.facebook.com/xin.jin.5872" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://github.com/lucas1004jx/lucas1004jx.github.io" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/lucas1004jx/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/xin-jin-2930b592/" target="_blank"><i class="fa fa-linkedin" ></i></a></li>
+    
+    </ul>
+    </section>
+
+   </div>
+    
+    <div class="custom-fluid-width" off-canvas="id-1 left push">
+         <ul class="nav">
+       <li><a href="../../index.html">home</a></li>
+     <li><a href="../../about/about.html">about</a></li>
+     <li><a href="../project.html" class="active">project</a> 
+     </li>
+     <li><a href="../../contact/contact.html">contact</a></li> 
+    </ul>
+     </div>
+    
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/slidebars.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/TweenLite.min.js"></script>
+    <script src="script/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+    <script src="script/ticTacToe.js"></script>
+</body>
+
+</html>

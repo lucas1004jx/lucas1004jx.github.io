@@ -1,0 +1,138 @@
+
+
+@mixin break($width...) {
+    @if length($width)==1 {
+        @media (min-width: nth($width, 1)) {
+            @content;
+        }
+    }
+    @if length($width)==2 {
+        @media (min-width: nth($width, 1)) and (max-width:nth($width, 2)) {
+            @content;
+        }
+    }
+}
+
+@mixin fadeIn($time, $d) {
+    @-webkit-keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    @-moz-keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    @-o-keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY($d)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+    animation:fade $time;
+}
+
+@mixin textShadow($color) {
+    color: $white;
+    text-shadow: 2px 0 0 $color, -2px 0 0 $color;
+}
+
+@mixin flex($dir){
+    display:flex;
+    display:-webkit-flex;
+    flex-direction: $dir;
+    -webkit-flex-direction:$dir;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin glow(){
+    
+    @-webkit-keyframes glow{
+        0%{
+            color:$white;
+             
+        }
+        50%{
+            color:$yellow;
+            
+        }
+        100%{
+            color:$white;
+            
+        }
+    }
+    
+    @-moz-keyframes glow{
+        0%{
+            color:$white;
+             
+        }
+        50%{
+            color:$yellow;
+            
+        }
+        100%{
+            color:$white;
+            
+        }
+    }
+    
+    
+    
+    @keyframes glow{
+        0%{
+            color:$white;
+             
+        }
+        50%{
+            color:$yellow;
+            
+        }
+        100%{
+            color:$white;
+            
+        }
+    }
+    
+}
+
+@mixin transition($value,$time,$effect){
+    -moz-transition: $value $time  $effect;
+    -webkit-transition: $value $time  $effect;
+    -o-transition: $value $time  $effect;
+    transition: $value $time  $effect;
+}
+
+@mixin gradient($color1,$color2){
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($color1, $color2); /* Standard syntax */
+}

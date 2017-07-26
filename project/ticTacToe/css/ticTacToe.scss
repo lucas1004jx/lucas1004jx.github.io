@@ -1,0 +1,124 @@
+@import "sass_modules/normalize";
+@import "sass_modules/variable";
+@import "sass_modules/mixins";
+@import "sass_modules/navbar";
+@import "sass_modules/social";
+@import "sass_modules/slidebar";
+
+#body {
+    background: url("../image/background.png") center center;
+    background-size: cover;
+}
+
+#main {
+    position: absolute;
+    display: none;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    #ai{
+        position: absolute;
+        bottom:-80px;
+        display: none;
+    }
+    #button {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: -80px;
+        .fa-circle-o {
+            color: $grey;
+        }
+        .fa-times {
+            color: $white;
+        }
+        #circle,
+        #x {
+            margin: 0;
+            font-family: sans-serif;
+            background: $green;
+            border: none;
+        }
+        .active {
+            border: 2px solid $red !important;
+        }
+        #circle_btn,
+        #x_btn {
+            display: inline-block;
+            margin: 0 20px;
+            border-bottom: 2px solid rgba(208, 166, 25, 0.9);
+            
+        }
+        #xScore,
+        #oScore {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            font-family: $wiki-font;
+        }
+    }
+    #end {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: rgba($green, 0.9);
+        font-family: $wiki-font;
+        text-align: center;
+        display: none;
+        #winner,
+        #empate {
+            font-size: 15rem;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 5rem;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+        .fa-circle-o {
+            color: $grey;
+        }
+        .fa-times {
+            color: $white;
+        }
+    }/*-----#end-------*/
+    #reset_btn {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}//-------restart btn------------
+}
+
+#canvas {
+    //position: absolute;
+}
+
+
+
+#intro {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    text-align: center;
+    @include flex(column);
+    h1 {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $wiki-font;
+        font-size: 4rem;
+    }
+    #play {
+        font-size: 2rem;
+        padding: 1rem 4rem;
+    }
+}
