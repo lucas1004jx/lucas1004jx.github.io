@@ -25,6 +25,15 @@ $(function () {
         ocupiedX[i] = false;
     }
 
+    var ticSound = new Audio();
+    ticSound.src="sound/tic.wav";
+   
+    
+    var backgroundSound= new Audio();
+    backgroundSound.src="sound/background.mp3";
+
+    backgroundSound.play();
+    backgroundSound.loop=true;
     //make canvas size responsible according to the window-------
     function canvasSize() {
         if (wWidth <= wHeight) {
@@ -662,8 +671,8 @@ $(function () {
         y1 = 40;
         x2 = canvas.width / 3 - 40;
         y2 = 40;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw1();
     }
 
@@ -673,8 +682,8 @@ $(function () {
         y1 = 40;
         x2 = canvas.width / 3 * 2 - 40;
         y2 = 40;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw2();
     }
 
@@ -684,8 +693,8 @@ $(function () {
         y1 = 40;
         x2 = canvas.width / 3 * 3 - 40;
         y2 = 40;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw3();
     }
 
@@ -695,8 +704,8 @@ $(function () {
         y1 = 40 + canvas.height / 3;
         x2 = canvas.width / 3 - 40;
         y2 = 40 + canvas.height / 3;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw4();
     }
 
@@ -706,8 +715,8 @@ $(function () {
         y1 = 40 + canvas.height / 3;
         x2 = canvas.width / 3 * 2 - 40;
         y2 = 40 + canvas.height / 3;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw5();
     }
 
@@ -717,8 +726,8 @@ $(function () {
         y1 = 40 + canvas.height / 3;
         x2 = canvas.width / 3 * 3 - 40;
         y2 = 40 + canvas.height / 3;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw6();
     }
 
@@ -728,8 +737,8 @@ $(function () {
         y1 = 40 + canvas.height / 3 * 2;
         x2 = canvas.width / 3 - 40;
         y2 = 40 + canvas.height / 3 * 2;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw7();
     }
 
@@ -739,8 +748,8 @@ $(function () {
         y1 = 40 + canvas.height / 3 * 2;
         x2 = canvas.width / 3 * 2 - 40;
         y2 = 40 + canvas.height / 3 * 2;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw8();
     }
 
@@ -750,8 +759,8 @@ $(function () {
         y1 = 40 + canvas.height / 3 * 2;
         x2 = canvas.width / 3 * 3 - 40;
         y2 = 40 + canvas.height / 3 * 2;
-        dx = 5;
-        dy = 5;
+        dx = 3;
+        dy = 3;
         draw9();
     }
 
@@ -766,6 +775,8 @@ $(function () {
         ctx.clearRect(0, 0, wWidth, wHeight);
         y = 0;
         x = 0;
+        dx=5;
+        dy=5;
         animate();
         if (playerX === true) {
             circle = false;
@@ -1534,6 +1545,7 @@ $(function () {
     }
 */
     function ai() {
+        ticSound.play();
         if (move === 0) {
             draw[4]();
         }
@@ -1584,6 +1596,7 @@ $(function () {
             if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[0] === false && ocupiedX[0] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d1();
                     setTimeout(ai, 500);
                 }
@@ -1591,6 +1604,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[1] === false && ocupiedX[1] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d2();
                     setTimeout(ai, 500);
                 }
@@ -1598,6 +1612,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[2] === false && ocupiedX[2] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d3();
                     setTimeout(ai, 500);
                 }
@@ -1605,6 +1620,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[3] === false && ocupiedX[3] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d4();
                     setTimeout(ai, 500);
                 }
@@ -1612,30 +1628,35 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[4] === false && ocupiedX[4] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d5();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[5] === false && ocupiedX[5] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d6();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[6] === false && ocupiedX[6] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d7();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[7] === false && ocupiedX[7] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d8();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[8] === false && ocupiedX[8] === false) {
                     playerMove = false;
+                    ticSound.play();
                     d9();
                     setTimeout(ai, 500);
                 }
@@ -1668,7 +1689,10 @@ $(function () {
         $("#body").css("background","#FECA47");
         $("#intro").fadeOut();
         $("#main").fadeIn();
+        dx=5;
+        dy=5;
         animate();
+        backgroundSound.volume=0.1;
     });
 
     $("#ai").click(function () {
@@ -1682,6 +1706,20 @@ $(function () {
 
     });
 
+    $("#sound").click(function(){
+        
+        if($("#vControl").hasClass("fa-volume-up")){
+           backgroundSound.pause();
+        $("#vControl").removeClass("fa-volume-up");
+        $("#vControl").addClass("fa-volume-off");
+           }else{
+              backgroundSound.play();
+        $("#vControl").removeClass("fa-volume-off");
+        $("#vControl").addClass("fa-volume-up"); 
+           }
+        
+    });
+    
 
     //--------initialize menu
     var controller = new slidebars();
@@ -1729,6 +1767,6 @@ $(function () {
     });
     TweenLite.from("#play", 1, {
         opacity: 0,
-        delay: 0.8
+        delay: 0.5
     });
 });

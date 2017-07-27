@@ -695,4 +695,12 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
     font-size: 2rem;
     padding: 1rem 4rem; }
 
+#sound {
+  position: absolute;
+  top: 5px;
+  left: 60px;
+  color: #000;
+  background: transparent;
+  z-index: 100; }
+
 /*# sourceMappingURL=ticTacToe.css.map */

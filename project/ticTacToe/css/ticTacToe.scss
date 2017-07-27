@@ -124,3 +124,12 @@
         padding: 1rem 4rem;
     }
 }
+
+#sound{
+    position: absolute;
+    top:5px;
+    left: 60px;
+    color: $black;
+    background: transparent;
+    z-index: 100; 
+}
