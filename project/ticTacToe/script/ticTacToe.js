@@ -25,8 +25,7 @@ $(function () {
         ocupiedX[i] = false;
     }
 
-    var ticSound = new Audio();
-    ticSound.src="sound/tic.wav";
+    
    
     
     var backgroundSound= new Audio();
@@ -1545,7 +1544,7 @@ $(function () {
     }
 */
     function ai() {
-        ticSound.play();
+        
         if (move === 0) {
             draw[4]();
         }
@@ -1596,7 +1595,7 @@ $(function () {
             if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[0] === false && ocupiedX[0] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d1();
                     setTimeout(ai, 500);
                 }
@@ -1604,7 +1603,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[1] === false && ocupiedX[1] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d2();
                     setTimeout(ai, 500);
                 }
@@ -1612,7 +1611,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 1) {
                 if (ocupiedO[2] === false && ocupiedX[2] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d3();
                     setTimeout(ai, 500);
                 }
@@ -1620,7 +1619,7 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[3] === false && ocupiedX[3] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d4();
                     setTimeout(ai, 500);
                 }
@@ -1628,35 +1627,35 @@ $(function () {
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[4] === false && ocupiedX[4] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d5();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 2) {
                 if (ocupiedO[5] === false && ocupiedX[5] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d6();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 1 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[6] === false && ocupiedX[6] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d7();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 2 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[7] === false && ocupiedX[7] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d8();
                     setTimeout(ai, 500);
                 }
             } else if (mouse.x < canvas.width / 3 * 3 && mouse.y < canvas.height / 3 * 3) {
                 if (ocupiedO[8] === false && ocupiedX[8] === false) {
                     playerMove = false;
-                    ticSound.play();
+                    
                     d9();
                     setTimeout(ai, 500);
                 }
