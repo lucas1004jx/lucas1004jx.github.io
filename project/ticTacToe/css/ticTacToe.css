@@ -612,14 +612,14 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   #main #ai_btn {
     position: absolute;
     width: 100%;
-    bottom: -80px;
+    bottom: -50px;
     display: none;
     text-align: center; }
   #main #button {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: -80px; }
+    top: -60px; }
     #main #button .fa-circle-o {
       color: #333333; }
     #main #button .fa-times {
@@ -669,7 +669,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
       color: #fff; }
   #main #reset_btn {
     position: absolute;
-    bottom: -80px;
+    bottom: -50px;
     width: 100%;
     text-align: center;
     display: none; }

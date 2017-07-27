@@ -22,7 +22,7 @@
     #ai_btn{
         position: absolute;
         width: 100%;
-        bottom:-80px;
+        bottom:-50px;
         display: none;
         text-align: center;
     }
@@ -30,7 +30,7 @@
         width: 100%;
         text-align: center;
         position: absolute;
-        top: -80px;
+        top: -60px;
         .fa-circle-o {
             color: $grey;
         }
@@ -93,7 +93,7 @@
     }/*-----#end-------*/
     #reset_btn {
     position: absolute;
-    bottom: -80px;
+    bottom: -50px;
     width: 100%;
     text-align: center;
     display: none;

@@ -1585,6 +1585,7 @@ $(function () {
     }, false);
 
 
+    $("#canvas" ).hover().css("cursor","pointer");
     canvas.addEventListener("click", function () {
 
         $("#reset_btn").fadeIn("slow");
