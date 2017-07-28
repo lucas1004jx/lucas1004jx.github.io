@@ -30,9 +30,12 @@ $(function () {
     
     var backgroundSound= new Audio();
     backgroundSound.src="sound/background.mp3";
-
     backgroundSound.play();
-    backgroundSound.loop=true;
+    //backgroundSound.loop=true;
+    backgroundSound.addEventListener("ened",function(){
+        backgroundSound.currentTime=0;
+        backgroundSound.play();
+    },false);
     //make canvas size responsible according to the window-------
     function canvasSize() {
         if (wWidth <= wHeight) {
@@ -1543,6 +1546,18 @@ $(function () {
         }//--------ai play X---------
     }
 */
+    function crossMove(){
+                var arr = [0, 2, 6, 8];
+                var random = Math.floor(Math.random() * 4)
+                var num = arr[random];
+        if(ocupiedO[num]===false && ocupiedX[num]===false){
+            draw[num]();
+           }else {
+               console.log(num);
+                crossMove();    
+                    }
+               
+    }
     function ai() {
         
         if (move === 0) {
@@ -1550,16 +1565,14 @@ $(function () {
         }
 
         if (move === 1 || move === 2) {
-           
+           console.log("move 1 or 2");
             if (ocupiedO[4] === false && ocupiedX[4] === false) {
+                
                 draw[4](); //if the center is empty, take the center at the first move
             } else if (ocupiedO[4] === true || ocupiedX[4] === true) {
-                
-                var arr = [0, 2, 6, 8];
-                var random = Math.floor(Math.random() * 4)
-                var num = arr[random];
-                draw[num]();
+                crossMove();
             } else {
+                 
                 randomMove();
             }
         } //------------the first step, a random move-------------
