@@ -32,7 +32,7 @@ $(function () {
     backgroundSound.src="sound/background.mp3";
     backgroundSound.play();
     //backgroundSound.loop=true;
-    backgroundSound.addEventListener("ened",function(){
+    backgroundSound.addEventListener("ended",function(){
         backgroundSound.currentTime=0;
         backgroundSound.play();
     },false);
