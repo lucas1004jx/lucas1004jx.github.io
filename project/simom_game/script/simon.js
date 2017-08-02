@@ -18,8 +18,31 @@ $(function () {
     var tl = new TimelineLite();
     var tlOn = new TimelineLite();
     var tlOff = new TimelineLite();
-    var tlBg= new TimelineLite();
+    var tlBg = new TimelineLite();
 
+
+    //-------------------creat audio-------------------------------
+    var audioError = new Howl({
+        src: ["sounds/error.wav"]
+    });
+    var audioWin = new Howl({
+        src: ["sounds/win.wav"]
+    });
+    var audioIntro = new Howl({
+        src: ["sounds/intro.wav"]
+    });
+    var audioMode = new Howl({
+        src: ["sounds/mode.wav"]
+    });
+    var audioIntro0 = new Howl({
+        src: ["sounds/intro0.wav"]
+    });
+    var audioOff = new Howl({
+        src: ["sounds/off.wav"]
+    });
+    
+    winSound();
+    //----------------canvas size---------------------
     function canvasSize() {
         if (wWidth <= wHeight) {
             if (wWidth <= 400) {
@@ -27,28 +50,28 @@ $(function () {
                 canvas.width = 300;
                 radius = 130;
                 canvas.height = canvas.width / ratio;
-                $("#main").css("width",wWidth);
-                $("#main").css("height",canvas.height);
+                $("#main").css("width", wWidth);
+                $("#main").css("height", canvas.height);
             } else {
                 canvas.width = 400;
                 radius = 170;
                 canvas.height = canvas.width / ratio;
-                $("#main").css("width",wWidth);
-                $("#main").css("height",canvas.height);
+                $("#main").css("width", wWidth);
+                $("#main").css("height", canvas.height);
             }
         } else {
             if (wHeight <= 400) {
                 canvas.height = 300;
                 radius = 130;
                 canvas.width = canvas.height / ratio;
-               $("#main").css("width",wWidth);
-                $("#main").css("height",canvas.height);
+                $("#main").css("width", wWidth);
+                $("#main").css("height", canvas.height);
             } else {
                 canvas.height = 400;
                 radius = 170;
                 canvas.width = canvas.height / ratio;
-               $("#main").css("width",wWidth);
-                $("#main").css("height",canvas.height); 
+                $("#main").css("width", wWidth);
+                $("#main").css("height", canvas.height);
             }
         }
 
@@ -58,14 +81,14 @@ $(function () {
 
     canvasSize();
 
-    $(window).resize(function(){
-    wWidth = $(window).width();
-    wHeight = $(window).height();
-        $("#main").css("width",wWidth);
+    $(window).resize(function () {
+        wWidth = $(window).width();
+        wHeight = $(window).height();
+        $("#main").css("width", wWidth);
     });
-    
+
     //$("#canvas").css("border", "2px solid black");
-     //$("#canvas").css("background", "transparent");
+    //$("#canvas").css("background", "transparent");
 
     function toDeg(deg) {
         return Math.PI * 2 / 360 * deg;
@@ -86,7 +109,8 @@ $(function () {
         ctx.stroke();
     }
 
-    
+
+
     function light(deg0, deg1, color0, color1, sound) {
         var grd = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, radius - 35, canvas.width / 2, canvas.height / 2, radius + 40);
         grd.addColorStop(0, color0);
@@ -100,7 +124,11 @@ $(function () {
         ctx.fill();
         ctx.strokeStyle = "rgba(255,255,255,0)";
         ctx.stroke();
-        var audio = new Audio("sounds/"+sound+".wav");
+
+
+        var audio = new Howl({
+            src: ["sounds/" + sound + ".wav"]
+        });
         audio.play();
         circle();
     }
@@ -144,8 +172,8 @@ $(function () {
         ctx.strokeStyle = "rgba(255,255,255,0)";
         ctx.stroke();
     }
-    
-        
+
+
     //------------------green--------------------
     var greenDeg0 = toDeg(181);
     var greenDeg1 = toDeg(-91);
@@ -174,8 +202,8 @@ $(function () {
         greenDeg1 = toDeg(-91);
         greenColor0 = "rgb(151, 255, 113)";
         greenColor1 = "rgba(32, 69, 30, 0)";
-        light(greenDeg0, greenDeg1, greenColor0, greenColor1,a);
-        
+        light(greenDeg0, greenDeg1, greenColor0, greenColor1, a);
+
     }
 
 
@@ -206,8 +234,8 @@ $(function () {
         redDeg1 = toDeg(-1);
         redColor0 = "rgb(255, 102, 6)";
         redColor1 = "rgba(75, 36, 3, 0)";
-        light(redDeg0, redDeg1, redColor0, redColor1,b);
-        
+        light(redDeg0, redDeg1, redColor0, redColor1, b);
+
     }
 
 
@@ -238,8 +266,8 @@ $(function () {
         blueDeg1 = toDeg(89);
         blueColor0 = "rgb(0, 145, 252)";
         blueColor1 = "rgba(7, 33, 82, 0)";
-        light(blueDeg0, blueDeg1, blueColor0, blueColor1,c);
-        
+        light(blueDeg0, blueDeg1, blueColor0, blueColor1, c);
+
     }
 
 
@@ -270,8 +298,8 @@ $(function () {
         yellowDeg1 = toDeg(179);
         yellowColor0 = "rgb(247, 247, 0)";
         yellowColor1 = "rgba(65, 65, 4, 0)";
-        light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1,d);
-        
+        light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, d);
+
     }
 
     function draw() {
@@ -299,7 +327,7 @@ $(function () {
     function turnOn() {
         setTimeout(function () {
             green();
-            light(greenDeg0, greenDeg1, greenColor0, greenColor1,a);
+            light(greenDeg0, greenDeg1, greenColor0, greenColor1, a);
         }, 100);
         setTimeout(function () {
             draw();
@@ -310,7 +338,7 @@ $(function () {
         }, 600);
         setTimeout(function () {
             red();
-            light(redDeg0, redDeg1, redColor0, redColor1,b);
+            light(redDeg0, redDeg1, redColor0, redColor1, b);
         }, 1300);
         setTimeout(function () {
             draw();
@@ -320,7 +348,7 @@ $(function () {
         }, 1800);
         setTimeout(function () {
             blue();
-            light(blueDeg0, blueDeg1, blueColor0, blueColor1,c);
+            light(blueDeg0, blueDeg1, blueColor0, blueColor1, c);
         }, 2300);
         setTimeout(function () {
             draw();
@@ -329,7 +357,7 @@ $(function () {
         }, 2800);
         setTimeout(function () {
             yellow();
-            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1,d);
+            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, d);
         }, 3300);
         setTimeout(function () {
             draw();
@@ -339,27 +367,39 @@ $(function () {
     }
     var blu;
     var br;
-function bgFadeIn(){
-    blur=5;
-     br=40;
-    tlBg.to("#background",2,{onUpdate:function(){
-        TweenLite.set("#background", {webkitFilter:"blur(" + blur + "px)",webkitFilter:"brightness(" + br + "%)"});
-        blur=blur*0.99;
-        br=br*1.01;
-        
-    }});
-}
-    
-    function bgFadeOut(){
-    blur=1;
-     br=130;
-    tlBg.to("#background",2,{onUpdate:function(){
-        TweenLite.set("#background", {webkitFilter:"blur(" + blur + "px)",webkitFilter:"brightness(" + br + "%)"});
-        blur=blur*1.01;
-        br=br*0.99;
-        
-    }});
-}
+
+    function bgFadeIn() {
+        blur = 5;
+        br = 40;
+        tlBg.to("#background", 2, {
+            onUpdate: function () {
+                TweenLite.set("#background", {
+                    webkitFilter: "blur(" + blur + "px)",
+                    webkitFilter: "brightness(" + br + "%)"
+                });
+                blur = blur * 0.99;
+                br = br * 1.01;
+
+            }
+        });
+    }
+
+    function bgFadeOut() {
+        blur = 1;
+        br = 130;
+        tlBg.to("#background", 2, {
+            onUpdate: function () {
+                TweenLite.set("#background", {
+                    webkitFilter: "blur(" + blur + "px)",
+                    webkitFilter: "brightness(" + br + "%)"
+                });
+                blur = blur * 1.01;
+                br = br * 0.99;
+
+            }
+        });
+    }
+
     function falied() {
         greenLight();
         redLight();
@@ -367,7 +407,7 @@ function bgFadeIn(){
         yellowLight();
 
     }
-//---------------------------------time line ----------------------------------
+    //---------------------------------time line ----------------------------------
     function timeLine() {
         tl.fromTo("#info", 1, {
                 opacity: 0,
@@ -436,8 +476,9 @@ function bgFadeIn(){
     var e = "e";
     var current = [];
 
-    var audioError = new Audio("sounds/error.wav");
-    
+
+
+
     function detect() {
 
         var areaDetection = Math.pow(canvas.width / 2 - mouse.x, 2) + Math.pow(canvas.height / 2 - mouse.y, 2);
@@ -466,7 +507,7 @@ function bgFadeIn(){
                     bingo = true;
 
                 } else if (current[i] !== original[i]) {
-                    
+
                     audioError.play();
                     bingo = false;
                     reset();
@@ -507,16 +548,17 @@ function bgFadeIn(){
         $("#info").text("Level " + " " + level);
     }
 
-    var audioWin = new Audio("sounds/win.wav");
-    audioWin.preload="auto";
+
+
+
     function winSound() {
-        
         audioWin.play();
     }
-    
-   var audioIntro = new Audio("sounds/intro.wav");
-    audioIntro.preload="auto";
-    function introSound() { 
+
+
+
+
+    function introSound() {
         audioIntro.play();
     }
 
@@ -537,19 +579,19 @@ function bgFadeIn(){
     }
 
     if (!isMobile()) {
-        
+
         canvas.addEventListener("mousemove", function (e) {
-            if(!powerOn){
-               $('[data-toggle="tooltip"]').tooltip("show"); 
-               }else{
-                 $('[data-toggle="tooltip"]').tooltip("hide");  
-               }
+            if (!powerOn) {
+                $('[data-toggle="tooltip"]').tooltip("show");
+            } else {
+                $('[data-toggle="tooltip"]').tooltip("hide");
+            }
             mouse.x = e.offsetX;
             mouse.y = e.offsetY;
         }, false);
         canvas.addEventListener("mousedown", function () {
-            if (powerOn && !intro ) {
-                
+            if (powerOn && !intro) {
+
                 detect();
             }
         }, false);
@@ -562,16 +604,16 @@ function bgFadeIn(){
         }, false);
     } else {
 
-        
+
         canvas.addEventListener("touchstart", function (e) {
             mouse.x = e.touches[0].pageX - e.touches[0].target.offsetLeft;
             mouse.y = e.touches[0].pageY - $("#main")[0].offsetTop;
-            if (powerOn && !intro ) {
+            if (powerOn && !intro) {
                 detect();
-                $('[data-toggle="tooltip"]').tooltip("hide"); 
-            }else{
-                 $('[data-toggle="tooltip"]').tooltip("show");  
-               }
+                $('[data-toggle="tooltip"]').tooltip("hide");
+            } else {
+                $('[data-toggle="tooltip"]').tooltip("show");
+            }
 
         }, false);
 
@@ -614,8 +656,8 @@ function bgFadeIn(){
         }
     }
 
-    function start(){
-       if (gameBegin === false && beginBtn == true && powerOn === true) {
+    function start() {
+        if (gameBegin === false && beginBtn == true && powerOn === true) {
             gameBegin = true;
             beginBtn = false;
             introSound();
@@ -631,19 +673,19 @@ function bgFadeIn(){
             level = 1;
             $("#info").text("Start Over");
             timeLine();
-        } 
+        }
     }
-    
-    
+
+
     turnOff();
 
     $("#start").click(start);
 
-    var audioMode =new Audio("sounds/mode.wav");
-    audioMode.preload="auto";
+
+
     $("#strict").click(function () {
         strict = !strict;
-        
+
         audioMode.play();
         if (strict) {
             $("#mode").text("Strict Mode");
@@ -653,10 +695,8 @@ function bgFadeIn(){
     });
 
     //--------------------power btn---------------------------------------------
-    var audioIntro0 = new Audio("sounds/intro0.wav");
-     var audioOff = new Audio("sounds/off.wav");
-    audioIntro0.preload="auto";
-    audioOff.preload="auto";
+
+
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
             powerOn = true;
@@ -671,7 +711,7 @@ function bgFadeIn(){
                 })
                 .to("#powerIcon", 1, {
                     background: "#0091fc",
-                    onStart: function () { 
+                    onStart: function () {
                         turnOn();
                     }
                 }, "-=0.3")
@@ -687,10 +727,12 @@ function bgFadeIn(){
                     y: 0,
                     ease: Bounce.easeOut,
                 }, "+=1.5")
-                .to("#mode",1,{onComplete:function(){
-                    start();
-                    $("#start,#strict").attr("disabled", false);
-                }},"+=0.5");
+                .to("#mode", 1, {
+                    onComplete: function () {
+                        start();
+                        $("#start,#strict").attr("disabled", false);
+                    }
+                }, "+=0.5");
 
 
         } else if (powerOn === true && intro === false) { //---turn off-----------------
@@ -701,7 +743,7 @@ function bgFadeIn(){
             level = 1;
             $("#start").text("Start");
             $("#start,#strict").attr("disabled", true);
-           
+
             audioOff.play();
             bgFadeOut();
             tlOff.to("#powerBtn", 0.4, {
@@ -744,6 +786,6 @@ function bgFadeIn(){
     $("#body").click(function () {
         controller.close('id-1');
     });
-  
+
 
 });
