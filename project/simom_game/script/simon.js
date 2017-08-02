@@ -697,8 +697,10 @@ $(function () {
         audioMode.play();
         if (strict) {
             $("#mode").text("Strict Mode");
+            $("#strict").text("Normal");
         } else {
             $("#mode").text("Normal mode");
+            $("#strict").text("Strict");
         }
     });
 
@@ -777,7 +779,7 @@ $(function () {
 
         }
 
-    }); //--------power click
+    }); //--------power click-------------
 
 
     //--------initialize menu
