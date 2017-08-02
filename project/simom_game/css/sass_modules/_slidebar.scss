@@ -1,0 +1,47 @@
+.nav { 
+    font-family: $nav-font;
+    text-transform: uppercase;
+    font-weight: bolder;
+    @include flex(column);
+    height: 100%;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+        width: 150px;
+        a { 
+            color: $white;
+            &:hover {
+                color: $neon-green;
+                border-bottom: 2px solid $neon-green;
+                background: transparent;
+            }
+        }
+    }
+    .active {
+        color: $neon-green;
+        border-bottom: 2px solid $neon-green;
+    }
+}
+
+.menu{
+    position: absolute;
+    top:5px;
+    left: 10px;
+    color: $white;
+    background: transparent;
+    z-index: 100;
+    &:hover{
+        background:$green;
+        color:$white;
+    }
+}
+
+.custom-fluid-width {
+  width: 40%;
+    background: url("../image/background.jpg") ;
+    background-size: cover;
+}

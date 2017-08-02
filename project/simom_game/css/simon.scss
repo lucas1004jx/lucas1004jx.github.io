@@ -1,0 +1,132 @@
+@import "sass_modules/normalize";
+@import "sass_modules/variable";
+@import "sass_modules/mixins";
+@import "sass_modules/social";
+@import "sass_modules/slidebar";
+
+#background {
+    
+    width: 100vw;
+    height:100vh;
+    background: url("../image/background.jpg") no-repeat center center;
+    background-size: cover;
+    filter: blur(5px) brightness(40%);
+   
+}
+
+#canvas{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#main {
+    
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    #power,
+    #powerIcon {
+        display: inline-block;
+    }
+    #powerIcon {
+        width: 60px;
+        height: 30px;
+        background: #463c45;
+        vertical-align: middle;
+        border-radius: 10px;
+        border: 1px solid $white;
+        border-bottom: 4px solid darken($white,40);
+        text-align: left;
+        #powerBtn {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background: $yellow;
+            
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    } 
+    #power {
+        margin-right: 10px;
+        color: $yellow;
+        font-family: $main-font;
+    }
+    .button {
+        position: absolute;
+        margin-top: 20px;
+        bottom: -100px;
+    }
+}
+
+#info {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    opacity: 1;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 18px;
+    color: $white;
+    text-transform: capitalize;
+}
+
+.btn-default {
+    margin: 5px 10px;
+    font-family: $main-font;
+    text-transform: uppercase;
+}
+
+#strict {
+    border-radius: 10px;
+    background: $orange;
+    border: 1px solid $orange;
+    border-bottom: 4px solid darken($orange,40);
+}
+
+#start {
+    border-radius: 10px;
+    background: $neon-green;
+    border: 1px solid $green;
+    border-bottom: 4px solid darken($green,40);
+}
+
+#mode {
+    position: absolute;
+    top:-60px;
+    text-align: center;
+    color: white;
+    font-family: $main-font;
+    font-size: 3rem;
+    text-transform: uppercase;
+    @include break(481px, 768px) {
+        font-size: 4rem;
+    }
+    @include break(769px) {
+        font-size: 5rem;
+    }
+}
+
+#powerUi{
+    position: absolute;
+    bottom: -40px;
+}
+.center{
+    width: 100%;
+    text-align: center;
+}
