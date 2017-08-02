@@ -622,10 +622,8 @@ $(function () {
 
         canvas.addEventListener("mousemove", function (e) {
             if (!powerOn) {
-                $('[data-toggle="tooltip"]').tooltip("show");
-            } else {
-                $('[data-toggle="tooltip"]').tooltip("hide");
-            }
+                
+            } 
             mouse.x = e.offsetX;
             mouse.y = e.offsetY;
         }, false);
@@ -650,10 +648,8 @@ $(function () {
             mouse.y = e.touches[0].pageY - $("#main")[0].offsetTop;
             if (powerOn && !intro) {
                 detect();
-                $('[data-toggle="tooltip"]').tooltip("hide");
-            } else if(!powerOn) {
-                $('[data-toggle="tooltip"]').tooltip("show");
-            }
+                
+            } 
 
         }, false);
 
@@ -804,10 +800,11 @@ $(function () {
 
     //--------------------power btn---------------------------------------------
 
-
+$('[data-toggle="tooltip"]').tooltip("show");
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
-            powerOn = true;
+            $('[data-toggle="tooltip"]').tooltip("hide");
+            //powerOn = true;
             intro = true;
             audioIntro0.play();
             setTimeout(function () {
