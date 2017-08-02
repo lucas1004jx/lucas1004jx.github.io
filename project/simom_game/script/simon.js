@@ -446,6 +446,7 @@ $(function () {
                         if(!originalMode){
                            random();
                            }else{
+                               
                                order();
                            }
                         
@@ -713,8 +714,8 @@ $(function () {
             originalArr.push(originalNum);*/
            }
         setTimeout(function () {
-            console.log("orden"+orden);
-            console.log("originalArr[orden]"+originalArr[orden]);
+            console.log("orden: "+orden);
+            console.log("originalArr[orden]: "+originalArr[orden]);
                 randomLight[originalArr[orden]]();
             }, 800);
         
@@ -754,8 +755,8 @@ $(function () {
              
             reset();
             originalArr=[];
-            originalNum = Math.floor(Math.random() * 4);
-            originalArr.push(originalNum);
+             originalNum = Math.floor(Math.random() * 4);
+             originalArr.push(originalNum);
             beginBtn = false;
             introSound();
             $("#start,#strict,#hard").attr("disabled", true);
@@ -768,7 +769,12 @@ $(function () {
 
     turnOff();
 
-    $("#start").click(start);
+    $("#start").click(function(){
+        if(!computerPlay){
+           start();
+            $("#start").attr("disabled",false);
+           }
+    });
 
    $("#hard").click(function(){
        start();
