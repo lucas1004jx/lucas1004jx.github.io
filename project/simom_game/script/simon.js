@@ -327,7 +327,7 @@ $(function () {
     function turnOn() {
         setTimeout(function () {
             green();
-            light(greenDeg0, greenDeg1, greenColor0, greenColor1, a);
+            light(greenDeg0, greenDeg1, greenColor0, greenColor1, e);
         }, 100);
         setTimeout(function () {
             draw();
@@ -338,7 +338,7 @@ $(function () {
         }, 600);
         setTimeout(function () {
             red();
-            light(redDeg0, redDeg1, redColor0, redColor1, b);
+            light(redDeg0, redDeg1, redColor0, redColor1, e);
         }, 1300);
         setTimeout(function () {
             draw();
@@ -348,7 +348,7 @@ $(function () {
         }, 1800);
         setTimeout(function () {
             blue();
-            light(blueDeg0, blueDeg1, blueColor0, blueColor1, c);
+            light(blueDeg0, blueDeg1, blueColor0, blueColor1, e);
         }, 2300);
         setTimeout(function () {
             draw();
@@ -357,7 +357,7 @@ $(function () {
         }, 2800);
         setTimeout(function () {
             yellow();
-            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, d);
+            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, e);
         }, 3300);
         setTimeout(function () {
             draw();
