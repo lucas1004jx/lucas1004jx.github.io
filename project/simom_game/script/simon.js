@@ -365,8 +365,8 @@ $(function () {
         }, 3800);
 
     }
-    var blu;
-    var br;
+    var blur;//blur
+    var br;//brightness
 
     function bgFadeIn() {
         blur = 5;
