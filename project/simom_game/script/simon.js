@@ -382,6 +382,8 @@ $(function () {
 
             }
         });
+        
+        
     }
 
     function bgFadeOut() {
