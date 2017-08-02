@@ -119,19 +119,19 @@
 
 #modeDisplay {
     position: absolute;
-    top:-70px;
+    top:-60px;
     text-align: center;
     color: white;
     font-family: $main-font;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     @include break(481px, 768px) {
-        font-size: 4rem;
-        top:-120px;
+        font-size: 3rem;
+        top:-100px;
     }
     @include break(769px) {
-        font-size: 5rem;
-        top:-140px;
+        font-size: 4rem;
+        top:-120px;
     }
 }
 
