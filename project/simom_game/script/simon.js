@@ -611,7 +611,7 @@ $(function () {
             if (powerOn && !intro) {
                 detect();
                 $('[data-toggle="tooltip"]').tooltip("hide");
-            } else {
+            } else if(!powerOn) {
                 $('[data-toggle="tooltip"]').tooltip("show");
             }
 
@@ -645,13 +645,19 @@ $(function () {
             }, 800);
 
             setTimeout(function () {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if(powerOn){
+                   ctx.clearRect(0, 0, canvas.width, canvas.height);
                 draw();
                 count++;
                 computerPlay = false;
                 if (count < level) {
                     random();
                 }
+                   }else if(!powerOn){
+                       ctx.clearRect(0, 0, canvas.width, canvas.height);
+                          turnOff();  
+                            }
+                
             }, 1200);
         }
     }
