@@ -647,8 +647,7 @@ $(function () {
             mouse.x = e.touches[0].pageX - e.touches[0].target.offsetLeft;
             mouse.y = e.touches[0].pageY - $("#main")[0].offsetTop;
             if (powerOn && !intro) {
-                detect();
-                
+                detect();  
             } 
 
         }, false);
@@ -800,10 +799,10 @@ $(function () {
 
     //--------------------power btn---------------------------------------------
 
-$('[data-toggle="tooltip"]').tooltip("show");
+   $('[data-toggle="tooltip"]').tooltip("show");
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
-            $('[data-toggle="tooltip"]').tooltip("hide");
+            $('[data-toggle="tooltip"]').tooltip("destroy");
             //powerOn = true;
             intro = true;
             audioIntro0.play();
@@ -844,6 +843,7 @@ $('[data-toggle="tooltip"]').tooltip("show");
 
 
         } else if (powerOn === true && intro === false) { //---turn off-----------------
+            $('[data-toggle="tooltip"]').tooltip("show");
             powerOn = false;
             gameBegin = false;
             reset();
