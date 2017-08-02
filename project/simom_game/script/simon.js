@@ -807,7 +807,7 @@ $(function () {
 
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
-            //powerOn = true;
+            powerOn = true;
             intro = true;
             audioIntro0.play();
             setTimeout(function () {
