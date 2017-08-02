@@ -86,6 +86,7 @@ $(function () {
         ctx.stroke();
     }
 
+    
     function light(deg0, deg1, color0, color1, sound) {
         var grd = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, radius - 35, canvas.width / 2, canvas.height / 2, radius + 40);
         grd.addColorStop(0, color0);
@@ -100,8 +101,7 @@ $(function () {
         ctx.strokeStyle = "rgba(255,255,255,0)";
         ctx.stroke();
 
-        var audio = new Audio("sounds/" + sound + ".wav");
-        audio.play();
+        
         circle();
     }
 
@@ -144,6 +144,12 @@ $(function () {
         ctx.strokeStyle = "rgba(255,255,255,0)";
         ctx.stroke();
     }
+    
+    var audioGreen = new Audio("sounds/a.wav");
+    var audioRed = new Audio("sounds/b.wav");
+    var audioBlue = new Audio("sounds/c.wav");
+    var audioYellow = new Audio("sounds/d.wav");
+        
     //------------------green--------------------
     var greenDeg0 = toDeg(181);
     var greenDeg1 = toDeg(-91);
@@ -172,7 +178,8 @@ $(function () {
         greenDeg1 = toDeg(-91);
         greenColor0 = "rgb(151, 255, 113)";
         greenColor1 = "rgba(32, 69, 30, 0)";
-        light(greenDeg0, greenDeg1, greenColor0, greenColor1, a);
+        light(greenDeg0, greenDeg1, greenColor0, greenColor1);
+        audioGreen.play();
     }
 
 
@@ -203,7 +210,8 @@ $(function () {
         redDeg1 = toDeg(-1);
         redColor0 = "rgb(255, 102, 6)";
         redColor1 = "rgba(75, 36, 3, 0)";
-        light(redDeg0, redDeg1, redColor0, redColor1, b);
+        light(redDeg0, redDeg1, redColor0, redColor1);
+        audioRed.play();
     }
 
 
@@ -234,7 +242,8 @@ $(function () {
         blueDeg1 = toDeg(89);
         blueColor0 = "rgb(0, 145, 252)";
         blueColor1 = "rgba(7, 33, 82, 0)";
-        light(blueDeg0, blueDeg1, blueColor0, blueColor1, c);
+        light(blueDeg0, blueDeg1, blueColor0, blueColor1);
+        audioBlue.play();
     }
 
 
@@ -265,7 +274,8 @@ $(function () {
         yellowDeg1 = toDeg(179);
         yellowColor0 = "rgb(247, 247, 0)";
         yellowColor1 = "rgba(65, 65, 4, 0)";
-        light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, d);
+        light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1);
+        audioYellow.play();
     }
 
     function draw() {
@@ -293,7 +303,7 @@ $(function () {
     function turnOn() {
         setTimeout(function () {
             green();
-            light(greenDeg0, greenDeg1, greenColor0, greenColor1, a);
+            light(greenDeg0, greenDeg1, greenColor0, greenColor1);
         }, 100);
         setTimeout(function () {
             draw();
@@ -304,7 +314,7 @@ $(function () {
         }, 600);
         setTimeout(function () {
             red();
-            light(redDeg0, redDeg1, redColor0, redColor1, b);
+            light(redDeg0, redDeg1, redColor0, redColor1);
         }, 1300);
         setTimeout(function () {
             draw();
@@ -314,7 +324,7 @@ $(function () {
         }, 1800);
         setTimeout(function () {
             blue();
-            light(blueDeg0, blueDeg1, blueColor0, blueColor1, c);
+            light(blueDeg0, blueDeg1, blueColor0, blueColor1);
         }, 2300);
         setTimeout(function () {
             draw();
@@ -323,14 +333,12 @@ $(function () {
         }, 2800);
         setTimeout(function () {
             yellow();
-            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1, d);
+            light(yellowDeg0, yellowDeg1, yellowColor0, yellowColor1);
         }, 3300);
         setTimeout(function () {
             draw();
 
         }, 3800);
-
-
 
     }
     var blu;
@@ -432,6 +440,8 @@ function bgFadeIn(){
     var e = "e";
     var current = [];
 
+    var audioError = new Audio("sounds/error.wav");
+    
     function detect() {
 
         var areaDetection = Math.pow(canvas.width / 2 - mouse.x, 2) + Math.pow(canvas.height / 2 - mouse.y, 2);
@@ -460,8 +470,8 @@ function bgFadeIn(){
                     bingo = true;
 
                 } else if (current[i] !== original[i]) {
-                    var audio = new Audio("sounds/error.wav");
-                    audio.play();
+                    
+                    audioError.play();
                     bingo = false;
                     reset();
                     falied();
@@ -501,14 +511,15 @@ function bgFadeIn(){
         $("#info").text("Level " + " " + level);
     }
 
-    function winSound() {
-        var audio = new Audio("sounds/win.wav");
-        audio.play();
+    var aduioWin = new Audio("sounds/win.wav");
+    function winSound() { 
+        audioWin.play();
     }
-
+    
+   var audioIntro = new Audio("sounds/intro.wav");
     function introSound() {
-        var audio = new Audio("sounds/intro.wav");
-        audio.play();
+        
+        audioIntro.play();
     }
 
     //-------------------------------------reset--------------------------------------------
@@ -630,10 +641,11 @@ function bgFadeIn(){
 
     $("#start").click(start);
 
+    var audioMode =new Audio("sounds/mode.wav");
     $("#strict").click(function () {
         strict = !strict;
-        var audio =new Audio("sounds/mode.wav");
-        audio.play();
+        
+        audioMode.play();
         if (strict) {
             $("#mode").text("Strict Mode");
         } else {
@@ -642,13 +654,12 @@ function bgFadeIn(){
     });
 
     //--------------------power btn---------------------------------------------
+    var audioIntro0 = new Audio("sounds/intro0.wav");
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
             powerOn = true;
             intro = true;
-           
-            var audio = new Audio("sounds/intro0.wav");
-            audio.play();
+            audioIntro0.play();
             setTimeout(function () {
                 intro = false;
             }, 5000);
