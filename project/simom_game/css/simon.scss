@@ -10,7 +10,7 @@
     height:100%;
     background: url("../image/background.jpg") no-repeat center center;
     background-size: cover;
-    filter: blur(5px) brightness(40%);
+    filter: blur(2px) brightness(60%);
    
 }
 
@@ -90,6 +90,7 @@
     margin: 5px 10px;
     font-family: $main-font;
     text-transform: uppercase;
+    font-size: 10px;
 }
 
 #strict {
@@ -97,6 +98,7 @@
     background: $orange;
     border: 1px solid $orange;
     border-bottom: 4px solid darken($orange,40);
+    
 }
 
 #start {
@@ -105,10 +107,19 @@
     border: 1px solid $green;
     border-bottom: 4px solid darken($green,40);
 }
+#hard {
+    border-radius: 10px;
+    background: $red;
+    border: 1px solid $red;
+    border-bottom: 4px solid darken($red,40);
+}
+#classic{
+    opacity: 0;
+}
 
-#mode {
+#modeDisplay {
     position: absolute;
-    top:-60px;
+    top:-70px;
     text-align: center;
     color: white;
     font-family: $main-font;
@@ -116,9 +127,11 @@
     text-transform: uppercase;
     @include break(481px, 768px) {
         font-size: 4rem;
+        top:-120px;
     }
     @include break(769px) {
         font-size: 5rem;
+        top:-140px;
     }
 }
 

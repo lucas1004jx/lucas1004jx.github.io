@@ -15,6 +15,7 @@ $(function () {
     var strict = false;
     var powerOn = false; //control power button,and intro animation
     var intro = false; // when intro animation is on, can´t turn off the power
+    var originalMode=true; // change between orginal mode and dificult mode.
     var tl = new TimelineLite();
     var tlOn = new TimelineLite();
     var tlOff = new TimelineLite();
@@ -320,7 +321,7 @@ $(function () {
         blueDark();
         yellowDark();
         circleDark();
-        $("#start,#strict").attr("disabled", true);
+        $("#start,#strict,#hard").attr("disabled", true);
         $("#info").text("");
     }
 
@@ -368,8 +369,10 @@ $(function () {
     var blur;//blur
     var br;//brightness
 
+    
+    //background fadeIn
     function bgFadeIn() {
-        blur = 5;
+        /*blur = 5;
         br = 40;
         tlBg.to("#background", 2, {
             onUpdate: function () {
@@ -382,12 +385,13 @@ $(function () {
 
             }
         });
-        
-        
+        */
+       $("#background").css("filter","blur(4px) brightness(100%)"); 
     }
-
+    
+  //background fadeOut
     function bgFadeOut() {
-        blur = 1;
+        /*blur = 1;
         br = 130;
         tlBg.to("#background", 2, {
             onUpdate: function () {
@@ -399,7 +403,9 @@ $(function () {
                 br = br * 0.99;
 
             }
-        });
+        });*/
+        
+        $("#background").css("filter","blur(2px) brightness(50%)");
     }
 
     function falied() {
@@ -437,14 +443,19 @@ $(function () {
                 fontSize: 18,
                 onComplete: function () {
                     if (powerOn) {
-                        random();
+                        if(!originalMode){
+                           random();
+                           }else{
+                               order();
+                           }
+                        
                     }
                 }
             })
             .to(".btn-default", 1, {
                 onComplete: function () {
                     if (powerOn) { //if turn off the power, wiil shut down everything
-                        $("#start,#strict").attr("disabled", false);
+                        $("#start,#strict,#hard").attr("disabled", false);
                         beginBtn = true;
                     } else {
                         $("#info").text("");
@@ -503,8 +514,8 @@ $(function () {
 
 
             for (var i = 0; i < current.length; i++) {
-
-                if (current[i] === original[i] && current.length === original.length) {
+                if(!originalMode){
+                   if (current[i] === original[i] && current.length === original.length) {
 
                     bingo = true;
 
@@ -518,12 +529,35 @@ $(function () {
                         level = 1;
                     }
                     beginBtn = false;
-                    $("#start,#strict").attr("disabled", true);
+                    $("#start,#strict,#hard").attr("disabled", true);
                     $("#info").text("Failed");
                     timeLine();
                     break;
                 }
-            }
+                   }else{
+                     if (current[i] === originalArr[i] && current.length === originalArr.length) {
+
+                    bingo = true;
+
+                } else if (current[i] !== originalArr[i]) {
+
+                    audioError.play();
+                    bingo = false;
+                    reset();
+                    falied();
+                    if (strict) {
+                        level = 1;
+                    }
+                    beginBtn = false;
+                    $("#start,#strict,#hard").attr("disabled", true);
+                    $("#info").text("Failed");
+                    timeLine();
+                    break;
+                }  
+                   }//---else
+
+                
+            }//---for loop----
 
             if (bingo) {
                 level++;
@@ -536,7 +570,9 @@ $(function () {
 
             if (levelUp) {
                 beginBtn = false;
-                $("#start,#strict").attr("disabled", true);
+                originalNum = Math.floor(Math.random() * 4);
+               originalArr.push(originalNum);
+                $("#start,#strict,#hard").attr("disabled", true);
                 $("#info").text("Level Up");
                 timeLine();
 
@@ -569,6 +605,7 @@ $(function () {
         current = [];
         original = [];
         count = 0;
+        orden=0;
         levelUp = false;
         computerPlay = true;
         bingo = false;
@@ -663,21 +700,65 @@ $(function () {
             }, 1200);
         }
     }
-
+//----------- original mode main function-----------------
+    var originalArr=[];
+    var orden=0;//originalArr num order
+    var originalNum;
+    
+    function order(){
+        if(gameBegin){
+            //console.log("originalmode");
+           computerPlay = true;
+            /*var originalNum = Math.floor(Math.random() * 4);
+            originalArr.push(originalNum);*/
+           }
+        setTimeout(function () {
+            console.log("orden"+orden);
+            console.log("originalArr[orden]"+originalArr[orden]);
+                randomLight[originalArr[orden]]();
+            }, 800);
+        
+        setTimeout(function () {
+                if(powerOn){
+                   ctx.clearRect(0, 0, canvas.width, canvas.height);
+                draw();
+                count++;
+                    orden++;
+                computerPlay = false;
+                if (count < level) {
+                    order();
+                }
+                   }else if(!powerOn){
+                       ctx.clearRect(0, 0, canvas.width, canvas.height);
+                          turnOff();  
+                            }
+                
+            }, 1200);
+    }
+    
+    
+    
     function start() {
         if (gameBegin === false && beginBtn == true && powerOn === true) {
+            
             gameBegin = true;
             beginBtn = false;
             introSound();
-            $("#start,#strict").attr("disabled", true);
-            $("#start").text("Restart");
+            $("#start,#strict,#hard").attr("disabled", true);
             $("#info").text("Begin");
+            originalArr=[];
+            originalNum = Math.floor(Math.random() * 4);
+            originalArr.push(originalNum);
             timeLine();
         } else if (gameBegin === true && beginBtn === true && powerOn === true) {
+             
             reset();
+            originalArr=[];
+            originalNum = Math.floor(Math.random() * 4);
+            originalArr.push(originalNum);
             beginBtn = false;
             introSound();
-            $("#start,#strict").attr("disabled", true);
+            $("#start,#strict,#hard").attr("disabled", true);
             level = 1;
             $("#info").text("Start Over");
             timeLine();
@@ -689,7 +770,18 @@ $(function () {
 
     $("#start").click(start);
 
-
+   $("#hard").click(function(){
+       start();
+       if(originalMode){
+           originalMode=false;
+          $("#hard").text("classic");
+           $("#classic").text("hard");
+          }else{
+              originalMode=true;
+            $("#hard").text("hard");
+           $("#classic").text("classic");  
+          }
+   });
 
     $("#strict").click(function () {
         strict = !strict;
@@ -709,10 +801,11 @@ $(function () {
 
     $("#powerIcon").click(function () {
         if (powerOn === false && intro === false) {
-            powerOn = true;
+            //powerOn = true;
             intro = true;
             audioIntro0.play();
             setTimeout(function () {
+                powerOn = true
                 intro = false;
             }, 5000);
             bgFadeIn();
@@ -725,22 +818,24 @@ $(function () {
                         turnOn();
                     }
                 }, "-=0.3")
-                .to("#mode", 1, {
+                .to(["#mode","#classic"], 1, {
                     opacity: 0,
                     y: -60,
                     onComplete: function () {
                         $("#mode").text("Normal mode");
                     }
                 }, "+=1")
-                .to("#mode", 1, {
+                .to(["#mode","#classic"], 1, {
                     opacity: 1,
                     y: 0,
                     ease: Bounce.easeOut,
                 }, "+=1.5")
                 .to("#mode", 1, {
                     onComplete: function () {
-                        start();
-                        $("#start,#strict").attr("disabled", false);
+                        if(powerOn){
+                           start();
+                        $("#start,#strict,#hard").attr("disabled", false);
+                           }   
                     }
                 }, "+=0.5");
 
@@ -751,11 +846,12 @@ $(function () {
             reset();
             beginBtn = true;
             level = 1;
-            $("#start").text("Start");
-            $("#start,#strict").attr("disabled", true);
+            
+            $("#start,#strict,#hard").attr("disabled", true);
 
             audioOff.play();
             bgFadeOut();
+            
             tlOff.to("#powerBtn", 0.4, {
                     x: 0
                 })
@@ -765,7 +861,7 @@ $(function () {
                         turnOff();
                     }
                 }, "-=0.3")
-                .to("#mode", 0.3, {
+                .to(["#mode","#classic"], 0.3, {
                     opacity: 0,
                     y: -50,
                     onComplete: function () {
