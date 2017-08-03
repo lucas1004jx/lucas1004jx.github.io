@@ -591,11 +591,11 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   @media (min-width: 481px) and (max-width: 768px) {
     #modeDisplay {
       font-size: 4rem;
-      top: -120px; } }
+      top: -100px; } }
   @media (min-width: 769px) {
     #modeDisplay {
       font-size: 4rem;
-      top: -140px; } }
+      top: -100px; } }
 
 #powerUi {
   position: absolute;

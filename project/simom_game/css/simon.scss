@@ -4,6 +4,8 @@
 @import "sass_modules/social";
 @import "sass_modules/slidebar";
 
+
+
 #background {
     
     width: 100vw;
@@ -135,11 +137,11 @@
     text-transform: uppercase;
     @include break(481px, 768px) {
         font-size: 4rem;
-        top:-120px;
+        top:-100px;
     }
     @include break(769px) {
         font-size: 4rem;
-        top:-140px;
+        top:-100px;
     }
 }
 
