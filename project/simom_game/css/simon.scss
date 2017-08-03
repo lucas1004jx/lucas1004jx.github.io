@@ -11,7 +11,7 @@
     background: url("../image/background.jpg") no-repeat center center;
     background-size: cover;
     filter: blur(2px) brightness(60%);
-   
+    
 }
 
 #canvas{
@@ -115,23 +115,31 @@
 }
 #classic{
     opacity: 0;
+    font-size: 2rem;
+    @include break(481px, 768px) {
+        font-size: 3rem;
+    }
+    @include break(769px) {
+        font-size: 3rem;
+    }
+    
 }
 
 #modeDisplay {
     position: absolute;
-    top:-50px;
+    top:-70px;
     text-align: center;
     color: white;
     font-family: $main-font;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     @include break(481px, 768px) {
-        font-size: 3rem;
-        top:-100px;
+        font-size: 4rem;
+        top:-120px;
     }
     @include break(769px) {
         font-size: 4rem;
-        top:-120px;
+        top:-140px;
     }
 }
 
