@@ -1,10 +1,5 @@
 $(function () {
 
-    /*ReactDOM.render(React.createElement("div",null,"hello world"),document.getElementById("react"))*/
-
-
-
-
     var wHeight = $(window).height();
     var wWidth = $(window).width();
     $(".fullHeight").css("height", wHeight);
@@ -98,6 +93,29 @@ $(function () {
     AOS.init();
 
     //-------------img overlay---------------
+    function overlayMobile(){
+        
+         $(this).on("touchstart", function () {
+                if ($(this).css("opacity") == 1) {
+                    $(this).css("opacity", 0);
+                } else if ($(this).css("opacity") == 0) {
+                    $(this).css("opacity", 1);
+                }
+            });
+    }
+    function overlay(){
+        
+         $(this).on("mouseover", function () {
+                    $(this).css("opacity", 1);
+             
+            });
+        
+        $(this).on("mouseout",function(){
+            $(this).css("opacity", 0);
+        });
+    }
+    
+    
     //---------detect mobile deveice-----------
     function isMobile() {
         try {
@@ -109,15 +127,16 @@ $(function () {
     }
 
     if (isMobile()) {
-        $(".imgContainer .overlay").each(function () {
-            $(this).on("touchstart", function () {
-                if ($(this).css("opacity") == 1) {
-                    $(this).css("opacity", 0);
-                } else if ($(this).css("opacity") == 0) {
-                    $(this).css("opacity", 1);
-                }
-            });
-        });
+        $(".imgContainer .overlay").each(overlayMobile);
+    }else{
+        $(".imgContainer .overlay").each(overlay);
+        
     }
+    
+    //--------------grennsocks animation---------------------
+ TweenMax.fromTo(".letter",2,{opacity:0,y:-500 }
+                 ,{opacity:1,y:0,ease: Bounce.easeOut, y: 0});
+    
+   
 
 });

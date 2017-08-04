@@ -2,12 +2,14 @@
 @import "variable";
 @import "mixins";
 @import "navbar";
+@import "social";
 body {
     background: url("image/background.jpg");
     overflow: scroll;
+    
 }
 
-
+ 
 
 header {
     color: $white;
@@ -24,6 +26,7 @@ header {
         }
     .letter {
         margin: 0px;
+        opacity: 0;
         text-transform: uppercase;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -166,6 +169,7 @@ header {
 section.project {
     padding: 10px 15px;
     margin-top: 20px;
+    
     h2 {
         text-align: center;
         text-transform: uppercase;
@@ -206,20 +210,56 @@ section.project {
                     text-transform: uppercase;
                     color: $white;
                     padding: 10px;
-                    border:2px solid $white;
+                    //border:2px solid $white;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-top: 1px solid $white;
+                        border-bottom: 1px solid $white;
+                        -webkit-transform: scaleX(0);
+                        -ms-transform: scaleX(0);
+                        transform: scaleX(0);
+                        -webkit-transition: -webkit-transform 0.2s ease-in;
+                        transition: transform 0.4s ease-in;
+                    }
+                    
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-left: 1px solid $white;
+                        border-right: 1px solid $white;
+                        -webkit-transform: scaleY(0);
+                        -ms-transform: scaleY(0);
+                        transform: scaleY(0);
+                        -webkit-transition: -webkit-transform 0.2s ease-in;
+                        transition: transform 0.5s ease-in;
+                    }
                 }
             }
             
-            &:hover .overlay{
-                opacity: 1;
+            &:hover .overlay p:before{
+                -webkit-transform: scaleX(1);
+              -ms-transform: scaleX(1);
+            transform: scaleX(1);
+            }
+            &:hover .overlay p:after{
+                -webkit-transform: scaleY(1);
+              -ms-transform: scaleY(1);
+            transform: scaleY(1);
             }
             
-            .fadein{
-               opacity: 1; 
-            }
+            
         } 
-        
-        
+   
     
     
     .caption{
