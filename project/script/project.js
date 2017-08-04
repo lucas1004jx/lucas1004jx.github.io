@@ -93,15 +93,18 @@ $(function () {
     AOS.init();
 
     //-------------img overlay---------------
+    
     function overlayMobile(){
-        
          $(this).on("touchstart", function () {
+            
                 if ($(this).css("opacity") == 1) {
                     $(this).css("opacity", 0);
                 } else if ($(this).css("opacity") == 0) {
                     $(this).css("opacity", 1);
+                    $(".overlay").not(this).css("opacity",0);
                 }
             });
+        
     }
     function overlay(){
         
@@ -132,6 +135,10 @@ $(function () {
         $(".imgContainer .overlay").each(overlay);
         
     }
+    
+    $(".overlay").on("mouseout",function(){
+                     $(".overlay").css("opacity",0);
+});
     
     //--------------grennsocks animation---------------------
  TweenMax.fromTo(".letter",2,{opacity:0,y:-500 }
