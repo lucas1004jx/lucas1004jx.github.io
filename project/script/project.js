@@ -48,7 +48,7 @@ $(function () {
         $(ele).css("left", left);
     }
 
-    function poLetter(){
+    function poLetter() {
         var hHeight = $("header").height();
         var hWidth = $("header").width();
         var lWidth = $(".letter").width();
@@ -57,9 +57,9 @@ $(function () {
         var left = (hWidth - lWidth) / 2;
         $(".letter").css("top", top);
         $(".letter").css("left", left);
-       
+
     }
-    
+
     //----------------position letters-------------------------
     var font = new FontFaceObserver("orbitron", {
         weight: 400
@@ -93,33 +93,34 @@ $(function () {
     AOS.init();
 
     //-------------img overlay---------------
-    
-    function overlayMobile(){
-         $(this).on("touchstart", function () {
+
+    function overlayMobile() {
+        $(this).on("touchstart", function () {
             
-                if ($(this).css("opacity") == 1) {
-                    $(this).css("opacity", 0);
-                    console.log("aa");
-                } else if ($(this).css("opacity") == 0) {
-                    $(this).css("opacity", 1);
-                    $(".overlay").not(this).css("opacity",0);
-                }
-            });
-        
+            if ($(this).css("opacity") == 1) {
+                $(this).css("opacity", 0);
+                
+            } else if ($(this).css("opacity") == 0) {
+                $(this).css("opacity", 1);
+                $(".overlay").not(this).css("opacity", 0);
+            }
+        });
+
     }
-    function overlay(){
-        
-         $(this).on("mouseover", function () {
-                    $(this).css("opacity", 1);
-             
-            });
-        
-        $(this).on("mouseout",function(){
+
+    function overlay() {
+
+        $(this).on("mouseover", function () {
+            $(this).css("opacity", 1);
+
+        });
+
+        $(this).on("mouseout", function () {
             $(this).css("opacity", 0);
         });
     }
-    
-    
+
+
     //---------detect mobile deveice-----------
     function isMobile() {
         try {
@@ -132,22 +133,27 @@ $(function () {
 
     if (isMobile()) {
         $(".imgContainer .overlay").each(overlayMobile);
-    }else{
+    } else {
         $(".imgContainer .overlay").each(overlay);
-        
+
     }
-    
-    $(".overlay").on("mouseout",function(){
-                     $(".overlay").css("opacity",0);
-});
-    $(window).not(".overlay").on("click",function(){
-                     $(".overlay").css("opacity",0);
-});
-    
+
+    $(".overlay").on("mouseout", function () {
+       
+        $(".overlay").css("opacity", 0);
+    });
+
     //--------------grennsocks animation---------------------
- TweenMax.fromTo(".letter",2,{opacity:0,y:-500 }
-                 ,{opacity:1,y:0,ease: Bounce.easeOut, y: 0});
-    
-   
+    TweenMax.fromTo(".letter", 2, {
+        opacity: 0,
+        y: -500
+    }, {
+        opacity: 1,
+        y: 0,
+        ease: Bounce.easeOut,
+        y: 0
+    });
+
+
 
 });
