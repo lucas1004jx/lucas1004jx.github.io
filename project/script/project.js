@@ -104,6 +104,11 @@ $(function () {
                 $(this).css("opacity", 1);
                 $(".overlay").not(this).css("opacity", 0);
             }
+            
+            $(this).on("mouseout", function () {
+       
+        $(this).css("opacity", 0);
+    });
         });
 
     }
@@ -118,6 +123,8 @@ $(function () {
         $(this).on("mouseout", function () {
             $(this).css("opacity", 0);
         });
+        
+        
     }
 
 
@@ -138,10 +145,7 @@ $(function () {
 
     }
 
-    $(".overlay").on("mouseout", function () {
-       
-        $(".overlay").css("opacity", 0);
-    });
+    
 
     //--------------grennsocks animation---------------------
     TweenMax.fromTo(".letter", 2, {
