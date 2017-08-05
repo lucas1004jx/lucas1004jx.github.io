@@ -99,6 +99,7 @@ $(function () {
             
                 if ($(this).css("opacity") == 1) {
                     $(this).css("opacity", 0);
+                    console.log("aa");
                 } else if ($(this).css("opacity") == 0) {
                     $(this).css("opacity", 1);
                     $(".overlay").not(this).css("opacity",0);
@@ -137,6 +138,9 @@ $(function () {
     }
     
     $(".overlay").on("mouseout",function(){
+                     $(".overlay").css("opacity",0);
+});
+    $(window).not(".overlay").on("click",function(){
                      $(".overlay").css("opacity",0);
 });
     
