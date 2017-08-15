@@ -1,17 +1,17 @@
   
-#social{
+.social{
       width: 100%;
         list-style: none;
         @include flex(row);
         padding: 0;
        margin: 0;
        margin-top: 50px;
-       top: 15px; 
+       //top: 15px; 
+    
         li{  
             display: inline-block;
             margin:0 20px;
             font-size: 16px;
-           
             @include break(769px){
                 font-size: 20px; 
                 margin: 0 25px;
@@ -19,9 +19,9 @@
             i{  
                 color:#000; 
                 &:hover{
-                color:$red;
+                color:$neon-green;
             }
-            } 
+            }  
         }
     }
 

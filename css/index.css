@@ -401,7 +401,7 @@ rgb(127,68,0);        brown
 #EDF2FF                grey
 city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rgb(131,194,90)) #F28140 (rgb(242,129,64)) #9266C0(rgb(146,102,192)) #CCB91F (rgb(199,178,7))  purple-blue rgba(0,0,51,0.8);
 */
-#social {
+.social {
   width: 100%;
   list-style: none;
   display: flex;
@@ -412,25 +412,31 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-top: 50px;
-  top: 15px; }
-  #social li {
+  margin-top: 50px; }
+  .social li {
     display: inline-block;
     margin: 0 20px;
     font-size: 16px; }
     @media (min-width: 769px) {
-      #social li {
+      .social li {
         font-size: 20px;
         margin: 0 25px; } }
-    #social li i {
+    .social li i {
       color: #000; }
-      #social li i:hover {
-        color: #e7193c; }
+      .social li i:hover {
+        color: #39ff01; }
 
-html, body {
-  background: #D9598A;
+html {
   overflow: hidden;
-  position: relative; }
+  background: url("../image/html.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh; }
+
+body {
+  background: #83C25A;
+  overflow: hidden;
+  position: relative;
+  display: none; }
 
 .page {
   width: 100%;
@@ -443,7 +449,10 @@ html, body {
 .box {
   padding: 2rem; }
 
-a:hover, a:visited, a:active, a:link {
+a:hover,
+a:visited,
+a:active,
+a:link {
   text-decoration: none !important;
   color: #000; }
 
@@ -454,7 +463,9 @@ li {
   position: fixed;
   z-index: 99;
   background: #fff;
-  width: 100vw; }
+  width: 100vw;
+  background: url("../image/pre.jpg") no-repeat center center;
+  background-size: cover; }
   #preloader .preloader {
     position: absolute;
     margin: auto;
@@ -488,10 +499,14 @@ nav {
         nav .nav ul li a {
           color: #000;
           font-family: Lato;
-          font-weight: lighter;
+          font-weight: 300;
           font-size: 1.5rem; }
           nav .nav ul li a:hover {
             color: #39ff01; }
+          @media (min-width: 769px) {
+            nav .nav ul li a {
+              font-size: 2.5rem;
+              margin: 0 25px; } }
   nav .nav-container-top {
     position: absolute;
     background: #39ff01;
@@ -610,7 +625,7 @@ nav {
       width: 0;
       height: 2px;
       background: #39ff01;
-      transition: width 0.5s; }
+      transition: width 0.5s ease-out; }
     .menu-logo #index .active:after {
       content: "";
       position: absolute;
@@ -651,7 +666,7 @@ nav {
       text-transform: uppercase;
       color: #000;
       font-family: Lato;
-      font-weight: lighter; }
+      font-weight: 300; }
       #page1 .title p span {
         display: inline-block; }
       #page1 .title p:first-child {
@@ -687,7 +702,7 @@ nav {
   color: #fff;
   text-transform: uppercase;
   font-family: Lato;
-  font-weight: lighter; }
+  font-weight: 300; }
   @media (min-width: 1400px) {
     #page2 {
       grid-template-columns: 1fr 4fr 1fr;
@@ -874,7 +889,7 @@ nav {
       text-align: center;
       font-family: Lato;
       text-transform: uppercase;
-      font-weight: lighter;
+      font-weight: 300;
       font-size: 2rem; }
     #portfolio #page4 .carousel {
       grid-column: 1/2;
@@ -942,7 +957,7 @@ nav {
             font-size: 5rem; } }
       #contact #page5 #info p {
         font-family: Lato;
-        font-weight: lighter;
+        font-weight: 300;
         color: #fff;
         font-size: 1.7rem; }
         @media (min-width: 481px) and (max-width: 768px) {
@@ -955,6 +970,12 @@ nav {
           color: #fff; }
           #contact #page5 #info p a span {
             border-bottom: 2px solid #39ff01; }
+      #contact #page5 #info .social {
+        display: block; }
+        #contact #page5 #info .social li i {
+          color: #fff; }
+          #contact #page5 #info .social li i:hover {
+            color: #39ff01; }
     #contact #page5 #map {
       grid-area: map;
       width: 100%;
@@ -970,17 +991,34 @@ nav {
 #logo .triangle {
   stroke-miterlimit: 10; }
 #logo .st1 {
-  font-family: 'ARDESTINE'; }
+  font-family: 'orbitron'; }
 #logo .st2 {
-  font-size: 36px; }
+  font-size: 30px; }
 #logo .st3 {
-  font-size: 10px; }
+  font-size: 7px; }
 
 .foot {
   width: 50px;
   height: 50px; }
 
-.fade-out {
-  opacity: 0; }
+.cv h1:before, .project h1:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: height 0.5s ease-in;
+  z-index: -1; }
+
+.cv h1:hover:before, .project h1:hover:before {
+  height: 100%; }
+
+.cv h1, .project h1 {
+  transition: color 0.4s ease-in; }
+
+.cv h1:hover, .project h1:hover {
+  color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

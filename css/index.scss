@@ -2,42 +2,54 @@
 @import "sass_modules/variable";
 @import "sass_modules/mixins";
 @import "sass_modules/social";
-html,body{
-    background: $pink;
+html{
+    overflow: hidden;
+    background:url("../image/html.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+body{
+    background: $green;
     overflow: hidden;
     position: relative;
-    //height: 100vh;
-}  
-.page {  
+    display: none;
+}
+.page {
     width: 100%;
     //height: 100vh;
     min-height: 500px;
     background: $yellow;
-     position: absolute;
-    top:100%;
-    transform: translateY(0); 
-    
+    position: absolute;
+    top: 100%;
+    transform: translateY(0);
 }
 
 .box {
     padding: 2rem;
-   
 }
-a:hover,a:visited,a:active,a:link{
-   text-decoration: none !important;
-    color:#000;
+
+a:hover,
+a:visited,
+a:active,
+a:link {
+    text-decoration: none !important;
+    color: #000;
 }
-li{
+
+li {
     text-decoration: none;
 }
 
-#preloader{
+#preloader {
     position: fixed;
     z-index: 99;
     background: #fff;
     width: 100vw;
     //height: 100vh;
-    .preloader{
+    background:url("../image/pre.jpg") no-repeat center center;
+    background-size: cover;
+    .preloader {
         position: absolute;
         margin: auto;
         top: 0;
@@ -45,14 +57,16 @@ li{
         right: 0;
         bottom: 0;
     }
+
 }
-nav{
+
+nav {
     position: fixed;
-     top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     //height: 100vh;
-    z-index:5;
+    z-index: 5;
     display: none;
     .nav {
         position: absolute;
@@ -69,21 +83,24 @@ nav{
                 text-align: center;
                 margin: 10px;
                 opacity: 1;
-                a{
-                    color:#000;
+                a {
+                    color: #000;
                     font-family: $text-font;
-                    font-weight: lighter;
+                    font-weight: 300;
                     font-size: 1.5rem;
-                    &:hover{
-                        color:$neon-green;
+                    &:hover {
+                        color: $neon-green;
+                    }
+                    
+                    @include break(769px) {
+                        font-size: 2.5rem;
+                        margin: 0 25px;
                     }
                 }
             }
         }
-     
     }
-
- .nav-container-top {
+    .nav-container-top {
         position: absolute;
         background: $neon-green;
         transform: scale(1, 1);
@@ -93,8 +110,6 @@ nav{
         height: 40px;
         border-radius: 100%;
         z-index: 8;
-       
-        
     }
     .nav-container-bottom {
         position: absolute;
@@ -106,18 +121,14 @@ nav{
         height: 40px;
         border-radius: 100%;
         z-index: 8;
-        
     }
-     
 }
- 
 
 //------menu and logo----------
 .menu-logo {
     //background: rgba($neon-green,0.8);
     position: fixed;
     width: 100%;
-    
     z-index: 20;
     .menu {
         position: absolute;
@@ -128,7 +139,7 @@ nav{
         overflow: hidden;
         cursor: pointer;
         z-index: 10;
-        &:hover{
+        &:hover {
             transform: scale(1.1);
         }
         span {
@@ -174,7 +185,7 @@ nav{
         width: 40px;
         height: 40px;
         z-index: 10;
-        fill:$neon-green;
+        fill: $neon-green;
         @include break(481px, 768px) {
             width: 60px;
             height: 60px;
@@ -185,16 +196,15 @@ nav{
         }
         &:hover {
             cursor: pointer;
-        }  
+        }
     }
-   
-    #index{
+    #index {
         position: absolute;
         width: 100%;
-       text-align: center;
+        text-align: center;
         left: 0;
-        top:0px;
-        li{
+        top: 0px;
+        li {
             position: relative;
             display: inline-block;
             margin: 5px;
@@ -202,66 +212,62 @@ nav{
             font-weight: bold;
             font-size: 12px;
             display: none;
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
-            @include break(769px){
+            @include break(769px) {
                 margin: 15px;
                 font-size: 16px;
                 display: inline-block;
-           }
+            }
         }
-        
-        #hire{
+        #hire {
             display: inline-block;
             padding: 2px;
             border: 2px solid $neon-green;
-            @include break(769px){
+            @include break(769px) {
                 display: none;
-           }
+            }
         }
-        .link:after{
-            content: ""; 
+        .link:after {
+            content: "";
             position: absolute;
-            bottom:0;
-            left: 0;  
+            bottom: 0;
+            left: 0;
             width: 0;
             height: 2px;
             background: $neon-green;
-            transition: width 0.5s;
+            transition: width 0.5s ease-out;
         }
-        .active:after{
-            content: ""; 
+        .active:after {
+            content: "";
             position: absolute;
-            bottom:0;
-            left: 0;  
+            bottom: 0;
+            left: 0;
             width: 100%;
             height: 2px;
             background: $neon-green;
         }
-        .link:hover:after{
-            content: ""; 
+        .link:hover:after {
+            content: "";
             position: absolute;
-            bottom:0;
-            left: 0;  
+            bottom: 0;
+            left: 0;
             width: 100%;
             height: 2px;
-            background: $neon-green; 
+            background: $neon-green;
         }
-        
-    }  
-   
+    }
 } //-----------------menu-logo------
 //--------------------page layout---------------------------
-#home{
-    top:0;
+#home {
+    top: 0;
 }
-#intro{
-   
-}
-#timeline{
-   
-}
+
+#intro {}
+
+#timeline {}
+
 #page1 {
     background: url("../image/perfil.jpg") no-repeat center center;
     background-size: cover;
@@ -277,9 +283,8 @@ nav{
     .title {
         padding: 0;
         grid-area: title;
-       
         p {
-            span{
+            span {
                 display: inline-block;
             }
             width: 100%;
@@ -287,38 +292,37 @@ nav{
             text-transform: uppercase;
             color: #000;
             font-family: $text-font;
-            font-weight: lighter;
+            font-weight: 300;
             &:first-child {
                 font-size: 3rem;
                 word-spacing: 2rem;
-                @include break(481px,768px){
-               font-size: 4rem; 
-            }
-            @include break(769px){
-               font-size: 5rem; 
-            }
-                
+                @include break(481px,
+                768px) {
+                    font-size: 4rem;
+                }
+                @include break(769px) {
+                    font-size: 5rem;
+                }
             }
             &:last-child {
                 font-size: 1.7rem;
                 word-spacing: 1rem;
                 letter-spacing: 0.5rem;
-                @include break(481px,768px){
-               font-size: 2.3rem; 
-            }
-            @include break(769px){
-               font-size: 2.8rem; 
-            }
+                @include break(481px,
+                768px) {
+                    font-size: 2.3rem;
+                }
+                @include break(769px) {
+                    font-size: 2.8rem;
+                }
             }
             #xin {
-            
                 font-weight: bold;
             }
         }
     } //-------title-------------------------
 } //------------page1------------------------
 //--------------------page2---------------------------
-
 #page2 {
     display: grid;
     background: #000;
@@ -331,47 +335,47 @@ nav{
     color: #fff;
     text-transform: uppercase;
     font-family: $text-font;
-    font-weight: lighter;
-    @include break(1400px){
+    font-weight: 300;
+    @include break(1400px) {
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-areas: "nav nav nav" ". title ." ". text .";
     }
     .title {
-        grid-area:title;
+        grid-area: title;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        h1{
-          font-weight: bold;
-        color: $neon-green;
-        font-size: 3rem;
-        margin: 0; 
-            @include break(481px,768px){
-               font-size: 4rem; 
+        h1 {
+            font-weight: bold;
+            color: $neon-green;
+            font-size: 3rem;
+            margin: 0;
+            @include break(481px,
+            768px) {
+                font-size: 4rem;
             }
-            @include break(769px){
-               font-size: 5rem; 
+            @include break(769px) {
+                font-size: 5rem;
             }
-            
         }
-        
     }
     #intro-container {
         grid-area: text;
-       flex-direction: row;
-        #self-intro{
+        flex-direction: row;
+        #self-intro {
             width: 100%;
             margin: 0 auto;
-            p{
+            p {
                 font-family: $text-font;
                 font-weight: lighter;
                 font-size: 1.7rem;
-                @include break(481px,768px){
-               font-size: 2.3rem; 
-            }
-            @include break(769px){
-               font-size: 2.8rem; 
-            }
+                @include break(481px,
+                768px) {
+                    font-size: 2.3rem;
+                }
+                @include break(769px) {
+                    font-size: 2.8rem;
+                }
             }
         }
         span {
@@ -547,7 +551,7 @@ nav{
             text-align: center;
             font-family: $text-font;
             text-transform: uppercase;
-            font-weight: lighter;
+            font-weight: 300;
             font-size: 2rem;
         }
         .carousel {
@@ -555,7 +559,6 @@ nav{
             grid-row: 3/4;
             figure {
                 margin: 10px 20px;
-               
             }
             img {
                 width: 100%;
@@ -568,6 +571,7 @@ nav{
             text-transform: uppercase;
             font-weight: lighter;
             h1 {
+               
                 font-family: $text-font;
                 font-size: 2rem;
                 padding: 1rem;
@@ -580,75 +584,85 @@ nav{
             }
         }
     }
-    
 }
 
-#contact{
-    
+#contact {
     background: #000;
     @include flex(column);
-  #page5{
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr 1fr;
-    grid-template-areas: "info" "map";
-    height: 80vh;
-    width:90%;
-    min-height: 500px;
-    margin: 0 auto;
-      @include break(886px){
-          grid-auto-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-areas: "info map" "info map";
-      }
-      #info{
-         grid-area: info;
-          color:$neon-green;
-          text-transform: uppercase;
-          
-          h1{
-              font-family: $text-font;
-              font-weight: bold;
-              font-size: 3rem;
-              @include break(481px,768px){
-               font-size: 4rem; 
+    #page5 {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
+        grid-template-areas: "info" "map";
+        height: 80vh;
+        width: 90%;
+        min-height: 500px;
+        margin: 0 auto;
+        @include break(886px) {
+            grid-auto-columns: 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-areas: "info map" "info map";
+        }
+        #info {
+            grid-area: info;
+            color: $neon-green;
+            text-transform: uppercase;
+            h1 {
+                font-family: $text-font;
+                font-weight: bold;
+                font-size: 3rem;
+                @include break(481px,
+                768px) {
+                    font-size: 4rem;
+                }
+                @include break(769px) {
+                    font-size: 5rem;
+                }
             }
-            @include break(769px){
-               font-size: 5rem; 
+            p {
+                font-family: $text-font;
+                font-weight: 300;
+                color: #fff;
+                font-size: 1.7rem;
+                @include break(481px,
+                768px) {
+                    font-size: 2.3rem;
+                }
+                @include break(769px) {
+                    font-size: 2.8rem;
+                }
+                a {
+                    color: #fff;
+                    span {
+                        border-bottom: 2px solid $neon-green;
+                    }
+                }
             }
-          }
-          p{
-              font-family: $text-font;
-              font-weight: lighter;
-              color:#fff;
-              font-size: 1.7rem;
-              @include break(481px,768px){
-               font-size: 2.3rem; 
-            }
-            @include break(769px){
-               font-size: 2.8rem; 
-            }
-              a{
+            .social {
+                display: block;
+                li i{
                   color:#fff;
-                  span {
-                    border-bottom: 2px solid $neon-green;  
-                  }
-              }
-          }
-      }
-    #map{
-        grid-area: map;
-        width: 100%;
-        height: 100%;
+                    &:hover{
+                        color:$neon-green;
+                    }
+                }
+                
+            }
+        }
+        #map {
+            grid-area: map;
+            width: 100%;
+            height: 100%;
+        }
     }
-}
     .footer {
         position: absolute;
         bottom: 0;
         left: 5px;
-        color:#fff;
+        color: #fff;
     }
 }
+
 
 /*----------------------svg style-------------------------
 ------------------------------------*/
@@ -658,16 +672,15 @@ nav{
         stroke-miterlimit: 10;
     }
     .st1 {
-        font-family: 'ARDESTINE';
+        font-family: 'orbitron';
     }
     .st2 {
-        font-size: 36px;
+        font-size: 30px;
     }
     .st3 {
-        font-size: 10px;
+        font-size: 7px;
     }
 }
-
 
 #foot {}
 
@@ -676,7 +689,26 @@ nav{
     height: 50px;
 }
 
-//------scroll magic animation class----
-.fade-out{
-    opacity: 0;
+//------cv and portfolio h1 hover----
+.cv h1:before,.project h1:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 0;
+    background: rgba(#000,0.5);
+    transition: height 0.5s ease-in;
+    z-index: -1;
+}
+
+.cv h1:hover:before,.project h1:hover:before{
+    height: 100%;
+}
+.cv h1, .project h1{
+    transition: color 0.4s ease-in;
+}
+
+.cv h1:hover, .project h1:hover{
+    color:#fff;
 }

@@ -1,38 +1,41 @@
 //---------preloader----------------
- 
-     wWidth=$(window).width();
-    wHeight=$(window).height();
-    $("#preloader").css({
-        width:wWidth,
-        height:wHeight
-    });   
-    
+
+$("#logo").css("fill", "rgb(57, 255, 1)");
+wWidth = $(window).width();
+wHeight = $(window).height();
+$("#preloader").css({
+    width: wWidth,
+    height: wHeight
+});
+
 TweenMax.to("#outter", 1, {
-            rotation: "360",
-            transformOrigin: "45 45",
-         repeat:-1
-        })
+    rotation: "360",
+    transformOrigin: "45 45",
+    repeat: -1
+})
 
 
 $(function () {
-    setTimeout(function(){
-      $("#preloader").fadeOut();
+    $("body").fadeIn(500);
+    setTimeout(function () {
+        $("#preloader").fadeOut();
         initLogo();
-    },2000);
-    
-    function fullHeight(){
-     wWidth=$(window).width();
-    wHeight=$(window).height();
-    $("html,body,.page,#preloader,nav,#page1,#page2,#page3").css({
-        width:wWidth,
-        height:wHeight
-    });   
+        titleTl.play();
+    }, 2000);
+
+    function fullHeight() {
+        wWidth = $(window).width();
+        wHeight = $(window).height();
+        $("html,body,.page,#preloader,nav,#page1,#page2,#page3").css({
+            width: wWidth,
+            height: wHeight
+        });
     }
-    
+
     fullHeight();
     $(window).resize(fullHeight);
-    
-    //-----animate each page title-----------
+
+    //-----------------------------------animate each page title----------------------------
     $("#dev").lettering();
     var titleTl = new TimelineLite({
         paused: true
@@ -67,7 +70,7 @@ $(function () {
             },
             opacity: 0
         }, 0.1);
-    titleTl.play();
+
 
 
     introTl
@@ -181,11 +184,12 @@ $(function () {
         setTimeout(logoReset, 1000);
     }
 
-    
+
     //--------------menu   animation-----------
     var tl = new TimelineLite({
         onReverseComplete: function () {
             tl.clear()
+            $("#index").fadeIn();
         }
     });
     var navT = $(".nav-container-top");
@@ -235,7 +239,6 @@ $(function () {
                 bottom: "50%",
                 left: "50%"
             }, "-=0.3")
-
             .staggerFromTo(".nav li", 0.5, {
                 cycle: {
                     x: [60, -60],
@@ -259,6 +262,7 @@ $(function () {
         if ($(".menu").hasClass("open")) {
             setFactor();
             navTl(factor);
+            $("#index").fadeOut();
         }
 
         tl.reversed() ? tl.play() : tl.reverse();
@@ -271,7 +275,18 @@ $(function () {
     $('#map').mapit({
         latitude: 41.637188,
         longitude: -4.739163,
-
+        marker: {
+            latitude: 41.637188,
+            longitude: -4.739163,
+            icon: '../image/marker.png',
+            title: '',
+            open: false,
+            center: true
+        },
+        address: 'PASEO ZORRILLA 45,VALLADOLID, SPAIN',
+        styles: 'GRAYSCALE',
+        locations: [],
+        origins: []
     });
 
     // -------------------------------------------scroll-------------------------------
@@ -310,10 +325,10 @@ $(function () {
             introTl.play();
             timelineTl.reverse();
             TweenMax.to(".menu span", 0.5, {
-                background: "#fff"
+                background: "rgb(57, 255, 1)"
             });
             TweenMax.to(".link", 0.5, {
-                color: "#fff"
+                color: "rgb(57, 255, 1)"
             });
             console.log("reverse:" + pageCount);
         }
@@ -367,10 +382,10 @@ $(function () {
                 titleTl.reverse();
                 introTl.play();
                 TweenMax.to(".menu span", 0.5, {
-                    background: "#fff"
+                    background: "rgb(57, 255, 1)"
                 });
                 TweenMax.to(".link", 0.5, {
-                    color: "#fff"
+                    color: "rgb(57, 255, 1)"
                 });
                 console.log("complete:" + pageCount);
             }
@@ -442,25 +457,25 @@ $(function () {
                 portTl.reverse();
                 contactTl.play();
                 TweenMax.to(".menu span", 0.5, {
-                    background: "#fff"
+                    background: "rgb(57, 255, 1)"
                 });
                 TweenMax.to(".link", 0.5, {
-                    color: "#fff"
+                    color: "rgb(57, 255, 1)"
                 });
                 console.log("complete:" + pageCount);
             }
         }, "-=0.2");
 
 
-    function pageScroll(){
+    function pageScroll() {
         if (scroll) {
-             initLogo();
+            initLogo();
             scroll = false;
             setTimeout(function () {
                 scroll = true;
             }, 1000);
-           
-            if ((delta > 0 || touchDir ==="panup") && down === true) {
+
+            if ((delta > 0 || touchDir === "panup") && down === true) {
 
                 up = false;
                 down = false;
@@ -491,7 +506,7 @@ $(function () {
                         break;
                 }
 
-            } else if ((delta < 0 ||  touchDir ==="pandown") && up === true) {
+            } else if ((delta < 0 || touchDir === "pandown") && up === true) {
                 up = false;
                 down = false;
 
@@ -525,29 +540,31 @@ $(function () {
         }
 
     }
-    
 
-    var delta =0;
+
+    var delta = 0;
     $("body").on("mousewheel", function (e) {
-        
-       delta = e.originalEvent.deltaY
+
+        delta = e.originalEvent.deltaY
         pageScroll();
-        
+
     });
-    
-    
-    var body=document.getElementById("body");
+
+
+    var body = document.getElementById("body");
     var mc = new Hammer(body);
     var touchDir;
-    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    mc.get('pan').set({
+        direction: Hammer.DIRECTION_ALL
+    });
 
-// listen to events...
-mc.on(" panup pandown ", function(ev) {
-    
-    touchDir=ev.type;
-    
-    pageScroll();
-});
+    // listen to events...
+    mc.on(" panup pandown ", function (ev) {
+
+        touchDir = ev.type;
+
+        pageScroll();
+    });
     /*--------------------------------------link---------------------------*/
     var $home = $("#home");
     var $intro = $("#intro");
@@ -563,6 +580,7 @@ mc.on(" panup pandown ", function(ev) {
     var circleTl = new TimelineLite({
         onReverseComplete: function () {
             tl.clear()
+            $("#index").fadeIn();
         }
     });
 
@@ -797,6 +815,7 @@ mc.on(" panup pandown ", function(ev) {
         circle(factor);
         circleTl.play();
         initLogo();
+        $("#index").fadeOut();
         $(".active").removeClass("active");
         setTimeout(function () {
             circleTl.reverse();
@@ -804,9 +823,9 @@ mc.on(" panup pandown ", function(ev) {
 
 
     });
-    
-    $(".link").each(function(){
-        $(this).click(function(){
+
+    $(".link").each(function () {
+        $(this).click(function () {
             $(this).addClass("active");
         })
     });
@@ -826,7 +845,7 @@ mc.on(" panup pandown ", function(ev) {
 
     });
     $(".timeLineLink").click(function () {
-        
+
         setTimeout(function () {
             toTimeline();
         }, 400);
@@ -844,5 +863,19 @@ mc.on(" panup pandown ", function(ev) {
             toContact();
         }, 400);
     });
+    
+    
+    
+    //--------htm page transition----------------
+    $(".navLink").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);      
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+
 
 }); //-------($function)
