@@ -412,7 +412,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-top: 50px; }
+  margin-top: 25px; }
   .social li {
     display: inline-block;
     margin: 0 20px;
@@ -731,7 +731,7 @@ nav {
       margin: 0 auto; }
       #page2 #intro-container #self-intro p {
         font-family: Lato;
-        font-weight: lighter;
+        font-weight: 300;
         font-size: 1.7rem; }
         @media (min-width: 481px) and (max-width: 768px) {
           #page2 #intro-container #self-intro p {
