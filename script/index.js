@@ -7,7 +7,23 @@ TweenMax.to("#outter", 1, {
 
 
 $(function () {
-    $("#preloader").css("display","none");
+    setTimeout(function(){
+      $("#preloader").fadeOut();
+        initLogo();
+    },2000);
+    
+    function fullHeight(){
+     wWidth=$(window).width();
+    wHeight=$(window).height();
+    $("html,body,.page,#preloader,nav,#page1,#page2,#page3").css({
+        width:wWidth,
+        height:wHeight
+    });   
+    }
+    
+    fullHeight();
+    $(window).resize(fullHeight);
+    
     //-----animate each page title-----------
     $("#dev").lettering();
     var titleTl = new TimelineLite({
@@ -157,7 +173,7 @@ $(function () {
         setTimeout(logoReset, 1000);
     }
 
-    initLogo();
+    
     //--------------menu   animation-----------
     var tl = new TimelineLite({
         onReverseComplete: function () {
@@ -428,18 +444,15 @@ $(function () {
         }, "-=0.2");
 
 
-
-
-    $("body").on("mousewheel", function (e) {
-
+    function pageScroll(){
         if (scroll) {
              initLogo();
-            var delta = e.originalEvent.deltaY
             scroll = false;
             setTimeout(function () {
                 scroll = true;
             }, 1000);
-            if (delta > 0 && down === true) {
+           
+            if ((delta > 0 || touchDir =="panup") && down === true) {
 
                 up = false;
                 down = false;
@@ -470,7 +483,7 @@ $(function () {
                         break;
                 }
 
-            } else if (delta < 0 && up === true) {
+            } else if ((delta < 0 ||  touchDir =="pandown") && up === true) {
                 up = false;
                 down = false;
 
@@ -503,9 +516,27 @@ $(function () {
             }
         }
 
+    }
+    
+
+    var delta =0;
+    $("body").on("mousewheel", function (e) {
+       delta = e.originalEvent.deltaY
+        pageScroll();
+        
     });
+    
+    
+    var body=document.getElementById("body");
+    var mc = new Hammer(body);
+    var touchDir;
+    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
-
+// listen to events...
+mc.on("panleft panright panup pandown tap press", function(ev) {
+    touchDir=ev.type;
+    pageScroll();
+});
     /*--------------------------------------link---------------------------*/
     var $home = $("#home");
     var $intro = $("#intro");

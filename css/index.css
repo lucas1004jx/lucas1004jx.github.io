@@ -430,12 +430,10 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 html, body {
   background: #D9598A;
   overflow: hidden;
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 .page {
   width: 100%;
-  height: 100vh;
   min-height: 500px;
   background: #FECA47;
   position: absolute;
@@ -456,8 +454,7 @@ li {
   position: fixed;
   z-index: 99;
   background: #fff;
-  width: 100vw;
-  height: 100vh; }
+  width: 100vw; }
   #preloader .preloader {
     position: absolute;
     margin: auto;
@@ -471,7 +468,6 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
   z-index: 5;
   display: none; }
   nav .nav {
@@ -639,7 +635,6 @@ nav {
   background: url("../image/perfil.jpg") no-repeat center center;
   background-size: cover;
   display: grid;
-  height: 100vh;
   width: 100%;
   min-height: 500px;
   grid-template-columns: repeat(2, 1fr);
@@ -684,7 +679,6 @@ nav {
 #page2 {
   display: grid;
   background: #000;
-  height: 100vh;
   min-height: 500px;
   margin: 0 auto;
   grid-template-columns: 100%;
@@ -738,7 +732,6 @@ nav {
 
 #page3 {
   display: grid;
-  height: 100vh;
   min-height: 500px;
   margin: 0 auto;
   grid-template-columns: 4fr 1fr 4fr;

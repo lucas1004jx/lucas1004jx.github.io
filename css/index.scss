@@ -6,11 +6,11 @@ html,body{
     background: $pink;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    //height: 100vh;
 }  
 .page {  
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     min-height: 500px;
     background: $yellow;
      position: absolute;
@@ -36,7 +36,7 @@ li{
     z-index: 99;
     background: #fff;
     width: 100vw;
-    height: 100vh;
+    //height: 100vh;
     .preloader{
         position: absolute;
         margin: auto;
@@ -51,7 +51,7 @@ nav{
      top:0;
     left:0;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     z-index:5;
     display: none;
     .nav {
@@ -266,7 +266,7 @@ nav{
     background: url("../image/perfil.jpg") no-repeat center center;
     background-size: cover;
     display: grid;
-    height: 100vh;
+    //height: 100vh;
     width: 100%;
     min-height: 500px;
     grid-template-columns: repeat(2, 1fr);
@@ -322,7 +322,7 @@ nav{
 #page2 {
     display: grid;
     background: #000;
-    height: 100vh;
+    //height: 100vh;
     min-height: 500px;
     margin: 0 auto;
     grid-template-columns: 100%;
@@ -387,7 +387,7 @@ nav{
 //--------------------page3---------------------------
 #page3 {
     display: grid;
-    height: 100vh;
+    //height: 100vh;
     min-height: 500px;
     margin: 0 auto;
     grid-template-columns: 4fr 1fr 4fr;
