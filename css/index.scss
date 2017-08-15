@@ -75,7 +75,7 @@ nav{
                     font-weight: lighter;
                     font-size: 1.5rem;
                     &:hover{
-                        color:$red;
+                        color:$neon-green;
                     }
                 }
             }
@@ -85,7 +85,7 @@ nav{
 
  .nav-container-top {
         position: absolute;
-        background: $yellow-green;
+        background: $neon-green;
         transform: scale(1, 1);
         right: -50px;
         top: -50px;
@@ -114,14 +114,14 @@ nav{
 
 //------menu and logo----------
 .menu-logo {
-    //background: rgba($red,0.8);
+    //background: rgba($neon-green,0.8);
     position: fixed;
     width: 100%;
     
     z-index: 20;
     .menu {
         position: absolute;
-        top: 10px;
+        top: 5px;
         right: 10px;
         width: 40px;
         height: 30px;
@@ -169,12 +169,12 @@ nav{
     }
     .logo {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 10px;
         width: 40px;
         height: 40px;
         z-index: 10;
-        fill:$red;
+        fill:$neon-green;
         @include break(481px, 768px) {
             width: 60px;
             height: 60px;
@@ -193,7 +193,7 @@ nav{
         width: 100%;
        text-align: center;
         left: 0;
-        top:10px;
+        top:0px;
         li{
             position: relative;
             display: inline-block;
@@ -215,7 +215,7 @@ nav{
         #hire{
             display: inline-block;
             padding: 2px;
-            border: 2px solid $red;
+            border: 2px solid $neon-green;
             @include break(769px){
                 display: none;
            }
@@ -227,7 +227,7 @@ nav{
             left: 0;  
             width: 0;
             height: 2px;
-            background: $red;
+            background: $neon-green;
             transition: width 0.5s;
         }
         .active:after{
@@ -237,7 +237,7 @@ nav{
             left: 0;  
             width: 100%;
             height: 2px;
-            background: $red;
+            background: $neon-green;
         }
         .link:hover:after{
             content: ""; 
@@ -246,7 +246,7 @@ nav{
             left: 0;  
             width: 100%;
             height: 2px;
-            background: $red; 
+            background: $neon-green; 
         }
         
     }  
@@ -343,7 +343,7 @@ nav{
         justify-content: flex-end;
         h1{
           font-weight: bold;
-        color: $yellow-green;
+        color: $neon-green;
         font-size: 3rem;
         margin: 0; 
             @include break(481px,768px){
@@ -376,10 +376,10 @@ nav{
         }
         span {
             font-weight: bold;
-            color: $yellow-green;
+            color: $neon-green;
         }
         a {
-            border-bottom: 2px solid $yellow-green;
+            border-bottom: 2px solid $neon-green;
         }
     }
 }
@@ -603,7 +603,7 @@ nav{
       }
       #info{
          grid-area: info;
-          color:$yellow-green;
+          color:$neon-green;
           text-transform: uppercase;
           
           h1{
@@ -631,7 +631,7 @@ nav{
               a{
                   color:#fff;
                   span {
-                    border-bottom: 2px solid $yellow-green;  
+                    border-bottom: 2px solid $neon-green;  
                   }
               }
           }

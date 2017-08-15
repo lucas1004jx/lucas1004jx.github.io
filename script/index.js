@@ -1,4 +1,12 @@
 //---------preloader----------------
+ 
+     wWidth=$(window).width();
+    wHeight=$(window).height();
+    $("#preloader").css({
+        width:wWidth,
+        height:wHeight
+    });   
+    
 TweenMax.to("#outter", 1, {
             rotation: "360",
             transformOrigin: "45 45",
@@ -143,7 +151,7 @@ $(function () {
             transformOrigin: "45 45"
         })
         TweenMax.to("#text", 0.5, {
-            fill: "#9266C0"
+            fill: "rgb(216,253,53)"
         });
     }
 
@@ -154,7 +162,7 @@ $(function () {
         });
 
         TweenMax.to("#text", 0.5, {
-            fill: "rgb(231,25,60)"
+            fill: "rgb(57, 255, 1)"
         });
     }
 
@@ -452,7 +460,7 @@ $(function () {
                 scroll = true;
             }, 1000);
            
-            if ((delta > 0 || touchDir =="panup") && down === true) {
+            if ((delta > 0 || touchDir ==="panup") && down === true) {
 
                 up = false;
                 down = false;
@@ -483,7 +491,7 @@ $(function () {
                         break;
                 }
 
-            } else if ((delta < 0 ||  touchDir =="pandown") && up === true) {
+            } else if ((delta < 0 ||  touchDir ==="pandown") && up === true) {
                 up = false;
                 down = false;
 
@@ -521,6 +529,7 @@ $(function () {
 
     var delta =0;
     $("body").on("mousewheel", function (e) {
+        
        delta = e.originalEvent.deltaY
         pageScroll();
         
@@ -533,8 +542,10 @@ $(function () {
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
 // listen to events...
-mc.on("panleft panright panup pandown tap press", function(ev) {
+mc.on(" panup pandown ", function(ev) {
+    
     touchDir=ev.type;
+    
     pageScroll();
 });
     /*--------------------------------------link---------------------------*/

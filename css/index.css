@@ -491,10 +491,10 @@ nav {
           font-weight: lighter;
           font-size: 1.5rem; }
           nav .nav ul li a:hover {
-            color: #e7193c; }
+            color: #39ff01; }
   nav .nav-container-top {
     position: absolute;
-    background: #D1EB0B;
+    background: #39ff01;
     transform: scale(1, 1);
     right: -50px;
     top: -50px;
@@ -519,7 +519,7 @@ nav {
   z-index: 20; }
   .menu-logo .menu {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     width: 40px;
     height: 30px;
@@ -558,12 +558,12 @@ nav {
     transform: rotate(-135deg); }
   .menu-logo .logo {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
     width: 40px;
     height: 40px;
     z-index: 10;
-    fill: #e7193c; }
+    fill: #39ff01; }
     @media (min-width: 481px) and (max-width: 768px) {
       .menu-logo .logo {
         width: 60px;
@@ -579,7 +579,7 @@ nav {
     width: 100%;
     text-align: center;
     left: 0;
-    top: 10px; }
+    top: 0px; }
     .menu-logo #index li {
       position: relative;
       display: inline-block;
@@ -598,7 +598,7 @@ nav {
     .menu-logo #index #hire {
       display: inline-block;
       padding: 2px;
-      border: 2px solid #e7193c; }
+      border: 2px solid #39ff01; }
       @media (min-width: 769px) {
         .menu-logo #index #hire {
           display: none; } }
@@ -609,7 +609,7 @@ nav {
       left: 0;
       width: 0;
       height: 2px;
-      background: #e7193c;
+      background: #39ff01;
       transition: width 0.5s; }
     .menu-logo #index .active:after {
       content: "";
@@ -618,7 +618,7 @@ nav {
       left: 0;
       width: 100%;
       height: 2px;
-      background: #e7193c; }
+      background: #39ff01; }
     .menu-logo #index .link:hover:after {
       content: "";
       position: absolute;
@@ -626,7 +626,7 @@ nav {
       left: 0;
       width: 100%;
       height: 2px;
-      background: #e7193c; }
+      background: #39ff01; }
 
 #home {
   top: 0; }
@@ -699,7 +699,7 @@ nav {
     justify-content: flex-end; }
     #page2 .title h1 {
       font-weight: bold;
-      color: #D1EB0B;
+      color: #39ff01;
       font-size: 3rem;
       margin: 0; }
       @media (min-width: 481px) and (max-width: 768px) {
@@ -726,9 +726,9 @@ nav {
             font-size: 2.8rem; } }
     #page2 #intro-container span {
       font-weight: bold;
-      color: #D1EB0B; }
+      color: #39ff01; }
     #page2 #intro-container a {
-      border-bottom: 2px solid #D1EB0B; }
+      border-bottom: 2px solid #39ff01; }
 
 #page3 {
   display: grid;
@@ -928,7 +928,7 @@ nav {
         grid-template-areas: "info map" "info map"; } }
     #contact #page5 #info {
       grid-area: info;
-      color: #D1EB0B;
+      color: #39ff01;
       text-transform: uppercase; }
       #contact #page5 #info h1 {
         font-family: Lato;
@@ -954,7 +954,7 @@ nav {
         #contact #page5 #info p a {
           color: #fff; }
           #contact #page5 #info p a span {
-            border-bottom: 2px solid #D1EB0B; }
+            border-bottom: 2px solid #39ff01; }
     #contact #page5 #map {
       grid-area: map;
       width: 100%;
