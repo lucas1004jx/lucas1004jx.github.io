@@ -310,7 +310,7 @@ $(function () {
             init();
             titleTl.play();
             introTl.reverse();
-            console.log("reverse:" + pageCount);
+            //console.log("reverse:" + pageCount);
             TweenMax.to(".menu span", 0.5, {
                 background: "#000"
             });
@@ -332,7 +332,7 @@ $(function () {
             TweenMax.to(".link", 0.5, {
                 color: "rgb(57, 255, 1)"
             });
-            console.log("reverse:" + pageCount);
+            //console.log("reverse:" + pageCount);
         }
     });
     var page3Scroll = new TimelineLite({
@@ -342,7 +342,7 @@ $(function () {
             init();
             timelineTl.play();
             portTl.reverse();
-            console.log("reverse:" + pageCount);
+            //console.log("reverse:" + pageCount);
         }
     });
     var page4Scroll = new TimelineLite({
@@ -358,7 +358,7 @@ $(function () {
             TweenMax.to(".link", 0.5, {
                 color: "#000"
             });
-            console.log("reverse:" + pageCount);
+            //console.log("reverse:" + pageCount);
         }
     });
 
@@ -389,7 +389,7 @@ $(function () {
                 TweenMax.to(".link", 0.5, {
                     color: "rgb(57, 255, 1)"
                 });
-                console.log("complete:" + pageCount);
+                //console.log("complete:" + pageCount);
             }
         }, "-=0.2");
 
@@ -416,7 +416,7 @@ $(function () {
                 TweenMax.to(".link", 0.5, {
                     color: "#000"
                 });
-                console.log("complete:" + pageCount);
+                //console.log("complete:" + pageCount);
             }
         }, "-=0.2");
 
@@ -437,7 +437,7 @@ $(function () {
                 init();
                 timelineTl.reverse();
                 portTl.play();
-                console.log("complete:" + pageCount);
+                //console.log("complete:" + pageCount);
             }
         }, "-=0.2");
 
@@ -464,7 +464,7 @@ $(function () {
                 TweenMax.to(".link", 0.5, {
                     color: "rgb(57, 255, 1)"
                 });
-                console.log("complete:" + pageCount);
+                //console.log("complete:" + pageCount);
             }
         }, "-=0.2");
 
@@ -604,21 +604,21 @@ $(function () {
             timelinePage = false;
             portfolioPage = false;
             contactPage = true;
-            console.log("contact");
+            //console.log("contact");
         } else if (posy1 < 0 && posy2 < 0 && posy3 < 0 && posy4 < 0) { // in portafolio page
             homePage = false;
             introPage = false;
             timelinePage = false;
             portfolioPage = true;
             contactPage = false;
-            console.log("port");
+            //console.log("port");
         } else if (posy1 < 0 && posy2 < 0 && posy3 < 0) { //in timeline page
             homePage = false;
             introPage = false;
             timelinePage = true;
             portfolioPage = false;
             contactPage = false;
-            console.log("time");
+            //console.log("time");
 
         } else if (posy1 < 0 && posy2 < 0) { // in intro page
             homePage = false;
@@ -626,14 +626,14 @@ $(function () {
             timelinePage = false;
             portfolioPage = false;
             contactPage = false;
-            console.log("intro");
+            //console.log("intro");
         } else if (posy1 == 0) {
             homePage = true;
             introPage = false;
             timelinePage = false;
             portfolioPage = false;
             contactPage = false;
-            console.log("home");
+            //console.log("home");
         }
 
     }
@@ -833,6 +833,7 @@ $(function () {
     });
 
     $(".homeLink").click(function () {
+        
         setTimeout(function () {
             toHome();
         }, 400);
