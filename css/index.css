@@ -782,6 +782,12 @@ nav {
     text-align: center;
     margin: 0;
     word-spacing: 1rem; }
+    @media (min-width: 480px) and (max-width: 768px) {
+      #page3 h1 {
+        font-size: 4.5rem; } }
+    @media (min-width: 769px) {
+      #page3 h1 {
+        font-size: 5rem; } }
     #page3 h1 span {
       font-weight: bold;
       color: #FECA47; }
@@ -792,8 +798,20 @@ nav {
       font-size: 1.2rem;
       margin: 0;
       text-transform: capitalize; }
+      @media (min-width: 480px) and (max-width: 768px) {
+        #page3 .tl h4 {
+          font-size: 1.4rem; } }
+      @media (min-width: 769px) {
+        #page3 .tl h4 {
+          font-size: 1.6rem; } }
     #page3 .tl p {
       font-size: 0.8rem; }
+      @media (min-width: 480px) and (max-width: 768px) {
+        #page3 .tl p {
+          font-size: 1rem; } }
+      @media (min-width: 769px) {
+        #page3 .tl p {
+          font-size: 1.2rem; } }
     #page3 .tl:nth-of-type(odd) {
       text-align: right;
       padding-right: 1rem;

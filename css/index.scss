@@ -432,6 +432,12 @@ nav {
         text-align: center;
         margin: 0;
         word-spacing: 1rem;
+        @include break(480px,768px){
+               font-size: 4.5rem; 
+            }
+            @include break(769px){
+               font-size: 5rem; 
+            }
         span {
             font-weight: bold;
             color: $yellow;
@@ -444,9 +450,21 @@ nav {
             font-size: 1.2rem;
             margin: 0;
             text-transform: capitalize;
+            @include break(480px,768px){
+               font-size: 1.4rem; 
+            }
+            @include break(769px){
+               font-size: 1.6rem; 
+            }
         }
         p {
             font-size: 0.8rem;
+            @include break(480px,768px){
+               font-size: 1rem; 
+            }
+            @include break(769px){
+               font-size: 1.2rem; 
+            }
         }
         &:nth-of-type(odd) {
             text-align: right;
