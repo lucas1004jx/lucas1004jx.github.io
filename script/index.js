@@ -114,7 +114,7 @@ $(function () {
             opacity: 0,
             y: -50
         }, 0.1);
-    //----------------portfolio carousel-------
+    //-----------------------------portfolio carousel---------------------
     $(".owl-carousel").owlCarousel({
         loop: true,
         nav: false,
@@ -136,8 +136,10 @@ $(function () {
 
 
     var owl = $(".owl-carousel");
+    var alt = $("#portfolio .owl-carousel").find(".center figure img").attr("alt");
+        $("#portfolio h2").text(alt);
     owl.on("translated.owl.carousel", function (e) {
-        var alt = $("#portfolio .owl-carousel").find(".active figure img").attr("alt");
+         alt = $("#portfolio .owl-carousel").find(".center figure img").attr("alt");
         $("#portfolio h2").text(alt);
         TweenMax.from("#portfolio h2", 0.5, {
             opacity: 0,
