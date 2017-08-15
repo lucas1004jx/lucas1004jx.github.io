@@ -1,4 +1,13 @@
+//---------preloader----------------
+TweenMax.to("#outter", 1, {
+            rotation: "360",
+            transformOrigin: "45 45",
+         repeat:-1
+        })
+
+
 $(function () {
+    $("#preloader").css("display","none");
     //-----animate each page title-----------
     $("#dev").lettering();
     var titleTl = new TimelineLite({
@@ -424,7 +433,7 @@ $(function () {
     $("body").on("mousewheel", function (e) {
 
         if (scroll) {
-
+             initLogo();
             var delta = e.originalEvent.deltaY
             scroll = false;
             setTimeout(function () {
