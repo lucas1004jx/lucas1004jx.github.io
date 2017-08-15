@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 91.9 91.9" style="enable-background:new 0 0 91.9 91.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'ARDESTINE';}
+	.st2{font-size:36px;}
+	.st3{font-size:10px;}
+</style>
+<g id="outter">
+	<polygon class="st0" points="77.9,13.9 77.9,32.7 59.2,14 	"/>
+	<polygon class="st0" points="77.9,78 59.2,77.9 77.9,59.2 	"/>
+	<polygon class="st0" points="32.7,13.9 14,32.7 14,14 	"/>
+	<polygon class="st0" points="14,77.9 14,59.2 32.7,78 	"/>
+</g>
+<g id="text">
+	<text transform="matrix(1 0 0 1 21.3034 47.9542)" class="st1 st2">xin</text>
+	<text transform="matrix(1 0 0 1 19.9834 60.5442)" class="st1 st3">DEVELOPER</text>
+	<text transform="matrix(1 0 0 1 38.0734 70.7642)" class="st1 st3">&lt;/&gt;</text>
+</g>
+</svg>
