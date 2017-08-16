@@ -429,7 +429,8 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 html {
   overflow: hidden;
   background: url("../image/html.jpg") no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 body {
   background: #83C25A;
@@ -915,7 +916,8 @@ nav {
       #portfolio #page4 .carousel figure {
         margin: 10px 20px; }
       #portfolio #page4 .carousel img {
-        width: 100%; }
+        width: 100%;
+        cursor: pointer; }
     #portfolio #page4 .project {
       grid-column: 1/2;
       grid-row: 5/6;

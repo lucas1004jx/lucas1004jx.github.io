@@ -879,6 +879,15 @@ $(function () {
     function redirectPage() {
         window.location = linkLocation;
     }
+    
+    $("#portfolio img").click(function(){
+       
+        linkLocation = $(this).attr("data-link");
+         console.log(linkLocation);
+        $("body").fadeOut(500, redirectPage);  
+    }); 
+         
+    
 
 
 }); //-------($function)

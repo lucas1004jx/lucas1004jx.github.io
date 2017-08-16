@@ -6,7 +6,7 @@ html{
     overflow: hidden;
     background:url("../image/html.jpg") no-repeat center center;
     background-size: cover;
-    //height: 100vh;
+    height: 100vh;
 }
 
 body{ 
@@ -580,6 +580,7 @@ nav {
             }
             img {
                 width: 100%;
+                cursor: pointer;
             }
         }
         .project {
