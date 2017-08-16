@@ -6,7 +6,7 @@ html{
     overflow: hidden;
     background:url("../image/html.jpg") no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    //height: 100vh;
 }
 
 body{
@@ -221,14 +221,14 @@ nav {
                 display: inline-block;
             }
         }
-        #hire {
+        /*#hire {
             display: inline-block;
             padding: 2px;
             border: 2px solid $neon-green;
             @include break(769px) {
                 display: none;
             }
-        }
+        }*/
         .link:after {
             content: "";
             position: absolute;
