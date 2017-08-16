@@ -429,8 +429,7 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 html {
   overflow: hidden;
   background: url("../image/html.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh; }
+  background-size: cover; }
 
 body {
   background: #83C25A;
@@ -594,7 +593,15 @@ nav {
     width: 100%;
     text-align: center;
     left: 0;
-    top: 0px; }
+    top: 0px;
+    /*#hire {
+        display: inline-block;
+        padding: 2px;
+        border: 2px solid $neon-green;
+        @include break(769px) {
+            display: none;
+        }
+    }*/ }
     .menu-logo #index li {
       position: relative;
       display: inline-block;
@@ -610,13 +617,6 @@ nav {
           margin: 15px;
           font-size: 16px;
           display: inline-block; } }
-    .menu-logo #index #hire {
-      display: inline-block;
-      padding: 2px;
-      border: 2px solid #39ff01; }
-      @media (min-width: 769px) {
-        .menu-logo #index #hire {
-          display: none; } }
     .menu-logo #index .link:after {
       content: "";
       position: absolute;
@@ -1027,14 +1027,14 @@ nav {
   width: 100%;
   height: 0;
   background: rgba(0, 0, 0, 0.5);
-  transition: height 0.5s ease-in;
+  transition: height 0.3s ease-in;
   z-index: -1; }
 
 .cv h1:hover:before, .project h1:hover:before {
   height: 100%; }
 
 .cv h1, .project h1 {
-  transition: color 0.4s ease-in; }
+  transition: color 0.3s ease-in; }
 
 .cv h1:hover, .project h1:hover {
   color: #fff; }
