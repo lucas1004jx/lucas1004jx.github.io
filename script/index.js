@@ -285,7 +285,7 @@ $(function () {
             open: false,
             center: true
         },
-        address: 'PASEO ZORRILLA 45,VALLADOLID, SPAIN',
+        address: 'VALLADOLID, SPAIN',
         styles: 'GRAYSCALE',
         locations: [],
         origins: []
@@ -870,21 +870,21 @@ $(function () {
     
     
     //--------htm page transition----------------
-    $(".navLink").click(function(event){
+    /*$(".navLink").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
         $("body").fadeOut(500, redirectPage);      
-    });
+    });*/
          
-    function redirectPage() {
+   /* function redirectPage() {
         window.location = linkLocation;
-    }
+    }*/
     
     $("#portfolio img").click(function(){
        
         linkLocation = $(this).attr("data-link");
-         console.log(linkLocation);
-        $("body").fadeOut(500, redirectPage);  
+         
+        window.open(linkLocation,"_blank");  
     }); 
          
     
