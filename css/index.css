@@ -657,10 +657,15 @@ nav {
   grid-template-rows: 1fr 10fr 2fr;
   grid-template-areas: "header header header header" "main main main main" "title title title title";
   grid-column-gap: 10px;
+  -ms-grid-template-columns: repeat(2, 1fr);
+  -ms-grid-template-rows: 1fr 10fr 2fr;
+  -ms-grid-template-areas: "header header header header" "main main main main" "title title title title";
+  -ms-grid-column-gap: 10px;
   margin: 0 auto; }
   #page1 .title {
     padding: 0;
-    grid-area: title; }
+    grid-area: title;
+    -ms-grid-area: title; }
     #page1 .title p {
       width: 100%;
       text-align: center;
@@ -700,6 +705,9 @@ nav {
   grid-template-columns: 100%;
   grid-template-rows: 1fr 3fr 8fr;
   grid-template-areas: "nav" "title" "text";
+  -ms-grid-template-columns: 100%;
+  -ms-grid-template-rows: 1fr 3fr 8fr;
+  -ms-grid-template-areas: "nav" "title" "text";
   color: #fff;
   text-transform: uppercase;
   font-family: Lato;
@@ -710,6 +718,7 @@ nav {
       grid-template-areas: "nav nav nav" ". title ." ". text ."; } }
   #page2 .title {
     grid-area: title;
+    -ms-grid-area: title;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
@@ -726,6 +735,7 @@ nav {
           font-size: 5rem; } }
   #page2 #intro-container {
     grid-area: text;
+    -ms-grid-area: text;
     flex-direction: row; }
     #page2 #intro-container #self-intro {
       width: 100%;
@@ -752,27 +762,39 @@ nav {
   margin: 0 auto;
   grid-template-columns: 4fr 1fr 4fr;
   grid-template-rows: repeat(8, 1fr);
+  -ms-grid-template-columns: 4fr 1fr 4fr;
+  -ms-grid-template-rows: repeat(8, 1fr);
   background: #fff; }
   #page3 .foot1 {
     text-align: center;
     grid-column: 2/3;
-    grid-row: 3/4; }
+    grid-row: 3/4;
+    -ms-grid-column: 2/3;
+    -ms-grid-row: 3/4; }
   #page3 .foot2 {
     text-align: center;
     grid-column: 2/3;
-    grid-row: 4/5; }
+    grid-row: 4/5;
+    -ms-grid-column: 2/3;
+    -ms-grid-row: 4/5; }
   #page3 .foot3 {
     text-align: center;
     grid-column: 2/3;
-    grid-row: 5/6; }
+    grid-row: 5/6;
+    -ms-grid-column: 2/3;
+    -ms-grid-row: 5/6; }
   #page3 .foot4 {
     text-align: center;
     grid-column: 2/3;
-    grid-row: 6/7; }
+    grid-row: 6/7;
+    -ms-grid-column: 2/3;
+    -ms-grid-row: 6/7; }
   #page3 .foot5 {
     text-align: center;
     grid-column: 2/3;
-    grid-row: 7/8; }
+    grid-row: 7/8;
+    -ms-grid-column: 2/3;
+    -ms-grid-row: 7/8; }
   #page3 h1 {
     font-family: Lato;
     font-size: 4rem;
@@ -780,6 +802,8 @@ nav {
     text-transform: uppercase;
     grid-column: 1/4;
     grid-row: 2/3;
+    -ms-grid-column: 1/4;
+    -ms-grid-row: 2/3;
     text-align: center;
     margin: 0;
     word-spacing: 1rem; }
@@ -823,37 +847,59 @@ nav {
       margin-top: 1rem; }
   #page3 .tl1 {
     grid-column: 1/2;
-    grid-row: 3/4; }
+    grid-row: 3/4;
+    -ms-grid-column: 1/2;
+    -ms-grid-row: 3/4; }
   #page3 .tl2 {
     grid-column: 3/4;
-    grid-row: 3/4; }
+    grid-row: 3/4;
+    -ms-grid-column: 3/4;
+    -ms-grid-row: 3/4; }
   #page3 .tl3 {
     grid-column: 1/2;
-    grid-row: 4/5; }
+    grid-row: 4/5;
+    -ms-grid-column: 1/2;
+    g-ms-rid-row: 4/5; }
   #page3 .tl4 {
     grid-column: 3/4;
-    grid-row: 4/5; }
+    grid-row: 4/5;
+    -ms-grid-column: 3/4;
+    -ms-grid-row: 4/5; }
   #page3 .tl5 {
     grid-column: 1/2;
-    grid-row: 5/6; }
+    grid-row: 5/6;
+    -ms-grid-column: 1/2;
+    -ms-grid-row: 5/6; }
   #page3 .tl6 {
     grid-column: 3/4;
-    grid-row: 5/6; }
+    grid-row: 5/6;
+    -ms-grid-column: 3/4;
+    -ms-grid-row: 5/6; }
   #page3 .tl7 {
     grid-column: 1/2;
-    grid-row: 6/7; }
+    grid-row: 6/7;
+    -ms-grid-column: 1/2;
+    -ms-grid-row: 6/7; }
   #page3 .tl8 {
     grid-column: 3/4;
-    grid-row: 6/7; }
+    grid-row: 6/7;
+    -ms-grid-column: 3/4;
+    -ms-grid-row: 6/7; }
   #page3 .tl9 {
     grid-column: 1/2;
-    grid-row: 7/8; }
+    grid-row: 7/8;
+    -ms-grid-column: 1/2;
+    -ms-grid-row: 7/8; }
   #page3 .tl10 {
     grid-column: 3/4;
-    grid-row: 7/8; }
+    grid-row: 7/8;
+    -ms-grid-column: 3/4;
+    -ms-grid-row: 7/8; }
   #page3 .cv {
     grid-column: 1/4;
     grid-row: 8/9;
+    -ms-grid-column: 1/4;
+    -ms-grid-row: 8/9;
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -893,10 +939,14 @@ nav {
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.8);
     grid-template-columns: 100%;
-    grid-template-rows: 2fr 1fr 4fr 1fr 1fr 2fr; }
+    grid-template-rows: 2fr 1fr 4fr 1fr 1fr 2fr;
+    -ms-grid-template-columns: 100%;
+    -ms-grid-template-rows: 2fr 1fr 4fr 1fr 1fr 2fr; }
     #portfolio #page4 h1 {
       grid-column: 1/2;
       grid-row: 1/2;
+      -ms-grid-column: 1/2;
+      -ms-grid-row: 1/2;
       text-align: center;
       font-family: Lato;
       text-transform: uppercase;
@@ -905,6 +955,8 @@ nav {
     #portfolio #page4 h2 {
       grid-column: 1/2;
       grid-row: 2/3;
+      -ms-grid-column: 1/2;
+      -ms-grid-row: 2/3;
       text-align: center;
       font-family: Lato;
       text-transform: uppercase;
@@ -912,7 +964,9 @@ nav {
       font-size: 2rem; }
     #portfolio #page4 .carousel {
       grid-column: 1/2;
-      grid-row: 3/4; }
+      grid-row: 3/4;
+      -ms-grid-column: 1/2;
+      -ms-grid-row: 3/4; }
       #portfolio #page4 .carousel figure {
         margin: 10px 20px; }
       #portfolio #page4 .carousel img {
@@ -921,6 +975,8 @@ nav {
     #portfolio #page4 .project {
       grid-column: 1/2;
       grid-row: 5/6;
+      -ms-grid-column: 1/2;
+      -ms-grid-row: 5/6;
       display: flex;
       display: -webkit-flex;
       flex-direction: column;
@@ -952,6 +1008,9 @@ nav {
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr 1fr;
     grid-template-areas: "info" "map";
+    -ms-grid-auto-columns: 1fr;
+    -ms-grid-auto-rows: 1fr 1fr;
+    -ms-grid-template-areas: "info" "map";
     height: 80vh;
     width: 90%;
     min-height: 500px;
@@ -960,9 +1019,13 @@ nav {
       #contact #page5 {
         grid-auto-columns: 1fr 1fr;
         grid-auto-rows: 1fr;
-        grid-template-areas: "info map" "info map"; } }
+        grid-template-areas: "info map" "info map";
+        -ms-grid-auto-columns: 1fr 1fr;
+        -ms-grid-auto-rows: 1fr;
+        -ms-grid-template-areas: "info map" "info map"; } }
     #contact #page5 #info {
       grid-area: info;
+      -ms-grid-area: info;
       color: #39ff01;
       text-transform: uppercase; }
       #contact #page5 #info h1 {
@@ -998,6 +1061,7 @@ nav {
             color: #39ff01; }
     #contact #page5 #map {
       grid-area: map;
+      -ms-grid-area: map;
       width: 100%;
       height: 100%; }
   #contact .footer {

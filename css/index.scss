@@ -9,7 +9,7 @@ html{
     height: 100vh;
 }
 
-body{ 
+body{
     background: $green;
     overflow: hidden;
     position: relative;
@@ -91,7 +91,7 @@ nav {
                     &:hover {
                         color: $neon-green;
                     }
-                    
+
                     @include break(769px) {
                         font-size: 2.5rem;
                         margin: 0 25px;
@@ -279,10 +279,15 @@ nav {
     grid-template-rows: 1fr 10fr 2fr;
     grid-template-areas: "header header header header" "main main main main" "title title title title";
     grid-column-gap: 10px;
+    -ms-grid-template-columns: repeat(2, 1fr);
+    -ms-grid-template-rows: 1fr 10fr 2fr;
+    -ms-grid-template-areas: "header header header header" "main main main main" "title title title title";
+    -ms-grid-column-gap: 10px;
     margin: 0 auto;
     .title {
         padding: 0;
         grid-area: title;
+        -ms-grid-area: title;
         p {
             span {
                 display: inline-block;
@@ -332,6 +337,9 @@ nav {
     grid-template-columns: 100%;
     grid-template-rows: 1fr 3fr 8fr;
     grid-template-areas: "nav" "title" "text";
+    -ms-grid-template-columns: 100%;
+    -ms-grid-template-rows: 1fr 3fr 8fr;
+    -ms-grid-template-areas: "nav" "title" "text";
     color: #fff;
     text-transform: uppercase;
     font-family: $text-font;
@@ -342,6 +350,7 @@ nav {
     }
     .title {
         grid-area: title;
+        -ms-grid-area: title;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -361,6 +370,7 @@ nav {
     }
     #intro-container {
         grid-area: text;
+        -ms-grid-area: text;
         flex-direction: row;
         #self-intro {
             width: 100%;
@@ -396,31 +406,43 @@ nav {
     margin: 0 auto;
     grid-template-columns: 4fr 1fr 4fr;
     grid-template-rows: repeat(8, 1fr);
+    -ms-grid-template-columns: 4fr 1fr 4fr;
+    -ms-grid-template-rows: repeat(8, 1fr);
     background: #fff;
     .foot1 {
         text-align: center;
         grid-column: 2/3;
         grid-row: 3/4;
+        -ms-grid-column: 2/3;
+        -ms-grid-row: 3/4;
     }
     .foot2 {
         text-align: center;
         grid-column: 2/3;
         grid-row: 4/5;
+        -ms-grid-column: 2/3;
+        -ms-grid-row: 4/5;
     }
     .foot3 {
         text-align: center;
         grid-column: 2/3;
         grid-row: 5/6;
+        -ms-grid-column: 2/3;
+        -ms-grid-row: 5/6;
     }
     .foot4 {
         text-align: center;
         grid-column: 2/3;
         grid-row: 6/7;
+        -ms-grid-column: 2/3;
+        -ms-grid-row: 6/7;
     }
     .foot5 {
         text-align: center;
         grid-column: 2/3;
         grid-row: 7/8;
+        -ms-grid-column: 2/3;
+        -ms-grid-row: 7/8;
     }
     h1 {
         font-family: $text-font;
@@ -429,14 +451,16 @@ nav {
         text-transform: uppercase;
         grid-column: 1/4;
         grid-row: 2/3;
+        -ms-grid-column: 1/4;
+        -ms-grid-row: 2/3;
         text-align: center;
         margin: 0;
         word-spacing: 1rem;
         @include break(480px,768px){
-               font-size: 4.5rem; 
+               font-size: 4.5rem;
             }
             @include break(769px){
-               font-size: 5rem; 
+               font-size: 5rem;
             }
         span {
             font-weight: bold;
@@ -451,19 +475,19 @@ nav {
             margin: 0;
             text-transform: capitalize;
             @include break(480px,768px){
-               font-size: 1.4rem; 
+               font-size: 1.4rem;
             }
             @include break(769px){
-               font-size: 1.6rem; 
+               font-size: 1.6rem;
             }
         }
         p {
             font-size: 0.8rem;
             @include break(480px,768px){
-               font-size: 1rem; 
+               font-size: 1rem;
             }
             @include break(769px){
-               font-size: 1.2rem; 
+               font-size: 1.2rem;
             }
         }
         &:nth-of-type(odd) {
@@ -478,48 +502,70 @@ nav {
         }
     }
     .tl1 {
-        grid-column: 1/2;
+        grid-column: 1/2 ;
         grid-row: 3/4;
+        -ms-grid-column: 1/2 ;
+        -ms-grid-row: 3/4;
     }
     .tl2 {
         grid-column: 3/4;
         grid-row: 3/4;
+        -ms-grid-column: 3/4;
+        -ms-grid-row: 3/4;
     }
     .tl3 {
         grid-column: 1/2;
         grid-row: 4/5;
+        -ms-grid-column: 1/2;
+        g-ms-rid-row: 4/5;
     }
     .tl4 {
         grid-column: 3/4;
         grid-row: 4/5;
+        -ms-grid-column: 3/4;
+        -ms-grid-row: 4/5;
     }
     .tl5 {
         grid-column: 1/2;
         grid-row: 5/6;
+        -ms-grid-column: 1/2;
+        -ms-grid-row: 5/6;
     }
     .tl6 {
         grid-column: 3/4;
         grid-row: 5/6;
+        -ms-grid-column: 3/4;
+        -ms-grid-row: 5/6;
     }
     .tl7 {
         grid-column: 1/2;
         grid-row: 6/7;
+        -ms-grid-column: 1/2;
+        -ms-grid-row: 6/7;
     }
     .tl8 {
         grid-column: 3/4;
         grid-row: 6/7;
+        -ms-grid-column: 3/4;
+        -ms-grid-row: 6/7;
     }
     .tl9 {
         grid-column: 1/2;
         grid-row: 7/8;
+        -ms-grid-column: 1/2;
+        -ms-grid-row: 7/8;
     }
     .tl10 {
         grid-column: 3/4;
         grid-row: 7/8;
+        -ms-grid-column: 3/4;
+        -ms-grid-row: 7/8;
     }
     .cv {
         grid-column: 1/4;
         grid-row: 8/9;
+        -ms-grid-column: 1/4;
+        -ms-grid-row: 8/9;
         @include flex(column);
         text-transform: uppercase;
         font-weight: lighter;
@@ -554,9 +600,13 @@ nav {
         background: rgba(#fff, 0.8);
         grid-template-columns: 100%;
         grid-template-rows: 2fr 1fr 4fr 1fr 1fr 2fr;
+        -ms-grid-template-columns: 100%;
+        -ms-grid-template-rows: 2fr 1fr 4fr 1fr 1fr 2fr;
         h1 {
             grid-column: 1/2;
             grid-row: 1/2;
+            -ms-grid-column: 1/2;
+            -ms-grid-row: 1/2;
             text-align: center;
             font-family: $text-font;
             text-transform: uppercase;
@@ -566,6 +616,8 @@ nav {
         h2 {
             grid-column: 1/2;
             grid-row: 2/3;
+            -ms-grid-column: 1/2;
+            -ms-grid-row: 2/3;
             text-align: center;
             font-family: $text-font;
             text-transform: uppercase;
@@ -575,6 +627,8 @@ nav {
         .carousel {
             grid-column: 1/2;
             grid-row: 3/4;
+            -ms-grid-column: 1/2;
+            -ms-grid-row: 3/4;
             figure {
                 margin: 10px 20px;
             }
@@ -586,11 +640,13 @@ nav {
         .project {
             grid-column: 1/2;
             grid-row: 5/6;
+            -ms-grid-column: 1/2;
+            -ms-grid-row: 5/6;
             @include flex(column);
             text-transform: uppercase;
             font-weight: lighter;
             h1 {
-               
+
                 font-family: $text-font;
                 font-size: 2rem;
                 padding: 1rem;
@@ -613,6 +669,9 @@ nav {
         grid-auto-columns: 1fr;
         grid-auto-rows: 1fr 1fr;
         grid-template-areas: "info" "map";
+        -ms-grid-auto-columns: 1fr;
+        -ms-grid-auto-rows: 1fr 1fr;
+        -ms-grid-template-areas: "info" "map";
         height: 80vh;
         width: 90%;
         min-height: 500px;
@@ -621,9 +680,13 @@ nav {
             grid-auto-columns: 1fr 1fr;
             grid-auto-rows: 1fr;
             grid-template-areas: "info map" "info map";
+            -ms-grid-auto-columns: 1fr 1fr;
+            -ms-grid-auto-rows: 1fr;
+            -ms-grid-template-areas: "info map" "info map";
         }
         #info {
             grid-area: info;
+            -ms-grid-area: info;
             color: $neon-green;
             text-transform: uppercase;
             h1 {
@@ -665,11 +728,12 @@ nav {
                         color:$neon-green;
                     }
                 }
-                
+
             }
         }
         #map {
             grid-area: map;
+            -ms-grid-area: map;
             width: 100%;
             height: 100%;
         }
@@ -715,10 +779,10 @@ nav {
     bottom: 0;
     left:0;
     width: 100%;
-    height: 0; 
+    height: 0;
     background: rgba(#000,0.5);
     transition: height 0.3s ease-in;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .cv h1:hover:before,.project h1:hover:before{

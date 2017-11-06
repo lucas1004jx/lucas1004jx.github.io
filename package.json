@@ -1,9 +1,0 @@
-{
-  "name": "portfolio_lucas",
-  "version": "2.0.0",
-  "author": "lucas jin",
-  "dependencies": {},
-  "devDependencies": {
-    "webpack": "^3.0.0"
-  }
-}
