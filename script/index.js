@@ -21,7 +21,7 @@ $(function () {
         $("#preloader").fadeOut();
         initLogo();
         titleTl.play();
-    }, 2000);
+    }, 1000);
 
     function fullHeight() {
         wWidth = $(window).width();
@@ -833,7 +833,7 @@ $(function () {
     });
 
     $(".homeLink").click(function () {
-        
+
         setTimeout(function () {
             toHome();
         }, 400);
@@ -866,28 +866,28 @@ $(function () {
             toContact();
         }, 400);
     });
-    
-    
-    
+
+
+
     //--------htm page transition----------------
     /*$(".navLink").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(500, redirectPage);      
+        $("body").fadeOut(500, redirectPage);
     });*/
-         
+
    /* function redirectPage() {
         window.location = linkLocation;
     }*/
-    
+
     $("#portfolio img").click(function(){
-       
+
         linkLocation = $(this).attr("data-link");
-         
-        window.open(linkLocation,"_blank");  
-    }); 
-         
-    
+
+        window.open(linkLocation,"_blank");
+    });
+
+
 
 
 }); //-------($function)
